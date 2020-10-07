@@ -48,13 +48,13 @@ import pca_pump._
   val Patient_Request_Not_Too_Soon_Id : Art.PortId,
   val Patient_Request_Too_Soon_Id : Art.PortId) extends Patient_Bolus_Checker_imp_Api {
 
-  def getMinimum_Time_Between_Bolus() : Option[ICE_Types.Minute] = {
-    val value : Option[ICE_Types.Minute] = Art.getValue(Minimum_Time_Between_Bolus_Id) match {
-      case Some(ICE_Types.Minute_Payload(v)) => Some(v)
+  def getMinimum_Time_Between_Bolus() : Option[ICE_Types.Minute_imp] = {
+    val value : Option[ICE_Types.Minute_imp] = Art.getValue(Minimum_Time_Between_Bolus_Id) match {
+      case Some(ICE_Types.Minute_imp_Payload(v)) => Some(v)
       case Some(v) =>
-        Art.logError(id, s"Unexpected payload on port Minimum_Time_Between_Bolus.  Expecting 'ICE_Types.Minute_Payload' but received ${v}")
-        None[ICE_Types.Minute]()
-      case _ => None[ICE_Types.Minute]()
+        Art.logError(id, s"Unexpected payload on port Minimum_Time_Between_Bolus.  Expecting 'ICE_Types.Minute_imp_Payload' but received ${v}")
+        None[ICE_Types.Minute_imp]()
+      case _ => None[ICE_Types.Minute_imp]()
     }
     return value
   }

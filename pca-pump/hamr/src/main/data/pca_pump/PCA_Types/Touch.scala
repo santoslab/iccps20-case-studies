@@ -5,18 +5,13 @@ package pca_pump.PCA_Types
 import org.sireum._
 import pca_pump._
 
-object Touch {
-  def empty(): PCA_Types.Touch = {
-    return PCA_Types.Touch()
-  }
-}
+@datatype trait Touch
 
-@datatype class Touch() // type skeleton
+@datatype class SimpleButton_Touch(val buttonId: PCA_Types.Button_Id.Type)
+  extends Touch
 
-object Touch_Payload {
-  def empty(): Touch_Payload = {
-    return Touch_Payload(PCA_Types.Touch.empty())
-  }
-}
+@datatype class SquareBolusDuration_Touch(val duration: ICE_Types.Minute_imp)
+  extends Touch
 
-@datatype class Touch_Payload(value: PCA_Types.Touch) extends art.DataContent
+
+@datatype class Touch_Payload(value: Touch) extends art.DataContent

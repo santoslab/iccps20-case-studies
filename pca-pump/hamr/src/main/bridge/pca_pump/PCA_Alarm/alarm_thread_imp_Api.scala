@@ -49,8 +49,8 @@ import pca_pump._
     Art.putValue(Warning_Id, PCA_Types.Warning_Type_Payload(value))
   }
 
-  def sendLog_Fault(value : PCA_Types.Fault_Record) : Unit = {
-    Art.putValue(Log_Fault_Id, PCA_Types.Fault_Record_Payload(value))
+  def sendLog_Fault(value : PCA_Types.Fault_Record_imp) : Unit = {
+    Art.putValue(Log_Fault_Id, PCA_Types.Fault_Record_imp_Payload(value))
   }
 
   def sendICE_Immediate() : Unit = {

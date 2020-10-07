@@ -16,9 +16,9 @@ features
       {BLESS::Assertion => "<<PATIENT_NEAR_MAX_DRUG_PER_HOUR()>>";};  
     Over_Max_Drug_Per_Hour: out event port --over maximum drug infused in any hour
       {BLESS::Assertion => "<<PATIENT_OVER_MAX_DRUG_PER_HOUR()>>";};  
-    Infusion_Flow_Rate: in data port PCA_Types::Flow_Rate  --rate to pump
+    Infusion_Flow_Rate: in data port PCA_Types::Flow_Rate.imp  --rate to pump
       {BLESS::Assertion => "<<:=PUMP_RATE()>>";};
-    Max_Drug_Per_Hour: in data port PCA_Types::Drug_Volume  --prescribed maximum hourly limit on drug infusion
+    Max_Drug_Per_Hour: in data port PCA_Types::Drug_Volume.imp  --prescribed maximum hourly limit on drug infusion
       {BLESS::Assertion => "<<:=MAX_DRUG_PER_HOUR>>";};  --maximum drug infused in any hour
   properties
     --Thread_Properties::Dispatch_Protocol => Hybrid;  --both event and period dispatches
@@ -63,7 +63,7 @@ end Max_Drug_Per_Hour_Watcher.imp;
 thread Rate_Controller
 features
   --pump control
-    Infusion_Flow_Rate: out data port PCA_Types::Flow_Rate  --rate to pump
+    Infusion_Flow_Rate: out data port PCA_Types::Flow_Rate.imp  --rate to pump
       {BLESS::Assertion => "<<:=PUMP_RATE()>>";};   
   --status (what rate being pumped)
     System_Status: out event data port PCA_Types::Status_Type;
@@ -74,13 +74,13 @@ features
     End_Priming: in event port;         --clinician pressed "off" button  
     Halt_Infusion: in event port;   --clinician pressed "stop" button
   --from prescription checker
-    Square_Bolus_Rate: in data port PCA_Types::Flow_Rate 
+    Square_Bolus_Rate: in data port PCA_Types::Flow_Rate.imp 
       {BLESS::Assertion => "<<:=SQUARE_BOLUS_RATE>>";};
-    Patient_Bolus_Rate: in data port PCA_Types::Flow_Rate 
+    Patient_Bolus_Rate: in data port PCA_Types::Flow_Rate.imp 
       {BLESS::Assertion => "<<:=PATIENT_BOLUS_RATE>>";};
-    Basal_Rate: in data port PCA_Types::Flow_Rate 
+    Basal_Rate: in data port PCA_Types::Flow_Rate.imp 
       {BLESS::Assertion => "<<:=BASAL_RATE>>";};
-    VTBI: in data port PCA_Types::Drug_Volume 
+    VTBI: in data port PCA_Types::Drug_Volume.imp 
       {BLESS::Assertion => "<<:=VTBI>>";};
   --from safety
     HW_Detected_Failure: in event port;
@@ -97,7 +97,7 @@ features
     Pause_Infusion: in event port;
     Resume_Infusion: in event port;
     CP_Clinician_Request_Bolus: in event port;   --square bolus request from control panel
-    CP_Bolus_Duration: in event data port ICE_Types::Minute; --set square bolus time from control panel
+    CP_Bolus_Duration: in event data port ICE_Types::Minute.imp; --set square bolus time from control panel
   --from Max_Drug_Per_Hour_Watcher
     Near_Max_Drug_Per_Hour: in event port  --near maximum drug infused in any hour
       {BLESS::Assertion => "<<PATIENT_NEAR_MAX_DRUG_PER_HOUR()>>";};  
@@ -337,29 +337,29 @@ end Rate_Controller.imp;
 thread Prescription_Checker
   features
     Check_Rx: in event port;  --from boss thread
-    Prescription: in data port PCA_Types::Prescription;  --prescription read from bar code or RFID
+    Prescription: in data port PCA_Types::Prescription.imp;  --prescription read from bar code or RFID
     Rx_Okay: out event port 
       {BLESS::Assertion => "<<Rx_APPROVED()>>";};  --the prescription approved for infusion
   --to rate controller
-    VTBI: out data port PCA_Types::Drug_Volume  --volume to be infused
+    VTBI: out data port PCA_Types::Drug_Volume.imp  --volume to be infused
       {BLESS::Assertion => "<<:=VTBI>>";};
-    Square_Bolus_Rate: out data port PCA_Types::Flow_Rate 
+    Square_Bolus_Rate: out data port PCA_Types::Flow_Rate.imp 
       {BLESS::Assertion => "<<:=SQUARE_BOLUS_RATE>>";};  --clinician-commanded bolus rate
-    Patient_Bolus_Rate: out data port PCA_Types::Flow_Rate 
+    Patient_Bolus_Rate: out data port PCA_Types::Flow_Rate.imp 
       {BLESS::Assertion => "<<:=PATIENT_BOLUS_RATE>>";};  --patient-requested bolus rate
-    Basal_Rate: out data port PCA_Types::Flow_Rate   --basal flow rate
+    Basal_Rate: out data port PCA_Types::Flow_Rate.imp   --basal flow rate
       {BLESS::Assertion => "<<:=BASAL_RATE>>";};
   --to patient bolus checker
-    Minimum_Time_Between_Bolus: out data port ICE_Types::Minute
+    Minimum_Time_Between_Bolus: out data port ICE_Types::Minute.imp
       {BLESS::Assertion => "<<:=MINIMUM_TIME_BETWEEN_BOLUS>>";};
   --to max drug per hour checker
-    Max_Drug_Per_Hour: out data port PCA_Types::Drug_Volume 
+    Max_Drug_Per_Hour: out data port PCA_Types::Drug_Volume.imp 
       {BLESS::Assertion => "<<:=MAX_DRUG_PER_HOUR>>";};  --maximum drug infused in any hour
 --    CP_Max_Drug_Per_Hour_Exceeded: in event port;   --display that maximum drug per hour would be exceeded by more drug 
   --drug library
-    Get_Drug_Record: out event data port PCA_Types::Drug_Code 
+    Get_Drug_Record: out event data port PCA_Types::Drug_Code.imp 
       {BLESS::Assertion => "<<:=myRx.code >>";};  --request drug record from library
-    The_Drug_Record: in event data port PCA_Types::Drug_Record 
+    The_Drug_Record: in event data port PCA_Types::Drug_Record.imp 
       {BLESS::Assertion => "<<:=DRUG_LIBRARY[myRx.code] >>";}; --returned drug record, may be null value if drug code not in library
     Drug_Not_In_Library : in event port  --no drug found having the given drug code
       {BLESS::Assertion=>"<<NDF(#PCA_Properties::Drug_Library_Size)>>";};  
@@ -546,18 +546,18 @@ thread ICE_Thread
 --    security: feature group PCA_Pump::PCA_Security;  
   --signals received by rate controller, or control panel
   --pump control
-    Infusion_Flow_Rate: in data port PCA_Types::Flow_Rate  --rate to pump
+    Infusion_Flow_Rate: in data port PCA_Types::Flow_Rate.imp  --rate to pump
       {BLESS::Assertion => "<<:=PUMP_RATE()>>";};   
   --from prescription checker
     Rx_Okay: in event port  --the prescription approved for infusion
       {BLESS::Assertion => "<<Rx_APPROVED()>>";};  
-    Patient_Bolus_Rate: in data port PCA_Types::Flow_Rate 
+    Patient_Bolus_Rate: in data port PCA_Types::Flow_Rate.imp 
       {BLESS::Assertion => "<<:=PATIENT_BOLUS_RATE>>";};
-    Square_Bolus_Rate: in data port PCA_Types::Flow_Rate 
+    Square_Bolus_Rate: in data port PCA_Types::Flow_Rate.imp 
       {BLESS::Assertion => "<<:=SQUARE_BOLUS_RATE>>";};
-    Basal_Rate: in data port PCA_Types::Flow_Rate 
+    Basal_Rate: in data port PCA_Types::Flow_Rate.imp 
       {BLESS::Assertion => "<<:=BASAL_RATE>>";};
-    VTBI: in data port PCA_Types::Drug_Volume;
+    VTBI: in data port PCA_Types::Drug_Volume.imp;
   --from patient bolus checker
     Patient_Request_Not_Too_Soon: in event port
       {BLESS::Assertion => "<<PATIENT_REQUEST_NOT_TOO_SOON(now)>>";};
@@ -575,7 +575,7 @@ thread ICE_Thread
 --    Pause_Infusion: in event port;
 --    Resume_Infusion: in event port;
     CP_Clinician_Request_Bolus: in event port;   --square bolus request from control panel
-    CP_Bolus_Duration: in event data port ICE_Types::Minute; --set square bolus time from control panel
+    CP_Bolus_Duration: in event data port ICE_Types::Minute.imp; --set square bolus time from control panel
     Halt_Infusion: in event port;   --clinician pressed "stop" button
     Begin_Infusion: in event port;  --clinician pressed "start" button   
 --    Begin_Priming: in event port;       --clinician pressed "prime" button 
@@ -615,7 +615,7 @@ end ICE_Thread.imp;
 
 thread Patient_Bolus_Checker
   features
-    Minimum_Time_Between_Bolus: in data port ICE_Types::Minute
+    Minimum_Time_Between_Bolus: in data port ICE_Types::Minute.imp
       {BLESS::Assertion => "<<:=MINIMUM_TIME_BETWEEN_BOLUS>>";};
     Patient_Button_Request: in event port;
     Patient_Request_Not_Too_Soon: out event port

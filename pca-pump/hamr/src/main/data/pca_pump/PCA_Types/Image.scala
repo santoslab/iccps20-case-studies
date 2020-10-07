@@ -3,20 +3,23 @@
 package pca_pump.PCA_Types
 
 import org.sireum._
-import pca_pump._
 
-object Image {
-  def empty(): PCA_Types.Image = {
-    return PCA_Types.Image()
-  }
-}
+@datatype class Image(l : ISZ[Image_Type]){}
 
-@datatype class Image() // type skeleton
+@datatype trait Image_Type
 
-object Image_Payload {
-  def empty(): Image_Payload = {
-    return Image_Payload(PCA_Types.Image.empty())
-  }
-}
+@datatype class Alarm_Image(s: String) extends Image_Type
 
-@datatype class Image_Payload(value: PCA_Types.Image) extends art.DataContent
+@datatype class Message_Image(s: String) extends Image_Type
+
+@datatype class SystemStatus_Image(s: String) extends Image_Type
+
+@datatype class DrugName_Image(s: String) extends Image_Type
+
+@datatype class DrugConcentration_Image(s: String) extends Image_Type
+
+@datatype class InfusionFlowRate_Image(s: String) extends Image_Type
+
+//@datatype class ImageList(l : ISZ[Image]) extends Image
+
+@datatype class Image_Payload(value: Image) extends art.DataContent

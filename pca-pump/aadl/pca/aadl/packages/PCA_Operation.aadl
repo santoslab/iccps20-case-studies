@@ -44,9 +44,9 @@ system operation
     security: feature group PCA_Pump::PCA_Security;
   
   --pump contol
-    Infusion_Flow_Rate: out data port PCA_Types::Flow_Rate;
---    Upstream_Flow_Rate: in data port PCA_Types::Flow_Rate;
---    Downstream_Flow_Rate: in data port PCA_Types::Flow_Rate;
+    Infusion_Flow_Rate: out data port PCA_Types::Flow_Rate.imp;
+--    Upstream_Flow_Rate: in data port PCA_Types::Flow_Rate.imp;
+--    Downstream_Flow_Rate: in data port PCA_Types::Flow_Rate.imp;
 
   --infusion rate changes due to faults
     Stop_Pump_Completely: in event port;
@@ -90,7 +90,7 @@ system operation
     -- simulation ports
     -- had to add this to allow the controller to simulate the downstream
     -- monitor
-    Downstream_Flow_Rate: out data port PCA_Types::Flow_Rate;  --measured drug flow rate
+    Downstream_Flow_Rate: out data port PCA_Types::Flow_Rate.imp;  --measured drug flow rate
     -- end of simulation ports            
 end operation;
 
@@ -255,9 +255,9 @@ process operation_process
     Get_Event_Log : in event port;
     The_Event_Log : out event data port PCA_Types::Event_Log; 
   --pump control
-    Infusion_Flow_Rate: out data port PCA_Types::Flow_Rate;   --rate to pump
---    Upstream_Flow_Rate: in data port PCA_Types::Flow_Rate;
---    Downstream_Flow_Rate: in data port PCA_Types::Flow_Rate;
+    Infusion_Flow_Rate: out data port PCA_Types::Flow_Rate.imp;   --rate to pump
+--    Upstream_Flow_Rate: in data port PCA_Types::Flow_Rate.imp;
+--    Downstream_Flow_Rate: in data port PCA_Types::Flow_Rate.imp;
   --reservoir
     Door_Open: in data port Base_Types::Boolean;
   --control panel
@@ -265,7 +265,7 @@ process operation_process
     Resume_Infusion: in event port;
     System_Status: out event data port PCA_Types::Status_Type;
     Clinician_Request_Bolus: in event port;   --square bolus request from control panel
-    Bolus_Duration: in event data port ICE_Types::Minute; --set square bolus time from control panel
+    Bolus_Duration: in event data port ICE_Types::Minute.imp; --set square bolus time from control panel
 --    Rx: out event data port PCA_Types::Prescription;  --prescription to control panel
     Confirm_Soft_Limit_Exception: in event port;  --clinician confirmed prescription
     Reject_Soft_Limit_Exception: in event port;   --clinician rejected prescription
@@ -283,7 +283,7 @@ process operation_process
     Authenticate_Clinician: out event port;     --do clinican authentication
     Authenticate_Patient: out event port;       --do patient authentication
     Authenticate_Prescription: out event port;  --do prescription authentication
-    Prescription: in data port PCA_Types::Prescription;  --extracted prescription from scan data
+    Prescription: in data port PCA_Types::Prescription.imp;  --extracted prescription from scan data
     Authentication_fail: in event port;         --authentication failed
     Authentication_pass: in event port;         --authentication passed
   --boss thread
@@ -411,8 +411,8 @@ process implementation operation_process.imp
 --    Max_Drug_Per_Hour_Exceeded: out propagation {ItemOmission,ItemCommission};  --too much juice
   --pump control
     Infusion_Flow_Rate:  out propagation {ItemOmission,ItemCommission,ValueError};    --rate to pump
---    Upstream_Flow_Rate: in data port PCA_Types::Flow_Rate;
---    Downstream_Flow_Rate: in data port PCA_Types::Flow_Rate;
+--    Upstream_Flow_Rate: in data port PCA_Types::Flow_Rate.imp;
+--    Downstream_Flow_Rate: in data port PCA_Types::Flow_Rate.imp;
   --drug library
 --    Get_Drug_Record: out propagation {ItemOmission,ItemCommission};  --request drug record from library
 --    The_Drug_Record: in propagation {ItemOmission,ItemCommission,ValueError}; --retruned drug record, may be null value if drug code not in library
@@ -470,7 +470,7 @@ thread group Operation_Thread_Group
     Pause_Infusion: in event port;
     Resume_Infusion: in event port;
     CP_Clinician_Request_Bolus: in event port;   --square bolus request from control panel
-    CP_Bolus_Duration: in event data port ICE_Types::Minute; --set square bolus time from control panel
+    CP_Bolus_Duration: in event data port ICE_Types::Minute.imp; --set square bolus time from control panel
 --    Rx: out event data port PCA_Types::Prescription;  --prescription read from bar code or RFID
     Stop_Button_Pressed: in event port;  --clinician pressed "stop" button
     Start_Button_Pressed: in event port;  --clinician pressed "start" button   
@@ -483,12 +483,12 @@ thread group Operation_Thread_Group
     Display_Message: out event data port PCA_Types::Message;  --message to be displayed on control panel and ICE console
     Sound_Type: out event data port PCA_Types::Sound;      --sound to be made by control panel and ICE console
   --pump control
-    Infusion_Flow_Rate: out data port PCA_Types::Flow_Rate;   --rate to pump
---    Upstream_Flow_Rate: in data port PCA_Types::Flow_Rate;
---    Downstream_Flow_Rate: in data port PCA_Types::Flow_Rate;
+    Infusion_Flow_Rate: out data port PCA_Types::Flow_Rate.imp;   --rate to pump
+--    Upstream_Flow_Rate: in data port PCA_Types::Flow_Rate.imp;
+--    Downstream_Flow_Rate: in data port PCA_Types::Flow_Rate.imp;
   --drug library
-    Get_Drug_Record: out event data port PCA_Types::Drug_Code;  --request drug record from library
-    The_Drug_Record: in event data port PCA_Types::Drug_Record; --returned drug record, may be null value if drug code not in library
+    Get_Drug_Record: out event data port PCA_Types::Drug_Code.imp;  --request drug record from library
+    The_Drug_Record: in event data port PCA_Types::Drug_Record.imp; --returned drug record, may be null value if drug code not in library
     --no library entry for given drug code
     No_Drug_Found : in event port  --no drug found having the given drug code
       {BLESS::Assertion=>"<<NDF(#PCA_Properties::Drug_Library_Size)>>";};  
@@ -513,7 +513,7 @@ thread group Operation_Thread_Group
     Authenticate_Prescription: out event port;  --do prescription authentication
     Authentication_fail: in event port;         --authentication failed
     Authentication_pass: in event port;         --authentication passed
-    Prescription: in data port PCA_Types::Prescription;  --extracted prescription from scan data
+    Prescription: in data port PCA_Types::Prescription.imp;  --extracted prescription from scan data
   --boss thread
     POST_done: in event port;                   --power-on self-test completed
     POST_fail: in event port;                   --power-on self-test failure  
@@ -689,8 +689,8 @@ thread group implementation Operation_Thread_Group.imp
     Over_Max_Drug_Per_Hour: out propagation {ItemOmission,ItemCommission};  --too much juice
   --pump control
     Infusion_Flow_Rate:  out propagation {ItemOmission,ItemCommission,ValueError};    --rate to pump
---    Upstream_Flow_Rate: in data port PCA_Types::Flow_Rate;
---    Downstream_Flow_Rate: in data port PCA_Types::Flow_Rate;
+--    Upstream_Flow_Rate: in data port PCA_Types::Flow_Rate.imp;
+--    Downstream_Flow_Rate: in data port PCA_Types::Flow_Rate.imp;
   --drug library
     Get_Drug_Record: not out propagation {CommonErrors};  --request drug record from library
     The_Drug_Record: in propagation {EarlyServiceTermination,ValueError}; --retruned drug record, may be null value if drug code not in library

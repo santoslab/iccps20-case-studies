@@ -48,24 +48,24 @@ import pca_pump._
   val Near_Max_Drug_Per_Hour_Id : Art.PortId,
   val Over_Max_Drug_Per_Hour_Id : Art.PortId) extends Max_Drug_Per_Hour_Watcher_imp_Api {
 
-  def getInfusion_Flow_Rate() : Option[PCA_Types.Flow_Rate] = {
-    val value : Option[PCA_Types.Flow_Rate] = Art.getValue(Infusion_Flow_Rate_Id) match {
-      case Some(PCA_Types.Flow_Rate_Payload(v)) => Some(v)
+  def getInfusion_Flow_Rate() : Option[PCA_Types.Flow_Rate_imp] = {
+    val value : Option[PCA_Types.Flow_Rate_imp] = Art.getValue(Infusion_Flow_Rate_Id) match {
+      case Some(PCA_Types.Flow_Rate_imp_Payload(v)) => Some(v)
       case Some(v) =>
-        Art.logError(id, s"Unexpected payload on port Infusion_Flow_Rate.  Expecting 'PCA_Types.Flow_Rate_Payload' but received ${v}")
-        None[PCA_Types.Flow_Rate]()
-      case _ => None[PCA_Types.Flow_Rate]()
+        Art.logError(id, s"Unexpected payload on port Infusion_Flow_Rate.  Expecting 'PCA_Types.Flow_Rate_imp_Payload' but received ${v}")
+        None[PCA_Types.Flow_Rate_imp]()
+      case _ => None[PCA_Types.Flow_Rate_imp]()
     }
     return value
   }
 
-  def getMax_Drug_Per_Hour() : Option[PCA_Types.Drug_Volume] = {
-    val value : Option[PCA_Types.Drug_Volume] = Art.getValue(Max_Drug_Per_Hour_Id) match {
-      case Some(PCA_Types.Drug_Volume_Payload(v)) => Some(v)
+  def getMax_Drug_Per_Hour() : Option[PCA_Types.Drug_Volume_imp] = {
+    val value : Option[PCA_Types.Drug_Volume_imp] = Art.getValue(Max_Drug_Per_Hour_Id) match {
+      case Some(PCA_Types.Drug_Volume_imp_Payload(v)) => Some(v)
       case Some(v) =>
-        Art.logError(id, s"Unexpected payload on port Max_Drug_Per_Hour.  Expecting 'PCA_Types.Drug_Volume_Payload' but received ${v}")
-        None[PCA_Types.Drug_Volume]()
-      case _ => None[PCA_Types.Drug_Volume]()
+        Art.logError(id, s"Unexpected payload on port Max_Drug_Per_Hour.  Expecting 'PCA_Types.Drug_Volume_imp_Payload' but received ${v}")
+        None[PCA_Types.Drug_Volume_imp]()
+      case _ => None[PCA_Types.Drug_Volume_imp]()
     }
     return value
   }

@@ -59,7 +59,7 @@ feature group PCA_Parameters extends ICE::ICE_Parameters
     bolus_flow_rate: out data port ICE_Types::Milliliter_Per_Hour;        --programmed bolus infusion rate
     KVO_Flow_Rate: out data port ICE_Types::Milliliter_Per_Hour;          --programmed KVO rate
     volume_to_be_infused: out data port ICE_Types::Milliliter;            --programmed bolus volume
-    clinican_requested_bolus_duration: out data port ICE_Types::Minute;  --programmed duration of square bolus
+    clinican_requested_bolus_duration: out data port ICE_Types::Minute.imp;  --programmed duration of square bolus
     square_flow_rate: out data port ICE_Types::Milliliter_Per_Hour;       --VTBI/Clinican_Requested_Bolus_Duration
 end PCA_Parameters;
 
@@ -70,7 +70,7 @@ feature group PCA_Commands extends ICE::ICE_Commands
     pause_infusion: in event port;  --temporarily pause infusion (KVO rate)
     resume_infusion: in event port;  --resume infusion (at basal rate, or continuing bolus)
 load_drug_library: in event data port PCA_Types::Drug_Library;  --write drug library into device
-    set_clinican_requested_bolus_duration: in event data port ICE_Types::Minute;
+    set_clinican_requested_bolus_duration: in event data port ICE_Types::Minute.imp;
 	end PCA_Commands;
 
 feature group PCA_Security extends ICE::ICE_Security
@@ -101,7 +101,7 @@ system pca extends ICE::ICE_Interface
   features
 --EXTERNAL EFFECT
   --drug infused into patient
-    out_infused_drug : out data port Physical_Types::Fluid_Flow
+    out_infused_drug : out data port Physical_Types::Fluid_Flow.imp
       {BLESS::Assertion=>"<<:=INFUSION_RATE>>";};  --infusion rate into patient is value of Infused_Drug port
 --EXTERNAL PHENOMENON
     LightToEye: out data port Base_Types::Boolean;  --image seen by clinician

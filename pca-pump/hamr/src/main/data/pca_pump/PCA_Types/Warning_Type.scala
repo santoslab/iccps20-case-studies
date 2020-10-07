@@ -21,6 +21,7 @@ import pca_pump._
   'Priming_Failure
   'Input_Needed
   'No_Warning
+  'Low_Battery
 }
 
 object Warning_Type_Payload {

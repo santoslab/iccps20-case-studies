@@ -1,0 +1,8 @@
+{
+  "type" : "StringList",
+  "list" : [
+    "John Doe",
+    "Jane Doe",
+    "Martin Smith"
+  ]
+}

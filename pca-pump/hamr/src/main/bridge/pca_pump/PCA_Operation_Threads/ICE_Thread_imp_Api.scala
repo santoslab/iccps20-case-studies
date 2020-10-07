@@ -98,57 +98,57 @@ import pca_pump._
   val Near_Max_Drug_Per_Hour_Id : Art.PortId,
   val Over_Max_Drug_Per_Hour_Id : Art.PortId) extends ICE_Thread_imp_Api {
 
-  def getInfusion_Flow_Rate() : Option[PCA_Types.Flow_Rate] = {
-    val value : Option[PCA_Types.Flow_Rate] = Art.getValue(Infusion_Flow_Rate_Id) match {
-      case Some(PCA_Types.Flow_Rate_Payload(v)) => Some(v)
+  def getInfusion_Flow_Rate() : Option[PCA_Types.Flow_Rate_imp] = {
+    val value : Option[PCA_Types.Flow_Rate_imp] = Art.getValue(Infusion_Flow_Rate_Id) match {
+      case Some(PCA_Types.Flow_Rate_imp_Payload(v)) => Some(v)
       case Some(v) =>
-        Art.logError(id, s"Unexpected payload on port Infusion_Flow_Rate.  Expecting 'PCA_Types.Flow_Rate_Payload' but received ${v}")
-        None[PCA_Types.Flow_Rate]()
-      case _ => None[PCA_Types.Flow_Rate]()
+        Art.logError(id, s"Unexpected payload on port Infusion_Flow_Rate.  Expecting 'PCA_Types.Flow_Rate_imp_Payload' but received ${v}")
+        None[PCA_Types.Flow_Rate_imp]()
+      case _ => None[PCA_Types.Flow_Rate_imp]()
     }
     return value
   }
 
-  def getPatient_Bolus_Rate() : Option[PCA_Types.Flow_Rate] = {
-    val value : Option[PCA_Types.Flow_Rate] = Art.getValue(Patient_Bolus_Rate_Id) match {
-      case Some(PCA_Types.Flow_Rate_Payload(v)) => Some(v)
+  def getPatient_Bolus_Rate() : Option[PCA_Types.Flow_Rate_imp] = {
+    val value : Option[PCA_Types.Flow_Rate_imp] = Art.getValue(Patient_Bolus_Rate_Id) match {
+      case Some(PCA_Types.Flow_Rate_imp_Payload(v)) => Some(v)
       case Some(v) =>
-        Art.logError(id, s"Unexpected payload on port Patient_Bolus_Rate.  Expecting 'PCA_Types.Flow_Rate_Payload' but received ${v}")
-        None[PCA_Types.Flow_Rate]()
-      case _ => None[PCA_Types.Flow_Rate]()
+        Art.logError(id, s"Unexpected payload on port Patient_Bolus_Rate.  Expecting 'PCA_Types.Flow_Rate_imp_Payload' but received ${v}")
+        None[PCA_Types.Flow_Rate_imp]()
+      case _ => None[PCA_Types.Flow_Rate_imp]()
     }
     return value
   }
 
-  def getSquare_Bolus_Rate() : Option[PCA_Types.Flow_Rate] = {
-    val value : Option[PCA_Types.Flow_Rate] = Art.getValue(Square_Bolus_Rate_Id) match {
-      case Some(PCA_Types.Flow_Rate_Payload(v)) => Some(v)
+  def getSquare_Bolus_Rate() : Option[PCA_Types.Flow_Rate_imp] = {
+    val value : Option[PCA_Types.Flow_Rate_imp] = Art.getValue(Square_Bolus_Rate_Id) match {
+      case Some(PCA_Types.Flow_Rate_imp_Payload(v)) => Some(v)
       case Some(v) =>
-        Art.logError(id, s"Unexpected payload on port Square_Bolus_Rate.  Expecting 'PCA_Types.Flow_Rate_Payload' but received ${v}")
-        None[PCA_Types.Flow_Rate]()
-      case _ => None[PCA_Types.Flow_Rate]()
+        Art.logError(id, s"Unexpected payload on port Square_Bolus_Rate.  Expecting 'PCA_Types.Flow_Rate_imp_Payload' but received ${v}")
+        None[PCA_Types.Flow_Rate_imp]()
+      case _ => None[PCA_Types.Flow_Rate_imp]()
     }
     return value
   }
 
-  def getBasal_Rate() : Option[PCA_Types.Flow_Rate] = {
-    val value : Option[PCA_Types.Flow_Rate] = Art.getValue(Basal_Rate_Id) match {
-      case Some(PCA_Types.Flow_Rate_Payload(v)) => Some(v)
+  def getBasal_Rate() : Option[PCA_Types.Flow_Rate_imp] = {
+    val value : Option[PCA_Types.Flow_Rate_imp] = Art.getValue(Basal_Rate_Id) match {
+      case Some(PCA_Types.Flow_Rate_imp_Payload(v)) => Some(v)
       case Some(v) =>
-        Art.logError(id, s"Unexpected payload on port Basal_Rate.  Expecting 'PCA_Types.Flow_Rate_Payload' but received ${v}")
-        None[PCA_Types.Flow_Rate]()
-      case _ => None[PCA_Types.Flow_Rate]()
+        Art.logError(id, s"Unexpected payload on port Basal_Rate.  Expecting 'PCA_Types.Flow_Rate_imp_Payload' but received ${v}")
+        None[PCA_Types.Flow_Rate_imp]()
+      case _ => None[PCA_Types.Flow_Rate_imp]()
     }
     return value
   }
 
-  def getVTBI() : Option[PCA_Types.Drug_Volume] = {
-    val value : Option[PCA_Types.Drug_Volume] = Art.getValue(VTBI_Id) match {
-      case Some(PCA_Types.Drug_Volume_Payload(v)) => Some(v)
+  def getVTBI() : Option[PCA_Types.Drug_Volume_imp] = {
+    val value : Option[PCA_Types.Drug_Volume_imp] = Art.getValue(VTBI_Id) match {
+      case Some(PCA_Types.Drug_Volume_imp_Payload(v)) => Some(v)
       case Some(v) =>
-        Art.logError(id, s"Unexpected payload on port VTBI.  Expecting 'PCA_Types.Drug_Volume_Payload' but received ${v}")
-        None[PCA_Types.Drug_Volume]()
-      case _ => None[PCA_Types.Drug_Volume]()
+        Art.logError(id, s"Unexpected payload on port VTBI.  Expecting 'PCA_Types.Drug_Volume_imp_Payload' but received ${v}")
+        None[PCA_Types.Drug_Volume_imp]()
+      case _ => None[PCA_Types.Drug_Volume_imp]()
     }
     return value
   }
@@ -197,13 +197,13 @@ import pca_pump._
     return value
   }
 
-  def getCP_Bolus_Duration() : Option[ICE_Types.Minute] = {
-    val value : Option[ICE_Types.Minute] = Art.getValue(CP_Bolus_Duration_Id) match {
-      case Some(ICE_Types.Minute_Payload(v)) => Some(v)
+  def getCP_Bolus_Duration() : Option[ICE_Types.Minute_imp] = {
+    val value : Option[ICE_Types.Minute_imp] = Art.getValue(CP_Bolus_Duration_Id) match {
+      case Some(ICE_Types.Minute_imp_Payload(v)) => Some(v)
       case Some(v) =>
-        Art.logError(id, s"Unexpected payload on port CP_Bolus_Duration.  Expecting 'ICE_Types.Minute_Payload' but received ${v}")
-        None[ICE_Types.Minute]()
-      case _ => None[ICE_Types.Minute]()
+        Art.logError(id, s"Unexpected payload on port CP_Bolus_Duration.  Expecting 'ICE_Types.Minute_imp_Payload' but received ${v}")
+        None[ICE_Types.Minute_imp]()
+      case _ => None[ICE_Types.Minute_imp]()
     }
     return value
   }

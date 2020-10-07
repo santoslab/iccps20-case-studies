@@ -25,32 +25,32 @@ import pca_pump._
   def Soft_Limit_Warning_Id : Art.PortId
   def Hard_Limit_Violated_Id : Art.PortId
 
-  def setVTBI(value : PCA_Types.Drug_Volume) : Unit = {
-    Art.putValue(VTBI_Id, PCA_Types.Drug_Volume_Payload(value))
+  def setVTBI(value : PCA_Types.Drug_Volume_imp) : Unit = {
+    Art.putValue(VTBI_Id, PCA_Types.Drug_Volume_imp_Payload(value))
   }
 
-  def setSquare_Bolus_Rate(value : PCA_Types.Flow_Rate) : Unit = {
-    Art.putValue(Square_Bolus_Rate_Id, PCA_Types.Flow_Rate_Payload(value))
+  def setSquare_Bolus_Rate(value : PCA_Types.Flow_Rate_imp) : Unit = {
+    Art.putValue(Square_Bolus_Rate_Id, PCA_Types.Flow_Rate_imp_Payload(value))
   }
 
-  def setPatient_Bolus_Rate(value : PCA_Types.Flow_Rate) : Unit = {
-    Art.putValue(Patient_Bolus_Rate_Id, PCA_Types.Flow_Rate_Payload(value))
+  def setPatient_Bolus_Rate(value : PCA_Types.Flow_Rate_imp) : Unit = {
+    Art.putValue(Patient_Bolus_Rate_Id, PCA_Types.Flow_Rate_imp_Payload(value))
   }
 
-  def setBasal_Rate(value : PCA_Types.Flow_Rate) : Unit = {
-    Art.putValue(Basal_Rate_Id, PCA_Types.Flow_Rate_Payload(value))
+  def setBasal_Rate(value : PCA_Types.Flow_Rate_imp) : Unit = {
+    Art.putValue(Basal_Rate_Id, PCA_Types.Flow_Rate_imp_Payload(value))
   }
 
-  def setMinimum_Time_Between_Bolus(value : ICE_Types.Minute) : Unit = {
-    Art.putValue(Minimum_Time_Between_Bolus_Id, ICE_Types.Minute_Payload(value))
+  def setMinimum_Time_Between_Bolus(value : ICE_Types.Minute_imp) : Unit = {
+    Art.putValue(Minimum_Time_Between_Bolus_Id, ICE_Types.Minute_imp_Payload(value))
   }
 
-  def setMax_Drug_Per_Hour(value : PCA_Types.Drug_Volume) : Unit = {
-    Art.putValue(Max_Drug_Per_Hour_Id, PCA_Types.Drug_Volume_Payload(value))
+  def setMax_Drug_Per_Hour(value : PCA_Types.Drug_Volume_imp) : Unit = {
+    Art.putValue(Max_Drug_Per_Hour_Id, PCA_Types.Drug_Volume_imp_Payload(value))
   }
 
-  def sendGet_Drug_Record(value : PCA_Types.Drug_Code) : Unit = {
-    Art.putValue(Get_Drug_Record_Id, PCA_Types.Drug_Code_Payload(value))
+  def sendGet_Drug_Record(value : PCA_Types.Drug_Code_imp) : Unit = {
+    Art.putValue(Get_Drug_Record_Id, PCA_Types.Drug_Code_imp_Payload(value))
   }
 
   def sendRx_Okay() : Unit = {
@@ -116,24 +116,24 @@ import pca_pump._
   val Soft_Limit_Warning_Id : Art.PortId,
   val Hard_Limit_Violated_Id : Art.PortId) extends Prescription_Checker_imp_Api {
 
-  def getPrescription() : Option[PCA_Types.Prescription] = {
-    val value : Option[PCA_Types.Prescription] = Art.getValue(Prescription_Id) match {
-      case Some(PCA_Types.Prescription_Payload(v)) => Some(v)
+  def getPrescription() : Option[PCA_Types.Prescription_imp] = {
+    val value : Option[PCA_Types.Prescription_imp] = Art.getValue(Prescription_Id) match {
+      case Some(PCA_Types.Prescription_imp_Payload(v)) => Some(v)
       case Some(v) =>
-        Art.logError(id, s"Unexpected payload on port Prescription.  Expecting 'PCA_Types.Prescription_Payload' but received ${v}")
-        None[PCA_Types.Prescription]()
-      case _ => None[PCA_Types.Prescription]()
+        Art.logError(id, s"Unexpected payload on port Prescription.  Expecting 'PCA_Types.Prescription_imp_Payload' but received ${v}")
+        None[PCA_Types.Prescription_imp]()
+      case _ => None[PCA_Types.Prescription_imp]()
     }
     return value
   }
 
-  def getThe_Drug_Record() : Option[PCA_Types.Drug_Record] = {
-    val value : Option[PCA_Types.Drug_Record] = Art.getValue(The_Drug_Record_Id) match {
-      case Some(PCA_Types.Drug_Record_Payload(v)) => Some(v)
+  def getThe_Drug_Record() : Option[PCA_Types.Drug_Record_imp] = {
+    val value : Option[PCA_Types.Drug_Record_imp] = Art.getValue(The_Drug_Record_Id) match {
+      case Some(PCA_Types.Drug_Record_imp_Payload(v)) => Some(v)
       case Some(v) =>
-        Art.logError(id, s"Unexpected payload on port The_Drug_Record.  Expecting 'PCA_Types.Drug_Record_Payload' but received ${v}")
-        None[PCA_Types.Drug_Record]()
-      case _ => None[PCA_Types.Drug_Record]()
+        Art.logError(id, s"Unexpected payload on port The_Drug_Record.  Expecting 'PCA_Types.Drug_Record_imp_Payload' but received ${v}")
+        None[PCA_Types.Drug_Record_imp]()
+      case _ => None[PCA_Types.Drug_Record_imp]()
     }
     return value
   }

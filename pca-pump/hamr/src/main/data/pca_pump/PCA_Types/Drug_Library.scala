@@ -9,12 +9,12 @@ import pca_pump._
 
 object Drug_Library {
   def empty(): PCA_Types.Drug_Library = {
-    return PCA_Types.Drug_Library(ISZ.create(500, PCA_Types.Drug_Record.empty()))
+    return PCA_Types.Drug_Library(ISZ.create(500, PCA_Types.Drug_Record_imp.empty()))
   }
 }
 
 @datatype class Drug_Library(
-  value : ISZ[PCA_Types.Drug_Record]) {
+  value : ISZ[PCA_Types.Drug_Record_imp]) {
   //{  assert (value.size == 500) }
 }
 

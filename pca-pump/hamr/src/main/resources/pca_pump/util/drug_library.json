@@ -1,0 +1,78 @@
+{
+  "type" : "PCA_Types.Drug_Library",
+  "value" : [
+    {
+      "type" : "PCA_Types.Drug_Record_imp",
+      "code" : {
+        "type" : "PCA_Types.Drug_Code_imp",
+        "code" : "Morphine"
+      },
+      "name" : "Morphine",
+      "location" : "",
+      "dose_rate_unit" : {
+        "type" : "PCA_Types.Dose_Rate_Unit_imp",
+        "value" : "ml\/hr"
+      },
+      "vtbi_unit" : {
+        "type" : "PCA_Types.Infusion_Unit_imp",
+        "value" : "ml"
+      },
+      "amount" : {
+        "type" : "PCA_Types.Drug_Weight_imp",
+        "value" : 0
+      },
+      "concentration" : {
+        "type" : "PCA_Types.Drug_Concentration_imp",
+        "value" : 10.0
+      },
+      "vtbiLowerSoft" : {
+        "type" : "PCA_Types.Drug_Volume_imp",
+        "value" : 1
+      },
+      "vtbiLowerHard" : {
+        "type" : "PCA_Types.Drug_Volume_imp",
+        "value" : 1
+      },
+      "vtbiTypical" : {
+        "type" : "PCA_Types.Drug_Volume_imp",
+        "value" : 100
+      },
+      "vtbiUpperSoft" : {
+        "type" : "PCA_Types.Drug_Volume_imp",
+        "value" : 190
+      },
+      "vtbiUpperHard" : {
+        "type" : "PCA_Types.Drug_Volume_imp",
+        "value" : 200
+      },
+      "basalRateLowerSoft" : {
+        "type" : "PCA_Types.Flow_Rate_imp",
+        "value" : 20
+      },
+      "basalRateLowerHard" : {
+        "type" : "PCA_Types.Flow_Rate_imp",
+        "value" : 10
+      },
+      "basalRateTypical" : {
+        "type" : "PCA_Types.Flow_Rate_imp",
+        "value" : 100
+      },
+      "basalRateUpperSoft" : {
+        "type" : "PCA_Types.Flow_Rate_imp",
+        "value" : 190
+      },
+      "basalRateUpperHard" : {
+        "type" : "PCA_Types.Flow_Rate_imp",
+        "value" : 200
+      },
+      "bolusTypical" : {
+        "type" : "PCA_Types.Drug_Volume_imp",
+        "value" : 100
+      },
+      "squareBolusRateTypical" : {
+        "type" : "PCA_Types.Flow_Rate_imp",
+        "value" : 100
+      }
+    }
+  ]
+}

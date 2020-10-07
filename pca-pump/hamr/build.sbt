@@ -21,7 +21,7 @@
 //
 // sbt can be obtained from https://www.scala-sbt.org/download.html
 
-lazy val pca_imp_Instance = slangEmbeddedTestProject("pca_imp_Instance", ".")
+lazy val wrap_pca_imp_Instance = slangEmbeddedTestProject("wrap_pca_imp_Instance", ".")
 
 
 val scalaVer = "2.13.3"
@@ -60,7 +60,7 @@ val slangEmbeddedSettings = Seq(
   mainClass in (Compile, run) := Some("pca_pump.Demo"),
 
   mainClass in assembly := Some("pca_pump.Demo"),
-  assemblyJarName in assembly := "pca_imp_Instance.jar",
+  assemblyJarName in assembly := "wrap_pca_imp_Instance.jar",
   assemblyOption in assembly := (assemblyOption in assembly).value.copy(prependShellScript = Some(defaultUniversalScript(shebang = false))),
 
   assemblyMergeStrategy in assembly := {

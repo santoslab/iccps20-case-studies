@@ -21,7 +21,7 @@ system security
     Authentication_pass: out event port;                  --authentication passed    
     Clinician_Name: out data port Base_Types::String;     --clinician name extracted from scan data    
     Patient_Name: out data port Base_Types::String;       --patient name extracted from scan data
-    Prescription: out data port PCA_Types::Prescription;  --extracted prescription from scan data
+    Prescription: out data port PCA_Types::Prescription.imp;  --extracted prescription from scan data
     Security_Fault: out event port;                       --error during security operation
      
   --internal bus
@@ -62,7 +62,7 @@ process Security_Process
     Authentication_pass: out event port;                  --authentication passed    
     Clinician_Name: out data port Base_Types::String;     --clinician name extracted from scan data    
     Patient_Name: out data port Base_Types::String;       --patient name extracted from scan data
-    Prescription: out data port PCA_Types::Prescription;  --extracted prescription from scan data
+    Prescription: out data port PCA_Types::Prescription.imp;  --extracted prescription from scan data
     Security_Fault: out event port;                       --error during security operation
 end Security_Process;
 
@@ -96,7 +96,7 @@ thread Security_Thread
     Authentication_pass: out event port;                  --authentication passed    
     Clinician_Name: out data port Base_Types::String;     --clinician name extracted from scan data    
     Patient_Name: out data port Base_Types::String;       --patient name extracted from scan data
-    Prescription: out data port PCA_Types::Prescription;  --extracted prescription from scan data
+    Prescription: out data port PCA_Types::Prescription.imp;  --extracted prescription from scan data
     Security_Fault: out event port;                       --error during security operation
   properties
     Thread_Properties::Dispatch_Protocol => Sporadic;

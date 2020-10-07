@@ -26,6 +26,8 @@ import pca_pump._
   'Priming_Failure
   'Insert_Needle_Then_Press_Start
   'Press_Stop_Again_To_End_Infusion_Press_Start_To_Resume_Infusion
+  'Drug_Not_In_Library
+  'Sound_Failure
 }
 
 object Message_Payload {

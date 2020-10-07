@@ -1,0 +1,85 @@
+{
+  "type" : "PrescriptionList",
+  "list" : [
+    {
+      "type" : "PCA_Types.Prescription_imp",
+      "patient" : "John Doe",
+      "drugName" : "Morphine",
+      "code" : {
+        "type" : "PCA_Types.Drug_Code_imp",
+        "code" : "Morphine"
+      },
+      "concentration" : {
+        "type" : "PCA_Types.Drug_Concentration_imp",
+        "value" : 10.0
+      },
+      "initialVolume" : {
+        "type" : "PCA_Types.Drug_Volume_imp",
+        "value" : 500
+      },
+      "basalFlowRate" : {
+        "type" : "PCA_Types.Flow_Rate_imp",
+        "value" : 90
+      },
+      "patientBolusRate" : {
+        "type" : "PCA_Types.Flow_Rate_imp",
+        "value" : 90
+      },
+      "vtbi" : {
+        "type" : "PCA_Types.Drug_Volume_imp",
+        "value" : 1
+      },
+      "maxDrugPerHour" : {
+        "type" : "PCA_Types.Drug_Volume_imp",
+        "value" : 500
+      },
+      "minimumTimeBetweenBolus" : {
+        "type" : "ICE_Types.Minute_imp",
+        "value" : 1
+      },
+      "dateRxFilled" : "2018.01.01",
+      "prescriber" : "Dr. Virginia Apgar",
+      "pharmacist" : ""
+    },
+    {
+      "type" : "PCA_Types.Prescription_imp",
+      "patient" : "Jane Doe",
+      "drugName" : "Fentanyl",
+      "code" : {
+        "type" : "PCA_Types.Drug_Code_imp",
+        "code" : "Fentanyl"
+      },
+      "concentration" : {
+        "type" : "PCA_Types.Drug_Concentration_imp",
+        "value" : 10.0
+      },
+      "initialVolume" : {
+        "type" : "PCA_Types.Drug_Volume_imp",
+        "value" : 500
+      },
+      "basalFlowRate" : {
+        "type" : "PCA_Types.Flow_Rate_imp",
+        "value" : 90
+      },
+      "patientBolusRate" : {
+        "type" : "PCA_Types.Flow_Rate_imp",
+        "value" : 90
+      },
+      "vtbi" : {
+        "type" : "PCA_Types.Drug_Volume_imp",
+        "value" : 1
+      },
+      "maxDrugPerHour" : {
+        "type" : "PCA_Types.Drug_Volume_imp",
+        "value" : 500
+      },
+      "minimumTimeBetweenBolus" : {
+        "type" : "ICE_Types.Minute_imp",
+        "value" : 1
+      },
+      "dateRxFilled" : "2018.01.01",
+      "prescriber" : "Dr. Joseph Lister",
+      "pharmacist" : ""
+    }
+  ]
+}

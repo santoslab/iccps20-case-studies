@@ -93,35 +93,35 @@ import pca_pump._
     return value
   }
 
-  def getInfusion_Flow_Rate() : Option[PCA_Types.Flow_Rate] = {
-    val value : Option[PCA_Types.Flow_Rate] = Art.getValue(Infusion_Flow_Rate_Id) match {
-      case Some(PCA_Types.Flow_Rate_Payload(v)) => Some(v)
+  def getInfusion_Flow_Rate() : Option[PCA_Types.Flow_Rate_imp] = {
+    val value : Option[PCA_Types.Flow_Rate_imp] = Art.getValue(Infusion_Flow_Rate_Id) match {
+      case Some(PCA_Types.Flow_Rate_imp_Payload(v)) => Some(v)
       case Some(v) =>
-        Art.logError(id, s"Unexpected payload on port Infusion_Flow_Rate.  Expecting 'PCA_Types.Flow_Rate_Payload' but received ${v}")
-        None[PCA_Types.Flow_Rate]()
-      case _ => None[PCA_Types.Flow_Rate]()
+        Art.logError(id, s"Unexpected payload on port Infusion_Flow_Rate.  Expecting 'PCA_Types.Flow_Rate_imp_Payload' but received ${v}")
+        None[PCA_Types.Flow_Rate_imp]()
+      case _ => None[PCA_Types.Flow_Rate_imp]()
     }
     return value
   }
 
-  def getUpstream_Flow_Rate() : Option[PCA_Types.Flow_Rate] = {
-    val value : Option[PCA_Types.Flow_Rate] = Art.getValue(Upstream_Flow_Rate_Id) match {
-      case Some(PCA_Types.Flow_Rate_Payload(v)) => Some(v)
+  def getUpstream_Flow_Rate() : Option[PCA_Types.Flow_Rate_imp] = {
+    val value : Option[PCA_Types.Flow_Rate_imp] = Art.getValue(Upstream_Flow_Rate_Id) match {
+      case Some(PCA_Types.Flow_Rate_imp_Payload(v)) => Some(v)
       case Some(v) =>
-        Art.logError(id, s"Unexpected payload on port Upstream_Flow_Rate.  Expecting 'PCA_Types.Flow_Rate_Payload' but received ${v}")
-        None[PCA_Types.Flow_Rate]()
-      case _ => None[PCA_Types.Flow_Rate]()
+        Art.logError(id, s"Unexpected payload on port Upstream_Flow_Rate.  Expecting 'PCA_Types.Flow_Rate_imp_Payload' but received ${v}")
+        None[PCA_Types.Flow_Rate_imp]()
+      case _ => None[PCA_Types.Flow_Rate_imp]()
     }
     return value
   }
 
-  def getDownstream_Flow_Rate() : Option[PCA_Types.Flow_Rate] = {
-    val value : Option[PCA_Types.Flow_Rate] = Art.getValue(Downstream_Flow_Rate_Id) match {
-      case Some(PCA_Types.Flow_Rate_Payload(v)) => Some(v)
+  def getDownstream_Flow_Rate() : Option[PCA_Types.Flow_Rate_imp] = {
+    val value : Option[PCA_Types.Flow_Rate_imp] = Art.getValue(Downstream_Flow_Rate_Id) match {
+      case Some(PCA_Types.Flow_Rate_imp_Payload(v)) => Some(v)
       case Some(v) =>
-        Art.logError(id, s"Unexpected payload on port Downstream_Flow_Rate.  Expecting 'PCA_Types.Flow_Rate_Payload' but received ${v}")
-        None[PCA_Types.Flow_Rate]()
-      case _ => None[PCA_Types.Flow_Rate]()
+        Art.logError(id, s"Unexpected payload on port Downstream_Flow_Rate.  Expecting 'PCA_Types.Flow_Rate_imp_Payload' but received ${v}")
+        None[PCA_Types.Flow_Rate_imp]()
+      case _ => None[PCA_Types.Flow_Rate_imp]()
     }
     return value
   }

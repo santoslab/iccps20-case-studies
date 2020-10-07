@@ -78,10 +78,10 @@ device drug_reservoir
   --internal bus
     i_bus: requires bus access PCA_Pump::Internal_Bus;
 
-    Fill_Reservoir : in data port Physical_Types::Fluid_Volume;  --put drug in reservoir
+    Fill_Reservoir : in data port Physical_Types::Fluid_Volume.imp;  --put drug in reservoir
     
   --drug flows out, but rate comes in
-    Drug_Outlet : out data port Physical_Types::Fluid_Flow;  --drug from reservoir
+    Drug_Outlet : out data port Physical_Types::Fluid_Flow.imp;  --drug from reservoir
     Door_Open: out data port Base_Types::Boolean;  --reservoir door is open
     Door_Closed: out event port;  --door was closed
     Low_Reservoir: out event port;  --warning: little drug left
@@ -146,13 +146,13 @@ device pump
   --internal bus
     i_bus: requires bus access PCA_Pump::Internal_Bus;
     
-    Drug_Intake : in data port Physical_Types::Fluid_Flow;   --drug from upstream monitor       
+    Drug_Intake : in data port Physical_Types::Fluid_Flow.imp;   --drug from upstream monitor       
     Halt: in event port 
       {BLESS::Assertion => "<<INFUSION_RATE=0>>";};  --stop pumping
-    Rate: in data port PCA_Types::Flow_Rate   --rate to pump
+    Rate: in data port PCA_Types::Flow_Rate.imp   --rate to pump
       {BLESS::Assertion => "<<:=INFUSION_RATE>>";};
       
-    Drug_Outlet : out data port Physical_Types::Fluid_Flow;  --drug to downstream monitor
+    Drug_Outlet : out data port Physical_Types::Fluid_Flow.imp;  --drug to downstream monitor
     Pump_Too_Hot: out event port;        --pump hot alarm    
   flows
     Flow_pump_in : flow sink Drug_Intake;
@@ -213,10 +213,10 @@ device upstream_monitor
   --internal bus
     i_bus: requires bus access PCA_Pump::Internal_Bus;
 
-    Drug_Intake : in data port Physical_Types::Fluid_Flow;   --drug from reservoir
+    Drug_Intake : in data port Physical_Types::Fluid_Flow.imp;   --drug from reservoir
         
-    Drug_Outlet : out data port Physical_Types::Fluid_Flow;  --drug to physical pump
-    Upstream_Flow_Rate: out data port PCA_Types::Flow_Rate;  --measured drug flow rate
+    Drug_Outlet : out data port Physical_Types::Fluid_Flow.imp;  --drug to physical pump
+    Upstream_Flow_Rate: out data port PCA_Types::Flow_Rate.imp;  --measured drug flow rate
     Occlusion: out event port;  --upstream occlusion detected
   flows
     Flow_ups_in : flow sink Drug_Intake;
@@ -262,10 +262,10 @@ device downstream_monitor
   --internal bus
     i_bus: requires bus access PCA_Pump::Internal_Bus;
     
-    Drug_Intake : in data port Physical_Types::Fluid_Flow;   --drug from physical pump
+    Drug_Intake : in data port Physical_Types::Fluid_Flow.imp;   --drug from physical pump
         
-    Drug_Outlet : out data port Physical_Types::Fluid_Flow;  --drug to patient
-    Downstream_Flow_Rate: out data port PCA_Types::Flow_Rate  --measured drug flow rate
+    Drug_Outlet : out data port Physical_Types::Fluid_Flow.imp;  --drug to patient
+    Downstream_Flow_Rate: out data port PCA_Types::Flow_Rate.imp  --measured drug flow rate
        {BLESS::Assertion=>"<<MEASURED_FLOW_RATE: :=Downstream_Flow_Rate>>";};
     Occlusion: out event port;		--downstream blockage detected
     Bubble: out event port;	    --bubble detected in line

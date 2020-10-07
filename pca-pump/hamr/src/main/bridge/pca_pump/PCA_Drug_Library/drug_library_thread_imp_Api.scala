@@ -13,8 +13,8 @@ import pca_pump._
   def The_Drug_Record_Id : Art.PortId
   def No_Drug_Found_Id : Art.PortId
 
-  def sendThe_Drug_Record(value : PCA_Types.Drug_Record) : Unit = {
-    Art.putValue(The_Drug_Record_Id, PCA_Types.Drug_Record_Payload(value))
+  def sendThe_Drug_Record(value : PCA_Types.Drug_Record_imp) : Unit = {
+    Art.putValue(The_Drug_Record_Id, PCA_Types.Drug_Record_imp_Payload(value))
   }
 
   def sendNo_Drug_Found() : Unit = {
@@ -59,13 +59,13 @@ import pca_pump._
     return value
   }
 
-  def getGet_Drug_Record() : Option[PCA_Types.Drug_Code] = {
-    val value : Option[PCA_Types.Drug_Code] = Art.getValue(Get_Drug_Record_Id) match {
-      case Some(PCA_Types.Drug_Code_Payload(v)) => Some(v)
+  def getGet_Drug_Record() : Option[PCA_Types.Drug_Code_imp] = {
+    val value : Option[PCA_Types.Drug_Code_imp] = Art.getValue(Get_Drug_Record_Id) match {
+      case Some(PCA_Types.Drug_Code_imp_Payload(v)) => Some(v)
       case Some(v) =>
-        Art.logError(id, s"Unexpected payload on port Get_Drug_Record.  Expecting 'PCA_Types.Drug_Code_Payload' but received ${v}")
-        None[PCA_Types.Drug_Code]()
-      case _ => None[PCA_Types.Drug_Code]()
+        Art.logError(id, s"Unexpected payload on port Get_Drug_Record.  Expecting 'PCA_Types.Drug_Code_imp_Payload' but received ${v}")
+        None[PCA_Types.Drug_Code_imp]()
+      case _ => None[PCA_Types.Drug_Code_imp]()
     }
     return value
   }

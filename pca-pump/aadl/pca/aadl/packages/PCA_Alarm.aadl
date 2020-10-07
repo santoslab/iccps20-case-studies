@@ -42,9 +42,9 @@ process alarm_process
     -- end of simulation ports
     
   --flow information
-    Infusion_Flow_Rate: in data port PCA_Types::Flow_Rate;  --intended
-    Upstream_Flow_Rate: in data port PCA_Types::Flow_Rate;  --measured
-    Downstream_Flow_Rate: in data port PCA_Types::Flow_Rate;  --measured    
+    Infusion_Flow_Rate: in data port PCA_Types::Flow_Rate.imp;  --intended
+    Upstream_Flow_Rate: in data port PCA_Types::Flow_Rate.imp;  --measured
+    Downstream_Flow_Rate: in data port PCA_Types::Flow_Rate.imp;  --measured    
   --battery
     Defective_Battery: in event port;  --dead battery
     Low_Battery_Warning: in event port;
@@ -54,7 +54,7 @@ process alarm_process
   --security
     Security_Fault: in event port;  --security fault
   --log faults
-    Log_Fault: out event data port PCA_Types::Fault_Record;   
+    Log_Fault: out event data port PCA_Types::Fault_Record.imp;   
 end alarm_process;
 
 process implementation alarm_process.imp
@@ -239,7 +239,7 @@ thread alarm_thread
 --    Long_Pause: in event port  
 --       {BLESS::Assertion=>"<<LONG_PAUSE>>";}; 
   --log faults
-    Log_Fault: out event data port PCA_Types::Fault_Record
+    Log_Fault: out event data port PCA_Types::Fault_Record.imp
        {BLESS::Assertion=>"<<:=(alarm=>currentAlarm;warning=>currentWarning;occurrence_time=>now;)>>";};   
   properties
     --Thread_Properties::Dispatch_Protocol=>Aperiodic;  
@@ -484,9 +484,9 @@ thread Flow_Rate_Checker
     System_Status: in data port PCA_Types::Status_Type;
     
   --flow information
-    Infusion_Flow_Rate: in data port PCA_Types::Flow_Rate;  --intended
-    Upstream_Flow_Rate: in data port PCA_Types::Flow_Rate;  --measured
-    Downstream_Flow_Rate: in data port PCA_Types::Flow_Rate;  --measured    
+    Infusion_Flow_Rate: in data port PCA_Types::Flow_Rate.imp;  --intended
+    Upstream_Flow_Rate: in data port PCA_Types::Flow_Rate.imp;  --measured
+    Downstream_Flow_Rate: in data port PCA_Types::Flow_Rate.imp;  --measured    
   --errors detected
     Basal_Overinfusion: out event port  
        {BLESS::Assertion=>"<<BASAL_OVERINFUSION>>";}; 

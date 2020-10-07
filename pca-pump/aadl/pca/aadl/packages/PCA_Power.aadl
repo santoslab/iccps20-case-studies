@@ -72,9 +72,9 @@ system implementation power.imp
 --Battery is subsection 9.2.1
 device battery
   features
-    Battery_Voltage : out data port Physical_Types::Voltage
+    Battery_Voltage : out data port Physical_Types::Voltage.imp
       {BLESS::Assertion=>"<<:=BATTERY_VOLTAGE>>";};  --actual battery voltage, measured by power_control
-    Battery_Current : out data port Physical_Types::Current
+    Battery_Current : out data port Physical_Types::Current.imp
       {BLESS::Assertion=>"<<:=BATTERY_CURRENT>>";};   --actual battery current, measured by power_control
 end battery;
 
@@ -117,11 +117,11 @@ device power_control
 		
     --the battery control is expected to measure battery voltage and current
     --these are modeled as if the values come from the physical battery
-    Battery_Voltage : in data port Physical_Types::Voltage
+    Battery_Voltage : in data port Physical_Types::Voltage.imp
         {BLESS::Assertion=>"<<:=BATTERY_VOLTAGE>>";};  --actual battery voltage, 
-    Battery_Current : in data port Physical_Types::Current
+    Battery_Current : in data port Physical_Types::Current.imp
         {BLESS::Assertion=>"<<:=BATTERY_CURRENT>>";};   --actual battery current
-    Power_Voltage : in data port Physical_Types::Voltage  --measure power supply voltage
+    Power_Voltage : in data port Physical_Types::Voltage.imp  --measure power supply voltage
         {BLESS::Assertion=>"<<:=POWER_VOLTAGE>>";};
 
     --R6.3.0(2)  If the estimated battery life remaining is less than DELTAlba = 3 minutes, the pump shall issue a low-battery warning.
@@ -198,7 +198,7 @@ end power_control.imp;
 
 device power_supply
   features
-    Power_Voltage : out data port Physical_Types::Voltage  --monitor power supply voltage
+    Power_Voltage : out data port Physical_Types::Voltage.imp  --monitor power supply voltage
            {BLESS::Assertion=>"<<:=POWER_VOLTAGE>>";};
 end power_supply;
   

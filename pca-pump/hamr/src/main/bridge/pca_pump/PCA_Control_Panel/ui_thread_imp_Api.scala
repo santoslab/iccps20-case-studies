@@ -51,8 +51,8 @@ import pca_pump._
     Art.putValue(Alarm_Inactivation_Id, ICE_Types.Alarm_Signal_Payload(value))
   }
 
-  def sendBolus_Duration(value : ICE_Types.Minute) : Unit = {
-    Art.putValue(Bolus_Duration_Id, ICE_Types.Minute_Payload(value))
+  def sendBolus_Duration(value : ICE_Types.Minute_imp) : Unit = {
+    Art.putValue(Bolus_Duration_Id, ICE_Types.Minute_imp_Payload(value))
   }
 
   def sendCP_Reset_Alarm() : Unit = {
@@ -192,24 +192,24 @@ import pca_pump._
     return value
   }
 
-  def getPrescription() : Option[PCA_Types.Prescription] = {
-    val value : Option[PCA_Types.Prescription] = Art.getValue(Prescription_Id) match {
-      case Some(PCA_Types.Prescription_Payload(v)) => Some(v)
+  def getPrescription() : Option[PCA_Types.Prescription_imp] = {
+    val value : Option[PCA_Types.Prescription_imp] = Art.getValue(Prescription_Id) match {
+      case Some(PCA_Types.Prescription_imp_Payload(v)) => Some(v)
       case Some(v) =>
-        Art.logError(id, s"Unexpected payload on port Prescription.  Expecting 'PCA_Types.Prescription_Payload' but received ${v}")
-        None[PCA_Types.Prescription]()
-      case _ => None[PCA_Types.Prescription]()
+        Art.logError(id, s"Unexpected payload on port Prescription.  Expecting 'PCA_Types.Prescription_imp_Payload' but received ${v}")
+        None[PCA_Types.Prescription_imp]()
+      case _ => None[PCA_Types.Prescription_imp]()
     }
     return value
   }
 
-  def getInfusion_Flow_Rate() : Option[PCA_Types.Flow_Rate] = {
-    val value : Option[PCA_Types.Flow_Rate] = Art.getValue(Infusion_Flow_Rate_Id) match {
-      case Some(PCA_Types.Flow_Rate_Payload(v)) => Some(v)
+  def getInfusion_Flow_Rate() : Option[PCA_Types.Flow_Rate_imp] = {
+    val value : Option[PCA_Types.Flow_Rate_imp] = Art.getValue(Infusion_Flow_Rate_Id) match {
+      case Some(PCA_Types.Flow_Rate_imp_Payload(v)) => Some(v)
       case Some(v) =>
-        Art.logError(id, s"Unexpected payload on port Infusion_Flow_Rate.  Expecting 'PCA_Types.Flow_Rate_Payload' but received ${v}")
-        None[PCA_Types.Flow_Rate]()
-      case _ => None[PCA_Types.Flow_Rate]()
+        Art.logError(id, s"Unexpected payload on port Infusion_Flow_Rate.  Expecting 'PCA_Types.Flow_Rate_imp_Payload' but received ${v}")
+        None[PCA_Types.Flow_Rate_imp]()
+      case _ => None[PCA_Types.Flow_Rate_imp]()
     }
     return value
   }

@@ -49,7 +49,7 @@ system safety
   --jab: added so flow rate checker can know what the current pumping mode is
     System_Status: in data port PCA_Types::Status_Type;
       
-    Infusion_Flow_Rate: in data port PCA_Types::Flow_Rate;  --intended
+    Infusion_Flow_Rate: in data port PCA_Types::Flow_Rate.imp;  --intended
   --drug reservoir problems
     Empty_Reservoir: in event port;  --no drug left
     Low_Reservoir: in event port; --little drug left
@@ -63,8 +63,8 @@ system safety
     Prime_Failure: in event port;
     Upstream_Occlusion: in event port;
     Downstream_Occlusion: in event port;
-    Upstream_Flow_Rate: in data port PCA_Types::Flow_Rate;  --measured
-    Downstream_Flow_Rate: in data port PCA_Types::Flow_Rate;  --measured
+    Upstream_Flow_Rate: in data port PCA_Types::Flow_Rate.imp;  --measured
+    Downstream_Flow_Rate: in data port PCA_Types::Flow_Rate.imp;  --measured
   --control panel
     CP_Reset_Alarm: in event port;	--control panel resets alarm(s)
   --fault log
@@ -422,7 +422,7 @@ device fault_logger
     s_bus: requires bus access Safety_Bus;
     
     --record a fault in the log
-    Log_Fault : in event data port PCA_Types::Fault_Record;
+    Log_Fault : in event data port PCA_Types::Fault_Record.imp;
        --{BLESS::Assertion=>"<< : :=CURRENT_FAULT_RECORD>>";};
     --ask for the whole fault log
     Get_Log : in event port;

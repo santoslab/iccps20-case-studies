@@ -18,18 +18,18 @@ system fluid
   --internal bus
     i_bus: requires bus access PCA_Pump::Internal_Bus;
   --drug to patient
-    Drug_Outlet : out data port Physical_Types::Fluid_Flow  --drug to patient
+    Drug_Outlet : out data port Physical_Types::Fluid_Flow.imp  --drug to patient
       {BLESS::Assertion => "<<:=INFUSION_RATE>>";};   
     Halt: in event port 
       {BLESS::Assertion => "<<INFUSION_RATE=0>>";};  --stop pumping
-    Rate_To_Pump: in data port PCA_Types::Flow_Rate   --rate to pump
+    Rate_To_Pump: in data port PCA_Types::Flow_Rate.imp   --rate to pump
       {BLESS::Assertion => "<<:=INFUSION_RATE>>";};
 --    Change_Rate: in event port           --start pumping at new rate
 --      {BLESS::Assertion => "<<INFUSION_RATE in 
 --        Rate-#PCA_Properties::Commanded_Drug_Flow_Rate_Tolerance..
 --        Rate+#PCA_Properties::Commanded_Drug_Flow_Rate_Tolerance>>";};  
-    Upstream_Flow_Rate: out data port PCA_Types::Flow_Rate;  --measured flow rate into pump
-    Downstream_Flow_Rate: out data port PCA_Types::Flow_Rate;  --measured flow rate out of pump
+    Upstream_Flow_Rate: out data port PCA_Types::Flow_Rate.imp;  --measured flow rate into pump
+    Downstream_Flow_Rate: out data port PCA_Types::Flow_Rate.imp;  --measured flow rate out of pump
   --reservoir signals
     Low_Reservoir : out event port;
     Empty_Reservoir : out event port;

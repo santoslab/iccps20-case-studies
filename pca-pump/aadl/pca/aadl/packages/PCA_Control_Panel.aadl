@@ -119,8 +119,8 @@ thread ui_thread
     Hard_Limit_Violated: in event port;
     Soft_Limit_Warning: in event port;
   --parameters     
-    Prescription: in data port PCA_Types::Prescription;  --prescription to be confirmed
-    Infusion_Flow_Rate: in data port PCA_Types::Flow_Rate; -- jab added
+    Prescription: in data port PCA_Types::Prescription.imp;  --prescription to be confirmed
+    Infusion_Flow_Rate: in data port PCA_Types::Flow_Rate.imp; -- jab added
         
     Confirm_Soft_Limit_Exception: out event port;  --clinician confirmed prescription
     Reject_Soft_Limit_Exception: out event port;  --clinician rejected prescription
@@ -132,7 +132,7 @@ thread ui_thread
     Stop_Button_Pressed: out event port;  --clinician pressed "stop" button
     Start_Button_Pressed: out event port;  --clinician pressed "start" button 
     Clinician_Request_Bolus: out event port;  --clinician requests square bolus  
-    Bolus_Duration: out event data port ICE_Types::Minute; --set square bolus time
+    Bolus_Duration: out event data port ICE_Types::Minute.imp; --set square bolus time
     Pause_Infusion: out event port;  --temporarily pause infusion (KVO rate)
     Resume_Infusion: out event port;  --resume infusion (at basal rate, or continuing bolus)
     Turn_Off: out event port;                    --the "off" switch was pressed
@@ -257,9 +257,9 @@ process ui_process
     Hard_Limit_Violated: in event port;
     Soft_Limit_Warning: in event port;
   --parameters 
-    Prescription: in data port PCA_Types::Prescription;  --prescription to be confirmed
+    Prescription: in data port PCA_Types::Prescription.imp;  --prescription to be confirmed
     
-    Infusion_Flow_Rate: in data port PCA_Types::Flow_Rate; -- jab added
+    Infusion_Flow_Rate: in data port PCA_Types::Flow_Rate.imp; -- jab added
     
     Confirm_Soft_Limit_Exception: out event port;  --clinician confirmed prescription
     Reject_Soft_Limit_Exception: out event port;  --clinician rejected prescription
@@ -270,7 +270,7 @@ process ui_process
     Stop_Button_Pressed: out event port;  --clinician pressed "stop" button
     Start_Button_Pressed: out event port;  --clinician pressed "start" button 
     Clinician_Request_Bolus: out event port;  --clinician requests square bolus  
-    Bolus_Duration: out event data port ICE_Types::Minute; --set square bolus time
+    Bolus_Duration: out event data port ICE_Types::Minute.imp; --set square bolus time
     Pause_Infusion: out event port;  --temporarily pause infusion (KVO rate)
     Resume_Infusion: out event port;  --resume infusion (at basal rate, or continuing bolus)
     Turn_Off: out event port;                    --the "off" switch was pressed
@@ -425,9 +425,9 @@ system control_panel
     Using_Battery_Power: in data port Base_Types::Boolean;
     Low_Battery_Warning: in event port;
   --parameters 
-    Prescription: in data port PCA_Types::Prescription;  --prescription to be confirmed
+    Prescription: in data port PCA_Types::Prescription.imp;  --prescription to be confirmed
     
-    Infusion_Flow_Rate: in data port PCA_Types::Flow_Rate; -- jab added
+    Infusion_Flow_Rate: in data port PCA_Types::Flow_Rate.imp; -- jab added
     
     Confirm_Soft_Limit_Exception: out event port;  --clinician confirmed prescription
     Reject_Soft_Limit_Exception: out event port;  --clinician rejected prescription
@@ -439,7 +439,7 @@ system control_panel
     Start_Button_Pressed: out event port;  --clinician pressed "start" button   
     Turn_Off: out event port;                    --the "off" switch was pressed
     Clinician_Request_Bolus: out event port;  --clinician requests square bolus  
-    Bolus_Duration: out event data port ICE_Types::Minute; --set square bolus time
+    Bolus_Duration: out event data port ICE_Types::Minute.imp; --set square bolus time
     Pause_Infusion: out event port;  --temporarily pause infusion (KVO rate)
     Resume_Infusion: out event port;  --resume infusion (at basal rate, or continuing bolus)
     Patient_Request_Not_Too_Soon: in event port

@@ -23,10 +23,10 @@ process drug_library_process
     Load_Drug_Library : in event data port PCA_Types::Drug_Library
       {BLESS::Assertion=>"<<:=DRUG_LIBRARY>>";};
     --ask for record for a drug code
-    Get_Drug_Record : in event data port PCA_Types::Drug_Code
+    Get_Drug_Record : in event data port PCA_Types::Drug_Code.imp
       {BLESS::Assertion=>"<<:=DRUG_CODE>>";};
     --fetched drug record, if given drug code is in drug library
-    The_Drug_Record : out event data port PCA_Types::Drug_Record
+    The_Drug_Record : out event data port PCA_Types::Drug_Record.imp
       {BLESS::Assertion=>"<<exists k:integer --there is some entry 
          in 0 .. (#PCA_Properties::Drug_Library_Size-1)  --in the array of drug library
          that DRUG_LIBRARY[k].code=DRUG_CODE  --having the given drug code
@@ -78,10 +78,10 @@ thread drug_library_thread
     Load_Drug_Library : in event data port PCA_Types::Drug_Library
       {BLESS::Assertion=>"<<:=DRUG_LIBRARY>>";};
     --ask for record for a drug code
-    Get_Drug_Record : in event data port PCA_Types::Drug_Code
+    Get_Drug_Record : in event data port PCA_Types::Drug_Code.imp
       {BLESS::Assertion=>"<<:=DRUG_CODE>>";};
     --fetched drug record, if given drug code is in drug library
-    The_Drug_Record : out event data port PCA_Types::Drug_Record
+    The_Drug_Record : out event data port PCA_Types::Drug_Record.imp
       {BLESS::Assertion=>"<<exists k:integer --there is some entry 
          in 0 .. (#PCA_Properties::Drug_Library_Size-1)  --in the array of drug library
          that DRUG_LIBRARY[k].code=DRUG_CODE  --having the given drug code

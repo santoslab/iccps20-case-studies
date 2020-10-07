@@ -27,8 +27,8 @@ import pca_pump._
     Art.putValue(Patient_Name_Id, Base_Types.String_Payload(value))
   }
 
-  def setPrescription(value : PCA_Types.Prescription) : Unit = {
-    Art.putValue(Prescription_Id, PCA_Types.Prescription_Payload(value))
+  def setPrescription(value : PCA_Types.Prescription_imp) : Unit = {
+    Art.putValue(Prescription_Id, PCA_Types.Prescription_imp_Payload(value))
   }
 
   def sendAuthentication_fail() : Unit = {

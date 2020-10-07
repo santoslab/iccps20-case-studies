@@ -9,12 +9,12 @@ import pca_pump._
 
 object Fault_Log {
   def empty(): PCA_Types.Fault_Log = {
-    return PCA_Types.Fault_Log(ISZ.create(150, PCA_Types.Fault_Record.empty()))
+    return PCA_Types.Fault_Log(ISZ.create(150, PCA_Types.Fault_Record_imp.empty()))
   }
 }
 
 @datatype class Fault_Log(
-  value : ISZ[PCA_Types.Fault_Record]) {
+  value : ISZ[PCA_Types.Fault_Record_imp]) {
   //{  assert (value.size == 150) }
 }
 

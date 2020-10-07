@@ -95,7 +95,7 @@ end Context.imp;
 abstract Patient
   features
   --drug infused into patient
-    Infused_Drug : in data port Physical_Types::Fluid_Flow
+    Infused_Drug : in data port Physical_Types::Fluid_Flow.imp
       {BLESS::Assertion=>"<<:=INFUSION_RATE>>";};  --infusion rate into patient is value of Infused_Drug port
     Button_Press: out event port;  --physically depressing the button
 end Patient;

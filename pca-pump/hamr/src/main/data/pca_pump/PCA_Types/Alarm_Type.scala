@@ -18,12 +18,13 @@ import pca_pump._
   'Upstream_Occlusion
   'POST_Failure
   'RAM_Failure
-  'ROM_failure
+  'ROM_Failure
   'CPU_Failure
   'Thread_Monitor_Failure
   'Defective_Battery
   'Low_Battery
   'No_Alarm
+  'Priming_Failure
 }
 
 object Alarm_Type_Payload {

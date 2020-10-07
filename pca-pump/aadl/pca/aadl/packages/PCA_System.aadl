@@ -17,7 +17,7 @@ system wrap_pca
   features
 --EXTERNAL EFFECT
   --drug infused into patient
-    Infused_Drug : out data port Physical_Types::Fluid_Flow
+    Infused_Drug : out data port Physical_Types::Fluid_Flow.imp
       {BLESS::Assertion=>"<<:=INFUSION_RATE>>";};  --infusion rate into patient is value of Infused_Drug port
 --EXTERNAL PHENOMENON
     Button_Press: in event port;  --physically depressing the button
