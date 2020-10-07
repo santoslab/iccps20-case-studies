@@ -1,0 +1,15 @@
+import "../../interfaces/sb_Monitor_BuildingControl__Temperature_impl.idl4";
+import "../../interfaces/sb_Monitor_BuildingControl__FanAck_1.idl4";
+import "../../interfaces/sb_Monitor_BuildingControl__FanCmd_1.idl4";
+
+component TempControl_i {
+  include <sb_proc_types.h>;
+  control;
+  uses sb_Monitor_BuildingControl__Temperature_impl sb_currentTemp;
+  uses sb_Monitor_BuildingControl__FanAck_1 sb_fanAck;
+  uses sb_Monitor_BuildingControl__FanCmd_1 sb_fanCmd0;
+  consumes DataportWrite sb_currentTemp_notification;
+  consumes QueuedData sb_fanAck_notification;
+  consumes Notification sb_tempChanged;
+  has semaphore sb_dispatch_sem;
+}

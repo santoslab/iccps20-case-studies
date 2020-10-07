@@ -1,0 +1,11 @@
+import "../../interfaces/sb_Monitor_BuildingControl__FanCmd_1.idl4";
+import "../../interfaces/sb_Monitor_BuildingControl__FanAck_1.idl4";
+
+component Fan_i {
+  include <sb_proc_types.h>;
+  control;
+  uses sb_Monitor_BuildingControl__FanCmd_1 sb_fanCmd;
+  uses sb_Monitor_BuildingControl__FanAck_1 sb_fanAck0;
+  consumes QueuedData sb_fanCmd_notification;
+  has semaphore sb_dispatch_sem;
+}

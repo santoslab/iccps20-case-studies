@@ -1,0 +1,5 @@
+procedure sb_Monitor_BuildingControl__Temperature_impl {
+  include <sb_proc_types.h>;
+  bool read(out BuildingControl__Temperature_impl m);
+  bool write(refin BuildingControl__Temperature_impl m);
+};

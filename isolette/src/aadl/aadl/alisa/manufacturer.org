@@ -1,0 +1,7 @@
+// Note: These notions are not found in the FAA REMH
+
+organization manufacturer
+
+stakeholder DesignTeam [description "The team designing the Isolette."]
+stakeholder SafetyAssessmentTeam [description "The team assessing the safety of the Isolette."]
+stakeholder MarketingTeam [description "The team in charge of marketing the Isolette."]

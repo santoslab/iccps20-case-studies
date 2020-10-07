@@ -1,0 +1,13 @@
+// Registry for Slang VCs for Manage Heat Source
+
+verification methods SlangMHS [
+
+// contract: SlangMHS.req-mhs-3()
+
+	method req_mhs_3 (): 
+	"MHS Req 3: Normal Mode: Turn Heat On" [
+		// slang Resolute_Isolette.Resolute_Isolette_public.Resolute.Resolute.is_Fahrenheit
+		// Peter
+		//  This particular handoff needs to be settled with Robby, Jason, Joe, etc. in a phone call
+	]
+]

@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="ASCII"?>
+<diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="7">
+  <element uuid="db6e7aee-6a28-4669-a7a1-27095eb810f2" manual="true">
+    <element uuid="9c1c2a12-f18f-4ba4-bff6-26740cdf4785" manual="true">
+      <element uuid="8c011898-5c44-4fa6-a046-2e651420ff8b" manual="true">
+        <bo>
+          <seg>pvg</seg>
+          <seg>Deployment_Properties::Actual_Processor_Binding</seg>
+          <seg>199c8a2e-e271-45e6-ab27-619a7921016c</seg>
+        </bo>
+        <bendpoints>
+          <point x="599.0" y="842.5"/>
+          <point x="615.0" y="842.5"/>
+          <point x="615.0" y="292.5"/>
+          <point x="621.0" y="292.5"/>
+        </bendpoints>
+      </element>
+      <element uuid="cf29baca-4116-4431-9913-decdf87647f4" manual="true">
+        <element uuid="5b385a5b-cb23-4c78-836c-1ca75ffb28e9" manual="true">
+          <bo>
+            <seg>subcomponent</seg>
+            <seg>heat_controller</seg>
+          </bo>
+          <position x="12.0" y="38.0"/>
+          <size width="154.0" height="35.0"/>
+        </element>
+        <bo>
+          <seg>subcomponent</seg>
+          <seg>cpi</seg>
+        </bo>
+        <position x="12.0" y="38.0"/>
+        <size width="178.0" height="85.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>heat_source</seg>
+      </bo>
+      <position x="381.0" y="763.0"/>
+      <size width="202.0" height="135.0"/>
+    </element>
+    <element uuid="199c8a2e-e271-45e6-ab27-619a7921016c" manual="true">
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>isolette_processor</seg>
+      </bo>
+      <position x="613.0" y="241.0"/>
+      <size width="178.0" height="50.0"/>
+    </element>
+    <element uuid="6e617cfa-be00-4be4-b212-5765f03f7df6" manual="true">
+      <element uuid="628aac40-7a3e-447a-a9d6-d80633b0fc2b" manual="true">
+        <bo>
+          <seg>pvg</seg>
+          <seg>Deployment_Properties::Actual_Processor_Binding</seg>
+          <seg>199c8a2e-e271-45e6-ab27-619a7921016c</seg>
+        </bo>
+        <bendpoints>
+          <point x="599.0" y="117.5"/>
+          <point x="605.0" y="117.5"/>
+          <point x="605.0" y="262.5"/>
+          <point x="621.0" y="262.5"/>
+        </bendpoints>
+      </element>
+      <element uuid="daac7aac-506e-4cdd-9857-e8c6f0a7d06a" manual="true">
+        <element uuid="eab5379c-e3cb-40dc-ae9a-c3614e02dd11" manual="true">
+          <bo>
+            <seg>subcomponent</seg>
+            <seg>oit</seg>
+          </bo>
+          <position x="12.0" y="38.0"/>
+          <size width="76.0" height="35.0"/>
+        </element>
+        <bo>
+          <seg>subcomponent</seg>
+          <seg>oip</seg>
+        </bo>
+        <position x="12.0" y="38.0"/>
+        <size width="100.0" height="85.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>operator_interface</seg>
+      </bo>
+      <position x="407.0" y="38.0"/>
+      <size width="176.0" height="135.0"/>
+    </element>
+    <element uuid="455a5132-4aae-47de-aaf5-d426ed8386dc" manual="true">
+      <element uuid="a958d1d4-a31d-4d7c-be23-eebbf20abb1a" manual="true">
+        <bo>
+          <seg>pvg</seg>
+          <seg>Deployment_Properties::Actual_Processor_Binding</seg>
+          <seg>199c8a2e-e271-45e6-ab27-619a7921016c</seg>
+        </bo>
+        <bendpoints>
+          <point x="599.0" y="272.5"/>
+          <point x="621.0" y="272.5"/>
+        </bendpoints>
+      </element>
+      <element uuid="89363767-05bd-4a22-9b7e-fdbc0074ffd2" manual="true">
+        <element uuid="62f24ff1-ee86-4147-b752-39eab9a0d3fc" manual="true">
+          <bo>
+            <seg>subcomponent</seg>
+            <seg>thermostat</seg>
+          </bo>
+          <position x="12.0" y="38.0"/>
+          <size width="126.0" height="35.0"/>
+        </element>
+        <bo>
+          <seg>subcomponent</seg>
+          <seg>cpi</seg>
+        </bo>
+        <position x="12.0" y="38.0"/>
+        <size width="150.0" height="85.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>temperature_sensor</seg>
+      </bo>
+      <position x="396.0" y="193.0"/>
+      <size width="187.0" height="135.0"/>
+    </element>
+    <element uuid="3255c21c-a75c-4a8e-a8de-78e24db0cc74" manual="true">
+      <element uuid="09a1e8c7-ab15-4f0b-ab98-a58d6bc596dc" manual="true">
+        <bo>
+          <seg>pvg</seg>
+          <seg>Deployment_Properties::Actual_Processor_Binding</seg>
+          <seg>199c8a2e-e271-45e6-ab27-619a7921016c</seg>
+        </bo>
+        <bendpoints>
+          <point x="599.0" y="557.5"/>
+          <point x="605.0" y="557.5"/>
+          <point x="605.0" y="282.5"/>
+          <point x="621.0" y="282.5"/>
+        </bendpoints>
+      </element>
+      <element uuid="d71d2c41-83bf-4077-a0b0-a7e9072a05cf" manual="true">
+        <element uuid="78f208dc-5a08-416c-b457-ad1a965ad396" manual="true">
+          <element uuid="2040d233-c15b-465f-85c9-49d90007b25f" manual="true">
+            <bo>
+              <seg>subcomponent</seg>
+              <seg>mat</seg>
+            </bo>
+            <position x="12.0" y="38.0"/>
+            <size width="83.0" height="35.0"/>
+          </element>
+          <bo>
+            <seg>subcomponent</seg>
+            <seg>manage_alarm</seg>
+          </bo>
+          <position x="12.0" y="38.0"/>
+          <size width="151.0" height="85.0"/>
+        </element>
+        <element uuid="fe40aca4-de24-489d-b987-1bf22b1122ea" manual="true">
+          <element uuid="b38830d7-cf8a-4dbd-b08d-cf42dec0fc13" manual="true">
+            <bo>
+              <seg>subcomponent</seg>
+              <seg>mmit</seg>
+            </bo>
+            <position x="12.0" y="38.0"/>
+            <size width="92.0" height="35.0"/>
+          </element>
+          <bo>
+            <seg>subcomponent</seg>
+            <seg>manage_monitor_interface</seg>
+          </bo>
+          <position x="12.0" y="248.0"/>
+          <size width="235.0" height="85.0"/>
+        </element>
+        <element uuid="6d80fd99-d66f-4e21-aa6d-9df469ca1f84" manual="true">
+          <element uuid="43924eb7-7052-4b50-b122-562892bf28c0" manual="true">
+            <bo>
+              <seg>subcomponent</seg>
+              <seg>mmmt</seg>
+            </bo>
+            <position x="12.0" y="38.0"/>
+            <size width="100.0" height="35.0"/>
+          </element>
+          <bo>
+            <seg>subcomponent</seg>
+            <seg>manage_monitor_mode</seg>
+          </bo>
+          <position x="12.0" y="143.0"/>
+          <size width="212.0" height="85.0"/>
+        </element>
+        <bo>
+          <seg>subcomponent</seg>
+          <seg>monitor_temperature</seg>
+        </bo>
+        <position x="12.0" y="38.0"/>
+        <size width="259.0" height="345.0"/>
+      </element>
+      <element uuid="c8ddcd85-6888-497a-9fa7-94ea61f9767d" manual="true">
+        <element uuid="948c0a62-b0e4-48fe-ae74-6a081cfd7eb8" manual="true">
+          <element uuid="e4d1eafa-6f07-45d7-a203-fb76c2706973" manual="true">
+            <bo>
+              <seg>subcomponent</seg>
+              <seg>mhst</seg>
+            </bo>
+            <position x="12.0" y="38.0"/>
+            <size width="91.0" height="35.0"/>
+          </element>
+          <bo>
+            <seg>subcomponent</seg>
+            <seg>manage_heat_source</seg>
+          </bo>
+          <position x="12.0" y="38.0"/>
+          <size width="195.0" height="85.0"/>
+        </element>
+        <element uuid="a64fde4a-81fc-4f87-a68b-98c73972953b" manual="true">
+          <element uuid="0cb8439c-556b-439a-8b10-83c28a932b38" manual="true">
+            <bo>
+              <seg>subcomponent</seg>
+              <seg>mrit</seg>
+            </bo>
+            <position x="12.0" y="38.0"/>
+            <size width="85.0" height="35.0"/>
+          </element>
+          <bo>
+            <seg>subcomponent</seg>
+            <seg>manage_regulator_interface</seg>
+          </bo>
+          <position x="12.0" y="248.0"/>
+          <size width="244.0" height="85.0"/>
+        </element>
+        <element uuid="997ed578-0c45-4bde-9ad7-883030d02885" manual="true">
+          <element uuid="e936b12a-0f89-48ca-8a5c-eb8c81f3978c" manual="true">
+            <bo>
+              <seg>subcomponent</seg>
+              <seg>mrmt</seg>
+            </bo>
+            <position x="12.0" y="38.0"/>
+            <size width="93.0" height="35.0"/>
+          </element>
+          <bo>
+            <seg>subcomponent</seg>
+            <seg>manage_regulator_mode</seg>
+          </bo>
+          <position x="12.0" y="143.0"/>
+          <size width="221.0" height="85.0"/>
+        </element>
+        <bo>
+          <seg>subcomponent</seg>
+          <seg>regulate_temperature</seg>
+        </bo>
+        <position x="291.0" y="38.0"/>
+        <size width="268.0" height="345.0"/>
+      </element>
+      <bo>
+        <seg>subcomponent</seg>
+        <seg>thermostat</seg>
+      </bo>
+      <position x="12.0" y="348.0"/>
+      <size width="571.0" height="395.0"/>
+    </element>
+    <bo>
+      <seg>classifier</seg>
+      <seg>isolette.single_sensor</seg>
+    </bo>
+    <position x="12.0" y="12.0"/>
+    <size width="803.0" height="910.0"/>
+  </element>
+  <config type="processorBinding" connectionPrimaryLabelsVisible="false">
+    <enabledAadlProperties>
+      <property>deployment_properties::actual_processor_binding</property>
+    </enabledAadlProperties>
+    <context>
+      <seg>classifier</seg>
+      <seg>Isolette::isolette.single_sensor</seg>
+    </context>
+  </config>
+</diagram:Diagram>

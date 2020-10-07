@@ -1,0 +1,13 @@
+verification methods ResoluteIsolette [
+
+// methods dealing with security exposure and common weaknesses
+
+	method IsFahrenheit (feature): 
+	"Measurement unit is Fahrenheit" [
+		resolute Resolute_Isolette.Resolute_Isolette_public.Resolute.Resolute.is_Fahrenheit
+	]
+	method IsTempWstatus (feature): 
+	"Data type is Isolette_Data_Model::TempWstatus" [
+		resolute Resolute_Isolette.Resolute_Isolette_public.Resolute.Resolute.is_TempWstatus
+	]	
+]

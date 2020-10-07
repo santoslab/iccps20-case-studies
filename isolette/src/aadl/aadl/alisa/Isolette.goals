@@ -1,0 +1,38 @@
+stakeholder goals IsoletteGoals for Isolette::isolette 
+[
+	// ===============================================================
+	//   Section A.1.2 of FAA REMH
+	// ===============================================================
+	goal G1 [ 
+		description "The infant should be kept at a safe and comfortable temperature"
+		stakeholder hospital.Infant manufacturer.MarketingTeam manufacturer.SafetyAssessmentTeam
+	]
+	
+	goal G2 [
+		description "The nurse should be warned if the infant becomes too hot or too cold"
+		stakeholder hospital.Infant manufacturer.SafetyAssessmentTeam
+	]
+	
+	goal G3 [
+		description "The cost of manufacturing the thermostat should be as low as possible"
+		stakeholder manufacturer.MarketingTeam
+	]
+	
+	// ==============================================================
+	//   A.4 Safety Requirements
+	// ==============================================================
+	//
+	//  The following goal is originally stated as a hazard in FAA REMH
+	//    "Prolonged exposure of Infant to unsafe heat or cold"
+	//  Reword it here (using opposite modality "avoid") as a safety goal
+	//
+	goal H1 [
+		description "Avoid prolonged exposure of Infant to unsafe heat or cold. Classification: catastrophic. Probability: < 10-9 per hour of operation"
+ 		category Quality.Safety
+		stakeholder hospital.Infant manufacturer.SafetyAssessmentTeam
+	]
+	
+
+]
+
+

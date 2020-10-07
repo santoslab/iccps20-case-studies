@@ -1,0 +1,12 @@
+import "../../interfaces/sb_Monitor_BuildingControl__Temperature_impl.idl4";
+import <std_connector.camkes>;
+
+component TempSensor_i {
+  include <sb_proc_types.h>;
+  control;
+  uses sb_Monitor_BuildingControl__Temperature_impl sb_currentTemp0;
+  uses Timer sb_timer;
+  emits Notification sb_tempChanged;
+  consumes Notification sb_periodic_dispatch_notification;
+  has semaphore sb_dispatch_sem;
+}
