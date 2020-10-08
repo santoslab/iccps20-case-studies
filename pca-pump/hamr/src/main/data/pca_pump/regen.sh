@@ -41,7 +41,7 @@ sed -i 's/printBase_TypesBits(o.value)/printISZ(T, o.value, printB _))/g' $FILE
 
 sed -i 's/parseBase_TypesInteger_16()/parser.parseS16()/g' $FILE
 sed -i 's/parseBase_TypesInteger_32()/parser.parseS32()/g' $FILE
-sed -i 's/parseBase_TypesInteger_64()/parser.parseS64)/g' $FILE
+sed -i 's/parseBase_TypesInteger_64()/parser.parseS64()/g' $FILE
 
 sed -i 's/parseBase_TypesUnsigned_16()/parser.parseU16()/g' $FILE
 sed -i 's/parseBase_TypesUnsigned_32()/parser.parseU32()/g' $FILE
