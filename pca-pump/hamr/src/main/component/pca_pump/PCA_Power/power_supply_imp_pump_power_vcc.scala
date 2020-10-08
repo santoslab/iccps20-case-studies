@@ -8,21 +8,9 @@ import pca_pump._
 // This file will not be overwritten so is safe to edit
 object power_supply_imp_pump_power_vcc {
 
-  def initialise(api: power_supply_imp_Initialization_Api): Unit = {
-    // example api usage
+  def initialise(api: power_supply_imp_Initialization_Api): Unit = {}
 
-    api.logInfo("Example info logging")
-    api.logDebug("Example debug logging")
-    api.logError("Example error logging")
-
-    api.setPower_Voltage(Physical_Types.Voltage_imp.empty())
-  }
-
-  def timeTriggered(api: power_supply_imp_Operational_Api): Unit = {
-    // example api usage
-
-    api.setPower_Voltage(Physical_Types.Voltage_imp.empty())
-  }
+  def timeTriggered(api: power_supply_imp_Operational_Api): Unit = {}
 
   def activate(api: power_supply_imp_Operational_Api): Unit = { }
 

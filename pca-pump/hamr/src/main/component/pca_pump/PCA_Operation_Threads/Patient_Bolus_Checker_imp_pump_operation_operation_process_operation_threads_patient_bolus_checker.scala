@@ -18,26 +18,26 @@ object Patient_Bolus_Checker_imp_pump_operation_operation_process_operation_thre
 
   var lastPatientBolus: Art.Time = z"0"
 
-  def initialise(api: Patient_Bolus_Checker_imp_Initialization_Api): Unit = {  }
+  def initialise(api: Patient_Bolus_Checker_imp_Initialization_Api): Unit = { }
 
   def handlePatient_Button_Request(api: Patient_Bolus_Checker_imp_Operational_Api): Unit = {
     api.logInfo("received Patient_Button_Request")
 
     api.getMinimum_Time_Between_Bolus() match {
       case Some(ICE_Types.Minute_imp(value)) =>
-        val minTimeBetweenBolus: Art.Time = conversions.U16.toZ(value)
+        val minTimeBetweenBolusInMs: Z = conversions.U16.toZ(value) * z"1000" * z"60"
 
-        val now : Art.Time = Art.time()
+        val nowInMs : Art.Time = Art.time()
 
-        val elapsed: Art.Time = now - lastPatientBolus
+        val elapsedInMs: Art.Time = nowInMs - lastPatientBolus
         val isFirstButtonPress: B = lastPatientBolus == z"0"
 
-        if(isFirstButtonPress || elapsed > minTimeBetweenBolus){
+        if(isFirstButtonPress || elapsedInMs > minTimeBetweenBolusInMs){
           api.logInfo("Patient button press not too soon")
 
           api.sendPatient_Request_Not_Too_Soon()
 
-          lastPatientBolus = now
+          lastPatientBolus = nowInMs
         } else {
           api.logInfo("Patient button press too soon")
 

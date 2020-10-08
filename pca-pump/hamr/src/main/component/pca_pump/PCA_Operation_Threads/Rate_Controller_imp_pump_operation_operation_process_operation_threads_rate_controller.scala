@@ -415,11 +415,11 @@ object Rate_Controller_imp_pump_operation_operation_process_operation_threads_ra
       }
     }
 
-    //art.ArtTimer.setTimeout(api.id, eventId, duration, true, callback _)
+    art.ArtTimer.setTimeout(api.id, eventId, duration, true, callback _)
   }
 
   def verifyDoorClosed(api: Rate_Controller_imp_Operational_Api): B = {
-    val isOpen = api.getDoor_Open().get.value
+    val isOpen: B = api.getDoor_Open().get
     if(isOpen){
       api.logError(s"Door is open but pump is in ${currentMode}.  Requirements unclear regarding how this should be handled")
     }

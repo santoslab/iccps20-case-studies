@@ -41,7 +41,7 @@ object ui_thread_imp_pump_operation_control_panel_ui_process_ui_thread {
         imageQueue = ISZ[PCA_Types.Image_Type]()
         timerSet = F
       }
-      //art.ArtTimer.setTimeout(api.id, "ui_thread_timer", waitTime, true, cb _)
+      art.ArtTimer.setTimeout(api.id, "ui_thread_timer", waitTime, true, cb _)
     }
   }
 
@@ -223,7 +223,7 @@ object ui_thread_imp_pump_operation_control_panel_ui_process_ui_thread {
         queueImages(api, PCA_Types.Message_Image(""))
       }
     }
-    //art.ArtTimer.setTimeout(api.id, "pbapproved_timer", 10000, true, cb _)
+    art.ArtTimer.setTimeout(api.id, "pbapproved_timer", 10000, true, cb _)
   }
 
   def handlePatient_Request_Too_Soon(api: ui_thread_imp_Operational_Api): Unit = {
@@ -237,7 +237,7 @@ object ui_thread_imp_pump_operation_control_panel_ui_process_ui_thread {
         queueImages(api, PCA_Types.Message_Image(""))
       }
     }
-    //art.ArtTimer.setTimeout(api.id, "pbdenied_timer", 10000, true, cb _)
+    art.ArtTimer.setTimeout(api.id, "pbdenied_timer", 10000, true, cb _)
   }
 
 

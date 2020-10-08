@@ -3,6 +3,7 @@ package pca_pump.PCA_Control_Panel
 import java.awt._
 import java.awt.event._
 
+import art.Art.{PortId, Time}
 import art._
 import javax.imageio.ImageIO
 import javax.sound.sampled.{AudioInputStream, AudioSystem, Clip}
@@ -52,8 +53,8 @@ class PCAInputForm() {
   def getUPort(name: String): art.UPort =
     art.Art.ports.elements.filter(_.nonEmpty).map(_.get).filter(_.name == name).head
 
-  //val reservoirState: Option[PCA_Mechanical.Wrapper] =
-  //  art.ArtDebug.getDebugObject(PCA_Mechanical.drug_reservoir_imp_Impl.debugKey)
+  val reservoirState: Option[PCA_Mechanical.Wrapper] =
+    art.ArtDebug.getDebugObject(PCA_Mechanical.drug_reservoir_imp_pump_fluid_reservoir.debugKey)
 
   def init(): Unit = {
     val width = 1000
@@ -175,8 +176,7 @@ class PCAInputForm() {
 
     val btnDoor = newHiddenButton("", 634, 403, 71, 72)
     btnDoor.addActionListener(_ => {
-      assert(false) // FIXME
-      //reservoirState.get.doorOpen = !reservoirState.get.doorOpen
+      reservoirState.get.doorOpen = !reservoirState.get.doorOpen
     })
     pane.add(btnDoor)
 
@@ -287,20 +287,25 @@ class PCAInputForm() {
       val flow_rateBridge_Infusion_Flow_Rate: art.UPort = getUPort("wrap_pca_imp_Instance_pump_safety_alarm_process_flow_rate_Infusion_Flow_Rate")
       val flow_rateBridge_Downstream_Flow_Rate: art.UPort = getUPort("wrap_pca_imp_Instance_pump_safety_alarm_process_flow_rate_Downstream_Flow_Rate")
 
-      /*
+
       // simulate measured downstream flow rate exactly matching the prescribed
       // infusion flow rate whenever the infusion flow rate changes
       var lastInfusionFlowRate: Option[DataContent] = None[DataContent]()
-      ArtDebug.registerPortListener(flow_rateBridge_Infusion_Flow_Rate.id,
-        new PortListener() with BaseMutable {
-          override def callback(bridge: Bridge, port: UPort, data: DataContent): Unit = {
-            if (lastInfusionFlowRate != Some(data)) {
-              lastInfusionFlowRate = Some(data)
+      ArtDebug.registerListener(
+        new ArtListener() with BaseMutable {
+          override def start(time: Time): Unit = { }
+          override def stop(time: Time): Unit = { }
 
-              val PCA_Types.Flow_Rate_imp_Payload(PCA_Types.Flow_Rate_imp(v)) = data
-              txtFlowRateInfusion.setText(s"$v")
+          override def output(src: PortId, dst: PortId, data: DataContent, time: Time): Unit = {
+            if(dst == flow_rateBridge_Infusion_Flow_Rate.id) {
+              if (lastInfusionFlowRate != Some(data)) {
+                lastInfusionFlowRate = Some(data)
 
-              art.ArtDebug.injectPort(flow_rateBridge.id, flow_rateBridge_Downstream_Flow_Rate.id, data)
+                val PCA_Types.Flow_Rate_imp_Payload(PCA_Types.Flow_Rate_imp(v)) = data
+                txtFlowRateInfusion.setText(s"$v")
+
+                art.ArtDebug.injectPort(flow_rateBridge.id, flow_rateBridge_Downstream_Flow_Rate.id, data)
+              }
             }
           }
         }
@@ -308,19 +313,26 @@ class PCAInputForm() {
 
       // update flowRateDown text whenever the flow_rate device updates the downstream flow rate
       var lastDownstreamFlowRate: Option[DataContent] = None[DataContent]()
-      ArtDebug.registerPortListener(flow_rateBridge_Downstream_Flow_Rate.id,
-        new PortListener with BaseMutable {
-          override def callback(bridge: Bridge, port: UPort, data: DataContent): Unit = {
-            if (lastDownstreamFlowRate != Some(data)) {
-              lastDownstreamFlowRate = Some(data)
+      ArtDebug.registerListener(
+        new ArtListener() with BaseMutable {
 
-              val PCA_Types.Flow_Rate_imp_Payload(PCA_Types.Flow_Rate_imp(v)) = data
-              txtFlowRateDownstream.setText(s"$v")
+          override def start(time: Time): Unit = { }
+          override def stop(time: Time): Unit = { }
+
+          override def output(src: PortId, dst: PortId, data: DataContent, time: Time): Unit = {
+            if(dst == flow_rateBridge_Downstream_Flow_Rate.id) {
+              if (lastDownstreamFlowRate != Some(data)) {
+                lastDownstreamFlowRate = Some(data)
+
+                val PCA_Types.Flow_Rate_imp_Payload(PCA_Types.Flow_Rate_imp(v)) = data
+                txtFlowRateDownstream.setText(s"$v")
+              }
+
             }
           }
         }
       )
-      */
+
 
       // allow user to modify the downstream flow rate
       txtFlowRateDownstream.addActionListener(_ => {
@@ -338,17 +350,16 @@ class PCAInputForm() {
       val txtVolume = new JTextField(4)
       messagePanel.add(txtVolume)
 
-      /*
       txtVolume.addActionListener(_ =>
         reservoirState match {
           case Some(s) =>
             val v: F32 = txtVolume.getText().toFloat
             println(s"Volume was ${s.volume} - changing to $v")
-            s.volume = Physical_Types.Fluid_Volume(v)
+            s.volume = Physical_Types.Fluid_Volume_imp(v)
           case _ =>
         }
       )
-     */
+
     }
 
     messagePanel.setBorder(BorderFactory.createTitledBorder("Debug Panel"))

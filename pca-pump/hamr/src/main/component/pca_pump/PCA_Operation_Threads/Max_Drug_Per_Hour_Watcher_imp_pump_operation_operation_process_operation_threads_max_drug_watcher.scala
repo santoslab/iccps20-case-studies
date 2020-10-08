@@ -2,8 +2,8 @@
 
 package pca_pump.PCA_Operation_Threads
 
-import art.Art
 import org.sireum._
+import art.Art
 import pca_pump._
 import pca_pump.util.ArtSystem
 

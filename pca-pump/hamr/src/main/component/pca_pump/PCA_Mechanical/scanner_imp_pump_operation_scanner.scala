@@ -8,13 +8,9 @@ import pca_pump._
 // This file will not be overwritten so is safe to edit
 object scanner_imp_pump_operation_scanner {
 
-  def initialise(api: scanner_imp_Initialization_Api): Unit = {
+  def initialise(api: scanner_imp_Initialization_Api): Unit = {}
 
-  }
-
-  def handleDo_Scan(api: scanner_imp_Operational_Api): Unit = {
-
-  }
+  def handleDo_Scan(api: scanner_imp_Operational_Api): Unit = {}
 
   def activate(api: scanner_imp_Operational_Api): Unit = { }
 

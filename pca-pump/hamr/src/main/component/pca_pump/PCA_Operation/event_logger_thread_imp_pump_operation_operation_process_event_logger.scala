@@ -24,15 +24,7 @@ object event_logger_thread_imp_pump_operation_operation_process_event_logger {
 
   var log: ISZ[PCA_Types.Event_Record] = ISZ()
 
-  def initialise(api: event_logger_thread_imp_Initialization_Api): Unit = {
-    // example api usage
-
-    api.logInfo("Example info logging")
-    api.logDebug("Example debug logging")
-    api.logError("Example error logging")
-
-    api.sendThe_Event_Log(PCA_Types.Event_Log.empty())
-  }
+  def initialise(api: event_logger_thread_imp_Initialization_Api): Unit = {}
 
   def handleLog_Event(api: event_logger_thread_imp_Operational_Api, value : PCA_Types.Event_Record): Unit = {
     api.logInfo(s"received ${value}")

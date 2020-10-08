@@ -16,10 +16,7 @@ object drug_library_thread_imp_pump_operation_operation_process_drug_library {
     drugLibraryLoaded = true
   }
 
-  def handleLoad_Drug_Library(api: drug_library_thread_imp_Operational_Api, value : PCA_Types.Drug_Library): Unit = {
-    api.logInfo("example handleLoad_Drug_Library implementation")
-    api.logInfo(s"received ${value}")
-  }
+  def handleLoad_Drug_Library(api: drug_library_thread_imp_Operational_Api, value : PCA_Types.Drug_Library): Unit = {}
 
   def handleGet_Drug_Record(api: drug_library_thread_imp_Operational_Api, value : PCA_Types.Drug_Code_imp): Unit = {
     api.logInfo(s"received Get_Drug_Record ${value}")

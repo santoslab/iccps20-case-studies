@@ -11,9 +11,7 @@ object pca_screen_imp_pump_operation_control_panel_display {
   var lastImage: Option[PCA_Types.Image] = None[PCA_Types.Image]()
   var firstInvocation : B = T
 
-  def initialise(api: pca_screen_imp_Initialization_Api): Unit = {
-
-  }
+  def initialise(api: pca_screen_imp_Initialization_Api): Unit = {}
 
   def timeTriggered(api: pca_screen_imp_Operational_Api): Unit = {
     if(firstInvocation) {

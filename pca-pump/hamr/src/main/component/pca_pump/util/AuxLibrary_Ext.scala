@@ -9,7 +9,7 @@ import org.sireum.Z
 object AuxLibrary_Ext {
   var drugLibrary: HashMap[PCA_Types.Drug_Code_imp, PCA_Types.Drug_Record_imp] = {
     val _drugLibrary = scala.io.Source.fromInputStream(getClass.getResourceAsStream("drug_library.json")).mkString
-    var drugLibrary = JSON.toPCA_TypesDrug_Library(_drugLibrary).left
+    val drugLibrary = JSON.toPCA_TypesDrug_Library(_drugLibrary).left
 
     var m = HashMap.empty[PCA_Types.Drug_Code_imp, PCA_Types.Drug_Record_imp]
     drugLibrary.value.foreach(record => m = m + (record.code, record))

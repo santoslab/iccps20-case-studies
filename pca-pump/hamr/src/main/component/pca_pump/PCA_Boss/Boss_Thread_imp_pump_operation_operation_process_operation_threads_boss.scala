@@ -5,6 +5,7 @@ package pca_pump.PCA_Boss
 import org.sireum._
 import pca_pump.PCA_Types.Generic_Event
 import pca_pump._
+import pca_pump.util.PCA_Properties
 
 // This file will not be overwritten so is safe to edit
 object Boss_Thread_imp_pump_operation_operation_process_operation_threads_boss {
@@ -41,7 +42,7 @@ object Boss_Thread_imp_pump_operation_operation_process_operation_threads_boss {
           transitionToUC1_19_display_turn_off_pump(api, 15000)
         }
       // clinician has 10 seconds to press the stop button
-      //art.ArtTimer.setTimeout(api.id, makeSoundTimeoutEvent, 10000, true, cb _)
+      art.ArtTimer.setTimeout(api.id, makeSoundTimeoutEvent, 10000, true, cb _)
 
       case _ =>
         api.logError(s"Wasn't expecting POST_done while mode is $currentMode")
@@ -63,7 +64,7 @@ object Boss_Thread_imp_pump_operation_operation_process_operation_threads_boss {
           UC1_19_display_turn_off_pump(api)
         }
       // pump will beep for 2 seconds before displaying turn off message
-      //art.ArtTimer.setTimeout(api.id, postFailTimeoutEvent, 2000, true, cb _)
+      art.ArtTimer.setTimeout(api.id, postFailTimeoutEvent, 2000, true, cb _)
       case _ =>
         api.logError(s"Wasn't expecting POST_fail while mode is $currentMode")
     }
@@ -154,7 +155,7 @@ object Boss_Thread_imp_pump_operation_operation_process_operation_threads_boss {
         }
 
       // clinican has 'PrimeTime' ms to press the stop button once priming starts
-      //art.ArtTimer.setTimeout(api.id, primingTimeoutEvent, Property_Sets.PCA_Properties.PrimeTime, true, timeoutHandler _)
+      art.ArtTimer.setTimeout(api.id, primingTimeoutEvent, PCA_Properties.PrimeTime, true, timeoutHandler _)
 
       case BossMode.UC1_13_display_insert_needle =>
         api.logInfo("start button pressed after needle inserted")
@@ -412,7 +413,7 @@ object Boss_Thread_imp_pump_operation_operation_process_operation_threads_boss {
       UC1_19_display_turn_off_pump(api)
     }
 
-    //art.ArtTimer.setTimeout(api.id, errorCaseTimeoutEvent, timeoutInMilliseconds, true, errorCaseTimeoutHandler _)
+    art.ArtTimer.setTimeout(api.id, errorCaseTimeoutEvent, timeoutInMilliseconds, true, errorCaseTimeoutHandler _)
   }
 
   def activate(api: Boss_Thread_imp_Operational_Api): Unit = { }

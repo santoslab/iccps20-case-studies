@@ -19,24 +19,7 @@ object Prescription_Checker_imp_pump_operation_operation_process_operation_threa
   val fixMe2: Option[PCA_Types.Infusion_Unit_imp] = None[PCA_Types.Infusion_Unit_imp]()
   val fixMe3: Option[PCA_Types.Drug_Weight_imp] = None[PCA_Types.Drug_Weight_imp]()
 
-  def initialise(api: Prescription_Checker_imp_Initialization_Api): Unit = {
-    // example api usage
-
-    api.logInfo("Example info logging")
-    api.logDebug("Example debug logging")
-    api.logError("Example error logging")
-
-    api.setVTBI(PCA_Types.Drug_Volume_imp.empty())
-    api.setSquare_Bolus_Rate(PCA_Types.Flow_Rate_imp.empty())
-    api.setPatient_Bolus_Rate(PCA_Types.Flow_Rate_imp.empty())
-    api.setBasal_Rate(PCA_Types.Flow_Rate_imp.empty())
-    api.setMinimum_Time_Between_Bolus(ICE_Types.Minute_imp.empty())
-    api.setMax_Drug_Per_Hour(PCA_Types.Drug_Volume_imp.empty())
-    api.sendGet_Drug_Record(PCA_Types.Drug_Code_imp.empty())
-    api.sendRx_Okay()
-    api.sendSoft_Limit_Warning()
-    api.sendHard_Limit_Violated()
-  }
+  def initialise(api: Prescription_Checker_imp_Initialization_Api): Unit = {}
 
   def handleThe_Drug_Record(api: Prescription_Checker_imp_Operational_Api, value : PCA_Types.Drug_Record_imp): Unit = {
     api.logInfo(s"received The_Drug_Record $value")
