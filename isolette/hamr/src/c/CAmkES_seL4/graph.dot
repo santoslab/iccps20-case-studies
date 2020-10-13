@@ -1,0 +1,422 @@
+digraph g {
+graph [
+  overlap = false,
+  rankdir = "LR"
+];
+node [
+  fontsize = "16",
+  shape = "ellipse"
+];
+edge [
+];
+
+thermostat_regulate_temperature_manage_regulator_interface_mrit [
+  label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+      <TR><TD><B>thermostat_regulate_temperature_manage_regulator_interface_mrit</B></TD></TR>
+      <TR><TD PORT="sb_current_tempWstatus"><FONT COLOR="red">dataport sp_union_art_DataContent_t <B>sb_current_tempWstatus</B></FONT></TD></TR>
+      <TR><TD PORT="sb_lower_desired_tempWstatus"><FONT COLOR="red">dataport sp_union_art_DataContent_t <B>sb_lower_desired_tempWstatus</B></FONT></TD></TR>
+      <TR><TD PORT="sb_upper_desired_tempWstatus"><FONT COLOR="red">dataport sp_union_art_DataContent_t <B>sb_upper_desired_tempWstatus</B></FONT></TD></TR>
+      <TR><TD PORT="sb_regulator_mode"><FONT COLOR="red">dataport sp_union_art_DataContent_t <B>sb_regulator_mode</B></FONT></TD></TR>
+      <TR><TD PORT="sb_upper_desired_temp"><FONT COLOR="red">dataport sp_union_art_DataContent_t <B>sb_upper_desired_temp</B></FONT></TD></TR>
+      <TR><TD PORT="sb_lower_desired_temp"><FONT COLOR="red">dataport sp_union_art_DataContent_t <B>sb_lower_desired_temp</B></FONT></TD></TR>
+      <TR><TD PORT="sb_displayed_temp"><FONT COLOR="red">dataport sp_union_art_DataContent_t <B>sb_displayed_temp</B></FONT></TD></TR>
+      <TR><TD PORT="sb_regulator_status"><FONT COLOR="red">dataport sp_union_art_DataContent_t <B>sb_regulator_status</B></FONT></TD></TR>
+      <TR><TD PORT="sb_interface_failure"><FONT COLOR="red">dataport sp_union_art_DataContent_t <B>sb_interface_failure</B></FONT></TD></TR>
+      <TR><TD PORT="sb_self_pacer_tick"><FONT COLOR="blue">emits TickTock <B>sb_self_pacer_tick</B></FONT></TD></TR>
+      <TR><TD PORT="sb_self_pacer_tock"><FONT COLOR="blue">consumes TickTock <B>sb_self_pacer_tock</B></FONT></TD></TR>"
+    </TABLE>
+  >
+  shape=plaintext
+];
+
+thermostat_regulate_temperature_manage_heat_source_mhst [
+  label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+      <TR><TD><B>thermostat_regulate_temperature_manage_heat_source_mhst</B></TD></TR>
+      <TR><TD PORT="sb_current_tempWstatus"><FONT COLOR="red">dataport sp_union_art_DataContent_t <B>sb_current_tempWstatus</B></FONT></TD></TR>
+      <TR><TD PORT="sb_lower_desired_temp"><FONT COLOR="red">dataport sp_union_art_DataContent_t <B>sb_lower_desired_temp</B></FONT></TD></TR>
+      <TR><TD PORT="sb_upper_desired_temp"><FONT COLOR="red">dataport sp_union_art_DataContent_t <B>sb_upper_desired_temp</B></FONT></TD></TR>
+      <TR><TD PORT="sb_regulator_mode"><FONT COLOR="red">dataport sp_union_art_DataContent_t <B>sb_regulator_mode</B></FONT></TD></TR>
+      <TR><TD PORT="sb_heat_control"><FONT COLOR="red">dataport sp_union_art_DataContent_t <B>sb_heat_control</B></FONT></TD></TR>
+      <TR><TD PORT="sb_self_pacer_tick"><FONT COLOR="blue">emits TickTock <B>sb_self_pacer_tick</B></FONT></TD></TR>
+      <TR><TD PORT="sb_self_pacer_tock"><FONT COLOR="blue">consumes TickTock <B>sb_self_pacer_tock</B></FONT></TD></TR>"
+    </TABLE>
+  >
+  shape=plaintext
+];
+
+thermostat_regulate_temperature_manage_regulator_mode_mrmt [
+  label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+      <TR><TD><B>thermostat_regulate_temperature_manage_regulator_mode_mrmt</B></TD></TR>
+      <TR><TD PORT="sb_current_tempWstatus"><FONT COLOR="red">dataport sp_union_art_DataContent_t <B>sb_current_tempWstatus</B></FONT></TD></TR>
+      <TR><TD PORT="sb_interface_failure"><FONT COLOR="red">dataport sp_union_art_DataContent_t <B>sb_interface_failure</B></FONT></TD></TR>
+      <TR><TD PORT="sb_regulator_mode"><FONT COLOR="red">dataport sp_union_art_DataContent_t <B>sb_regulator_mode</B></FONT></TD></TR>
+      <TR><TD PORT="sb_self_pacer_tick"><FONT COLOR="blue">emits TickTock <B>sb_self_pacer_tick</B></FONT></TD></TR>
+      <TR><TD PORT="sb_self_pacer_tock"><FONT COLOR="blue">consumes TickTock <B>sb_self_pacer_tock</B></FONT></TD></TR>"
+    </TABLE>
+  >
+  shape=plaintext
+];
+
+thermostat_monitor_temperature_manage_alarm_mat [
+  label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+      <TR><TD><B>thermostat_monitor_temperature_manage_alarm_mat</B></TD></TR>
+      <TR><TD PORT="sb_current_tempWstatus"><FONT COLOR="red">dataport sp_union_art_DataContent_t <B>sb_current_tempWstatus</B></FONT></TD></TR>
+      <TR><TD PORT="sb_lower_alarm_temp"><FONT COLOR="red">dataport sp_union_art_DataContent_t <B>sb_lower_alarm_temp</B></FONT></TD></TR>
+      <TR><TD PORT="sb_upper_alarm_temp"><FONT COLOR="red">dataport sp_union_art_DataContent_t <B>sb_upper_alarm_temp</B></FONT></TD></TR>
+      <TR><TD PORT="sb_monitor_mode"><FONT COLOR="red">dataport sp_union_art_DataContent_t <B>sb_monitor_mode</B></FONT></TD></TR>
+      <TR><TD PORT="sb_alarm_control"><FONT COLOR="red">dataport sp_union_art_DataContent_t <B>sb_alarm_control</B></FONT></TD></TR>
+      <TR><TD PORT="sb_self_pacer_tick"><FONT COLOR="blue">emits TickTock <B>sb_self_pacer_tick</B></FONT></TD></TR>
+      <TR><TD PORT="sb_self_pacer_tock"><FONT COLOR="blue">consumes TickTock <B>sb_self_pacer_tock</B></FONT></TD></TR>"
+    </TABLE>
+  >
+  shape=plaintext
+];
+
+thermostat_monitor_temperature_manage_monitor_interface_mmit [
+  label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+      <TR><TD><B>thermostat_monitor_temperature_manage_monitor_interface_mmit</B></TD></TR>
+      <TR><TD PORT="sb_upper_alarm_tempWstatus"><FONT COLOR="red">dataport sp_union_art_DataContent_t <B>sb_upper_alarm_tempWstatus</B></FONT></TD></TR>
+      <TR><TD PORT="sb_lower_alarm_tempWstatus"><FONT COLOR="red">dataport sp_union_art_DataContent_t <B>sb_lower_alarm_tempWstatus</B></FONT></TD></TR>
+      <TR><TD PORT="sb_current_tempWstatus"><FONT COLOR="red">dataport sp_union_art_DataContent_t <B>sb_current_tempWstatus</B></FONT></TD></TR>
+      <TR><TD PORT="sb_monitor_mode"><FONT COLOR="red">dataport sp_union_art_DataContent_t <B>sb_monitor_mode</B></FONT></TD></TR>
+      <TR><TD PORT="sb_upper_alarm_temp"><FONT COLOR="red">dataport sp_union_art_DataContent_t <B>sb_upper_alarm_temp</B></FONT></TD></TR>
+      <TR><TD PORT="sb_lower_alarm_temp"><FONT COLOR="red">dataport sp_union_art_DataContent_t <B>sb_lower_alarm_temp</B></FONT></TD></TR>
+      <TR><TD PORT="sb_monitor_status"><FONT COLOR="red">dataport sp_union_art_DataContent_t <B>sb_monitor_status</B></FONT></TD></TR>
+      <TR><TD PORT="sb_interface_failure"><FONT COLOR="red">dataport sp_union_art_DataContent_t <B>sb_interface_failure</B></FONT></TD></TR>
+      <TR><TD PORT="sb_self_pacer_tick"><FONT COLOR="blue">emits TickTock <B>sb_self_pacer_tick</B></FONT></TD></TR>
+      <TR><TD PORT="sb_self_pacer_tock"><FONT COLOR="blue">consumes TickTock <B>sb_self_pacer_tock</B></FONT></TD></TR>"
+    </TABLE>
+  >
+  shape=plaintext
+];
+
+thermostat_monitor_temperature_manage_monitor_mode_mmmt [
+  label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+      <TR><TD><B>thermostat_monitor_temperature_manage_monitor_mode_mmmt</B></TD></TR>
+      <TR><TD PORT="sb_current_tempWstatus"><FONT COLOR="red">dataport sp_union_art_DataContent_t <B>sb_current_tempWstatus</B></FONT></TD></TR>
+      <TR><TD PORT="sb_interface_failure"><FONT COLOR="red">dataport sp_union_art_DataContent_t <B>sb_interface_failure</B></FONT></TD></TR>
+      <TR><TD PORT="sb_monitor_mode"><FONT COLOR="red">dataport sp_union_art_DataContent_t <B>sb_monitor_mode</B></FONT></TD></TR>
+      <TR><TD PORT="sb_self_pacer_tick"><FONT COLOR="blue">emits TickTock <B>sb_self_pacer_tick</B></FONT></TD></TR>
+      <TR><TD PORT="sb_self_pacer_tock"><FONT COLOR="blue">consumes TickTock <B>sb_self_pacer_tock</B></FONT></TD></TR>"
+    </TABLE>
+  >
+  shape=plaintext
+];
+
+operator_interface_oip_oit [
+  label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+      <TR><TD><B>operator_interface_oip_oit</B></TD></TR>
+      <TR><TD PORT="sb_regulator_status"><FONT COLOR="red">dataport sp_union_art_DataContent_t <B>sb_regulator_status</B></FONT></TD></TR>
+      <TR><TD PORT="sb_monitor_status"><FONT COLOR="red">dataport sp_union_art_DataContent_t <B>sb_monitor_status</B></FONT></TD></TR>
+      <TR><TD PORT="sb_display_temperature"><FONT COLOR="red">dataport sp_union_art_DataContent_t <B>sb_display_temperature</B></FONT></TD></TR>
+      <TR><TD PORT="sb_alarm_control"><FONT COLOR="red">dataport sp_union_art_DataContent_t <B>sb_alarm_control</B></FONT></TD></TR>
+      <TR><TD PORT="sb_lower_desired_tempWstatus"><FONT COLOR="red">dataport sp_union_art_DataContent_t <B>sb_lower_desired_tempWstatus</B></FONT></TD></TR>
+      <TR><TD PORT="sb_upper_desired_tempWstatus"><FONT COLOR="red">dataport sp_union_art_DataContent_t <B>sb_upper_desired_tempWstatus</B></FONT></TD></TR>
+      <TR><TD PORT="sb_upper_alarm_tempWstatus"><FONT COLOR="red">dataport sp_union_art_DataContent_t <B>sb_upper_alarm_tempWstatus</B></FONT></TD></TR>
+      <TR><TD PORT="sb_self_pacer_tick"><FONT COLOR="blue">emits TickTock <B>sb_self_pacer_tick</B></FONT></TD></TR>
+      <TR><TD PORT="sb_self_pacer_tock"><FONT COLOR="blue">consumes TickTock <B>sb_self_pacer_tock</B></FONT></TD></TR>"
+    </TABLE>
+  >
+  shape=plaintext
+];
+
+temperature_sensor_cpi_thermostat [
+  label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+      <TR><TD><B>temperature_sensor_cpi_thermostat</B></TD></TR>
+      <TR><TD PORT="sb_current_tempWstatus"><FONT COLOR="red">dataport sp_union_art_DataContent_t <B>sb_current_tempWstatus</B></FONT></TD></TR>
+      <TR><TD PORT="sb_self_pacer_tick"><FONT COLOR="blue">emits TickTock <B>sb_self_pacer_tick</B></FONT></TD></TR>
+      <TR><TD PORT="sb_self_pacer_tock"><FONT COLOR="blue">consumes TickTock <B>sb_self_pacer_tock</B></FONT></TD></TR>"
+    </TABLE>
+  >
+  shape=plaintext
+];
+
+heat_source_cpi_heat_controller [
+  label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+      <TR><TD><B>heat_source_cpi_heat_controller</B></TD></TR>
+      <TR><TD PORT="sb_heat_control"><FONT COLOR="red">dataport sp_union_art_DataContent_t <B>sb_heat_control</B></FONT></TD></TR>
+      <TR><TD PORT="sb_self_pacer_tick"><FONT COLOR="blue">emits TickTock <B>sb_self_pacer_tick</B></FONT></TD></TR>
+      <TR><TD PORT="sb_self_pacer_tock"><FONT COLOR="blue">consumes TickTock <B>sb_self_pacer_tock</B></FONT></TD></TR>"
+    </TABLE>
+  >
+  shape=plaintext
+];
+
+connectiontypekey [
+  label=<
+   <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+     <TR><TD COLSPAN="2"><B>Key: Connection Types</B></TD></TR>
+     <TR><TD><FONT COLOR="red">seL4SharedData</FONT></TD><TD BGCOLOR="red">red</TD></TR>
+     <TR><TD><FONT COLOR="blue">seL4Notification</FONT></TD><TD BGCOLOR="blue">blue</TD></TR>
+     <TR><TD><FONT COLOR="orange">seL4RPCCall</FONT></TD><TD BGCOLOR="orange">orange</TD></TR>
+     <TR><TD><FONT COLOR="green">seL4TimeServer</FONT></TD><TD BGCOLOR="green">green</TD></TR>
+     <TR><TD><FONT COLOR="brown">seL4GlobalAsynchCallback</FONT></TD><TD BGCOLOR="brown">brown</TD></TR>
+     <TR><TD><FONT COLOR="yellow">seL4VMDTBPassthrough</FONT></TD><TD BGCOLOR="yellow">yellow</TD></TR>
+     <TR><TD><FONT COLOR="pink">seL4SharedDataWithCaps</FONT></TD><TD BGCOLOR="pink">pink</TD></TR>
+   </TABLE>
+  >
+  shape=plaintext
+];
+
+interfacetypekey [
+  label=<
+   <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+     <TR><TD COLSPAN="2"><B>Key: Interface Types</B></TD></TR>
+     <TR><TD><FONT COLOR="red">dataport</FONT></TD><TD BGCOLOR="red">red</TD></TR>
+     <TR><TD><FONT COLOR="blue">emits</FONT></TD><TD BGCOLOR="blue">blue</TD></TR>
+     <TR><TD><FONT COLOR="blue">consumes</FONT></TD><TD BGCOLOR="blue">blue</TD></TR>
+     <TR><TD><FONT COLOR="orange">provides</FONT></TD><TD BGCOLOR="orange">orange</TD></TR>
+     <TR><TD><FONT COLOR="orange">uses</FONT></TD><TD BGCOLOR="orange">orange</TD></TR>
+   </TABLE>
+  >
+  shape=plaintext
+];
+
+"thermostat_regulate_temperature_manage_regulator_interface_mrit":sb_displayed_temp -> "operator_interface_oip_oit":sb_display_temperature [
+  color="red"
+  //label = "seL4SharedData"
+  id = conn1
+
+];
+
+"thermostat_regulate_temperature_manage_regulator_interface_mrit":sb_regulator_status -> "operator_interface_oip_oit":sb_regulator_status [
+  color="red"
+  //label = "seL4SharedData"
+  id = conn2
+
+];
+
+"thermostat_regulate_temperature_manage_heat_source_mhst":sb_heat_control -> "heat_source_cpi_heat_controller":sb_heat_control [
+  color="red"
+  //label = "seL4SharedData"
+  id = conn3
+
+];
+
+"thermostat_monitor_temperature_manage_alarm_mat":sb_alarm_control -> "operator_interface_oip_oit":sb_alarm_control [
+  color="red"
+  //label = "seL4SharedData"
+  id = conn4
+
+];
+
+"thermostat_monitor_temperature_manage_monitor_interface_mmit":sb_monitor_status -> "operator_interface_oip_oit":sb_monitor_status [
+  color="red"
+  //label = "seL4SharedData"
+  id = conn5
+
+];
+
+"operator_interface_oip_oit":sb_lower_desired_tempWstatus -> "thermostat_regulate_temperature_manage_regulator_interface_mrit":sb_lower_desired_tempWstatus [
+  color="red"
+  //label = "seL4SharedData"
+  id = conn6
+
+];
+
+"operator_interface_oip_oit":sb_upper_desired_tempWstatus -> "thermostat_regulate_temperature_manage_regulator_interface_mrit":sb_upper_desired_tempWstatus [
+  color="red"
+  //label = "seL4SharedData"
+  id = conn7
+
+];
+
+"operator_interface_oip_oit":sb_upper_alarm_tempWstatus -> "thermostat_monitor_temperature_manage_monitor_interface_mmit":sb_upper_alarm_tempWstatus [
+  color="red"
+  //label = "seL4SharedData"
+  id = conn8
+
+];
+
+"operator_interface_oip_oit":sb_upper_alarm_tempWstatus -> "thermostat_monitor_temperature_manage_monitor_interface_mmit":sb_lower_alarm_tempWstatus [
+  color="red"
+  //label = "seL4SharedData"
+  id = conn8
+
+];
+
+"temperature_sensor_cpi_thermostat":sb_current_tempWstatus -> "thermostat_monitor_temperature_manage_monitor_interface_mmit":sb_current_tempWstatus [
+  color="red"
+  //label = "seL4SharedData"
+  id = conn9
+
+];
+
+"temperature_sensor_cpi_thermostat":sb_current_tempWstatus -> "thermostat_monitor_temperature_manage_alarm_mat":sb_current_tempWstatus [
+  color="red"
+  //label = "seL4SharedData"
+  id = conn9
+
+];
+
+"temperature_sensor_cpi_thermostat":sb_current_tempWstatus -> "thermostat_monitor_temperature_manage_monitor_mode_mmmt":sb_current_tempWstatus [
+  color="red"
+  //label = "seL4SharedData"
+  id = conn9
+
+];
+
+"temperature_sensor_cpi_thermostat":sb_current_tempWstatus -> "thermostat_regulate_temperature_manage_regulator_interface_mrit":sb_current_tempWstatus [
+  color="red"
+  //label = "seL4SharedData"
+  id = conn9
+
+];
+
+"temperature_sensor_cpi_thermostat":sb_current_tempWstatus -> "thermostat_regulate_temperature_manage_heat_source_mhst":sb_current_tempWstatus [
+  color="red"
+  //label = "seL4SharedData"
+  id = conn9
+
+];
+
+"temperature_sensor_cpi_thermostat":sb_current_tempWstatus -> "thermostat_regulate_temperature_manage_regulator_mode_mrmt":sb_current_tempWstatus [
+  color="red"
+  //label = "seL4SharedData"
+  id = conn9
+
+];
+
+"thermostat_regulate_temperature_manage_regulator_interface_mrit":sb_upper_desired_temp -> "thermostat_regulate_temperature_manage_heat_source_mhst":sb_upper_desired_temp [
+  color="red"
+  //label = "seL4SharedData"
+  id = conn10
+
+];
+
+"thermostat_regulate_temperature_manage_regulator_interface_mrit":sb_lower_desired_temp -> "thermostat_regulate_temperature_manage_heat_source_mhst":sb_lower_desired_temp [
+  color="red"
+  //label = "seL4SharedData"
+  id = conn11
+
+];
+
+"thermostat_regulate_temperature_manage_regulator_interface_mrit":sb_interface_failure -> "thermostat_regulate_temperature_manage_regulator_mode_mrmt":sb_interface_failure [
+  color="red"
+  //label = "seL4SharedData"
+  id = conn12
+
+];
+
+"thermostat_regulate_temperature_manage_regulator_mode_mrmt":sb_regulator_mode -> "thermostat_regulate_temperature_manage_regulator_interface_mrit":sb_regulator_mode [
+  color="red"
+  //label = "seL4SharedData"
+  id = conn13
+
+];
+
+"thermostat_regulate_temperature_manage_regulator_mode_mrmt":sb_regulator_mode -> "thermostat_regulate_temperature_manage_heat_source_mhst":sb_regulator_mode [
+  color="red"
+  //label = "seL4SharedData"
+  id = conn13
+
+];
+
+"thermostat_monitor_temperature_manage_monitor_interface_mmit":sb_upper_alarm_temp -> "thermostat_monitor_temperature_manage_alarm_mat":sb_upper_alarm_temp [
+  color="red"
+  //label = "seL4SharedData"
+  id = conn14
+
+];
+
+"thermostat_monitor_temperature_manage_monitor_interface_mmit":sb_lower_alarm_temp -> "thermostat_monitor_temperature_manage_alarm_mat":sb_lower_alarm_temp [
+  color="red"
+  //label = "seL4SharedData"
+  id = conn15
+
+];
+
+"thermostat_monitor_temperature_manage_monitor_interface_mmit":sb_interface_failure -> "thermostat_monitor_temperature_manage_monitor_mode_mmmt":sb_interface_failure [
+  color="red"
+  //label = "seL4SharedData"
+  id = conn16
+
+];
+
+"thermostat_monitor_temperature_manage_monitor_mode_mmmt":sb_monitor_mode -> "thermostat_monitor_temperature_manage_monitor_interface_mmit":sb_monitor_mode [
+  color="red"
+  //label = "seL4SharedData"
+  id = conn17
+
+];
+
+"thermostat_monitor_temperature_manage_monitor_mode_mmmt":sb_monitor_mode -> "thermostat_monitor_temperature_manage_alarm_mat":sb_monitor_mode [
+  color="red"
+  //label = "seL4SharedData"
+  id = conn17
+
+];
+
+"thermostat_regulate_temperature_manage_regulator_interface_mrit":sb_self_pacer_tick -> "thermostat_regulate_temperature_manage_regulator_interface_mrit":sb_self_pacer_tock [
+  color="blue"
+  //label = "seL4Notification"
+  id = conn18
+
+];
+
+"thermostat_regulate_temperature_manage_heat_source_mhst":sb_self_pacer_tick -> "thermostat_regulate_temperature_manage_heat_source_mhst":sb_self_pacer_tock [
+  color="blue"
+  //label = "seL4Notification"
+  id = conn19
+
+];
+
+"thermostat_regulate_temperature_manage_regulator_mode_mrmt":sb_self_pacer_tick -> "thermostat_regulate_temperature_manage_regulator_mode_mrmt":sb_self_pacer_tock [
+  color="blue"
+  //label = "seL4Notification"
+  id = conn20
+
+];
+
+"thermostat_monitor_temperature_manage_alarm_mat":sb_self_pacer_tick -> "thermostat_monitor_temperature_manage_alarm_mat":sb_self_pacer_tock [
+  color="blue"
+  //label = "seL4Notification"
+  id = conn21
+
+];
+
+"thermostat_monitor_temperature_manage_monitor_interface_mmit":sb_self_pacer_tick -> "thermostat_monitor_temperature_manage_monitor_interface_mmit":sb_self_pacer_tock [
+  color="blue"
+  //label = "seL4Notification"
+  id = conn22
+
+];
+
+"thermostat_monitor_temperature_manage_monitor_mode_mmmt":sb_self_pacer_tick -> "thermostat_monitor_temperature_manage_monitor_mode_mmmt":sb_self_pacer_tock [
+  color="blue"
+  //label = "seL4Notification"
+  id = conn23
+
+];
+
+"operator_interface_oip_oit":sb_self_pacer_tick -> "operator_interface_oip_oit":sb_self_pacer_tock [
+  color="blue"
+  //label = "seL4Notification"
+  id = conn24
+
+];
+
+"temperature_sensor_cpi_thermostat":sb_self_pacer_tick -> "temperature_sensor_cpi_thermostat":sb_self_pacer_tock [
+  color="blue"
+  //label = "seL4Notification"
+  id = conn25
+
+];
+
+"heat_source_cpi_heat_controller":sb_self_pacer_tick -> "heat_source_cpi_heat_controller":sb_self_pacer_tock [
+  color="blue"
+  //label = "seL4Notification"
+  id = conn26
+
+];
+
+}

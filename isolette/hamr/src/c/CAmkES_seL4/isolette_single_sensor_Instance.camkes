@@ -1,0 +1,117 @@
+// This file will be regenerated, do not edit
+
+import <std_connector.camkes>;
+import "components/Manage_Regulator_Interface_impl_thermostat_regulate_temperature_manage_regulator_interface_mrit/Manage_Regulator_Interface_impl_thermostat_regulate_temperature_manage_regulator_interface_mrit.camkes";
+import "components/Manage_Heat_Source_impl_thermostat_regulate_temperature_manage_heat_source_mhst/Manage_Heat_Source_impl_thermostat_regulate_temperature_manage_heat_source_mhst.camkes";
+import "components/Manage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_mrmt/Manage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_mrmt.camkes";
+import "components/Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_mat/Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_mat.camkes";
+import "components/Manage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monitor_interface_mmit/Manage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monitor_interface_mmit.camkes";
+import "components/Manage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mode_mmmt/Manage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mode_mmmt.camkes";
+import "components/operator_interface_thread_impl_operator_interface_oip_oit/operator_interface_thread_impl_operator_interface_oip_oit.camkes";
+import "components/Temperature_Sensor_impl_temperature_sensor_cpi_thermostat/Temperature_Sensor_impl_temperature_sensor_cpi_thermostat.camkes";
+import "components/Heat_Source_impl_heat_source_cpi_heat_controller/Heat_Source_impl_heat_source_cpi_heat_controller.camkes";
+
+assembly {
+  composition {
+    component Manage_Regulator_Interface_impl_thermostat_regulate_temperature_manage_regulator_interface_mrit thermostat_regulate_temperature_manage_regulator_interface_mrit;
+    component Manage_Heat_Source_impl_thermostat_regulate_temperature_manage_heat_source_mhst thermostat_regulate_temperature_manage_heat_source_mhst;
+    component Manage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_mrmt thermostat_regulate_temperature_manage_regulator_mode_mrmt;
+    component Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_mat thermostat_monitor_temperature_manage_alarm_mat;
+    component Manage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monitor_interface_mmit thermostat_monitor_temperature_manage_monitor_interface_mmit;
+    component Manage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mode_mmmt thermostat_monitor_temperature_manage_monitor_mode_mmmt;
+    component operator_interface_thread_impl_operator_interface_oip_oit operator_interface_oip_oit;
+    component Temperature_Sensor_impl_temperature_sensor_cpi_thermostat temperature_sensor_cpi_thermostat;
+    component Heat_Source_impl_heat_source_cpi_heat_controller heat_source_cpi_heat_controller;
+
+    connection seL4SharedData conn1(from thermostat_regulate_temperature_manage_regulator_interface_mrit.sb_displayed_temp, to operator_interface_oip_oit.sb_display_temperature);
+    connection seL4SharedData conn2(from thermostat_regulate_temperature_manage_regulator_interface_mrit.sb_regulator_status, to operator_interface_oip_oit.sb_regulator_status);
+    connection seL4SharedData conn3(from thermostat_regulate_temperature_manage_heat_source_mhst.sb_heat_control, to heat_source_cpi_heat_controller.sb_heat_control);
+    connection seL4SharedData conn4(from thermostat_monitor_temperature_manage_alarm_mat.sb_alarm_control, to operator_interface_oip_oit.sb_alarm_control);
+    connection seL4SharedData conn5(from thermostat_monitor_temperature_manage_monitor_interface_mmit.sb_monitor_status, to operator_interface_oip_oit.sb_monitor_status);
+    connection seL4SharedData conn6(from operator_interface_oip_oit.sb_lower_desired_tempWstatus, to thermostat_regulate_temperature_manage_regulator_interface_mrit.sb_lower_desired_tempWstatus);
+    connection seL4SharedData conn7(from operator_interface_oip_oit.sb_upper_desired_tempWstatus, to thermostat_regulate_temperature_manage_regulator_interface_mrit.sb_upper_desired_tempWstatus);
+    connection seL4SharedData conn8(from operator_interface_oip_oit.sb_upper_alarm_tempWstatus, to thermostat_monitor_temperature_manage_monitor_interface_mmit.sb_upper_alarm_tempWstatus, to thermostat_monitor_temperature_manage_monitor_interface_mmit.sb_lower_alarm_tempWstatus);
+    connection seL4SharedData conn9(from temperature_sensor_cpi_thermostat.sb_current_tempWstatus, to thermostat_monitor_temperature_manage_monitor_interface_mmit.sb_current_tempWstatus, to thermostat_monitor_temperature_manage_alarm_mat.sb_current_tempWstatus, to thermostat_monitor_temperature_manage_monitor_mode_mmmt.sb_current_tempWstatus, to thermostat_regulate_temperature_manage_regulator_interface_mrit.sb_current_tempWstatus, to thermostat_regulate_temperature_manage_heat_source_mhst.sb_current_tempWstatus, to thermostat_regulate_temperature_manage_regulator_mode_mrmt.sb_current_tempWstatus);
+    connection seL4SharedData conn10(from thermostat_regulate_temperature_manage_regulator_interface_mrit.sb_upper_desired_temp, to thermostat_regulate_temperature_manage_heat_source_mhst.sb_upper_desired_temp);
+    connection seL4SharedData conn11(from thermostat_regulate_temperature_manage_regulator_interface_mrit.sb_lower_desired_temp, to thermostat_regulate_temperature_manage_heat_source_mhst.sb_lower_desired_temp);
+    connection seL4SharedData conn12(from thermostat_regulate_temperature_manage_regulator_interface_mrit.sb_interface_failure, to thermostat_regulate_temperature_manage_regulator_mode_mrmt.sb_interface_failure);
+    connection seL4SharedData conn13(from thermostat_regulate_temperature_manage_regulator_mode_mrmt.sb_regulator_mode, to thermostat_regulate_temperature_manage_regulator_interface_mrit.sb_regulator_mode, to thermostat_regulate_temperature_manage_heat_source_mhst.sb_regulator_mode);
+    connection seL4SharedData conn14(from thermostat_monitor_temperature_manage_monitor_interface_mmit.sb_upper_alarm_temp, to thermostat_monitor_temperature_manage_alarm_mat.sb_upper_alarm_temp);
+    connection seL4SharedData conn15(from thermostat_monitor_temperature_manage_monitor_interface_mmit.sb_lower_alarm_temp, to thermostat_monitor_temperature_manage_alarm_mat.sb_lower_alarm_temp);
+    connection seL4SharedData conn16(from thermostat_monitor_temperature_manage_monitor_interface_mmit.sb_interface_failure, to thermostat_monitor_temperature_manage_monitor_mode_mmmt.sb_interface_failure);
+    connection seL4SharedData conn17(from thermostat_monitor_temperature_manage_monitor_mode_mmmt.sb_monitor_mode, to thermostat_monitor_temperature_manage_monitor_interface_mmit.sb_monitor_mode, to thermostat_monitor_temperature_manage_alarm_mat.sb_monitor_mode);
+    connection seL4Notification conn18(from thermostat_regulate_temperature_manage_regulator_interface_mrit.sb_self_pacer_tick, to thermostat_regulate_temperature_manage_regulator_interface_mrit.sb_self_pacer_tock);
+    connection seL4Notification conn19(from thermostat_regulate_temperature_manage_heat_source_mhst.sb_self_pacer_tick, to thermostat_regulate_temperature_manage_heat_source_mhst.sb_self_pacer_tock);
+    connection seL4Notification conn20(from thermostat_regulate_temperature_manage_regulator_mode_mrmt.sb_self_pacer_tick, to thermostat_regulate_temperature_manage_regulator_mode_mrmt.sb_self_pacer_tock);
+    connection seL4Notification conn21(from thermostat_monitor_temperature_manage_alarm_mat.sb_self_pacer_tick, to thermostat_monitor_temperature_manage_alarm_mat.sb_self_pacer_tock);
+    connection seL4Notification conn22(from thermostat_monitor_temperature_manage_monitor_interface_mmit.sb_self_pacer_tick, to thermostat_monitor_temperature_manage_monitor_interface_mmit.sb_self_pacer_tock);
+    connection seL4Notification conn23(from thermostat_monitor_temperature_manage_monitor_mode_mmmt.sb_self_pacer_tick, to thermostat_monitor_temperature_manage_monitor_mode_mmmt.sb_self_pacer_tock);
+    connection seL4Notification conn24(from operator_interface_oip_oit.sb_self_pacer_tick, to operator_interface_oip_oit.sb_self_pacer_tock);
+    connection seL4Notification conn25(from temperature_sensor_cpi_thermostat.sb_self_pacer_tick, to temperature_sensor_cpi_thermostat.sb_self_pacer_tock);
+    connection seL4Notification conn26(from heat_source_cpi_heat_controller.sb_self_pacer_tick, to heat_source_cpi_heat_controller.sb_self_pacer_tock);
+  }
+
+  configuration {
+    thermostat_regulate_temperature_manage_regulator_interface_mrit.current_tempWstatus_access = "R";
+    thermostat_regulate_temperature_manage_regulator_interface_mrit.lower_desired_tempWstatus_access = "R";
+    thermostat_regulate_temperature_manage_regulator_interface_mrit.upper_desired_tempWstatus_access = "R";
+    thermostat_regulate_temperature_manage_regulator_interface_mrit.regulator_mode_access = "R";
+    thermostat_regulate_temperature_manage_regulator_interface_mrit.upper_desired_temp_access = "W";
+    thermostat_regulate_temperature_manage_regulator_interface_mrit.lower_desired_temp_access = "W";
+    thermostat_regulate_temperature_manage_regulator_interface_mrit.displayed_temp_access = "W";
+    thermostat_regulate_temperature_manage_regulator_interface_mrit.regulator_status_access = "W";
+    thermostat_regulate_temperature_manage_regulator_interface_mrit.interface_failure_access = "W";
+    thermostat_regulate_temperature_manage_regulator_interface_mrit._stack_size = 217088;
+    thermostat_regulate_temperature_manage_regulator_interface_mrit._domain = 5;
+    thermostat_regulate_temperature_manage_heat_source_mhst.current_tempWstatus_access = "R";
+    thermostat_regulate_temperature_manage_heat_source_mhst.lower_desired_temp_access = "R";
+    thermostat_regulate_temperature_manage_heat_source_mhst.upper_desired_temp_access = "R";
+    thermostat_regulate_temperature_manage_heat_source_mhst.regulator_mode_access = "R";
+    thermostat_regulate_temperature_manage_heat_source_mhst.heat_control_access = "W";
+    thermostat_regulate_temperature_manage_heat_source_mhst._stack_size = 217088;
+    thermostat_regulate_temperature_manage_heat_source_mhst._domain = 6;
+    thermostat_regulate_temperature_manage_regulator_mode_mrmt.current_tempWstatus_access = "R";
+    thermostat_regulate_temperature_manage_regulator_mode_mrmt.interface_failure_access = "R";
+    thermostat_regulate_temperature_manage_regulator_mode_mrmt.regulator_mode_access = "W";
+    thermostat_regulate_temperature_manage_regulator_mode_mrmt._stack_size = 217088;
+    thermostat_regulate_temperature_manage_regulator_mode_mrmt._domain = 4;
+    thermostat_monitor_temperature_manage_alarm_mat.current_tempWstatus_access = "R";
+    thermostat_monitor_temperature_manage_alarm_mat.lower_alarm_temp_access = "R";
+    thermostat_monitor_temperature_manage_alarm_mat.upper_alarm_temp_access = "R";
+    thermostat_monitor_temperature_manage_alarm_mat.monitor_mode_access = "R";
+    thermostat_monitor_temperature_manage_alarm_mat.alarm_control_access = "W";
+    thermostat_monitor_temperature_manage_alarm_mat._stack_size = 217088;
+    thermostat_monitor_temperature_manage_alarm_mat._domain = 9;
+    thermostat_monitor_temperature_manage_monitor_interface_mmit.upper_alarm_tempWstatus_access = "R";
+    thermostat_monitor_temperature_manage_monitor_interface_mmit.lower_alarm_tempWstatus_access = "R";
+    thermostat_monitor_temperature_manage_monitor_interface_mmit.current_tempWstatus_access = "R";
+    thermostat_monitor_temperature_manage_monitor_interface_mmit.monitor_mode_access = "R";
+    thermostat_monitor_temperature_manage_monitor_interface_mmit.upper_alarm_temp_access = "W";
+    thermostat_monitor_temperature_manage_monitor_interface_mmit.lower_alarm_temp_access = "W";
+    thermostat_monitor_temperature_manage_monitor_interface_mmit.monitor_status_access = "W";
+    thermostat_monitor_temperature_manage_monitor_interface_mmit.interface_failure_access = "W";
+    thermostat_monitor_temperature_manage_monitor_interface_mmit._stack_size = 217088;
+    thermostat_monitor_temperature_manage_monitor_interface_mmit._domain = 8;
+    thermostat_monitor_temperature_manage_monitor_mode_mmmt.current_tempWstatus_access = "R";
+    thermostat_monitor_temperature_manage_monitor_mode_mmmt.interface_failure_access = "R";
+    thermostat_monitor_temperature_manage_monitor_mode_mmmt.monitor_mode_access = "W";
+    thermostat_monitor_temperature_manage_monitor_mode_mmmt._stack_size = 217088;
+    thermostat_monitor_temperature_manage_monitor_mode_mmmt._domain = 7;
+    operator_interface_oip_oit.regulator_status_access = "R";
+    operator_interface_oip_oit.monitor_status_access = "R";
+    operator_interface_oip_oit.display_temperature_access = "R";
+    operator_interface_oip_oit.alarm_control_access = "R";
+    operator_interface_oip_oit.lower_desired_tempWstatus_access = "W";
+    operator_interface_oip_oit.upper_desired_tempWstatus_access = "W";
+    operator_interface_oip_oit.upper_alarm_tempWstatus_access = "W";
+    operator_interface_oip_oit._stack_size = 217088;
+    operator_interface_oip_oit._domain = 2;
+    temperature_sensor_cpi_thermostat.current_tempWstatus_access = "W";
+    temperature_sensor_cpi_thermostat._stack_size = 217088;
+    temperature_sensor_cpi_thermostat._domain = 3;
+    heat_source_cpi_heat_controller.heat_control_access = "R";
+    heat_source_cpi_heat_controller._stack_size = 217088;
+    heat_source_cpi_heat_controller._domain = 10;
+
+  }
+}

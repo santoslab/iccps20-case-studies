@@ -1,0 +1,94 @@
+# This file will be regenerated, do not edit
+
+cmake_minimum_required(VERSION 3.8.2)
+
+project (isolette_single_sensor_Instance C)
+
+add_definitions(-DCAMKES)
+
+include(${CMAKE_CURRENT_LIST_DIR}/CMake_TranspilerOptions.cmake)
+
+if ("${CMAKE_CXX_COMPILER_ID}" MATCHES "(C|c?)lang")
+  add_compile_options("$<$<CONFIG:Release>:-Oz>")
+elseif ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU")
+  add_compile_options(-fstack-usage)
+  add_compile_options("$<$<CONFIG:Release>:-Os>")
+endif()
+
+add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/slang_libraries/Manage_Regulator_Interface_impl_thermostat_regulate_temperature_manage_regulator_interface_mrit)
+
+add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/slang_libraries/Manage_Heat_Source_impl_thermostat_regulate_temperature_manage_heat_source_mhst)
+
+add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/slang_libraries/Manage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_mrmt)
+
+add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/slang_libraries/Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_mat)
+
+add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/slang_libraries/Manage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monitor_interface_mmit)
+
+add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/slang_libraries/Manage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mode_mmmt)
+
+add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/slang_libraries/operator_interface_thread_impl_operator_interface_oip_oit)
+
+add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/slang_libraries/Temperature_Sensor_impl_temperature_sensor_cpi_thermostat)
+
+add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/slang_libraries/Heat_Source_impl_heat_source_cpi_heat_controller)
+
+add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/slang_libraries/SlangTypeLibrary)
+
+add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/types)
+
+DeclareCAmkESComponent(Manage_Regulator_Interface_impl_thermostat_regulate_temperature_manage_regulator_interface_mrit
+  SOURCES components/Manage_Regulator_Interface_impl_thermostat_regulate_temperature_manage_regulator_interface_mrit/src/sb_Manage_Regulator_Interface_impl.c types/src/sp_union_art_DataContent.c types/src/sp_union_art_DataContent.c types/src/sp_union_art_DataContent.c types/src/sp_union_art_DataContent.c types/src/sp_union_art_DataContent.c types/src/sp_union_art_DataContent.c types/src/sp_union_art_DataContent.c types/src/sp_union_art_DataContent.c types/src/sp_union_art_DataContent.c
+  INCLUDES components/Manage_Regulator_Interface_impl_thermostat_regulate_temperature_manage_regulator_interface_mrit/includes/ types/includes types/includes types/includes types/includes types/includes types/includes types/includes types/includes types/includes types/includes
+  LIBS Manage_Regulator_Interface_impl_thermostat_regulate_temperature_manage_regulator_interface_mrit
+)
+
+DeclareCAmkESComponent(Manage_Heat_Source_impl_thermostat_regulate_temperature_manage_heat_source_mhst
+  SOURCES components/Manage_Heat_Source_impl_thermostat_regulate_temperature_manage_heat_source_mhst/src/sb_Manage_Heat_Source_impl.c types/src/sp_union_art_DataContent.c types/src/sp_union_art_DataContent.c types/src/sp_union_art_DataContent.c types/src/sp_union_art_DataContent.c types/src/sp_union_art_DataContent.c
+  INCLUDES components/Manage_Heat_Source_impl_thermostat_regulate_temperature_manage_heat_source_mhst/includes/ types/includes types/includes types/includes types/includes types/includes types/includes
+  LIBS Manage_Heat_Source_impl_thermostat_regulate_temperature_manage_heat_source_mhst
+)
+
+DeclareCAmkESComponent(Manage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_mrmt
+  SOURCES components/Manage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_mrmt/src/sb_Manage_Regulator_Mode_impl.c types/src/sp_union_art_DataContent.c types/src/sp_union_art_DataContent.c types/src/sp_union_art_DataContent.c
+  INCLUDES components/Manage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_mrmt/includes/ types/includes types/includes types/includes types/includes
+  LIBS Manage_Regulator_Mode_impl_thermostat_regulate_temperature_manage_regulator_mode_mrmt
+)
+
+DeclareCAmkESComponent(Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_mat
+  SOURCES components/Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_mat/src/sb_Manage_Alarm_impl.c types/src/sp_union_art_DataContent.c types/src/sp_union_art_DataContent.c types/src/sp_union_art_DataContent.c types/src/sp_union_art_DataContent.c types/src/sp_union_art_DataContent.c
+  INCLUDES components/Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_mat/includes/ types/includes types/includes types/includes types/includes types/includes types/includes
+  LIBS Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_mat
+)
+
+DeclareCAmkESComponent(Manage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monitor_interface_mmit
+  SOURCES components/Manage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monitor_interface_mmit/src/sb_Manage_Monitor_Interface_impl.c types/src/sp_union_art_DataContent.c types/src/sp_union_art_DataContent.c types/src/sp_union_art_DataContent.c types/src/sp_union_art_DataContent.c types/src/sp_union_art_DataContent.c types/src/sp_union_art_DataContent.c types/src/sp_union_art_DataContent.c types/src/sp_union_art_DataContent.c
+  INCLUDES components/Manage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monitor_interface_mmit/includes/ types/includes types/includes types/includes types/includes types/includes types/includes types/includes types/includes types/includes
+  LIBS Manage_Monitor_Interface_impl_thermostat_monitor_temperature_manage_monitor_interface_mmit
+)
+
+DeclareCAmkESComponent(Manage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mode_mmmt
+  SOURCES components/Manage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mode_mmmt/src/sb_Manage_Monitor_Mode_impl.c types/src/sp_union_art_DataContent.c types/src/sp_union_art_DataContent.c types/src/sp_union_art_DataContent.c
+  INCLUDES components/Manage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mode_mmmt/includes/ types/includes types/includes types/includes types/includes
+  LIBS Manage_Monitor_Mode_impl_thermostat_monitor_temperature_manage_monitor_mode_mmmt
+)
+
+DeclareCAmkESComponent(operator_interface_thread_impl_operator_interface_oip_oit
+  SOURCES components/operator_interface_thread_impl_operator_interface_oip_oit/src/sb_operator_interface_thread_impl.c types/src/sp_union_art_DataContent.c types/src/sp_union_art_DataContent.c types/src/sp_union_art_DataContent.c types/src/sp_union_art_DataContent.c types/src/sp_union_art_DataContent.c types/src/sp_union_art_DataContent.c types/src/sp_union_art_DataContent.c
+  INCLUDES components/operator_interface_thread_impl_operator_interface_oip_oit/includes/ types/includes types/includes types/includes types/includes types/includes types/includes types/includes types/includes
+  LIBS operator_interface_thread_impl_operator_interface_oip_oit
+)
+
+DeclareCAmkESComponent(Temperature_Sensor_impl_temperature_sensor_cpi_thermostat
+  SOURCES components/Temperature_Sensor_impl_temperature_sensor_cpi_thermostat/src/sb_Temperature_Sensor_impl.c types/src/sp_union_art_DataContent.c
+  INCLUDES components/Temperature_Sensor_impl_temperature_sensor_cpi_thermostat/includes/ types/includes types/includes
+  LIBS Temperature_Sensor_impl_temperature_sensor_cpi_thermostat
+)
+
+DeclareCAmkESComponent(Heat_Source_impl_heat_source_cpi_heat_controller
+  SOURCES components/Heat_Source_impl_heat_source_cpi_heat_controller/src/sb_Heat_Source_impl.c types/src/sp_union_art_DataContent.c
+  INCLUDES components/Heat_Source_impl_heat_source_cpi_heat_controller/includes/ types/includes types/includes
+  LIBS Heat_Source_impl_heat_source_cpi_heat_controller
+)
+
+DeclareCAmkESRootserver(isolette_single_sensor_Instance.camkes)

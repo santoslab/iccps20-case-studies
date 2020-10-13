@@ -1,0 +1,35 @@
+// #Sireum
+
+package isolette.Monitor
+
+import org.sireum._
+import art._
+
+@ext object Manage_Alarm_impl_thermostat_monitor_temperature_manage_alarm_mat_seL4Nix {
+  // returns T if seL4's current_tempWstatus port is empty, F otherwise 
+  def current_tempWstatus_IsEmpty(): B = $
+
+  // returns result of dequeuing seL4's current_tempWstatus port 
+  def current_tempWstatus_Receive(): Option[DataContent] = $
+
+  // returns T if seL4's lower_alarm_temp port is empty, F otherwise 
+  def lower_alarm_temp_IsEmpty(): B = $
+
+  // returns result of dequeuing seL4's lower_alarm_temp port 
+  def lower_alarm_temp_Receive(): Option[DataContent] = $
+
+  // returns T if seL4's upper_alarm_temp port is empty, F otherwise 
+  def upper_alarm_temp_IsEmpty(): B = $
+
+  // returns result of dequeuing seL4's upper_alarm_temp port 
+  def upper_alarm_temp_Receive(): Option[DataContent] = $
+
+  // returns T if seL4's monitor_mode port is empty, F otherwise 
+  def monitor_mode_IsEmpty(): B = $
+
+  // returns result of dequeuing seL4's monitor_mode port 
+  def monitor_mode_Receive(): Option[DataContent] = $
+
+  // send payload 'd' to components connected to seL4's alarm_control port
+  def alarm_control_Send(d: DataContent): Unit = $
+}

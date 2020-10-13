@@ -1,6 +1,0 @@
-component Life_Cycle_Manager {
-  control;
-  emits Step step;
-  emits TickTock tick;
-  consumes TickTock tock;
-}

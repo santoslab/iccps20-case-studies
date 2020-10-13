@@ -1,0 +1,5 @@
+organization hospital
+stakeholder Infant [ description "The infant that is inside the Isolette" ]
+stakeholder Nurse [description "The Nurse that operates the Isolette."]
+stakeholder ClinicalEngineer [description "Member of technical team responsible for setup and maintenance of the Isolette"]
+

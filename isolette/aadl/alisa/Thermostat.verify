@@ -1,0 +1,63 @@
+verification plan ThermostatVPlan for ThermostatReqs [
+	
+
+claim EA_TS_1 [
+	activities
+		correctUnit: ResoluteIsolette.IsFahrenheit()
+		correctType: ResoluteIsolette.IsTempWstatus()
+	]
+
+
+	claim EA_TS_2 [
+	]
+
+	claim EA_TS_3 [
+	]
+
+	claim EA_TS_4 [
+	]
+
+	claim REQ_TH_1 [
+	]
+
+	claim REQ_TH_2 [
+	]
+
+	claim REQ_TH_3 [
+	]
+
+	claim REQ_TH_4 [
+	]
+
+	claim REQ_TH_5 [
+	]
+]
+
+verification plan ManageHeatSourceVPlan for ManageHeatSourceReqs [
+	
+claim LATENCY_MHS_1 [
+	]
+
+	claim REQ_MHS_1 [
+	]
+
+	claim REQ_MHS_2 [
+	]
+
+	claim REQ_MHS_3 [
+		activities
+		// invoke a method in the registry
+		  contract: SlangMHS.req-mhs-3()
+		  // verify the REQ_MHS_3 Alisa requirement by performing the contract check activity
+		  // which will invoke the checker for the slang contract labeled SlangMHS.req-mhs-3()
+		  // as found in the registry
+		  //
+		  // Note other aadl information can be passed as parameters
+	]
+
+	claim REQ_MHS_4 [
+	]
+
+	claim REQ_MHS_5 [
+	]
+]

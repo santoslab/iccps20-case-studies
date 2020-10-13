@@ -1,5 +1,0 @@
-procedure sb_Monitor_BuildingControl__FanAck_1 {
-  include <sb_proc_types.h>;
-  bool enqueue(refin BuildingControl__FanAck m);
-  bool dequeue(out BuildingControl__FanAck m);
-};

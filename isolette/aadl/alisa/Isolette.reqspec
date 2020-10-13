@@ -1,0 +1,61 @@
+system requirements IsoletteReqs for Isolette::isolette  [
+
+// Section A.3.1 in FAA REMH
+//
+// The following environmental assumptions about the Isolette's operational context
+//
+    // State assumption about the rate at which temperature inside the Isolette may increase.
+    // This is based on factors such as the temperature in the operating environment (e.g., hospital room),
+    // insulation properties of the Isolette, energy produced by heating unit, specific heat of air in Isolette, etc.
+	requirement EA_IS_1 [
+		val TempIncreaseRate = 1.0 Fdeg_Minute
+		// parameterized limit value. used in text and in predicate
+		description "When the heat source is on and the isolette is properly shut, the current temperature increases no more than " TempIncreaseRate " deg F per minute." 
+		rationale "If the current temperature can increase at a rate of more than 1 deg F per minute, the thermostat may not be able to turn the heat source off quickly enough to maintain the desired temperature range unless the allowed latency specified for the heat control is reduced"
+ 		category Kind.EnvAssumption
+        // predicate ensures that the limit value is correctly reflected in the property value in the model
+		value predicate #Isolette_Properties::Temperature_Change_Rate <= TempIncreaseRate
+	]
+	// State assumption about the rate at which temperature inside the Isolette may decrease.
+	requirement EA_IS_2 [
+		val TempDecreaseRate = 1.0 Fdeg_Minute
+		description "When the heat source is off and the isolette is properly shut, the current temperature decreases no more than "TempDecreaseRate" deg F per minute."
+		rationale "If the current temperature can decrease at a rate of more than 1 deg F per minute, the thermostat may not be able to turn the heat source on quickly enough to maintain the desired temperature range unless the allowed latency specified for the heat control is reduced"
+ 		category Kind.EnvAssumption
+		value predicate #Isolette_Properties::Temperature_Change_Rate <= TempDecreaseRate
+	]
+	
+	// Note: Environmental Assumptions stated in A.3.2 - A.3.4 are stated elsewhere.
+	//   A.3.2  Temperature Sensor
+	//   A.3.3  Heat Source
+	//   A.3.4  Operator Interface
+	
+	// A.4 Safety Requirements
+	
+	// TODO: Document how/why the hazard is phrased as a requirement
+	requirement REQ_H1 [
+		val InfantExposureHazardRate = 1.0e-9
+		compute actualprob: real
+		compute specprob : real
+		description "Prolonged exposure of Infant to unsafe heat or cold. Classification: catastrophic. Probability: < " InfantExposureHazardRate " per hour of operation"
+ 		category Quality.Safety
+ 		see goal IsoletteGoals.H1
+ 		value predicate actualprob <= InfantExposureHazardRate 
+	]
+	
+]
+
+system requirements IsoletteEnvironmentReqs for Isolette::IsoletteEnvironment.tier1 [
+	
+	requirement OE_IS_SR2 for alarmResponse [
+		val NurseAlarmResponse = 15 sec
+		compute ActualLatency: Time
+		compute SpecLatency : Time
+		compute Mode : string
+		description "The Infant should be removed from the Isolette within 15 seconds after the Current Temperature falls below or rises above the Alarm Temperature Range."
+ 		category Kind.EnvAssumption
+// 		see goal IsoletteGoals.SR_2
+ 		value predicate ActualLatency <= NurseAlarmResponse 
+	]
+	
+]

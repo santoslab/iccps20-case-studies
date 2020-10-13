@@ -1,4 +1,0 @@
-#ifdef __sb_tempControl_fanAck_Monitor_H__
-#define __sb_tempControl_fanAck_Monitor_H__
-
-#endif // __sb_tempControl_fanAck_Monitor_H__

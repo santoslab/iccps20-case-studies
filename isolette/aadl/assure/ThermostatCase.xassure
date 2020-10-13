@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="ASCII"?>
+<assure:AssuranceCaseResult xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aadl2="http://aadl.info/AADL/2.0" xmlns:assure="http://www.osate.org/assure/Assure" name="ThermostatCase">
+  <metrics successCount="1" failCount="1"/>
+  <modelResult>
+    <metrics successCount="1" failCount="1"/>
+    <plan href="../aadl/alisa/Thermostat.alisa#//@assurancePlans.0"/>
+    <target xsi:type="aadl2:SystemImplementation" href="../aadl/packages/Isolette.aadl#Isolette.thermostat_single_sensor.impl"/>
+    <claimResult>
+      <metrics successCount="1" failCount="1"/>
+      <targetReference>
+        <verificationPlan href="../aadl/alisa/Thermostat.verify#//@contents.0"/>
+        <requirement>
+          <requirement href="../aadl/alisa/Thermostat.reqspec#//@parts.0/@requirements.0"/>
+        </requirement>
+      </targetReference>
+      <modelElement xsi:type="aadl2:DataPort" href="../aadl/packages/Isolette.aadl#/0/@ownedPublicSection/@ownedClassifier.2/@ownedDataPort.0"/>
+      <verificationActivityResult xsi:type="assure:VerificationActivityResult" type="FAILURE">
+        <metrics failCount="1" executionTime="255"/>
+        <results message="Measurement unit of current_tempWstatus must be Fahrenheit" resultType="FAILURE">
+          <modelElement href="../aadl/Resolute/Resolute_Isolette.aadl#Resolute_Isolette.Resolute_Isolette_public.Resolute.Resolute.is_Fahrenheit"/>
+        </results>
+        <targetReference>
+          <verificationPlan href="../aadl/alisa/Thermostat.verify#//@contents.0"/>
+          <requirement>
+            <requirement href="../aadl/alisa/Thermostat.reqspec#//@parts.0/@requirements.0"/>
+          </requirement>
+          <verificationActivity href="../aadl/alisa/Thermostat.verify#//@contents.0/@claim.0/@activities.0"/>
+        </targetReference>
+      </verificationActivityResult>
+      <verificationActivityResult xsi:type="assure:VerificationActivityResult" type="SUCCESS">
+        <metrics successCount="1" executionTime="3"/>
+        <results message="Data type of current_tempWstatus must be Isolette_Data_Model::TempWstatus" resultType="SUCCESS">
+          <modelElement href="../aadl/Resolute/Resolute_Isolette.aadl#Resolute_Isolette.Resolute_Isolette_public.Resolute.Resolute.is_TempWstatus"/>
+        </results>
+        <targetReference>
+          <verificationPlan href="../aadl/alisa/Thermostat.verify#//@contents.0"/>
+          <requirement>
+            <requirement href="../aadl/alisa/Thermostat.reqspec#//@parts.0/@requirements.0"/>
+          </requirement>
+          <verificationActivity href="../aadl/alisa/Thermostat.verify#//@contents.0/@claim.0/@activities.1"/>
+        </targetReference>
+      </verificationActivityResult>
+    </claimResult>
+    <subsystemResult>
+      <metrics/>
+      <targetSystem xsi:type="aadl2:DeviceSubcomponent" href="../aadl/packages/Isolette.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedDeviceSubcomponent.0"/>
+    </subsystemResult>
+    <subsystemResult>
+      <metrics/>
+      <targetSystem xsi:type="aadl2:DeviceSubcomponent" href="../aadl/packages/Isolette.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedDeviceSubcomponent.1"/>
+    </subsystemResult>
+    <subsystemResult>
+      <metrics/>
+      <targetSystem xsi:type="aadl2:ProcessSubcomponent" href="../aadl/packages/Isolette.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedProcessSubcomponent.0"/>
+      <subsystemResult>
+        <metrics/>
+        <targetSystem xsi:type="aadl2:ThreadSubcomponent" href="../aadl/packages/Regulate.aadl#//@ownedPublicSection/@ownedClassifier.1/@ownedThreadSubcomponent.0"/>
+      </subsystemResult>
+      <subsystemResult>
+        <metrics/>
+        <targetSystem xsi:type="aadl2:ThreadSubcomponent" href="../aadl/packages/Regulate.aadl#//@ownedPublicSection/@ownedClassifier.1/@ownedThreadSubcomponent.1"/>
+      </subsystemResult>
+      <subsystemResult>
+        <metrics/>
+        <targetSystem xsi:type="aadl2:ThreadSubcomponent" href="../aadl/packages/Regulate.aadl#//@ownedPublicSection/@ownedClassifier.1/@ownedThreadSubcomponent.2"/>
+      </subsystemResult>
+    </subsystemResult>
+    <subsystemResult>
+      <metrics/>
+      <targetSystem xsi:type="aadl2:ProcessSubcomponent" href="../aadl/packages/Isolette.aadl#//@ownedPublicSection/@ownedClassifier.3/@ownedProcessSubcomponent.1"/>
+      <subsystemResult>
+        <metrics/>
+        <targetSystem xsi:type="aadl2:ThreadSubcomponent" href="../aadl/packages/Monitor.aadl#//@ownedPublicSection/@ownedClassifier.1/@ownedThreadSubcomponent.0"/>
+      </subsystemResult>
+      <subsystemResult>
+        <metrics/>
+        <targetSystem xsi:type="aadl2:ThreadSubcomponent" href="../aadl/packages/Monitor.aadl#//@ownedPublicSection/@ownedClassifier.1/@ownedThreadSubcomponent.1"/>
+      </subsystemResult>
+      <subsystemResult>
+        <metrics/>
+        <targetSystem xsi:type="aadl2:ThreadSubcomponent" href="../aadl/packages/Monitor.aadl#//@ownedPublicSection/@ownedClassifier.1/@ownedThreadSubcomponent.2"/>
+      </subsystemResult>
+    </subsystemResult>
+  </modelResult>
+</assure:AssuranceCaseResult>
