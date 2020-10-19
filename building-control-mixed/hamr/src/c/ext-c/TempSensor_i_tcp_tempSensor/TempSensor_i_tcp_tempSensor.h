@@ -1,0 +1,12 @@
+#ifndef TEMPSENSOR_I_TCP_TEMPSENSOR_H
+#define TEMPSENSOR_I_TCP_TEMPSENSOR_H
+
+#include <all.h>
+
+Unit building_control_mixed_BuildingControl_TempSensor_i_tcp_tempSensor_initialise_(STACK_FRAME_ONLY);
+
+Unit building_control_mixed_BuildingControl_TempSensor_i_tcp_tempSensor_finalise_(STACK_FRAME_ONLY);
+
+Unit building_control_mixed_BuildingControl_TempSensor_i_tcp_tempSensor_timeTriggered_(STACK_FRAME_ONLY);
+
+#endif

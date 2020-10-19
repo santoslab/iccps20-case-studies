@@ -109,8 +109,8 @@ bool sb_tempChanged_dequeue() {
 /************************************************************************
  * sb_tempChanged_is_empty;
  *
- * Helper method to determine if infrastructure port has received
- * new events
+ * Helper method to determine if infrastructure port has not received
+ * any new events since the last dispatch
  *
  ************************************************************************/
 bool sb_tempChanged_is_empty() {

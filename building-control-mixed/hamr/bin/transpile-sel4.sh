@@ -33,7 +33,8 @@ ${SIREUM_HOME}/bin/sireum slang transpilers c \
   --forward "art.ArtNative=building_control_mixed.TempSensor_i_tcp_tempSensor.tempSensor" \
   --stack-size "110592" \
   --stable-type-id \
-  --exts "${SCRIPT_HOME}/../src/c/ext-c/ext.c${PATH_SEP}${SCRIPT_HOME}/../src/c/ext-c/ext.h${PATH_SEP}${SCRIPT_HOME}/../src/c/ext-c/adapters/TempSensor_i_tcp_tempSensor/TempSensor_i_tcp_tempSensor_adapter.h${PATH_SEP}${SCRIPT_HOME}/../src/c/ext-c/adapters/TempSensor_i_tcp_tempSensor/TempSensor_i_tcp_tempSensor_adapter.c" \
+  --exts "${SCRIPT_HOME}/../src/c/ext-c/ext.c${PATH_SEP}${SCRIPT_HOME}/../src/c/ext-c/ext.h${PATH_SEP}${SCRIPT_HOME}/../src/c/ext-c/TempSensor_i_tcp_tempSensor/TempSensor_i_tcp_tempSensor.h${PATH_SEP}${SCRIPT_HOME}/../src/c/ext-c/TempSensor_i_tcp_tempSensor/TempSensor_i_tcp_tempSensor.c${PATH_SEP}${SCRIPT_HOME}/../src/c/ext-c/TempSensor_i_tcp_tempSensor/TempSensor_i_tcp_tempSensor_api.h${PATH_SEP}${SCRIPT_HOME}/../src/c/ext-c/TempSensor_i_tcp_tempSensor/TempSensor_i_tcp_tempSensor_api.c${PATH_SEP}${SCRIPT_HOME}/../src/c/ext-c/adapters/TempSensor_i_tcp_tempSensor/TempSensor_i_tcp_tempSensor_adapter.h${PATH_SEP}${SCRIPT_HOME}/../src/c/ext-c/adapters/TempSensor_i_tcp_tempSensor/TempSensor_i_tcp_tempSensor_adapter.c" \
+  --exclude-build "building_control_mixed.BuildingControl.TempSensor_i_tcp_tempSensor,building_control_mixed.BuildingControl.TempControl_i_tcp_tempControl,building_control_mixed.BuildingControl.Fan_i_tcp_fan" \
   --lib-only \
   --verbose
 
@@ -54,7 +55,8 @@ ${SIREUM_HOME}/bin/sireum slang transpilers c \
   --forward "art.ArtNative=building_control_mixed.TempControl_i_tcp_tempControl.tempControl" \
   --stack-size "110592" \
   --stable-type-id \
-  --exts "${SCRIPT_HOME}/../src/c/ext-c/ext.c${PATH_SEP}${SCRIPT_HOME}/../src/c/ext-c/ext.h${PATH_SEP}${SCRIPT_HOME}/../src/c/ext-c/adapters/TempControl_i_tcp_tempControl/TempControl_i_tcp_tempControl_adapter.h${PATH_SEP}${SCRIPT_HOME}/../src/c/ext-c/adapters/TempControl_i_tcp_tempControl/TempControl_i_tcp_tempControl_adapter.c" \
+  --exts "${SCRIPT_HOME}/../src/c/ext-c/ext.c${PATH_SEP}${SCRIPT_HOME}/../src/c/ext-c/ext.h${PATH_SEP}${SCRIPT_HOME}/../src/c/ext-c/TempControl_i_tcp_tempControl/TempControl_i_tcp_tempControl.h${PATH_SEP}${SCRIPT_HOME}/../src/c/ext-c/TempControl_i_tcp_tempControl/TempControl_i_tcp_tempControl.c${PATH_SEP}${SCRIPT_HOME}/../src/c/ext-c/TempControl_i_tcp_tempControl/TempControl_i_tcp_tempControl_api.h${PATH_SEP}${SCRIPT_HOME}/../src/c/ext-c/TempControl_i_tcp_tempControl/TempControl_i_tcp_tempControl_api.c${PATH_SEP}${SCRIPT_HOME}/../src/c/ext-c/adapters/TempControl_i_tcp_tempControl/TempControl_i_tcp_tempControl_adapter.h${PATH_SEP}${SCRIPT_HOME}/../src/c/ext-c/adapters/TempControl_i_tcp_tempControl/TempControl_i_tcp_tempControl_adapter.c" \
+  --exclude-build "building_control_mixed.BuildingControl.TempSensor_i_tcp_tempSensor,building_control_mixed.BuildingControl.TempControl_i_tcp_tempControl,building_control_mixed.BuildingControl.Fan_i_tcp_fan" \
   --lib-only \
   --verbose
 
@@ -75,7 +77,8 @@ ${SIREUM_HOME}/bin/sireum slang transpilers c \
   --forward "art.ArtNative=building_control_mixed.Fan_i_tcp_fan.fan" \
   --stack-size "110592" \
   --stable-type-id \
-  --exts "${SCRIPT_HOME}/../src/c/ext-c/ext.c${PATH_SEP}${SCRIPT_HOME}/../src/c/ext-c/ext.h${PATH_SEP}${SCRIPT_HOME}/../src/c/ext-c/adapters/Fan_i_tcp_fan/Fan_i_tcp_fan_adapter.h${PATH_SEP}${SCRIPT_HOME}/../src/c/ext-c/adapters/Fan_i_tcp_fan/Fan_i_tcp_fan_adapter.c" \
+  --exts "${SCRIPT_HOME}/../src/c/ext-c/ext.c${PATH_SEP}${SCRIPT_HOME}/../src/c/ext-c/ext.h${PATH_SEP}${SCRIPT_HOME}/../src/c/ext-c/Fan_i_tcp_fan/Fan_i_tcp_fan.h${PATH_SEP}${SCRIPT_HOME}/../src/c/ext-c/Fan_i_tcp_fan/Fan_i_tcp_fan.c${PATH_SEP}${SCRIPT_HOME}/../src/c/ext-c/Fan_i_tcp_fan/Fan_i_tcp_fan_api.h${PATH_SEP}${SCRIPT_HOME}/../src/c/ext-c/Fan_i_tcp_fan/Fan_i_tcp_fan_api.c${PATH_SEP}${SCRIPT_HOME}/../src/c/ext-c/adapters/Fan_i_tcp_fan/Fan_i_tcp_fan_adapter.h${PATH_SEP}${SCRIPT_HOME}/../src/c/ext-c/adapters/Fan_i_tcp_fan/Fan_i_tcp_fan_adapter.c" \
+  --exclude-build "building_control_mixed.BuildingControl.TempSensor_i_tcp_tempSensor,building_control_mixed.BuildingControl.TempControl_i_tcp_tempControl,building_control_mixed.BuildingControl.Fan_i_tcp_fan" \
   --lib-only \
   --verbose
 
