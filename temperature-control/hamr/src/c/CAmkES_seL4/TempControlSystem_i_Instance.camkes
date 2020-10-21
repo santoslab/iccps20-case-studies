@@ -1,0 +1,48 @@
+// This file will be regenerated, do not edit
+
+import <std_connector.camkes>;
+import <global-connectors.camkes>;
+import <TimeServer/TimeServer.camkes>;;
+import "components/TempSensor_i_p_tempSensor/TempSensor_i_p_tempSensor.camkes";
+import "components/TempControl_i_p_tempControl/TempControl_i_p_tempControl.camkes";
+import "components/Fan_i_p_fan/Fan_i_p_fan.camkes";
+import "components/dispatch_periodic/dispatch_periodic.camkes";
+
+assembly {
+  composition {
+    component TempSensor_i_p_tempSensor p_tempSensor;
+    component TempControl_i_p_tempControl p_tempControl;
+    component Fan_i_p_fan p_fan;
+    component dispatch_periodic dispatch_periodic_inst;
+    component TimeServer time_server;
+
+    connection seL4SharedData conn1(from p_tempSensor.sb_currentTemp, to p_tempControl.sb_currentTemp);
+    connection seL4Notification conn2(from p_tempSensor.sb_tempChanged, to p_tempControl.sb_tempChanged);
+    connection seL4SharedData conn3(from p_tempSensor.sb_tempChanged_counter, to p_tempControl.sb_tempChanged_counter);
+    connection seL4Notification conn4(from p_tempControl.sb_fanCmd_1_notification, to p_fan.sb_fanCmd_notification);
+    connection seL4SharedData conn5(from p_tempControl.sb_fanCmd_queue_1, to p_fan.sb_fanCmd_queue);
+    connection seL4Notification conn6(from p_fan.sb_fanAck_1_notification, to p_tempControl.sb_fanAck_notification);
+    connection seL4SharedData conn7(from p_fan.sb_fanAck_queue_1, to p_tempControl.sb_fanAck_queue);
+    connection seL4Notification conn8(from dispatch_periodic_inst.sb_p_tempSensor_periodic_dispatch_notification, to p_tempSensor.sb_periodic_dispatch_notification);
+    connection seL4TimeServer conn9(from dispatch_periodic_inst.timer, to time_server.the_timer);
+    connection seL4GlobalAsynchCallback conn10(from time_server.timer_notification, to dispatch_periodic_inst.timer_complete);
+  }
+
+  configuration {
+    p_tempSensor.currentTemp_access = "W";
+    p_tempSensor._stack_size = 110592;
+    p_tempControl.currentTemp_access = "R";
+    p_tempControl._stack_size = 110592;
+    p_fan._stack_size = 110592;
+    p_tempSensor.sb_tempChanged_counter_access = "W";
+    p_tempControl.sb_tempChanged_counter_access = "R";
+    p_tempControl.sb_fanCmd_queue_1_access = "W";
+    p_fan.sb_fanCmd_queue_access = "R";
+    p_fan.sb_fanAck_queue_1_access = "W";
+    p_tempControl.sb_fanAck_queue_access = "R";
+    time_server.timers_per_client = 1;
+    dispatch_periodic_inst.timer_attributes = 1;
+    dispatch_periodic_inst.priority = 201;
+
+  }
+}

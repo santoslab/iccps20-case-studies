@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="ASCII"?>
+<diagram:Diagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:diagram="http://osate.org/diagram" formatVersion="7">
+  <element uuid="9c277d12-cca7-4df1-8771-b03e5ad43def" manual="true">
+    <element uuid="7fb751b5-9a67-40ef-9c0a-db440a40c5d0" manual="true">
+      <element uuid="298ca443-6710-4644-b30b-e9de79bad3de" manual="true">
+        <element uuid="78ad7ff2-b8c8-4c63-86b1-cfb1eccb2ac6" manual="true" dockArea="right">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>fanAck</seg>
+          </bo>
+          <position x="126.0" y="60.0"/>
+        </element>
+        <element uuid="d90a490c-d20a-4bf1-aacf-cdebd0b3dc2c" manual="true" dockArea="right">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>fanCmd</seg>
+          </bo>
+          <position x="120.0" y="10.0"/>
+        </element>
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>component_instance</seg>
+          <seg>fan</seg>
+        </bo>
+        <position x="275.0" y="211.0"/>
+        <size width="178.0" height="110.0"/>
+      </element>
+      <element uuid="4d9f8383-d4dc-4270-96a7-c1a0dd0a2a90" manual="true">
+        <element uuid="46d1d6d0-e4d9-46f5-b678-0c9ba5a24a96" manual="true" dockArea="left">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>currentTemp</seg>
+          </bo>
+          <position y="60.0"/>
+        </element>
+        <element uuid="e3a0ca9c-17e2-4b75-a7b3-d9f96e40aedd" manual="true" dockArea="left">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>fanAck</seg>
+          </bo>
+          <position y="210.0"/>
+        </element>
+        <element uuid="79d4a470-e963-4a0d-9c9a-142dbe96007e" manual="true" dockArea="left">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>fanCmd</seg>
+          </bo>
+          <position y="160.0"/>
+        </element>
+        <element uuid="08d2d462-ceff-45d8-85ec-a9178faabb8a" manual="true" dockArea="left">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>setPoint</seg>
+          </bo>
+          <position y="10.0"/>
+        </element>
+        <element uuid="67e2d117-1cff-4a25-b1ba-66866bd4cbb4" manual="true" dockArea="left">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>tempChanged</seg>
+          </bo>
+          <position y="110.0"/>
+        </element>
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>component_instance</seg>
+          <seg>tempControl</seg>
+        </bo>
+        <position x="473.0" y="61.0"/>
+        <size width="331.0" height="260.0"/>
+      </element>
+      <element uuid="761dc897-23f7-4728-9160-d4b1326fd004" manual="true">
+        <element uuid="6bba7a59-7bf0-4243-8ef7-d63b23c9f6a2" manual="true" dockArea="right">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>currentTemp</seg>
+          </bo>
+          <position x="235.0" y="10.0"/>
+        </element>
+        <element uuid="d85054cf-e1fa-4dcc-9247-7299b4588a23" manual="true" dockArea="right">
+          <bo>
+            <seg>org.osate.ge.diagrams.instance</seg>
+            <seg>feature_instance</seg>
+            <seg>tempChanged</seg>
+          </bo>
+          <position x="226.0" y="60.0"/>
+        </element>
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>component_instance</seg>
+          <seg>tempSensor</seg>
+        </bo>
+        <position x="126.0" y="81.0"/>
+        <size width="327.0" height="110.0"/>
+      </element>
+      <element uuid="e52c7d57-3287-4823-b847-083babf7bfb2" manual="true">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>connection_reference</seg>
+          <seg>ct : TempControlSystem_i_Instance.p.tempSensor.currentTemp -> TempControlSystem_i_Instance.p.tempControl.currentTemp</seg>
+        </bo>
+        <bendpoints>
+          <point x="601.0" y="173.0"/>
+          <point x="601.0" y="203.0"/>
+        </bendpoints>
+      </element>
+      <element uuid="e9561256-c07c-4e89-98b5-7041b58fd6e6" manual="true">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>connection_reference</seg>
+          <seg>fa : TempControlSystem_i_Instance.p.fan.fanAck -> TempControlSystem_i_Instance.p.tempControl.fanAck</seg>
+        </bo>
+      </element>
+      <element uuid="dde922ed-e957-4643-a9e0-be9b7d9552ef" manual="true">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>connection_reference</seg>
+          <seg>fc : TempControlSystem_i_Instance.p.tempControl.fanCmd -> TempControlSystem_i_Instance.p.fan.fanCmd</seg>
+        </bo>
+      </element>
+      <element uuid="dfe1adba-2fd3-4506-8b4a-2cfaf5ded745" manual="true">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>connection_reference</seg>
+          <seg>tc : TempControlSystem_i_Instance.p.tempSensor.tempChanged -> TempControlSystem_i_Instance.p.tempControl.tempChanged</seg>
+        </bo>
+        <bendpoints>
+          <point x="601.0" y="223.0"/>
+          <point x="601.0" y="253.0"/>
+        </bendpoints>
+      </element>
+      <element uuid="e4dab688-fd54-4a0e-afaa-7f1fa96efd9e" manual="true" dockArea="left">
+        <bo>
+          <seg>org.osate.ge.diagrams.instance</seg>
+          <seg>feature_instance</seg>
+          <seg>setPoint</seg>
+        </bo>
+        <position y="38.0"/>
+      </element>
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>component_instance</seg>
+        <seg>p</seg>
+      </bo>
+      <position x="126.0" y="38.0"/>
+      <size width="816.0" height="333.0"/>
+    </element>
+    <element uuid="b636f203-080a-4e4d-b048-47dd9e52ac0d" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>sp : TempControlSystem_i_Instance.p.setPoint -> TempControlSystem_i_Instance.p.tempControl.setPoint</seg>
+      </bo>
+      <bendpoints>
+        <point x="601.0" y="120.0"/>
+        <point x="601.0" y="153.0"/>
+      </bendpoints>
+    </element>
+    <element uuid="d637e2cf-972c-4064-970d-ede7f071f440" manual="true">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>connection_reference</seg>
+        <seg>sp : TempControlSystem_i_Instance.setPoint -> TempControlSystem_i_Instance.p.setPoint</seg>
+      </bo>
+    </element>
+    <element uuid="2c7a6645-2c82-483a-8338-829e9277057c" manual="true" dockArea="left">
+      <bo>
+        <seg>org.osate.ge.diagrams.instance</seg>
+        <seg>feature_instance</seg>
+        <seg>setPoint</seg>
+      </bo>
+      <position y="76.0"/>
+    </element>
+    <bo>
+      <seg>org.osate.ge.diagrams.instance</seg>
+      <seg>system_instance</seg>
+      <seg>/temperature-control/packages/instances/temperaturecontrol_tempcontrolsystem_i_instance.aaxl2</seg>
+    </bo>
+    <position x="12.0" y="12.0"/>
+    <size width="954.0" height="383.0"/>
+  </element>
+  <config type="structure" connectionPrimaryLabelsVisible="false">
+    <enabledAadlProperties/>
+    <context>
+      <seg>org.osate.ge.diagrams.instance</seg>
+      <seg>system_instance</seg>
+      <seg>/temperature-control/packages/instances/temperaturecontrol_tempcontrolsystem_i_instance.aaxl2</seg>
+    </context>
+  </config>
+</diagram:Diagram>

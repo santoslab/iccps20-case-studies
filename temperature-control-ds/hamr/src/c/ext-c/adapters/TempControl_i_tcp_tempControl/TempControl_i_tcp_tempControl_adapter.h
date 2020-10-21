@@ -1,0 +1,14 @@
+#ifndef TEMPCONTROL_I_TCP_TEMPCONTROL_ADAPTER_H
+#define TEMPCONTROL_I_TCP_TEMPCONTROL_ADAPTER_H
+
+#include <all.h>
+
+Unit b_TemperatureControl_TempControl_i_tcp_tempControl_adapter_initialiseArchitecture(STACK_FRAME_ONLY);
+
+Unit b_TemperatureControl_TempControl_i_tcp_tempControl_adapter_initialiseEntryPoint(STACK_FRAME_ONLY);
+
+Unit b_TemperatureControl_TempControl_i_tcp_tempControl_adapter_computeEntryPoint(STACK_FRAME_ONLY);
+
+art_Bridge_EntryPoints b_TemperatureControl_TempControl_i_tcp_tempControl_adapter_entryPoints(STACK_FRAME_ONLY);
+
+#endif

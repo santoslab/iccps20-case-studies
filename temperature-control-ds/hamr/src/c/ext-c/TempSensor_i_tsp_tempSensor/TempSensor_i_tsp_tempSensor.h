@@ -1,0 +1,12 @@
+#ifndef TEMPSENSOR_I_TSP_TEMPSENSOR_H
+#define TEMPSENSOR_I_TSP_TEMPSENSOR_H
+
+#include <all.h>
+
+Unit b_TemperatureControl_TempSensor_i_tsp_tempSensor_initialise_(STACK_FRAME_ONLY);
+
+Unit b_TemperatureControl_TempSensor_i_tsp_tempSensor_finalise_(STACK_FRAME_ONLY);
+
+Unit b_TemperatureControl_TempSensor_i_tsp_tempSensor_timeTriggered_(STACK_FRAME_ONLY);
+
+#endif

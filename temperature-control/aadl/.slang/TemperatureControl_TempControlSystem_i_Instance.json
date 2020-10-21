@@ -1,0 +1,5184 @@
+{
+  "type" : "Aadl",
+  "components" : [
+    {
+      "type" : "Component",
+      "identifier" : {
+        "type" : "Name",
+        "name" : ["TempControlSystem_i_Instance"],
+        "pos" : {
+          "type" : "Some",
+          "value" : {
+            "type" : "Position",
+            "uriOpt" : {
+              "type" : "Some",
+              "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+            },
+            "beginLine" : 10,
+            "beginColumn" : 2,
+            "endLine" : 24,
+            "endColumn" : 26,
+            "offset" : 178,
+            "length" : 409
+          }
+        }
+      },
+      "category" : {
+        "type" : "ComponentCategory",
+        "value" : "System"
+      },
+      "classifier" : {
+        "type" : "None"
+      },
+      "features" : [
+        {
+          "type" : "FeatureEnd",
+          "identifier" : {
+            "type" : "Name",
+            "name" : ["TempControlSystem_i_Instance", "setPoint"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                },
+                "beginLine" : 7,
+                "beginColumn" : 4,
+                "endLine" : 7,
+                "endColumn" : 44,
+                "offset" : 111,
+                "length" : 40
+              }
+            }
+          },
+          "direction" : {
+            "type" : "Direction",
+            "value" : "In"
+          },
+          "category" : {
+            "type" : "FeatureCategory",
+            "value" : "EventDataPort"
+          },
+          "classifier" : {
+            "type" : "Some",
+            "value" : {
+              "type" : "Classifier",
+              "name" : "TemperatureControl::SetPoint.i"
+            }
+          },
+          "properties" : [
+            {
+              "type" : "Property",
+              "name" : {
+                "type" : "Name",
+                "name" : ["TempControlSystem_i_Instance", "setPoint", "Data_Model::Data_Representation"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                    },
+                    "beginLine" : 26,
+                    "beginColumn" : 4,
+                    "endLine" : 29,
+                    "endColumn" : 36,
+                    "offset" : 1108,
+                    "length" : 162
+                  }
+                }
+              },
+              "propertyValues" : [
+                {
+                  "type" : "ValueProp",
+                  "value" : "Struct"
+                }
+              ],
+              "appliesTo" : [
+              ]
+            }
+          ],
+          "uriFrag" : "platform:\/resource\/temperature-control\/packages\/instances\/TemperatureControl_TempControlSystem_i_Instance.aaxl2#\/\/@featureInstance.0"
+        }
+      ],
+      "subComponents" : [
+        {
+          "type" : "Component",
+          "identifier" : {
+            "type" : "Name",
+            "name" : ["TempControlSystem_i_Instance", "p"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                },
+                "beginLine" : 13,
+                "beginColumn" : 4,
+                "endLine" : 13,
+                "endColumn" : 36,
+                "offset" : 289,
+                "length" : 32
+              }
+            }
+          },
+          "category" : {
+            "type" : "ComponentCategory",
+            "value" : "Process"
+          },
+          "classifier" : {
+            "type" : "Some",
+            "value" : {
+              "type" : "Classifier",
+              "name" : "TemperatureControl::TempControlProcess.i"
+            }
+          },
+          "features" : [
+            {
+              "type" : "FeatureEnd",
+              "identifier" : {
+                "type" : "Name",
+                "name" : ["TempControlSystem_i_Instance", "p", "setPoint"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                    },
+                    "beginLine" : 34,
+                    "beginColumn" : 4,
+                    "endLine" : 34,
+                    "endColumn" : 44,
+                    "offset" : 770,
+                    "length" : 40
+                  }
+                }
+              },
+              "direction" : {
+                "type" : "Direction",
+                "value" : "In"
+              },
+              "category" : {
+                "type" : "FeatureCategory",
+                "value" : "EventDataPort"
+              },
+              "classifier" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Classifier",
+                  "name" : "TemperatureControl::SetPoint.i"
+                }
+              },
+              "properties" : [
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["TempControlSystem_i_Instance", "p", "setPoint", "Data_Model::Data_Representation"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                        },
+                        "beginLine" : 26,
+                        "beginColumn" : 4,
+                        "endLine" : 29,
+                        "endColumn" : 36,
+                        "offset" : 1108,
+                        "length" : 162
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Struct"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                }
+              ],
+              "uriFrag" : "platform:\/resource\/temperature-control\/packages\/instances\/TemperatureControl_TempControlSystem_i_Instance.aaxl2#\/\/@componentInstance.0\/@featureInstance.0"
+            }
+          ],
+          "subComponents" : [
+            {
+              "type" : "Component",
+              "identifier" : {
+                "type" : "Name",
+                "name" : ["TempControlSystem_i_Instance", "p", "tempSensor"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                    },
+                    "beginLine" : 39,
+                    "beginColumn" : 4,
+                    "endLine" : 39,
+                    "endColumn" : 36,
+                    "offset" : 901,
+                    "length" : 32
+                  }
+                }
+              },
+              "category" : {
+                "type" : "ComponentCategory",
+                "value" : "Thread"
+              },
+              "classifier" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Classifier",
+                  "name" : "TemperatureControl::TempSensor.i"
+                }
+              },
+              "features" : [
+                {
+                  "type" : "FeatureEnd",
+                  "identifier" : {
+                    "type" : "Name",
+                    "name" : ["TempControlSystem_i_Instance", "p", "tempSensor", "currentTemp"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                        },
+                        "beginLine" : 52,
+                        "beginColumn" : 4,
+                        "endLine" : 52,
+                        "endColumn" : 45,
+                        "offset" : 1333,
+                        "length" : 41
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Direction",
+                    "value" : "Out"
+                  },
+                  "category" : {
+                    "type" : "FeatureCategory",
+                    "value" : "DataPort"
+                  },
+                  "classifier" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Classifier",
+                      "name" : "TemperatureControl::Temperature.i"
+                    }
+                  },
+                  "properties" : [
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["TempControlSystem_i_Instance", "p", "tempSensor", "currentTemp", "Data_Model::Data_Representation"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                            },
+                            "beginLine" : 26,
+                            "beginColumn" : 4,
+                            "endLine" : 29,
+                            "endColumn" : 36,
+                            "offset" : 1108,
+                            "length" : 162
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "ValueProp",
+                          "value" : "Struct"
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    }
+                  ],
+                  "uriFrag" : "platform:\/resource\/temperature-control\/packages\/instances\/TemperatureControl_TempControlSystem_i_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@featureInstance.0"
+                },
+                {
+                  "type" : "FeatureEnd",
+                  "identifier" : {
+                    "type" : "Name",
+                    "name" : ["TempControlSystem_i_Instance", "p", "tempSensor", "tempChanged"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                        },
+                        "beginLine" : 53,
+                        "beginColumn" : 4,
+                        "endLine" : 53,
+                        "endColumn" : 32,
+                        "offset" : 1378,
+                        "length" : 28
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Direction",
+                    "value" : "Out"
+                  },
+                  "category" : {
+                    "type" : "FeatureCategory",
+                    "value" : "EventPort"
+                  },
+                  "classifier" : {
+                    "type" : "None"
+                  },
+                  "properties" : [
+                  ],
+                  "uriFrag" : "platform:\/resource\/temperature-control\/packages\/instances\/TemperatureControl_TempControlSystem_i_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0\/@featureInstance.1"
+                }
+              ],
+              "subComponents" : [
+              ],
+              "connections" : [
+              ],
+              "connectionInstances" : [
+              ],
+              "properties" : [
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["TempControlSystem_i_Instance", "p", "tempSensor", "Deployment_Properties::Actual_Processor_Binding"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Deployment_Properties.aadl"
+                        },
+                        "beginLine" : 47,
+                        "beginColumn" : 2,
+                        "endLine" : 48,
+                        "endColumn" : 81,
+                        "offset" : 3130,
+                        "length" : 189
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ReferenceProp",
+                      "value" : {
+                        "type" : "Name",
+                        "name" : ["TempControlSystem_i_Instance", "t_processor"],
+                        "pos" : {
+                          "type" : "None"
+                        }
+                      }
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["TempControlSystem_i_Instance", "p", "tempSensor", "Thread_Properties::Dispatch_Protocol"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Thread_Properties.aadl"
+                        },
+                        "beginLine" : 13,
+                        "beginColumn" : 2,
+                        "endLine" : 14,
+                        "endColumn" : 50,
+                        "offset" : 527,
+                        "length" : 97
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Periodic"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["TempControlSystem_i_Instance", "p", "tempSensor", "Timing_Properties::Period"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Timing_Properties.aadl"
+                        },
+                        "beginLine" : 192,
+                        "beginColumn" : 2,
+                        "endLine" : 193,
+                        "endColumn" : 99,
+                        "offset" : 11626,
+                        "length" : 119
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "UnitProp",
+                      "value" : "1.0E12",
+                      "unit" : {
+                        "type" : "Some",
+                        "value" : "ps"
+                      }
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["TempControlSystem_i_Instance", "p", "tempSensor", "Memory_Properties::Stack_Size"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
+                        },
+                        "beginLine" : 107,
+                        "beginColumn" : 2,
+                        "endLine" : 108,
+                        "endColumn" : 73,
+                        "offset" : 5669,
+                        "length" : 89
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "UnitProp",
+                      "value" : "884736.0",
+                      "unit" : {
+                        "type" : "Some",
+                        "value" : "bits"
+                      }
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                }
+              ],
+              "flows" : [
+              ],
+              "modes" : [
+              ],
+              "annexes" : [
+                {
+                  "type" : "Annex",
+                  "name" : "Emv2",
+                  "clause" : {
+                    "type" : "Emv2Clause",
+                    "libraries" : [
+                    ],
+                    "propagations" : [
+                    ],
+                    "flows" : [
+                    ],
+                    "componentBehavior" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Emv2BehaviorSection",
+                        "events" : [
+                        ],
+                        "transitions" : [
+                        ],
+                        "propagations" : [
+                        ]
+                      }
+                    },
+                    "properties" : [
+                    ]
+                  }
+                },
+                {
+                  "type" : "Annex",
+                  "name" : "smf",
+                  "clause" : {
+                    "type" : "SmfClause",
+                    "classification" : [
+                    ],
+                    "declass" : [
+                    ]
+                  }
+                }
+              ],
+              "uriFrag" : "platform:\/resource\/temperature-control\/packages\/instances\/TemperatureControl_TempControlSystem_i_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.0"
+            },
+            {
+              "type" : "Component",
+              "identifier" : {
+                "type" : "Name",
+                "name" : ["TempControlSystem_i_Instance", "p", "tempControl"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                    },
+                    "beginLine" : 40,
+                    "beginColumn" : 4,
+                    "endLine" : 40,
+                    "endColumn" : 38,
+                    "offset" : 937,
+                    "length" : 34
+                  }
+                }
+              },
+              "category" : {
+                "type" : "ComponentCategory",
+                "value" : "Thread"
+              },
+              "classifier" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Classifier",
+                  "name" : "TemperatureControl::TempControl.i"
+                }
+              },
+              "features" : [
+                {
+                  "type" : "FeatureEnd",
+                  "identifier" : {
+                    "type" : "Name",
+                    "name" : ["TempControlSystem_i_Instance", "p", "tempControl", "currentTemp"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                        },
+                        "beginLine" : 78,
+                        "beginColumn" : 4,
+                        "endLine" : 78,
+                        "endColumn" : 44,
+                        "offset" : 1920,
+                        "length" : 40
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Direction",
+                    "value" : "In"
+                  },
+                  "category" : {
+                    "type" : "FeatureCategory",
+                    "value" : "DataPort"
+                  },
+                  "classifier" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Classifier",
+                      "name" : "TemperatureControl::Temperature.i"
+                    }
+                  },
+                  "properties" : [
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["TempControlSystem_i_Instance", "p", "tempControl", "currentTemp", "Data_Model::Data_Representation"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                            },
+                            "beginLine" : 26,
+                            "beginColumn" : 4,
+                            "endLine" : 29,
+                            "endColumn" : 36,
+                            "offset" : 1108,
+                            "length" : 162
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "ValueProp",
+                          "value" : "Struct"
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    }
+                  ],
+                  "uriFrag" : "platform:\/resource\/temperature-control\/packages\/instances\/TemperatureControl_TempControlSystem_i_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.0"
+                },
+                {
+                  "type" : "FeatureEnd",
+                  "identifier" : {
+                    "type" : "Name",
+                    "name" : ["TempControlSystem_i_Instance", "p", "tempControl", "fanAck"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                        },
+                        "beginLine" : 80,
+                        "beginColumn" : 4,
+                        "endLine" : 80,
+                        "endColumn" : 38,
+                        "offset" : 1995,
+                        "length" : 34
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Direction",
+                    "value" : "In"
+                  },
+                  "category" : {
+                    "type" : "FeatureCategory",
+                    "value" : "EventDataPort"
+                  },
+                  "classifier" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Classifier",
+                      "name" : "TemperatureControl::FanAck"
+                    }
+                  },
+                  "properties" : [
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["TempControlSystem_i_Instance", "p", "tempControl", "fanAck", "Data_Model::Data_Representation"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                            },
+                            "beginLine" : 26,
+                            "beginColumn" : 4,
+                            "endLine" : 29,
+                            "endColumn" : 36,
+                            "offset" : 1108,
+                            "length" : 162
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "ValueProp",
+                          "value" : "Enum"
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    },
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["TempControlSystem_i_Instance", "p", "tempControl", "fanAck", "Data_Model::Enumerators"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                            },
+                            "beginLine" : 48,
+                            "beginColumn" : 4,
+                            "endLine" : 48,
+                            "endColumn" : 66,
+                            "offset" : 2129,
+                            "length" : 62
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "ValueProp",
+                          "value" : "Ok"
+                        },
+                        {
+                          "type" : "ValueProp",
+                          "value" : "Error"
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    }
+                  ],
+                  "uriFrag" : "platform:\/resource\/temperature-control\/packages\/instances\/TemperatureControl_TempControlSystem_i_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.1"
+                },
+                {
+                  "type" : "FeatureEnd",
+                  "identifier" : {
+                    "type" : "Name",
+                    "name" : ["TempControlSystem_i_Instance", "p", "tempControl", "setPoint"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                        },
+                        "beginLine" : 81,
+                        "beginColumn" : 4,
+                        "endLine" : 81,
+                        "endColumn" : 44,
+                        "offset" : 2033,
+                        "length" : 40
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Direction",
+                    "value" : "In"
+                  },
+                  "category" : {
+                    "type" : "FeatureCategory",
+                    "value" : "EventDataPort"
+                  },
+                  "classifier" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Classifier",
+                      "name" : "TemperatureControl::SetPoint.i"
+                    }
+                  },
+                  "properties" : [
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["TempControlSystem_i_Instance", "p", "tempControl", "setPoint", "Data_Model::Data_Representation"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                            },
+                            "beginLine" : 26,
+                            "beginColumn" : 4,
+                            "endLine" : 29,
+                            "endColumn" : 36,
+                            "offset" : 1108,
+                            "length" : 162
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "ValueProp",
+                          "value" : "Struct"
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    }
+                  ],
+                  "uriFrag" : "platform:\/resource\/temperature-control\/packages\/instances\/TemperatureControl_TempControlSystem_i_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.2"
+                },
+                {
+                  "type" : "FeatureEnd",
+                  "identifier" : {
+                    "type" : "Name",
+                    "name" : ["TempControlSystem_i_Instance", "p", "tempControl", "fanCmd"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                        },
+                        "beginLine" : 82,
+                        "beginColumn" : 4,
+                        "endLine" : 82,
+                        "endColumn" : 39,
+                        "offset" : 2077,
+                        "length" : 35
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Direction",
+                    "value" : "Out"
+                  },
+                  "category" : {
+                    "type" : "FeatureCategory",
+                    "value" : "EventDataPort"
+                  },
+                  "classifier" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Classifier",
+                      "name" : "TemperatureControl::FanCmd"
+                    }
+                  },
+                  "properties" : [
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["TempControlSystem_i_Instance", "p", "tempControl", "fanCmd", "Data_Model::Data_Representation"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                            },
+                            "beginLine" : 26,
+                            "beginColumn" : 4,
+                            "endLine" : 29,
+                            "endColumn" : 36,
+                            "offset" : 1108,
+                            "length" : 162
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "ValueProp",
+                          "value" : "Enum"
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    },
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["TempControlSystem_i_Instance", "p", "tempControl", "fanCmd", "Data_Model::Enumerators"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                            },
+                            "beginLine" : 48,
+                            "beginColumn" : 4,
+                            "endLine" : 48,
+                            "endColumn" : 66,
+                            "offset" : 2129,
+                            "length" : 62
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "ValueProp",
+                          "value" : "On"
+                        },
+                        {
+                          "type" : "ValueProp",
+                          "value" : "Off"
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    }
+                  ],
+                  "uriFrag" : "platform:\/resource\/temperature-control\/packages\/instances\/TemperatureControl_TempControlSystem_i_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.3"
+                },
+                {
+                  "type" : "FeatureEnd",
+                  "identifier" : {
+                    "type" : "Name",
+                    "name" : ["TempControlSystem_i_Instance", "p", "tempControl", "tempChanged"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                        },
+                        "beginLine" : 79,
+                        "beginColumn" : 4,
+                        "endLine" : 79,
+                        "endColumn" : 31,
+                        "offset" : 1964,
+                        "length" : 27
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Direction",
+                    "value" : "In"
+                  },
+                  "category" : {
+                    "type" : "FeatureCategory",
+                    "value" : "EventPort"
+                  },
+                  "classifier" : {
+                    "type" : "None"
+                  },
+                  "properties" : [
+                  ],
+                  "uriFrag" : "platform:\/resource\/temperature-control\/packages\/instances\/TemperatureControl_TempControlSystem_i_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1\/@featureInstance.4"
+                }
+              ],
+              "subComponents" : [
+              ],
+              "connections" : [
+              ],
+              "connectionInstances" : [
+              ],
+              "properties" : [
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["TempControlSystem_i_Instance", "p", "tempControl", "Deployment_Properties::Actual_Processor_Binding"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Deployment_Properties.aadl"
+                        },
+                        "beginLine" : 47,
+                        "beginColumn" : 2,
+                        "endLine" : 48,
+                        "endColumn" : 81,
+                        "offset" : 3130,
+                        "length" : 189
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ReferenceProp",
+                      "value" : {
+                        "type" : "Name",
+                        "name" : ["TempControlSystem_i_Instance", "t_processor"],
+                        "pos" : {
+                          "type" : "None"
+                        }
+                      }
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["TempControlSystem_i_Instance", "p", "tempControl", "Thread_Properties::Dispatch_Protocol"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Thread_Properties.aadl"
+                        },
+                        "beginLine" : 13,
+                        "beginColumn" : 2,
+                        "endLine" : 14,
+                        "endColumn" : 50,
+                        "offset" : 527,
+                        "length" : 97
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Sporadic"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["TempControlSystem_i_Instance", "p", "tempControl", "Timing_Properties::Period"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Timing_Properties.aadl"
+                        },
+                        "beginLine" : 192,
+                        "beginColumn" : 2,
+                        "endLine" : 193,
+                        "endColumn" : 99,
+                        "offset" : 11626,
+                        "length" : 119
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "UnitProp",
+                      "value" : "1.0E12",
+                      "unit" : {
+                        "type" : "Some",
+                        "value" : "ps"
+                      }
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["TempControlSystem_i_Instance", "p", "tempControl", "Memory_Properties::Stack_Size"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
+                        },
+                        "beginLine" : 107,
+                        "beginColumn" : 2,
+                        "endLine" : 108,
+                        "endColumn" : 73,
+                        "offset" : 5669,
+                        "length" : 89
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "UnitProp",
+                      "value" : "884736.0",
+                      "unit" : {
+                        "type" : "Some",
+                        "value" : "bits"
+                      }
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                }
+              ],
+              "flows" : [
+              ],
+              "modes" : [
+              ],
+              "annexes" : [
+                {
+                  "type" : "Annex",
+                  "name" : "Emv2",
+                  "clause" : {
+                    "type" : "Emv2Clause",
+                    "libraries" : [
+                    ],
+                    "propagations" : [
+                    ],
+                    "flows" : [
+                    ],
+                    "componentBehavior" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Emv2BehaviorSection",
+                        "events" : [
+                        ],
+                        "transitions" : [
+                        ],
+                        "propagations" : [
+                        ]
+                      }
+                    },
+                    "properties" : [
+                    ]
+                  }
+                },
+                {
+                  "type" : "Annex",
+                  "name" : "smf",
+                  "clause" : {
+                    "type" : "SmfClause",
+                    "classification" : [
+                    ],
+                    "declass" : [
+                    ]
+                  }
+                }
+              ],
+              "uriFrag" : "platform:\/resource\/temperature-control\/packages\/instances\/TemperatureControl_TempControlSystem_i_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.1"
+            },
+            {
+              "type" : "Component",
+              "identifier" : {
+                "type" : "Name",
+                "name" : ["TempControlSystem_i_Instance", "p", "fan"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                    },
+                    "beginLine" : 41,
+                    "beginColumn" : 4,
+                    "endLine" : 41,
+                    "endColumn" : 22,
+                    "offset" : 975,
+                    "length" : 18
+                  }
+                }
+              },
+              "category" : {
+                "type" : "ComponentCategory",
+                "value" : "Thread"
+              },
+              "classifier" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Classifier",
+                  "name" : "TemperatureControl::Fan.i"
+                }
+              },
+              "features" : [
+                {
+                  "type" : "FeatureEnd",
+                  "identifier" : {
+                    "type" : "Name",
+                    "name" : ["TempControlSystem_i_Instance", "p", "fan", "fanCmd"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                        },
+                        "beginLine" : 65,
+                        "beginColumn" : 4,
+                        "endLine" : 65,
+                        "endColumn" : 38,
+                        "offset" : 1633,
+                        "length" : 34
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Direction",
+                    "value" : "In"
+                  },
+                  "category" : {
+                    "type" : "FeatureCategory",
+                    "value" : "EventDataPort"
+                  },
+                  "classifier" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Classifier",
+                      "name" : "TemperatureControl::FanCmd"
+                    }
+                  },
+                  "properties" : [
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["TempControlSystem_i_Instance", "p", "fan", "fanCmd", "Data_Model::Data_Representation"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                            },
+                            "beginLine" : 26,
+                            "beginColumn" : 4,
+                            "endLine" : 29,
+                            "endColumn" : 36,
+                            "offset" : 1108,
+                            "length" : 162
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "ValueProp",
+                          "value" : "Enum"
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    },
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["TempControlSystem_i_Instance", "p", "fan", "fanCmd", "Data_Model::Enumerators"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                            },
+                            "beginLine" : 48,
+                            "beginColumn" : 4,
+                            "endLine" : 48,
+                            "endColumn" : 66,
+                            "offset" : 2129,
+                            "length" : 62
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "ValueProp",
+                          "value" : "On"
+                        },
+                        {
+                          "type" : "ValueProp",
+                          "value" : "Off"
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    }
+                  ],
+                  "uriFrag" : "platform:\/resource\/temperature-control\/packages\/instances\/TemperatureControl_TempControlSystem_i_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.2\/@featureInstance.0"
+                },
+                {
+                  "type" : "FeatureEnd",
+                  "identifier" : {
+                    "type" : "Name",
+                    "name" : ["TempControlSystem_i_Instance", "p", "fan", "fanAck"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                        },
+                        "beginLine" : 66,
+                        "beginColumn" : 4,
+                        "endLine" : 66,
+                        "endColumn" : 39,
+                        "offset" : 1671,
+                        "length" : 35
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Direction",
+                    "value" : "Out"
+                  },
+                  "category" : {
+                    "type" : "FeatureCategory",
+                    "value" : "EventDataPort"
+                  },
+                  "classifier" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Classifier",
+                      "name" : "TemperatureControl::FanAck"
+                    }
+                  },
+                  "properties" : [
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["TempControlSystem_i_Instance", "p", "fan", "fanAck", "Data_Model::Data_Representation"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                            },
+                            "beginLine" : 26,
+                            "beginColumn" : 4,
+                            "endLine" : 29,
+                            "endColumn" : 36,
+                            "offset" : 1108,
+                            "length" : 162
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "ValueProp",
+                          "value" : "Enum"
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    },
+                    {
+                      "type" : "Property",
+                      "name" : {
+                        "type" : "Name",
+                        "name" : ["TempControlSystem_i_Instance", "p", "fan", "fanAck", "Data_Model::Enumerators"],
+                        "pos" : {
+                          "type" : "Some",
+                          "value" : {
+                            "type" : "Position",
+                            "uriOpt" : {
+                              "type" : "Some",
+                              "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                            },
+                            "beginLine" : 48,
+                            "beginColumn" : 4,
+                            "endLine" : 48,
+                            "endColumn" : 66,
+                            "offset" : 2129,
+                            "length" : 62
+                          }
+                        }
+                      },
+                      "propertyValues" : [
+                        {
+                          "type" : "ValueProp",
+                          "value" : "Ok"
+                        },
+                        {
+                          "type" : "ValueProp",
+                          "value" : "Error"
+                        }
+                      ],
+                      "appliesTo" : [
+                      ]
+                    }
+                  ],
+                  "uriFrag" : "platform:\/resource\/temperature-control\/packages\/instances\/TemperatureControl_TempControlSystem_i_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.2\/@featureInstance.1"
+                }
+              ],
+              "subComponents" : [
+              ],
+              "connections" : [
+              ],
+              "connectionInstances" : [
+              ],
+              "properties" : [
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["TempControlSystem_i_Instance", "p", "fan", "Deployment_Properties::Actual_Processor_Binding"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Deployment_Properties.aadl"
+                        },
+                        "beginLine" : 47,
+                        "beginColumn" : 2,
+                        "endLine" : 48,
+                        "endColumn" : 81,
+                        "offset" : 3130,
+                        "length" : 189
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ReferenceProp",
+                      "value" : {
+                        "type" : "Name",
+                        "name" : ["TempControlSystem_i_Instance", "t_processor"],
+                        "pos" : {
+                          "type" : "None"
+                        }
+                      }
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["TempControlSystem_i_Instance", "p", "fan", "Thread_Properties::Dispatch_Protocol"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Thread_Properties.aadl"
+                        },
+                        "beginLine" : 13,
+                        "beginColumn" : 2,
+                        "endLine" : 14,
+                        "endColumn" : 50,
+                        "offset" : 527,
+                        "length" : 97
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Sporadic"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["TempControlSystem_i_Instance", "p", "fan", "Timing_Properties::Period"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Timing_Properties.aadl"
+                        },
+                        "beginLine" : 192,
+                        "beginColumn" : 2,
+                        "endLine" : 193,
+                        "endColumn" : 99,
+                        "offset" : 11626,
+                        "length" : 119
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "UnitProp",
+                      "value" : "1.0E12",
+                      "unit" : {
+                        "type" : "Some",
+                        "value" : "ps"
+                      }
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["TempControlSystem_i_Instance", "p", "fan", "Memory_Properties::Stack_Size"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
+                        },
+                        "beginLine" : 107,
+                        "beginColumn" : 2,
+                        "endLine" : 108,
+                        "endColumn" : 73,
+                        "offset" : 5669,
+                        "length" : 89
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "UnitProp",
+                      "value" : "884736.0",
+                      "unit" : {
+                        "type" : "Some",
+                        "value" : "bits"
+                      }
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                }
+              ],
+              "flows" : [
+              ],
+              "modes" : [
+              ],
+              "annexes" : [
+                {
+                  "type" : "Annex",
+                  "name" : "Emv2",
+                  "clause" : {
+                    "type" : "Emv2Clause",
+                    "libraries" : [
+                    ],
+                    "propagations" : [
+                    ],
+                    "flows" : [
+                    ],
+                    "componentBehavior" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Emv2BehaviorSection",
+                        "events" : [
+                        ],
+                        "transitions" : [
+                        ],
+                        "propagations" : [
+                        ]
+                      }
+                    },
+                    "properties" : [
+                    ]
+                  }
+                },
+                {
+                  "type" : "Annex",
+                  "name" : "smf",
+                  "clause" : {
+                    "type" : "SmfClause",
+                    "classification" : [
+                    ],
+                    "declass" : [
+                    ]
+                  }
+                }
+              ],
+              "uriFrag" : "platform:\/resource\/temperature-control\/packages\/instances\/TemperatureControl_TempControlSystem_i_Instance.aaxl2#\/\/@componentInstance.0\/@componentInstance.2"
+            }
+          ],
+          "connections" : [
+            {
+              "type" : "Connection",
+              "name" : {
+                "type" : "Name",
+                "name" : ["TempControlSystem_i_Instance", "p", "sp"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                    },
+                    "beginLine" : 43,
+                    "beginColumn" : 4,
+                    "endLine" : 43,
+                    "endColumn" : 46,
+                    "offset" : 1011,
+                    "length" : 42
+                  }
+                }
+              },
+              "src" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["TempControlSystem_i_Instance", "p"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                        },
+                        "beginLine" : 13,
+                        "beginColumn" : 4,
+                        "endLine" : 13,
+                        "endColumn" : 36,
+                        "offset" : 289,
+                        "length" : 32
+                      }
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["TempControlSystem_i_Instance", "p", "setPoint"],
+                      "pos" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                          },
+                          "beginLine" : 34,
+                          "beginColumn" : 4,
+                          "endLine" : 34,
+                          "endColumn" : 44,
+                          "offset" : 770,
+                          "length" : 40
+                        }
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "In"
+                    }
+                  }
+                }
+              ],
+              "dst" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["TempControlSystem_i_Instance", "p", "tempControl"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                        },
+                        "beginLine" : 40,
+                        "beginColumn" : 4,
+                        "endLine" : 40,
+                        "endColumn" : 38,
+                        "offset" : 937,
+                        "length" : 34
+                      }
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["TempControlSystem_i_Instance", "p", "tempControl", "setPoint"],
+                      "pos" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                          },
+                          "beginLine" : 81,
+                          "beginColumn" : 4,
+                          "endLine" : 81,
+                          "endColumn" : 44,
+                          "offset" : 2033,
+                          "length" : 40
+                        }
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "In"
+                    }
+                  }
+                }
+              ],
+              "kind" : {
+                "type" : "ConnectionKind",
+                "value" : "Port"
+              },
+              "isBiDirectional" : false,
+              "connectionInstances" : [
+                {
+                  "type" : "Name",
+                  "name" : ["TempControlSystem_i_Instance", "setPoint -> p", "tempControl", "setPoint"],
+                  "pos" : {
+                    "type" : "None"
+                  }
+                }
+              ],
+              "properties" : [
+              ],
+              "uriFrag" : "platform:\/resource\/temperature-control\/packages\/instances\/TemperatureControl_TempControlSystem_i_Instance.aaxl2#\/\/@connectionInstance.0\/@connectionReference.1"
+            },
+            {
+              "type" : "Connection",
+              "name" : {
+                "type" : "Name",
+                "name" : ["TempControlSystem_i_Instance", "p", "ct"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                    },
+                    "beginLine" : 44,
+                    "beginColumn" : 4,
+                    "endLine" : 44,
+                    "endColumn" : 63,
+                    "offset" : 1057,
+                    "length" : 59
+                  }
+                }
+              },
+              "src" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["TempControlSystem_i_Instance", "p", "tempSensor"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                        },
+                        "beginLine" : 39,
+                        "beginColumn" : 4,
+                        "endLine" : 39,
+                        "endColumn" : 36,
+                        "offset" : 901,
+                        "length" : 32
+                      }
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["TempControlSystem_i_Instance", "p", "tempSensor", "currentTemp"],
+                      "pos" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                          },
+                          "beginLine" : 52,
+                          "beginColumn" : 4,
+                          "endLine" : 52,
+                          "endColumn" : 45,
+                          "offset" : 1333,
+                          "length" : 41
+                        }
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "Out"
+                    }
+                  }
+                }
+              ],
+              "dst" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["TempControlSystem_i_Instance", "p", "tempControl"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                        },
+                        "beginLine" : 40,
+                        "beginColumn" : 4,
+                        "endLine" : 40,
+                        "endColumn" : 38,
+                        "offset" : 937,
+                        "length" : 34
+                      }
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["TempControlSystem_i_Instance", "p", "tempControl", "currentTemp"],
+                      "pos" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                          },
+                          "beginLine" : 78,
+                          "beginColumn" : 4,
+                          "endLine" : 78,
+                          "endColumn" : 44,
+                          "offset" : 1920,
+                          "length" : 40
+                        }
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "In"
+                    }
+                  }
+                }
+              ],
+              "kind" : {
+                "type" : "ConnectionKind",
+                "value" : "Port"
+              },
+              "isBiDirectional" : false,
+              "connectionInstances" : [
+                {
+                  "type" : "Name",
+                  "name" : ["TempControlSystem_i_Instance", "p", "tempSensor", "currentTemp -> tempControl", "currentTemp"],
+                  "pos" : {
+                    "type" : "None"
+                  }
+                }
+              ],
+              "properties" : [
+              ],
+              "uriFrag" : "platform:\/resource\/temperature-control\/packages\/instances\/TemperatureControl_TempControlSystem_i_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.0\/@connectionReference.0"
+            },
+            {
+              "type" : "Connection",
+              "name" : {
+                "type" : "Name",
+                "name" : ["TempControlSystem_i_Instance", "p", "tc"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                    },
+                    "beginLine" : 45,
+                    "beginColumn" : 4,
+                    "endLine" : 45,
+                    "endColumn" : 63,
+                    "offset" : 1120,
+                    "length" : 59
+                  }
+                }
+              },
+              "src" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["TempControlSystem_i_Instance", "p", "tempSensor"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                        },
+                        "beginLine" : 39,
+                        "beginColumn" : 4,
+                        "endLine" : 39,
+                        "endColumn" : 36,
+                        "offset" : 901,
+                        "length" : 32
+                      }
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["TempControlSystem_i_Instance", "p", "tempSensor", "tempChanged"],
+                      "pos" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                          },
+                          "beginLine" : 53,
+                          "beginColumn" : 4,
+                          "endLine" : 53,
+                          "endColumn" : 32,
+                          "offset" : 1378,
+                          "length" : 28
+                        }
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "Out"
+                    }
+                  }
+                }
+              ],
+              "dst" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["TempControlSystem_i_Instance", "p", "tempControl"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                        },
+                        "beginLine" : 40,
+                        "beginColumn" : 4,
+                        "endLine" : 40,
+                        "endColumn" : 38,
+                        "offset" : 937,
+                        "length" : 34
+                      }
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["TempControlSystem_i_Instance", "p", "tempControl", "tempChanged"],
+                      "pos" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                          },
+                          "beginLine" : 79,
+                          "beginColumn" : 4,
+                          "endLine" : 79,
+                          "endColumn" : 31,
+                          "offset" : 1964,
+                          "length" : 27
+                        }
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "In"
+                    }
+                  }
+                }
+              ],
+              "kind" : {
+                "type" : "ConnectionKind",
+                "value" : "Port"
+              },
+              "isBiDirectional" : false,
+              "connectionInstances" : [
+                {
+                  "type" : "Name",
+                  "name" : ["TempControlSystem_i_Instance", "p", "tempSensor", "tempChanged -> tempControl", "tempChanged"],
+                  "pos" : {
+                    "type" : "None"
+                  }
+                }
+              ],
+              "properties" : [
+              ],
+              "uriFrag" : "platform:\/resource\/temperature-control\/packages\/instances\/TemperatureControl_TempControlSystem_i_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.1\/@connectionReference.0"
+            },
+            {
+              "type" : "Connection",
+              "name" : {
+                "type" : "Name",
+                "name" : ["TempControlSystem_i_Instance", "p", "fc"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                    },
+                    "beginLine" : 46,
+                    "beginColumn" : 4,
+                    "endLine" : 46,
+                    "endColumn" : 46,
+                    "offset" : 1183,
+                    "length" : 42
+                  }
+                }
+              },
+              "src" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["TempControlSystem_i_Instance", "p", "tempControl"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                        },
+                        "beginLine" : 40,
+                        "beginColumn" : 4,
+                        "endLine" : 40,
+                        "endColumn" : 38,
+                        "offset" : 937,
+                        "length" : 34
+                      }
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["TempControlSystem_i_Instance", "p", "tempControl", "fanCmd"],
+                      "pos" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                          },
+                          "beginLine" : 82,
+                          "beginColumn" : 4,
+                          "endLine" : 82,
+                          "endColumn" : 39,
+                          "offset" : 2077,
+                          "length" : 35
+                        }
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "Out"
+                    }
+                  }
+                }
+              ],
+              "dst" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["TempControlSystem_i_Instance", "p", "fan"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                        },
+                        "beginLine" : 41,
+                        "beginColumn" : 4,
+                        "endLine" : 41,
+                        "endColumn" : 22,
+                        "offset" : 975,
+                        "length" : 18
+                      }
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["TempControlSystem_i_Instance", "p", "fan", "fanCmd"],
+                      "pos" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                          },
+                          "beginLine" : 65,
+                          "beginColumn" : 4,
+                          "endLine" : 65,
+                          "endColumn" : 38,
+                          "offset" : 1633,
+                          "length" : 34
+                        }
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "In"
+                    }
+                  }
+                }
+              ],
+              "kind" : {
+                "type" : "ConnectionKind",
+                "value" : "Port"
+              },
+              "isBiDirectional" : false,
+              "connectionInstances" : [
+                {
+                  "type" : "Name",
+                  "name" : ["TempControlSystem_i_Instance", "p", "tempControl", "fanCmd -> fan", "fanCmd"],
+                  "pos" : {
+                    "type" : "None"
+                  }
+                }
+              ],
+              "properties" : [
+              ],
+              "uriFrag" : "platform:\/resource\/temperature-control\/packages\/instances\/TemperatureControl_TempControlSystem_i_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.2\/@connectionReference.0"
+            },
+            {
+              "type" : "Connection",
+              "name" : {
+                "type" : "Name",
+                "name" : ["TempControlSystem_i_Instance", "p", "fa"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                    },
+                    "beginLine" : 47,
+                    "beginColumn" : 4,
+                    "endLine" : 47,
+                    "endColumn" : 46,
+                    "offset" : 1229,
+                    "length" : 42
+                  }
+                }
+              },
+              "src" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["TempControlSystem_i_Instance", "p", "fan"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                        },
+                        "beginLine" : 41,
+                        "beginColumn" : 4,
+                        "endLine" : 41,
+                        "endColumn" : 22,
+                        "offset" : 975,
+                        "length" : 18
+                      }
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["TempControlSystem_i_Instance", "p", "fan", "fanAck"],
+                      "pos" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                          },
+                          "beginLine" : 66,
+                          "beginColumn" : 4,
+                          "endLine" : 66,
+                          "endColumn" : 39,
+                          "offset" : 1671,
+                          "length" : 35
+                        }
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "Out"
+                    }
+                  }
+                }
+              ],
+              "dst" : [
+                {
+                  "type" : "EndPoint",
+                  "component" : {
+                    "type" : "Name",
+                    "name" : ["TempControlSystem_i_Instance", "p", "tempControl"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                        },
+                        "beginLine" : 40,
+                        "beginColumn" : 4,
+                        "endLine" : 40,
+                        "endColumn" : 38,
+                        "offset" : 937,
+                        "length" : 34
+                      }
+                    }
+                  },
+                  "feature" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Name",
+                      "name" : ["TempControlSystem_i_Instance", "p", "tempControl", "fanAck"],
+                      "pos" : {
+                        "type" : "Some",
+                        "value" : {
+                          "type" : "Position",
+                          "uriOpt" : {
+                            "type" : "Some",
+                            "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                          },
+                          "beginLine" : 80,
+                          "beginColumn" : 4,
+                          "endLine" : 80,
+                          "endColumn" : 38,
+                          "offset" : 1995,
+                          "length" : 34
+                        }
+                      }
+                    }
+                  },
+                  "direction" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Direction",
+                      "value" : "In"
+                    }
+                  }
+                }
+              ],
+              "kind" : {
+                "type" : "ConnectionKind",
+                "value" : "Port"
+              },
+              "isBiDirectional" : false,
+              "connectionInstances" : [
+                {
+                  "type" : "Name",
+                  "name" : ["TempControlSystem_i_Instance", "p", "fan", "fanAck -> tempControl", "fanAck"],
+                  "pos" : {
+                    "type" : "None"
+                  }
+                }
+              ],
+              "properties" : [
+              ],
+              "uriFrag" : "platform:\/resource\/temperature-control\/packages\/instances\/TemperatureControl_TempControlSystem_i_Instance.aaxl2#\/\/@componentInstance.0\/@connectionInstance.3\/@connectionReference.0"
+            }
+          ],
+          "connectionInstances" : [
+            {
+              "type" : "ConnectionInstance",
+              "name" : {
+                "type" : "Name",
+                "name" : ["TempControlSystem_i_Instance", "p", "tempSensor.currentTemp -> tempControl.currentTemp"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                    },
+                    "beginLine" : 44,
+                    "beginColumn" : 4,
+                    "endLine" : 44,
+                    "endColumn" : 63,
+                    "offset" : 1057,
+                    "length" : 59
+                  }
+                }
+              },
+              "src" : {
+                "type" : "EndPoint",
+                "component" : {
+                  "type" : "Name",
+                  "name" : ["TempControlSystem_i_Instance", "p", "tempSensor"],
+                  "pos" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                      },
+                      "beginLine" : 39,
+                      "beginColumn" : 4,
+                      "endLine" : 39,
+                      "endColumn" : 36,
+                      "offset" : 901,
+                      "length" : 32
+                    }
+                  }
+                },
+                "feature" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Name",
+                    "name" : ["TempControlSystem_i_Instance", "p", "tempSensor", "currentTemp"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                        },
+                        "beginLine" : 52,
+                        "beginColumn" : 4,
+                        "endLine" : 52,
+                        "endColumn" : 45,
+                        "offset" : 1333,
+                        "length" : 41
+                      }
+                    }
+                  }
+                },
+                "direction" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Direction",
+                    "value" : "Out"
+                  }
+                }
+              },
+              "dst" : {
+                "type" : "EndPoint",
+                "component" : {
+                  "type" : "Name",
+                  "name" : ["TempControlSystem_i_Instance", "p", "tempControl"],
+                  "pos" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                      },
+                      "beginLine" : 40,
+                      "beginColumn" : 4,
+                      "endLine" : 40,
+                      "endColumn" : 38,
+                      "offset" : 937,
+                      "length" : 34
+                    }
+                  }
+                },
+                "feature" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Name",
+                    "name" : ["TempControlSystem_i_Instance", "p", "tempControl", "currentTemp"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                        },
+                        "beginLine" : 78,
+                        "beginColumn" : 4,
+                        "endLine" : 78,
+                        "endColumn" : 44,
+                        "offset" : 1920,
+                        "length" : 40
+                      }
+                    }
+                  }
+                },
+                "direction" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Direction",
+                    "value" : "In"
+                  }
+                }
+              },
+              "kind" : {
+                "type" : "ConnectionKind",
+                "value" : "Port"
+              },
+              "connectionRefs" : [
+                {
+                  "type" : "ConnectionReference",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["TempControlSystem_i_Instance", "p", "ct"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                        },
+                        "beginLine" : 44,
+                        "beginColumn" : 4,
+                        "endLine" : 44,
+                        "endColumn" : 63,
+                        "offset" : 1057,
+                        "length" : 59
+                      }
+                    }
+                  },
+                  "context" : {
+                    "type" : "Name",
+                    "name" : ["TempControlSystem_i_Instance", "p"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                        },
+                        "beginLine" : 13,
+                        "beginColumn" : 4,
+                        "endLine" : 13,
+                        "endColumn" : 36,
+                        "offset" : 289,
+                        "length" : 32
+                      }
+                    }
+                  },
+                  "isParent" : true
+                }
+              ],
+              "properties" : [
+              ]
+            },
+            {
+              "type" : "ConnectionInstance",
+              "name" : {
+                "type" : "Name",
+                "name" : ["TempControlSystem_i_Instance", "p", "tempSensor.tempChanged -> tempControl.tempChanged"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                    },
+                    "beginLine" : 45,
+                    "beginColumn" : 4,
+                    "endLine" : 45,
+                    "endColumn" : 63,
+                    "offset" : 1120,
+                    "length" : 59
+                  }
+                }
+              },
+              "src" : {
+                "type" : "EndPoint",
+                "component" : {
+                  "type" : "Name",
+                  "name" : ["TempControlSystem_i_Instance", "p", "tempSensor"],
+                  "pos" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                      },
+                      "beginLine" : 39,
+                      "beginColumn" : 4,
+                      "endLine" : 39,
+                      "endColumn" : 36,
+                      "offset" : 901,
+                      "length" : 32
+                    }
+                  }
+                },
+                "feature" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Name",
+                    "name" : ["TempControlSystem_i_Instance", "p", "tempSensor", "tempChanged"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                        },
+                        "beginLine" : 53,
+                        "beginColumn" : 4,
+                        "endLine" : 53,
+                        "endColumn" : 32,
+                        "offset" : 1378,
+                        "length" : 28
+                      }
+                    }
+                  }
+                },
+                "direction" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Direction",
+                    "value" : "Out"
+                  }
+                }
+              },
+              "dst" : {
+                "type" : "EndPoint",
+                "component" : {
+                  "type" : "Name",
+                  "name" : ["TempControlSystem_i_Instance", "p", "tempControl"],
+                  "pos" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                      },
+                      "beginLine" : 40,
+                      "beginColumn" : 4,
+                      "endLine" : 40,
+                      "endColumn" : 38,
+                      "offset" : 937,
+                      "length" : 34
+                    }
+                  }
+                },
+                "feature" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Name",
+                    "name" : ["TempControlSystem_i_Instance", "p", "tempControl", "tempChanged"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                        },
+                        "beginLine" : 79,
+                        "beginColumn" : 4,
+                        "endLine" : 79,
+                        "endColumn" : 31,
+                        "offset" : 1964,
+                        "length" : 27
+                      }
+                    }
+                  }
+                },
+                "direction" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Direction",
+                    "value" : "In"
+                  }
+                }
+              },
+              "kind" : {
+                "type" : "ConnectionKind",
+                "value" : "Port"
+              },
+              "connectionRefs" : [
+                {
+                  "type" : "ConnectionReference",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["TempControlSystem_i_Instance", "p", "tc"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                        },
+                        "beginLine" : 45,
+                        "beginColumn" : 4,
+                        "endLine" : 45,
+                        "endColumn" : 63,
+                        "offset" : 1120,
+                        "length" : 59
+                      }
+                    }
+                  },
+                  "context" : {
+                    "type" : "Name",
+                    "name" : ["TempControlSystem_i_Instance", "p"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                        },
+                        "beginLine" : 13,
+                        "beginColumn" : 4,
+                        "endLine" : 13,
+                        "endColumn" : 36,
+                        "offset" : 289,
+                        "length" : 32
+                      }
+                    }
+                  },
+                  "isParent" : true
+                }
+              ],
+              "properties" : [
+              ]
+            },
+            {
+              "type" : "ConnectionInstance",
+              "name" : {
+                "type" : "Name",
+                "name" : ["TempControlSystem_i_Instance", "p", "tempControl.fanCmd -> fan.fanCmd"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                    },
+                    "beginLine" : 46,
+                    "beginColumn" : 4,
+                    "endLine" : 46,
+                    "endColumn" : 46,
+                    "offset" : 1183,
+                    "length" : 42
+                  }
+                }
+              },
+              "src" : {
+                "type" : "EndPoint",
+                "component" : {
+                  "type" : "Name",
+                  "name" : ["TempControlSystem_i_Instance", "p", "tempControl"],
+                  "pos" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                      },
+                      "beginLine" : 40,
+                      "beginColumn" : 4,
+                      "endLine" : 40,
+                      "endColumn" : 38,
+                      "offset" : 937,
+                      "length" : 34
+                    }
+                  }
+                },
+                "feature" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Name",
+                    "name" : ["TempControlSystem_i_Instance", "p", "tempControl", "fanCmd"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                        },
+                        "beginLine" : 82,
+                        "beginColumn" : 4,
+                        "endLine" : 82,
+                        "endColumn" : 39,
+                        "offset" : 2077,
+                        "length" : 35
+                      }
+                    }
+                  }
+                },
+                "direction" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Direction",
+                    "value" : "Out"
+                  }
+                }
+              },
+              "dst" : {
+                "type" : "EndPoint",
+                "component" : {
+                  "type" : "Name",
+                  "name" : ["TempControlSystem_i_Instance", "p", "fan"],
+                  "pos" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                      },
+                      "beginLine" : 41,
+                      "beginColumn" : 4,
+                      "endLine" : 41,
+                      "endColumn" : 22,
+                      "offset" : 975,
+                      "length" : 18
+                    }
+                  }
+                },
+                "feature" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Name",
+                    "name" : ["TempControlSystem_i_Instance", "p", "fan", "fanCmd"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                        },
+                        "beginLine" : 65,
+                        "beginColumn" : 4,
+                        "endLine" : 65,
+                        "endColumn" : 38,
+                        "offset" : 1633,
+                        "length" : 34
+                      }
+                    }
+                  }
+                },
+                "direction" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Direction",
+                    "value" : "In"
+                  }
+                }
+              },
+              "kind" : {
+                "type" : "ConnectionKind",
+                "value" : "Port"
+              },
+              "connectionRefs" : [
+                {
+                  "type" : "ConnectionReference",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["TempControlSystem_i_Instance", "p", "fc"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                        },
+                        "beginLine" : 46,
+                        "beginColumn" : 4,
+                        "endLine" : 46,
+                        "endColumn" : 46,
+                        "offset" : 1183,
+                        "length" : 42
+                      }
+                    }
+                  },
+                  "context" : {
+                    "type" : "Name",
+                    "name" : ["TempControlSystem_i_Instance", "p"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                        },
+                        "beginLine" : 13,
+                        "beginColumn" : 4,
+                        "endLine" : 13,
+                        "endColumn" : 36,
+                        "offset" : 289,
+                        "length" : 32
+                      }
+                    }
+                  },
+                  "isParent" : true
+                }
+              ],
+              "properties" : [
+              ]
+            },
+            {
+              "type" : "ConnectionInstance",
+              "name" : {
+                "type" : "Name",
+                "name" : ["TempControlSystem_i_Instance", "p", "fan.fanAck -> tempControl.fanAck"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                    },
+                    "beginLine" : 47,
+                    "beginColumn" : 4,
+                    "endLine" : 47,
+                    "endColumn" : 46,
+                    "offset" : 1229,
+                    "length" : 42
+                  }
+                }
+              },
+              "src" : {
+                "type" : "EndPoint",
+                "component" : {
+                  "type" : "Name",
+                  "name" : ["TempControlSystem_i_Instance", "p", "fan"],
+                  "pos" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                      },
+                      "beginLine" : 41,
+                      "beginColumn" : 4,
+                      "endLine" : 41,
+                      "endColumn" : 22,
+                      "offset" : 975,
+                      "length" : 18
+                    }
+                  }
+                },
+                "feature" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Name",
+                    "name" : ["TempControlSystem_i_Instance", "p", "fan", "fanAck"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                        },
+                        "beginLine" : 66,
+                        "beginColumn" : 4,
+                        "endLine" : 66,
+                        "endColumn" : 39,
+                        "offset" : 1671,
+                        "length" : 35
+                      }
+                    }
+                  }
+                },
+                "direction" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Direction",
+                    "value" : "Out"
+                  }
+                }
+              },
+              "dst" : {
+                "type" : "EndPoint",
+                "component" : {
+                  "type" : "Name",
+                  "name" : ["TempControlSystem_i_Instance", "p", "tempControl"],
+                  "pos" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                      },
+                      "beginLine" : 40,
+                      "beginColumn" : 4,
+                      "endLine" : 40,
+                      "endColumn" : 38,
+                      "offset" : 937,
+                      "length" : 34
+                    }
+                  }
+                },
+                "feature" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Name",
+                    "name" : ["TempControlSystem_i_Instance", "p", "tempControl", "fanAck"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                        },
+                        "beginLine" : 80,
+                        "beginColumn" : 4,
+                        "endLine" : 80,
+                        "endColumn" : 38,
+                        "offset" : 1995,
+                        "length" : 34
+                      }
+                    }
+                  }
+                },
+                "direction" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Direction",
+                    "value" : "In"
+                  }
+                }
+              },
+              "kind" : {
+                "type" : "ConnectionKind",
+                "value" : "Port"
+              },
+              "connectionRefs" : [
+                {
+                  "type" : "ConnectionReference",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["TempControlSystem_i_Instance", "p", "fa"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                        },
+                        "beginLine" : 47,
+                        "beginColumn" : 4,
+                        "endLine" : 47,
+                        "endColumn" : 46,
+                        "offset" : 1229,
+                        "length" : 42
+                      }
+                    }
+                  },
+                  "context" : {
+                    "type" : "Name",
+                    "name" : ["TempControlSystem_i_Instance", "p"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                        },
+                        "beginLine" : 13,
+                        "beginColumn" : 4,
+                        "endLine" : 13,
+                        "endColumn" : 36,
+                        "offset" : 289,
+                        "length" : 32
+                      }
+                    }
+                  },
+                  "isParent" : true
+                }
+              ],
+              "properties" : [
+              ]
+            }
+          ],
+          "properties" : [
+            {
+              "type" : "Property",
+              "name" : {
+                "type" : "Name",
+                "name" : ["TempControlSystem_i_Instance", "p", "Deployment_Properties::Actual_Processor_Binding"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Deployment_Properties.aadl"
+                    },
+                    "beginLine" : 47,
+                    "beginColumn" : 2,
+                    "endLine" : 48,
+                    "endColumn" : 81,
+                    "offset" : 3130,
+                    "length" : 189
+                  }
+                }
+              },
+              "propertyValues" : [
+                {
+                  "type" : "ReferenceProp",
+                  "value" : {
+                    "type" : "Name",
+                    "name" : ["TempControlSystem_i_Instance", "t_processor"],
+                    "pos" : {
+                      "type" : "None"
+                    }
+                  }
+                }
+              ],
+              "appliesTo" : [
+              ]
+            }
+          ],
+          "flows" : [
+          ],
+          "modes" : [
+          ],
+          "annexes" : [
+            {
+              "type" : "Annex",
+              "name" : "Emv2",
+              "clause" : {
+                "type" : "Emv2Clause",
+                "libraries" : [
+                ],
+                "propagations" : [
+                ],
+                "flows" : [
+                ],
+                "componentBehavior" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Emv2BehaviorSection",
+                    "events" : [
+                    ],
+                    "transitions" : [
+                    ],
+                    "propagations" : [
+                    ]
+                  }
+                },
+                "properties" : [
+                ]
+              }
+            },
+            {
+              "type" : "Annex",
+              "name" : "smf",
+              "clause" : {
+                "type" : "SmfClause",
+                "classification" : [
+                ],
+                "declass" : [
+                ]
+              }
+            }
+          ],
+          "uriFrag" : "platform:\/resource\/temperature-control\/packages\/instances\/TemperatureControl_TempControlSystem_i_Instance.aaxl2#\/\/@componentInstance.0"
+        },
+        {
+          "type" : "Component",
+          "identifier" : {
+            "type" : "Name",
+            "name" : ["TempControlSystem_i_Instance", "t_processor"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                },
+                "beginLine" : 12,
+                "beginColumn" : 4,
+                "endLine" : 12,
+                "endColumn" : 50,
+                "offset" : 239,
+                "length" : 46
+              }
+            }
+          },
+          "category" : {
+            "type" : "ComponentCategory",
+            "value" : "Processor"
+          },
+          "classifier" : {
+            "type" : "Some",
+            "value" : {
+              "type" : "Classifier",
+              "name" : "TemperatureControl::TempControlProcessor.i"
+            }
+          },
+          "features" : [
+          ],
+          "subComponents" : [
+          ],
+          "connections" : [
+          ],
+          "connectionInstances" : [
+          ],
+          "properties" : [
+          ],
+          "flows" : [
+          ],
+          "modes" : [
+          ],
+          "annexes" : [
+            {
+              "type" : "Annex",
+              "name" : "Emv2",
+              "clause" : {
+                "type" : "Emv2Clause",
+                "libraries" : [
+                ],
+                "propagations" : [
+                ],
+                "flows" : [
+                ],
+                "componentBehavior" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Emv2BehaviorSection",
+                    "events" : [
+                    ],
+                    "transitions" : [
+                    ],
+                    "propagations" : [
+                    ]
+                  }
+                },
+                "properties" : [
+                ]
+              }
+            },
+            {
+              "type" : "Annex",
+              "name" : "smf",
+              "clause" : {
+                "type" : "SmfClause",
+                "classification" : [
+                ],
+                "declass" : [
+                ]
+              }
+            }
+          ],
+          "uriFrag" : "platform:\/resource\/temperature-control\/packages\/instances\/TemperatureControl_TempControlSystem_i_Instance.aaxl2#\/\/@componentInstance.1"
+        }
+      ],
+      "connections" : [
+        {
+          "type" : "Connection",
+          "name" : {
+            "type" : "Name",
+            "name" : ["TempControlSystem_i_Instance", "sp"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                },
+                "beginLine" : 15,
+                "beginColumn" : 4,
+                "endLine" : 15,
+                "endColumn" : 36,
+                "offset" : 339,
+                "length" : 32
+              }
+            }
+          },
+          "src" : [
+            {
+              "type" : "EndPoint",
+              "component" : {
+                "type" : "Name",
+                "name" : ["TempControlSystem_i_Instance"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                    },
+                    "beginLine" : 10,
+                    "beginColumn" : 2,
+                    "endLine" : 24,
+                    "endColumn" : 26,
+                    "offset" : 178,
+                    "length" : 409
+                  }
+                }
+              },
+              "feature" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Name",
+                  "name" : ["TempControlSystem_i_Instance", "setPoint"],
+                  "pos" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                      },
+                      "beginLine" : 7,
+                      "beginColumn" : 4,
+                      "endLine" : 7,
+                      "endColumn" : 44,
+                      "offset" : 111,
+                      "length" : 40
+                    }
+                  }
+                }
+              },
+              "direction" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Direction",
+                  "value" : "In"
+                }
+              }
+            }
+          ],
+          "dst" : [
+            {
+              "type" : "EndPoint",
+              "component" : {
+                "type" : "Name",
+                "name" : ["TempControlSystem_i_Instance", "p"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                    },
+                    "beginLine" : 13,
+                    "beginColumn" : 4,
+                    "endLine" : 13,
+                    "endColumn" : 36,
+                    "offset" : 289,
+                    "length" : 32
+                  }
+                }
+              },
+              "feature" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Name",
+                  "name" : ["TempControlSystem_i_Instance", "p", "setPoint"],
+                  "pos" : {
+                    "type" : "Some",
+                    "value" : {
+                      "type" : "Position",
+                      "uriOpt" : {
+                        "type" : "Some",
+                        "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                      },
+                      "beginLine" : 34,
+                      "beginColumn" : 4,
+                      "endLine" : 34,
+                      "endColumn" : 44,
+                      "offset" : 770,
+                      "length" : 40
+                    }
+                  }
+                }
+              },
+              "direction" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Direction",
+                  "value" : "In"
+                }
+              }
+            }
+          ],
+          "kind" : {
+            "type" : "ConnectionKind",
+            "value" : "Port"
+          },
+          "isBiDirectional" : false,
+          "connectionInstances" : [
+            {
+              "type" : "Name",
+              "name" : ["TempControlSystem_i_Instance", "setPoint -> p", "tempControl", "setPoint"],
+              "pos" : {
+                "type" : "None"
+              }
+            }
+          ],
+          "properties" : [
+          ],
+          "uriFrag" : "platform:\/resource\/temperature-control\/packages\/instances\/TemperatureControl_TempControlSystem_i_Instance.aaxl2#\/\/@connectionInstance.0\/@connectionReference.0"
+        }
+      ],
+      "connectionInstances" : [
+        {
+          "type" : "ConnectionInstance",
+          "name" : {
+            "type" : "Name",
+            "name" : ["TempControlSystem_i_Instance", "setPoint -> p.tempControl.setPoint"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                },
+                "beginLine" : 15,
+                "beginColumn" : 4,
+                "endLine" : 15,
+                "endColumn" : 36,
+                "offset" : 339,
+                "length" : 32
+              }
+            }
+          },
+          "src" : {
+            "type" : "EndPoint",
+            "component" : {
+              "type" : "Name",
+              "name" : ["TempControlSystem_i_Instance"],
+              "pos" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Position",
+                  "uriOpt" : {
+                    "type" : "Some",
+                    "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                  },
+                  "beginLine" : 10,
+                  "beginColumn" : 2,
+                  "endLine" : 24,
+                  "endColumn" : 26,
+                  "offset" : 178,
+                  "length" : 409
+                }
+              }
+            },
+            "feature" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Name",
+                "name" : ["TempControlSystem_i_Instance", "setPoint"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                    },
+                    "beginLine" : 7,
+                    "beginColumn" : 4,
+                    "endLine" : 7,
+                    "endColumn" : 44,
+                    "offset" : 111,
+                    "length" : 40
+                  }
+                }
+              }
+            },
+            "direction" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Direction",
+                "value" : "In"
+              }
+            }
+          },
+          "dst" : {
+            "type" : "EndPoint",
+            "component" : {
+              "type" : "Name",
+              "name" : ["TempControlSystem_i_Instance", "p", "tempControl"],
+              "pos" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Position",
+                  "uriOpt" : {
+                    "type" : "Some",
+                    "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                  },
+                  "beginLine" : 40,
+                  "beginColumn" : 4,
+                  "endLine" : 40,
+                  "endColumn" : 38,
+                  "offset" : 937,
+                  "length" : 34
+                }
+              }
+            },
+            "feature" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Name",
+                "name" : ["TempControlSystem_i_Instance", "p", "tempControl", "setPoint"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                    },
+                    "beginLine" : 81,
+                    "beginColumn" : 4,
+                    "endLine" : 81,
+                    "endColumn" : 44,
+                    "offset" : 2033,
+                    "length" : 40
+                  }
+                }
+              }
+            },
+            "direction" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Direction",
+                "value" : "In"
+              }
+            }
+          },
+          "kind" : {
+            "type" : "ConnectionKind",
+            "value" : "Port"
+          },
+          "connectionRefs" : [
+            {
+              "type" : "ConnectionReference",
+              "name" : {
+                "type" : "Name",
+                "name" : ["TempControlSystem_i_Instance", "sp"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                    },
+                    "beginLine" : 15,
+                    "beginColumn" : 4,
+                    "endLine" : 15,
+                    "endColumn" : 36,
+                    "offset" : 339,
+                    "length" : 32
+                  }
+                }
+              },
+              "context" : {
+                "type" : "Name",
+                "name" : ["TempControlSystem_i_Instance"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                    },
+                    "beginLine" : 10,
+                    "beginColumn" : 2,
+                    "endLine" : 24,
+                    "endColumn" : 26,
+                    "offset" : 178,
+                    "length" : 409
+                  }
+                }
+              },
+              "isParent" : true
+            },
+            {
+              "type" : "ConnectionReference",
+              "name" : {
+                "type" : "Name",
+                "name" : ["TempControlSystem_i_Instance", "p", "sp"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                    },
+                    "beginLine" : 43,
+                    "beginColumn" : 4,
+                    "endLine" : 43,
+                    "endColumn" : 46,
+                    "offset" : 1011,
+                    "length" : 42
+                  }
+                }
+              },
+              "context" : {
+                "type" : "Name",
+                "name" : ["TempControlSystem_i_Instance", "p"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                    },
+                    "beginLine" : 13,
+                    "beginColumn" : 4,
+                    "endLine" : 13,
+                    "endColumn" : 36,
+                    "offset" : 289,
+                    "length" : 32
+                  }
+                }
+              },
+              "isParent" : false
+            }
+          ],
+          "properties" : [
+          ]
+        }
+      ],
+      "properties" : [
+        {
+          "type" : "Property",
+          "name" : {
+            "type" : "Name",
+            "name" : ["TempControlSystem_i_Instance", "HAMR::Platform"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/org.sireum.aadl.osate.hamr\/resources\/HAMR.aadl"
+                },
+                "beginLine" : 28,
+                "beginColumn" : 3,
+                "endLine" : 28,
+                "endColumn" : 153,
+                "offset" : 1125,
+                "length" : 150
+              }
+            }
+          },
+          "propertyValues" : [
+            {
+              "type" : "ValueProp",
+              "value" : "JVM"
+            },
+            {
+              "type" : "ValueProp",
+              "value" : "Linux"
+            },
+            {
+              "type" : "ValueProp",
+              "value" : "macOS"
+            },
+            {
+              "type" : "ValueProp",
+              "value" : "Cygwin"
+            },
+            {
+              "type" : "ValueProp",
+              "value" : "seL4"
+            }
+          ],
+          "appliesTo" : [
+          ]
+        }
+      ],
+      "flows" : [
+      ],
+      "modes" : [
+      ],
+      "annexes" : [
+        {
+          "type" : "Annex",
+          "name" : "Emv2",
+          "clause" : {
+            "type" : "Emv2Clause",
+            "libraries" : [
+            ],
+            "propagations" : [
+            ],
+            "flows" : [
+            ],
+            "componentBehavior" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Emv2BehaviorSection",
+                "events" : [
+                ],
+                "transitions" : [
+                ],
+                "propagations" : [
+                ]
+              }
+            },
+            "properties" : [
+            ]
+          }
+        },
+        {
+          "type" : "Annex",
+          "name" : "smf",
+          "clause" : {
+            "type" : "SmfClause",
+            "classification" : [
+            ],
+            "declass" : [
+            ]
+          }
+        }
+      ],
+      "uriFrag" : "platform:\/resource\/temperature-control\/packages\/instances\/TemperatureControl_TempControlSystem_i_Instance.aaxl2#\/"
+    }
+  ],
+  "annexLib" : [
+  ],
+  "dataComponents" : [
+    {
+      "type" : "Component",
+      "identifier" : {
+        "type" : "Name",
+        "name" : [],
+        "pos" : {
+          "type" : "None"
+        }
+      },
+      "category" : {
+        "type" : "ComponentCategory",
+        "value" : "Data"
+      },
+      "classifier" : {
+        "type" : "Some",
+        "value" : {
+          "type" : "Classifier",
+          "name" : "Base_Types::Float_32"
+        }
+      },
+      "features" : [
+      ],
+      "subComponents" : [
+      ],
+      "connections" : [
+      ],
+      "connectionInstances" : [
+      ],
+      "properties" : [
+        {
+          "type" : "Property",
+          "name" : {
+            "type" : "Name",
+            "name" : ["Data_Model::IEEE754_Precision"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                },
+                "beginLine" : 52,
+                "beginColumn" : 4,
+                "endLine" : 52,
+                "endColumn" : 84,
+                "offset" : 2312,
+                "length" : 80
+              }
+            }
+          },
+          "propertyValues" : [
+            {
+              "type" : "ValueProp",
+              "value" : "Simple"
+            }
+          ],
+          "appliesTo" : [
+          ]
+        },
+        {
+          "type" : "Property",
+          "name" : {
+            "type" : "Name",
+            "name" : ["Memory_Properties::Data_Size"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
+                },
+                "beginLine" : 92,
+                "beginColumn" : 2,
+                "endLine" : 93,
+                "endColumn" : 137,
+                "offset" : 4808,
+                "length" : 152
+              }
+            }
+          },
+          "propertyValues" : [
+            {
+              "type" : "UnitProp",
+              "value" : "32.0",
+              "unit" : {
+                "type" : "Some",
+                "value" : "bits"
+              }
+            }
+          ],
+          "appliesTo" : [
+          ]
+        }
+      ],
+      "flows" : [
+      ],
+      "modes" : [
+      ],
+      "annexes" : [
+      ],
+      "uriFrag" : ""
+    },
+    {
+      "type" : "Component",
+      "identifier" : {
+        "type" : "Name",
+        "name" : [],
+        "pos" : {
+          "type" : "None"
+        }
+      },
+      "category" : {
+        "type" : "ComponentCategory",
+        "value" : "Data"
+      },
+      "classifier" : {
+        "type" : "Some",
+        "value" : {
+          "type" : "Classifier",
+          "name" : "TemperatureControl::TempUnit"
+        }
+      },
+      "features" : [
+      ],
+      "subComponents" : [
+      ],
+      "connections" : [
+      ],
+      "connectionInstances" : [
+      ],
+      "properties" : [
+        {
+          "type" : "Property",
+          "name" : {
+            "type" : "Name",
+            "name" : ["Data_Model::Data_Representation"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                },
+                "beginLine" : 26,
+                "beginColumn" : 4,
+                "endLine" : 29,
+                "endColumn" : 36,
+                "offset" : 1108,
+                "length" : 162
+              }
+            }
+          },
+          "propertyValues" : [
+            {
+              "type" : "ValueProp",
+              "value" : "Enum"
+            }
+          ],
+          "appliesTo" : [
+          ]
+        },
+        {
+          "type" : "Property",
+          "name" : {
+            "type" : "Name",
+            "name" : ["Data_Model::Enumerators"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                },
+                "beginLine" : 48,
+                "beginColumn" : 4,
+                "endLine" : 48,
+                "endColumn" : 66,
+                "offset" : 2129,
+                "length" : 62
+              }
+            }
+          },
+          "propertyValues" : [
+            {
+              "type" : "ValueProp",
+              "value" : "Fahrenheit"
+            },
+            {
+              "type" : "ValueProp",
+              "value" : "Celsius"
+            },
+            {
+              "type" : "ValueProp",
+              "value" : "Kelvin"
+            }
+          ],
+          "appliesTo" : [
+          ]
+        }
+      ],
+      "flows" : [
+      ],
+      "modes" : [
+      ],
+      "annexes" : [
+      ],
+      "uriFrag" : ""
+    },
+    {
+      "type" : "Component",
+      "identifier" : {
+        "type" : "Name",
+        "name" : [],
+        "pos" : {
+          "type" : "None"
+        }
+      },
+      "category" : {
+        "type" : "ComponentCategory",
+        "value" : "Data"
+      },
+      "classifier" : {
+        "type" : "Some",
+        "value" : {
+          "type" : "Classifier",
+          "name" : "TemperatureControl::Temperature.i"
+        }
+      },
+      "features" : [
+      ],
+      "subComponents" : [
+        {
+          "type" : "Component",
+          "identifier" : {
+            "type" : "Name",
+            "name" : ["degrees"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                },
+                "beginLine" : 99,
+                "beginColumn" : 4,
+                "endLine" : 99,
+                "endColumn" : 39,
+                "offset" : 2466,
+                "length" : 35
+              }
+            }
+          },
+          "category" : {
+            "type" : "ComponentCategory",
+            "value" : "Data"
+          },
+          "classifier" : {
+            "type" : "Some",
+            "value" : {
+              "type" : "Classifier",
+              "name" : "Base_Types::Float_32"
+            }
+          },
+          "features" : [
+          ],
+          "subComponents" : [
+          ],
+          "connections" : [
+          ],
+          "connectionInstances" : [
+          ],
+          "properties" : [
+            {
+              "type" : "Property",
+              "name" : {
+                "type" : "Name",
+                "name" : ["Data_Model::IEEE754_Precision"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                    },
+                    "beginLine" : 52,
+                    "beginColumn" : 4,
+                    "endLine" : 52,
+                    "endColumn" : 84,
+                    "offset" : 2312,
+                    "length" : 80
+                  }
+                }
+              },
+              "propertyValues" : [
+                {
+                  "type" : "ValueProp",
+                  "value" : "Simple"
+                }
+              ],
+              "appliesTo" : [
+              ]
+            },
+            {
+              "type" : "Property",
+              "name" : {
+                "type" : "Name",
+                "name" : ["Memory_Properties::Data_Size"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
+                    },
+                    "beginLine" : 92,
+                    "beginColumn" : 2,
+                    "endLine" : 93,
+                    "endColumn" : 137,
+                    "offset" : 4808,
+                    "length" : 152
+                  }
+                }
+              },
+              "propertyValues" : [
+                {
+                  "type" : "UnitProp",
+                  "value" : "32.0",
+                  "unit" : {
+                    "type" : "Some",
+                    "value" : "bits"
+                  }
+                }
+              ],
+              "appliesTo" : [
+              ]
+            }
+          ],
+          "flows" : [
+          ],
+          "modes" : [
+          ],
+          "annexes" : [
+          ],
+          "uriFrag" : "platform:\/plugin\/org.osate.contribution.sei\/resources\/packages\/Base_Types.aadl#Base_Types.Float_32"
+        },
+        {
+          "type" : "Component",
+          "identifier" : {
+            "type" : "Name",
+            "name" : ["unit"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                },
+                "beginLine" : 100,
+                "beginColumn" : 4,
+                "endLine" : 100,
+                "endColumn" : 24,
+                "offset" : 2505,
+                "length" : 20
+              }
+            }
+          },
+          "category" : {
+            "type" : "ComponentCategory",
+            "value" : "Data"
+          },
+          "classifier" : {
+            "type" : "Some",
+            "value" : {
+              "type" : "Classifier",
+              "name" : "TemperatureControl::TempUnit"
+            }
+          },
+          "features" : [
+          ],
+          "subComponents" : [
+          ],
+          "connections" : [
+          ],
+          "connectionInstances" : [
+          ],
+          "properties" : [
+            {
+              "type" : "Property",
+              "name" : {
+                "type" : "Name",
+                "name" : ["Data_Model::Data_Representation"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                    },
+                    "beginLine" : 26,
+                    "beginColumn" : 4,
+                    "endLine" : 29,
+                    "endColumn" : 36,
+                    "offset" : 1108,
+                    "length" : 162
+                  }
+                }
+              },
+              "propertyValues" : [
+                {
+                  "type" : "ValueProp",
+                  "value" : "Enum"
+                }
+              ],
+              "appliesTo" : [
+              ]
+            },
+            {
+              "type" : "Property",
+              "name" : {
+                "type" : "Name",
+                "name" : ["Data_Model::Enumerators"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                    },
+                    "beginLine" : 48,
+                    "beginColumn" : 4,
+                    "endLine" : 48,
+                    "endColumn" : 66,
+                    "offset" : 2129,
+                    "length" : 62
+                  }
+                }
+              },
+              "propertyValues" : [
+                {
+                  "type" : "ValueProp",
+                  "value" : "Fahrenheit"
+                },
+                {
+                  "type" : "ValueProp",
+                  "value" : "Celsius"
+                },
+                {
+                  "type" : "ValueProp",
+                  "value" : "Kelvin"
+                }
+              ],
+              "appliesTo" : [
+              ]
+            }
+          ],
+          "flows" : [
+          ],
+          "modes" : [
+          ],
+          "annexes" : [
+          ],
+          "uriFrag" : "platform:\/resource\/temperature-control\/packages\/TemperatureControl.aadl#TemperatureControl.TempUnit"
+        }
+      ],
+      "connections" : [
+      ],
+      "connectionInstances" : [
+      ],
+      "properties" : [
+        {
+          "type" : "Property",
+          "name" : {
+            "type" : "Name",
+            "name" : ["Data_Model::Data_Representation"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                },
+                "beginLine" : 26,
+                "beginColumn" : 4,
+                "endLine" : 29,
+                "endColumn" : 36,
+                "offset" : 1108,
+                "length" : 162
+              }
+            }
+          },
+          "propertyValues" : [
+            {
+              "type" : "ValueProp",
+              "value" : "Struct"
+            }
+          ],
+          "appliesTo" : [
+          ]
+        }
+      ],
+      "flows" : [
+      ],
+      "modes" : [
+      ],
+      "annexes" : [
+      ],
+      "uriFrag" : ""
+    },
+    {
+      "type" : "Component",
+      "identifier" : {
+        "type" : "Name",
+        "name" : [],
+        "pos" : {
+          "type" : "None"
+        }
+      },
+      "category" : {
+        "type" : "ComponentCategory",
+        "value" : "Data"
+      },
+      "classifier" : {
+        "type" : "Some",
+        "value" : {
+          "type" : "Classifier",
+          "name" : "TemperatureControl::SetPoint.i"
+        }
+      },
+      "features" : [
+      ],
+      "subComponents" : [
+        {
+          "type" : "Component",
+          "identifier" : {
+            "type" : "Name",
+            "name" : ["low"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                },
+                "beginLine" : 110,
+                "beginColumn" : 4,
+                "endLine" : 110,
+                "endColumn" : 28,
+                "offset" : 2688,
+                "length" : 24
+              }
+            }
+          },
+          "category" : {
+            "type" : "ComponentCategory",
+            "value" : "Data"
+          },
+          "classifier" : {
+            "type" : "Some",
+            "value" : {
+              "type" : "Classifier",
+              "name" : "TemperatureControl::Temperature.i"
+            }
+          },
+          "features" : [
+          ],
+          "subComponents" : [
+            {
+              "type" : "Component",
+              "identifier" : {
+                "type" : "Name",
+                "name" : ["degrees"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                    },
+                    "beginLine" : 99,
+                    "beginColumn" : 4,
+                    "endLine" : 99,
+                    "endColumn" : 39,
+                    "offset" : 2466,
+                    "length" : 35
+                  }
+                }
+              },
+              "category" : {
+                "type" : "ComponentCategory",
+                "value" : "Data"
+              },
+              "classifier" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Classifier",
+                  "name" : "Base_Types::Float_32"
+                }
+              },
+              "features" : [
+              ],
+              "subComponents" : [
+              ],
+              "connections" : [
+              ],
+              "connectionInstances" : [
+              ],
+              "properties" : [
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["Data_Model::IEEE754_Precision"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                        },
+                        "beginLine" : 52,
+                        "beginColumn" : 4,
+                        "endLine" : 52,
+                        "endColumn" : 84,
+                        "offset" : 2312,
+                        "length" : 80
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Simple"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["Memory_Properties::Data_Size"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
+                        },
+                        "beginLine" : 92,
+                        "beginColumn" : 2,
+                        "endLine" : 93,
+                        "endColumn" : 137,
+                        "offset" : 4808,
+                        "length" : 152
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "UnitProp",
+                      "value" : "32.0",
+                      "unit" : {
+                        "type" : "Some",
+                        "value" : "bits"
+                      }
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                }
+              ],
+              "flows" : [
+              ],
+              "modes" : [
+              ],
+              "annexes" : [
+              ],
+              "uriFrag" : "platform:\/plugin\/org.osate.contribution.sei\/resources\/packages\/Base_Types.aadl#Base_Types.Float_32"
+            },
+            {
+              "type" : "Component",
+              "identifier" : {
+                "type" : "Name",
+                "name" : ["unit"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                    },
+                    "beginLine" : 100,
+                    "beginColumn" : 4,
+                    "endLine" : 100,
+                    "endColumn" : 24,
+                    "offset" : 2505,
+                    "length" : 20
+                  }
+                }
+              },
+              "category" : {
+                "type" : "ComponentCategory",
+                "value" : "Data"
+              },
+              "classifier" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Classifier",
+                  "name" : "TemperatureControl::TempUnit"
+                }
+              },
+              "features" : [
+              ],
+              "subComponents" : [
+              ],
+              "connections" : [
+              ],
+              "connectionInstances" : [
+              ],
+              "properties" : [
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["Data_Model::Data_Representation"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                        },
+                        "beginLine" : 26,
+                        "beginColumn" : 4,
+                        "endLine" : 29,
+                        "endColumn" : 36,
+                        "offset" : 1108,
+                        "length" : 162
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Enum"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["Data_Model::Enumerators"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                        },
+                        "beginLine" : 48,
+                        "beginColumn" : 4,
+                        "endLine" : 48,
+                        "endColumn" : 66,
+                        "offset" : 2129,
+                        "length" : 62
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Fahrenheit"
+                    },
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Celsius"
+                    },
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Kelvin"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                }
+              ],
+              "flows" : [
+              ],
+              "modes" : [
+              ],
+              "annexes" : [
+              ],
+              "uriFrag" : "platform:\/resource\/temperature-control\/packages\/TemperatureControl.aadl#TemperatureControl.TempUnit"
+            }
+          ],
+          "connections" : [
+          ],
+          "connectionInstances" : [
+          ],
+          "properties" : [
+            {
+              "type" : "Property",
+              "name" : {
+                "type" : "Name",
+                "name" : ["Data_Model::Data_Representation"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                    },
+                    "beginLine" : 26,
+                    "beginColumn" : 4,
+                    "endLine" : 29,
+                    "endColumn" : 36,
+                    "offset" : 1108,
+                    "length" : 162
+                  }
+                }
+              },
+              "propertyValues" : [
+                {
+                  "type" : "ValueProp",
+                  "value" : "Struct"
+                }
+              ],
+              "appliesTo" : [
+              ]
+            }
+          ],
+          "flows" : [
+          ],
+          "modes" : [
+          ],
+          "annexes" : [
+          ],
+          "uriFrag" : "platform:\/resource\/temperature-control\/packages\/TemperatureControl.aadl#TemperatureControl.Temperature.i"
+        },
+        {
+          "type" : "Component",
+          "identifier" : {
+            "type" : "Name",
+            "name" : ["high"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                },
+                "beginLine" : 111,
+                "beginColumn" : 4,
+                "endLine" : 111,
+                "endColumn" : 29,
+                "offset" : 2716,
+                "length" : 25
+              }
+            }
+          },
+          "category" : {
+            "type" : "ComponentCategory",
+            "value" : "Data"
+          },
+          "classifier" : {
+            "type" : "Some",
+            "value" : {
+              "type" : "Classifier",
+              "name" : "TemperatureControl::Temperature.i"
+            }
+          },
+          "features" : [
+          ],
+          "subComponents" : [
+            {
+              "type" : "Component",
+              "identifier" : {
+                "type" : "Name",
+                "name" : ["degrees"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                    },
+                    "beginLine" : 99,
+                    "beginColumn" : 4,
+                    "endLine" : 99,
+                    "endColumn" : 39,
+                    "offset" : 2466,
+                    "length" : 35
+                  }
+                }
+              },
+              "category" : {
+                "type" : "ComponentCategory",
+                "value" : "Data"
+              },
+              "classifier" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Classifier",
+                  "name" : "Base_Types::Float_32"
+                }
+              },
+              "features" : [
+              ],
+              "subComponents" : [
+              ],
+              "connections" : [
+              ],
+              "connectionInstances" : [
+              ],
+              "properties" : [
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["Data_Model::IEEE754_Precision"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                        },
+                        "beginLine" : 52,
+                        "beginColumn" : 4,
+                        "endLine" : 52,
+                        "endColumn" : 84,
+                        "offset" : 2312,
+                        "length" : 80
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Simple"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["Memory_Properties::Data_Size"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Memory_Properties.aadl"
+                        },
+                        "beginLine" : 92,
+                        "beginColumn" : 2,
+                        "endLine" : 93,
+                        "endColumn" : 137,
+                        "offset" : 4808,
+                        "length" : 152
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "UnitProp",
+                      "value" : "32.0",
+                      "unit" : {
+                        "type" : "Some",
+                        "value" : "bits"
+                      }
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                }
+              ],
+              "flows" : [
+              ],
+              "modes" : [
+              ],
+              "annexes" : [
+              ],
+              "uriFrag" : "platform:\/plugin\/org.osate.contribution.sei\/resources\/packages\/Base_Types.aadl#Base_Types.Float_32"
+            },
+            {
+              "type" : "Component",
+              "identifier" : {
+                "type" : "Name",
+                "name" : ["unit"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
+                    },
+                    "beginLine" : 100,
+                    "beginColumn" : 4,
+                    "endLine" : 100,
+                    "endColumn" : 24,
+                    "offset" : 2505,
+                    "length" : 20
+                  }
+                }
+              },
+              "category" : {
+                "type" : "ComponentCategory",
+                "value" : "Data"
+              },
+              "classifier" : {
+                "type" : "Some",
+                "value" : {
+                  "type" : "Classifier",
+                  "name" : "TemperatureControl::TempUnit"
+                }
+              },
+              "features" : [
+              ],
+              "subComponents" : [
+              ],
+              "connections" : [
+              ],
+              "connectionInstances" : [
+              ],
+              "properties" : [
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["Data_Model::Data_Representation"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                        },
+                        "beginLine" : 26,
+                        "beginColumn" : 4,
+                        "endLine" : 29,
+                        "endColumn" : 36,
+                        "offset" : 1108,
+                        "length" : 162
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Enum"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
+                    "name" : ["Data_Model::Enumerators"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                        },
+                        "beginLine" : 48,
+                        "beginColumn" : 4,
+                        "endLine" : 48,
+                        "endColumn" : 66,
+                        "offset" : 2129,
+                        "length" : 62
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Fahrenheit"
+                    },
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Celsius"
+                    },
+                    {
+                      "type" : "ValueProp",
+                      "value" : "Kelvin"
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                }
+              ],
+              "flows" : [
+              ],
+              "modes" : [
+              ],
+              "annexes" : [
+              ],
+              "uriFrag" : "platform:\/resource\/temperature-control\/packages\/TemperatureControl.aadl#TemperatureControl.TempUnit"
+            }
+          ],
+          "connections" : [
+          ],
+          "connectionInstances" : [
+          ],
+          "properties" : [
+            {
+              "type" : "Property",
+              "name" : {
+                "type" : "Name",
+                "name" : ["Data_Model::Data_Representation"],
+                "pos" : {
+                  "type" : "Some",
+                  "value" : {
+                    "type" : "Position",
+                    "uriOpt" : {
+                      "type" : "Some",
+                      "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                    },
+                    "beginLine" : 26,
+                    "beginColumn" : 4,
+                    "endLine" : 29,
+                    "endColumn" : 36,
+                    "offset" : 1108,
+                    "length" : 162
+                  }
+                }
+              },
+              "propertyValues" : [
+                {
+                  "type" : "ValueProp",
+                  "value" : "Struct"
+                }
+              ],
+              "appliesTo" : [
+              ]
+            }
+          ],
+          "flows" : [
+          ],
+          "modes" : [
+          ],
+          "annexes" : [
+          ],
+          "uriFrag" : "platform:\/resource\/temperature-control\/packages\/TemperatureControl.aadl#TemperatureControl.Temperature.i"
+        }
+      ],
+      "connections" : [
+      ],
+      "connectionInstances" : [
+      ],
+      "properties" : [
+        {
+          "type" : "Property",
+          "name" : {
+            "type" : "Name",
+            "name" : ["Data_Model::Data_Representation"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                },
+                "beginLine" : 26,
+                "beginColumn" : 4,
+                "endLine" : 29,
+                "endColumn" : 36,
+                "offset" : 1108,
+                "length" : 162
+              }
+            }
+          },
+          "propertyValues" : [
+            {
+              "type" : "ValueProp",
+              "value" : "Struct"
+            }
+          ],
+          "appliesTo" : [
+          ]
+        }
+      ],
+      "flows" : [
+      ],
+      "modes" : [
+      ],
+      "annexes" : [
+      ],
+      "uriFrag" : ""
+    },
+    {
+      "type" : "Component",
+      "identifier" : {
+        "type" : "Name",
+        "name" : [],
+        "pos" : {
+          "type" : "None"
+        }
+      },
+      "category" : {
+        "type" : "ComponentCategory",
+        "value" : "Data"
+      },
+      "classifier" : {
+        "type" : "Some",
+        "value" : {
+          "type" : "Classifier",
+          "name" : "TemperatureControl::FanAck"
+        }
+      },
+      "features" : [
+      ],
+      "subComponents" : [
+      ],
+      "connections" : [
+      ],
+      "connectionInstances" : [
+      ],
+      "properties" : [
+        {
+          "type" : "Property",
+          "name" : {
+            "type" : "Name",
+            "name" : ["Data_Model::Data_Representation"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                },
+                "beginLine" : 26,
+                "beginColumn" : 4,
+                "endLine" : 29,
+                "endColumn" : 36,
+                "offset" : 1108,
+                "length" : 162
+              }
+            }
+          },
+          "propertyValues" : [
+            {
+              "type" : "ValueProp",
+              "value" : "Enum"
+            }
+          ],
+          "appliesTo" : [
+          ]
+        },
+        {
+          "type" : "Property",
+          "name" : {
+            "type" : "Name",
+            "name" : ["Data_Model::Enumerators"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                },
+                "beginLine" : 48,
+                "beginColumn" : 4,
+                "endLine" : 48,
+                "endColumn" : 66,
+                "offset" : 2129,
+                "length" : 62
+              }
+            }
+          },
+          "propertyValues" : [
+            {
+              "type" : "ValueProp",
+              "value" : "Ok"
+            },
+            {
+              "type" : "ValueProp",
+              "value" : "Error"
+            }
+          ],
+          "appliesTo" : [
+          ]
+        }
+      ],
+      "flows" : [
+      ],
+      "modes" : [
+      ],
+      "annexes" : [
+      ],
+      "uriFrag" : ""
+    },
+    {
+      "type" : "Component",
+      "identifier" : {
+        "type" : "Name",
+        "name" : [],
+        "pos" : {
+          "type" : "None"
+        }
+      },
+      "category" : {
+        "type" : "ComponentCategory",
+        "value" : "Data"
+      },
+      "classifier" : {
+        "type" : "Some",
+        "value" : {
+          "type" : "Classifier",
+          "name" : "TemperatureControl::FanCmd"
+        }
+      },
+      "features" : [
+      ],
+      "subComponents" : [
+      ],
+      "connections" : [
+      ],
+      "connectionInstances" : [
+      ],
+      "properties" : [
+        {
+          "type" : "Property",
+          "name" : {
+            "type" : "Name",
+            "name" : ["Data_Model::Data_Representation"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                },
+                "beginLine" : 26,
+                "beginColumn" : 4,
+                "endLine" : 29,
+                "endColumn" : 36,
+                "offset" : 1108,
+                "length" : 162
+              }
+            }
+          },
+          "propertyValues" : [
+            {
+              "type" : "ValueProp",
+              "value" : "Enum"
+            }
+          ],
+          "appliesTo" : [
+          ]
+        },
+        {
+          "type" : "Property",
+          "name" : {
+            "type" : "Name",
+            "name" : ["Data_Model::Enumerators"],
+            "pos" : {
+              "type" : "Some",
+              "value" : {
+                "type" : "Position",
+                "uriOpt" : {
+                  "type" : "Some",
+                  "value" : "\/org.osate.contribution.sei\/resources\/properties\/Data_Model.aadl"
+                },
+                "beginLine" : 48,
+                "beginColumn" : 4,
+                "endLine" : 48,
+                "endColumn" : 66,
+                "offset" : 2129,
+                "length" : 62
+              }
+            }
+          },
+          "propertyValues" : [
+            {
+              "type" : "ValueProp",
+              "value" : "On"
+            },
+            {
+              "type" : "ValueProp",
+              "value" : "Off"
+            }
+          ],
+          "appliesTo" : [
+          ]
+        }
+      ],
+      "flows" : [
+      ],
+      "modes" : [
+      ],
+      "annexes" : [
+      ],
+      "uriFrag" : ""
+    }
+  ]
+}
