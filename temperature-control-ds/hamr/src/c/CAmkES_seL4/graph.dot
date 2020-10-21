@@ -17,7 +17,8 @@ tsp_tempSensor [
       <TR><TD PORT="sb_currentTemp"><FONT COLOR="red">dataport sp_union_art_DataContent_t <B>sb_currentTemp</B></FONT></TD></TR>
       <TR><TD PORT="sb_tempChanged_counter"><FONT COLOR="red">dataport sb_event_counter_t <B>sb_tempChanged_counter</B></FONT></TD></TR>
       <TR><TD PORT="sb_tempChanged"><FONT COLOR="blue">emits ReceiveEvent <B>sb_tempChanged</B></FONT></TD></TR>
-      <TR><TD PORT="sb_periodic_dispatch_notification"><FONT COLOR="blue">consumes Notification <B>sb_periodic_dispatch_notification</B></FONT></TD></TR>"
+      <TR><TD PORT="sb_self_pacer_tick"><FONT COLOR="blue">emits TickTock <B>sb_self_pacer_tick</B></FONT></TD></TR>
+      <TR><TD PORT="sb_self_pacer_tock"><FONT COLOR="blue">consumes TickTock <B>sb_self_pacer_tock</B></FONT></TD></TR>"
     </TABLE>
   >
   shape=plaintext
@@ -47,18 +48,6 @@ fp_fan [
       <TR><TD PORT="sb_fanAck_queue_1"><FONT COLOR="red">dataport sb_queue_union_art_DataContent_1_t <B>sb_fanAck_queue_1</B></FONT></TD></TR>
       <TR><TD PORT="sb_fanAck_1_notification"><FONT COLOR="blue">emits ReceiveEvent <B>sb_fanAck_1_notification</B></FONT></TD></TR>
       <TR><TD PORT="sb_fanCmd_notification"><FONT COLOR="blue">consumes ReceiveEvent <B>sb_fanCmd_notification</B></FONT></TD></TR>"
-    </TABLE>
-  >
-  shape=plaintext
-];
-
-dispatch_periodic_inst [
-  label=<
-    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
-      <TR><TD><B>dispatch_periodic_inst</B></TD></TR>
-      <TR><TD PORT="sb_tsp_tempSensor_periodic_dispatch_notification"><FONT COLOR="blue">emits Notification <B>sb_tsp_tempSensor_periodic_dispatch_notification</B></FONT></TD></TR>
-      <TR><TD PORT="timer"><FONT COLOR="orange">uses Timer <B>timer</B></FONT></TD></TR>
-      <TR><TD PORT="timer_complete"><FONT COLOR="blue">consumes Notification <B>timer_complete</B></FONT></TD></TR>"
     </TABLE>
   >
   shape=plaintext
@@ -143,24 +132,10 @@ interfacetypekey [
 
 ];
 
-"dispatch_periodic_inst":sb_tsp_tempSensor_periodic_dispatch_notification -> "tsp_tempSensor":sb_periodic_dispatch_notification [
+"tsp_tempSensor":sb_self_pacer_tick -> "tsp_tempSensor":sb_self_pacer_tock [
   color="blue"
   //label = "seL4Notification"
   id = conn8
-
-];
-
-"dispatch_periodic_inst":timer -> "time_server":the_timer [
-  color="green"
-  //label = "seL4TimeServer"
-  id = conn9
-
-];
-
-"time_server":timer_notification -> "dispatch_periodic_inst":timer_complete [
-  color="brown"
-  //label = "seL4GlobalAsynchCallback"
-  id = conn10
 
 ];
 

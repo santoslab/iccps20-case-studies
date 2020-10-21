@@ -15,8 +15,6 @@ elseif ("${CMAKE_CXX_COMPILER_ID}" STREQUAL "GNU")
   add_compile_options("$<$<CONFIG:Release>:-Os>")
 endif()
 
-includeGlobalComponents()
-
 add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/slang_libraries/TempSensor_i_tsp_tempSensor)
 
 add_subdirectory(${CMAKE_CURRENT_LIST_DIR}/slang_libraries/TempControl_i_tcp_tempControl)
@@ -43,11 +41,6 @@ DeclareCAmkESComponent(Fan_i_fp_fan
   SOURCES components/Fan_i_fp_fan/src/sb_Fan_i.c types/src/sb_queue_union_art_DataContent_1.c types/src/sb_queue_union_art_DataContent_1.c
   INCLUDES components/Fan_i_fp_fan/includes/ types/includes
   LIBS Fan_i_fp_fan
-)
-
-DeclareCAmkESComponent(dispatch_periodic
-  SOURCES components/dispatch_periodic/src/sb_dispatch_periodic.c
-  LIBS SB_Type_Library SlangTypeLibrary
 )
 
 DeclareCAmkESRootserver(TempControlSystem_i_Instance.camkes)

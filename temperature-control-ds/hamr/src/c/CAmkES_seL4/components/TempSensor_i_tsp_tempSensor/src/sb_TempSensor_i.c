@@ -6,35 +6,6 @@
 #include <string.h>
 #include <camkes.h>
 
-static bool sb_occurred_periodic_dispatcher;
-static int64_t sb_time_periodic_dispatcher;
-
-/************************************************************************
- * periodic_dispatcher_write_int64_t
- * Invoked from remote periodic dispatch thread.
- *
- * This function records the current time and triggers the active thread
- * dispatch from a periodic event.  Note that the periodic dispatch
- * thread is the *only* thread that triggers a dispatch, so we do not
- * mutex lock the function.
- *
- ************************************************************************/
-
-bool periodic_dispatcher_write_int64_t(const int64_t * arg) {
-    sb_occurred_periodic_dispatcher = true;
-    sb_time_periodic_dispatcher = *arg;
-    MUTEXOP(sb_dispatch_sem_post());
-    return true;
-}
-
-void sb_periodic_dispatch_notification_callback(void *_ UNUSED) {
-   // we want time in microseconds, not nanoseconds, so we divide by 1000.
-   int64_t sb_time_periodic_dispatcher = 0; // sb_timer_time() / 1000LL -- timer connection disabled;
-   (void)periodic_dispatcher_write_int64_t(&sb_time_periodic_dispatcher);
-   CALLBACKOP(sb_periodic_dispatch_notification_reg_callback(sb_periodic_dispatch_notification_callback, NULL));
-}
-
-
 seqNum_t sb_currentTemp_seqNum;
 
 bool sb_currentTemp_write(const union_art_DataContent * value) {
@@ -114,12 +85,12 @@ int run(void) {
   DeclNewStackFrame(NULL, "sb_TempSensor_i.c", "", "run", 0);
 
 
-  CALLBACKOP(sb_periodic_dispatch_notification_reg_callback(sb_periodic_dispatch_notification_callback, NULL));
-  MUTEXOP(sb_dispatch_sem_wait())
+  sb_self_pacer_tick_emit();
   for(;;) {
-    MUTEXOP(sb_dispatch_sem_wait())
+    sb_self_pacer_tock_wait();
     // call the component's compute entrypoint
     b_TemperatureControl_TempSensor_i_tsp_tempSensor_adapter_computeEntryPoint(SF_LAST);
+    sb_self_pacer_tick_emit();
   }
   return 0;
 }

@@ -26,12 +26,28 @@
        Timing_Properties::Compute_Execution_Time : 10 ms
        Timing_Properties::Period : 1000 ms
 
+     tempControl
+     -----------
+
+       CASE_Scheduling::Domain : 3
+       Timing_Properties::Compute_Execution_Time : 10 ms
+       Timing_Properties::Period :  ms
+
+     fan
+     ---
+
+       CASE_Scheduling::Domain : 4
+       Timing_Properties::Compute_Execution_Time : 10 ms
+       Timing_Properties::Period :  ms
+
  *********************************************************/
 
 const dschedule_t ksDomSchedule[] = {
   { .domain = 0, .length = 100 },  // all other seL4 threads, init, 200ms
   { .domain = 2, .length = 5 },  // tempSensor  10ms
-  { .domain = 0, .length = 390 },  // pad rest of frame period
+  { .domain = 3, .length = 5 },  // tempControl  10ms
+  { .domain = 4, .length = 5 },  // fan  10ms
+  { .domain = 0, .length = 380 },  // pad rest of frame period
 };
 
 const word_t ksDomScheduleLength = sizeof(ksDomSchedule) / sizeof(dschedule_t);
