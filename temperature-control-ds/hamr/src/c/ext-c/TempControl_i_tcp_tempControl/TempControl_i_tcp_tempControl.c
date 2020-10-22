@@ -59,27 +59,27 @@ Unit b_TemperatureControl_TempControl_i_tcp_tempControl_handlesetPoint_(
 Unit b_TemperatureControl_TempControl_i_tcp_tempControl_handletempChanged_(STACK_FRAME_ONLY) {
   DeclNewStackFrame(caller, "TempControl_i_tcp_tempControl.c", "", "b_TemperatureControl_TempControl_i_tcp_tempControl_handletempChanged_", 0);
 
-  DeclNewb_TemperatureControl_Temperature_i(currentTemp);
-  if(api_get_currentTemp__b_TemperatureControl_TempControl_i_tcp_tempControl(SF &currentTemp)){
-    struct b_TemperatureControl_Temperature_i currentTempInF =
-      convertTemperatureToFahrenheit(&currentTemp);
+  DeclNewb_TemperatureControl_Temperature_i(currTemp);
+  if(api_get_currentTemp__b_TemperatureControl_TempControl_i_tcp_tempControl(SF &currTemp)){
+    struct b_TemperatureControl_Temperature_i currTempInF =
+      convertTemperatureToFahrenheit(&currTemp);
 
     DeclNewString(_str1);
     String str = (String) &_str1;
     String__append(str, string("Received: "));
-    b_TemperatureControl_Temperature_i_string_(SF str, &currentTemp);
+    b_TemperatureControl_Temperature_i_string_(SF str, &currTempInF);
     api_logInfo__b_TemperatureControl_TempControl_i_tcp_tempControl(SF str);
 
     DeclNewString(_str2);
     str = (String) &_str2;
-    if(currentTemp.degrees > setPoint.high.degrees) {
+    if(currTempInF.degrees > setPoint.high.degrees) {
       String__append(str, string("Sent fan command: "));
       api_send_fanCmd__b_TemperatureControl_TempControl_i_tcp_tempControl(SF
       b_TemperatureControl_FanCmd_Type_On);
       b_TemperatureControl_FanCmd_Type_string_(SF str,
         b_TemperatureControl_FanCmd_Type_On);
     }
-    else if(currentTemp.degrees < setPoint.low.degrees) {
+    else if(currTempInF.degrees < setPoint.low.degrees) {
       String__append(str, string("Sent fan command: "));
       api_send_fanCmd__b_TemperatureControl_TempControl_i_tcp_tempControl(SF
       b_TemperatureControl_FanCmd_Type_Off);

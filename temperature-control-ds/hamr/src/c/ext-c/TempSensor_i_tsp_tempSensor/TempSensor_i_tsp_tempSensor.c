@@ -17,24 +17,37 @@ Unit b_TemperatureControl_TempSensor_i_tsp_tempSensor_initialise_(STACK_FRAME_ON
     &lastTemperature);
 }
 
-Unit b_TemperatureControl_TempSensor_i_tsp_tempSensor_timeTriggered_(STACK_FRAME_ONLY) {
-  DeclNewStackFrame(caller, "TempSensor_i_tsp_tempSensor.c", "", "b_TemperatureControl_TempSensor_i_tsp_tempSensor_timeTriggered_", 0);
+void senseTemperature(b_TemperatureControl_Temperature_i result) {
+  // simulate getting temperature from sensor
 
-  lastTemperature.degrees = lastTemperature.degrees + delta;
+  result->degrees = lastTemperature.degrees + delta;
+  result->unit = lastTemperature.unit;
 
+  #ifndef SIREUM_NO_PRINT
   DeclNewString(_str);
   String str = (String) &_str;
   String__append(str, string("Sensed: "));
-  b_TemperatureControl_Temperature_i_string_(SF str, &lastTemperature);
+  b_TemperatureControl_Temperature_i_string_(SF str, result);
   api_logInfo__b_TemperatureControl_TempSensor_i_tsp_tempSensor(SF str);
+  #endif
 
-  if(lastTemperature.degrees < MIN_TEMP) delta = 4;
-  else if(lastTemperature.degrees > MAX_TEMP) delta = -4;
+  if(result->degrees < MIN_TEMP) delta = 4;
+  else if(result->degrees > MAX_TEMP) delta = -4;
+}
 
-  api_send_currentTemp__b_TemperatureControl_TempSensor_i_tsp_tempSensor(SF
-    &lastTemperature);
+Unit b_TemperatureControl_TempSensor_i_tsp_tempSensor_timeTriggered_(STACK_FRAME_ONLY) {
+  DeclNewStackFrame(caller, "TempSensor_i_tsp_tempSensor.c", "", "b_TemperatureControl_TempSensor_i_tsp_tempSensor_timeTriggered_", 0);
 
-  api_send_tempChanged__b_TemperatureControl_TempSensor_i_tsp_tempSensor(SF_LAST);
+  DeclNewb_TemperatureControl_Temperature_i(currTemp);
+  senseTemperature(&currTemp);
+  if(lastTemperature.degrees != currTemp.degrees) {
+    lastTemperature = currTemp;
+
+    api_send_currentTemp__b_TemperatureControl_TempSensor_i_tsp_tempSensor(SF
+      &lastTemperature);
+
+    api_send_tempChanged__b_TemperatureControl_TempSensor_i_tsp_tempSensor(SF_LAST);
+  }
 }
 
 Unit b_TemperatureControl_TempSensor_i_tsp_tempSensor_finalise_(STACK_FRAME_ONLY) {

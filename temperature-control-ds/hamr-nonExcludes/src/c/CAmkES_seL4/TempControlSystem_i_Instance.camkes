@@ -1,0 +1,41 @@
+// This file will be regenerated, do not edit
+
+import <std_connector.camkes>;
+import "components/TempSensor_i_tsp_tempSensor/TempSensor_i_tsp_tempSensor.camkes";
+import "components/TempControl_i_tcp_tempControl/TempControl_i_tcp_tempControl.camkes";
+import "components/Fan_i_fp_fan/Fan_i_fp_fan.camkes";
+
+assembly {
+  composition {
+    component TempSensor_i_tsp_tempSensor tsp_tempSensor;
+    component TempControl_i_tcp_tempControl tcp_tempControl;
+    component Fan_i_fp_fan fp_fan;
+
+    connection seL4SharedData conn1(from tsp_tempSensor.sb_currentTemp, to tcp_tempControl.sb_currentTemp);
+    connection seL4Notification conn2(from tsp_tempSensor.sb_tempChanged, to tcp_tempControl.sb_tempChanged);
+    connection seL4SharedData conn3(from tsp_tempSensor.sb_tempChanged_counter, to tcp_tempControl.sb_tempChanged_counter);
+    connection seL4Notification conn4(from tcp_tempControl.sb_fanCmd_1_notification, to fp_fan.sb_fanCmd_notification);
+    connection seL4SharedData conn5(from tcp_tempControl.sb_fanCmd_queue_1, to fp_fan.sb_fanCmd_queue);
+    connection seL4Notification conn6(from fp_fan.sb_fanAck_1_notification, to tcp_tempControl.sb_fanAck_notification);
+    connection seL4SharedData conn7(from fp_fan.sb_fanAck_queue_1, to tcp_tempControl.sb_fanAck_queue);
+    connection seL4Notification conn8(from tsp_tempSensor.sb_self_pacer_tick, to tsp_tempSensor.sb_self_pacer_tock);
+  }
+
+  configuration {
+    tsp_tempSensor.currentTemp_access = "W";
+    tsp_tempSensor._stack_size = 110592;
+    tsp_tempSensor._domain = 2;
+    tcp_tempControl.currentTemp_access = "R";
+    tcp_tempControl._stack_size = 110592;
+    tcp_tempControl._domain = 3;
+    fp_fan._stack_size = 110592;
+    fp_fan._domain = 4;
+    tsp_tempSensor.sb_tempChanged_counter_access = "W";
+    tcp_tempControl.sb_tempChanged_counter_access = "R";
+    tcp_tempControl.sb_fanCmd_queue_1_access = "W";
+    fp_fan.sb_fanCmd_queue_access = "R";
+    fp_fan.sb_fanAck_queue_1_access = "W";
+    tcp_tempControl.sb_fanAck_queue_access = "R";
+
+  }
+}
