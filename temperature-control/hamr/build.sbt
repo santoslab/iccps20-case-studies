@@ -57,9 +57,9 @@ val slangEmbeddedSettings = Seq(
   Compile / unmanagedSourceDirectories += baseDirectory.value / "src/main/nix",
   Compile / unmanagedSourceDirectories += baseDirectory.value / "src/main/seL4Nix",
 
-  mainClass in (Compile, run) := Some("temperature_control.Demo"),
+  mainClass in (Compile, run) := Some("b.Demo"),
 
-  mainClass in assembly := Some("temperature_control.Demo"),
+  mainClass in assembly := Some("b.Demo"),
   assemblyJarName in assembly := "TempControlSystem_i_Instance.jar",
   assemblyOption in assembly := (assemblyOption in assembly).value.copy(prependShellScript = Some(defaultUniversalScript(shebang = false))),
 

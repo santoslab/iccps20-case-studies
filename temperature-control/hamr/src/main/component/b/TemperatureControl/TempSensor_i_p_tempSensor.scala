@@ -9,21 +9,17 @@ import b._
 object TempSensor_i_p_tempSensor {
 
   def initialise(api: TempSensor_i_Initialization_Api): Unit = {
-    // example api usage
-
-    api.logInfo("Example info logging")
-    api.logDebug("Example debug logging")
-    api.logError("Example error logging")
-
-    api.setcurrentTemp(TemperatureControl.Temperature_i.empty())
-    api.sendtempChanged()
+    // initialize outgoing data port
+    val temp = TempSensorNative.currentTempGet()
+    api.setcurrentTemp(temp)
   }
 
   def timeTriggered(api: TempSensor_i_Operational_Api): Unit = {
-    // example api usage
-
-    api.setcurrentTemp(TemperatureControl.Temperature_i.empty())
+    val temp = TempSensorNative.currentTempGet()
+    api.setcurrentTemp(temp)
     api.sendtempChanged()
+    val degree = Util.toFahrenheit(temp).degrees
+    api.logInfo(s"Sensed temperature: $degree F")
   }
 
   def activate(api: TempSensor_i_Operational_Api): Unit = { }
@@ -33,4 +29,8 @@ object TempSensor_i_p_tempSensor {
   def finalise(api: TempSensor_i_Operational_Api): Unit = { }
 
   def recover(api: TempSensor_i_Operational_Api): Unit = { }
+}
+
+@ext object TempSensorNative {
+  def currentTempGet(): Temperature_i = $
 }

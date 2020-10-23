@@ -3,42 +3,66 @@
  Table of Contents
   * [Diagrams](#diagrams)
     * [AADL Arch](#aadl-arch)
-    * [SeL4_TB](#sel4_tb)
-      * [SeL4_TB CAmkES Arch](#sel4_tb-camkes-arch)
-      * [SeL4_TB CAmkES HAMR Arch](#sel4_tb-camkes-hamr-arch)
-    * [SeL4_Only](#sel4_only)
-      * [SeL4_Only CAmkES Arch](#sel4_only-camkes-arch)
-      * [SeL4_Only CAmkES HAMR Arch](#sel4_only-camkes-hamr-arch)
+    * [SeL4](#sel4)
+      * [SeL4 CAmkES Arch](#sel4-camkes-arch)
+      * [SeL4 CAmkES HAMR Arch](#sel4-camkes-hamr-arch)
+  * [Metrics](#metrics)
+    * [AADL Metrics](#aadl-metrics)
+    * [JVM Metrics](#jvm-metrics)
+    * [Linux Metrics](#linux-metrics)
+    * [SeL4 Metrics](#sel4-metrics)
   * [Example Output](#example-output)
-    * [SeL4_TB Expected Output: Timeout = 15 seconds](#sel4_tb-expected-output-timeout--15-seconds)
-    * [SeL4_Only Expected Output: Timeout = 15 seconds](#sel4_only-expected-output-timeout--15-seconds)
+    * [JVM Expected Output: Timeout = 0 seconds](#jvm-expected-output-timeout--0-seconds)
+    * [SeL4 Expected Output: Timeout = 0 seconds](#sel4-expected-output-timeout--0-seconds)
 
 ## Diagrams
 ### AADL Arch
 ![AADL Arch](aadl/diagrams/aadl-arch.png)
 
-### SeL4_TB
-#### SeL4_TB CAmkES Arch
-![SeL4_TB CAmkES Arch](aadl/diagrams/CAmkES-arch-SeL4_TB.svg)
+### SeL4
+#### SeL4 CAmkES Arch
+![SeL4 CAmkES Arch](aadl/diagrams/CAmkES-arch-SeL4.svg)
 
-#### SeL4_TB CAmkES HAMR Arch
-![SeL4_TB CAmkES HAMR Arch](aadl/diagrams/CAmkES-HAMR-arch-SeL4_TB.svg)
+#### SeL4 CAmkES HAMR Arch
+![SeL4 CAmkES HAMR Arch](aadl/diagrams/CAmkES-HAMR-arch-SeL4.svg)
 
-### SeL4_Only
-#### SeL4_Only CAmkES Arch
-![SeL4_Only CAmkES Arch](aadl/diagrams/CAmkES-arch-SeL4_Only.svg)
+## Metrics
+### AADL Metrics
+| | |
+|--|--|
+|Threads|3|
+|Ports|9|
+|Connections|4|
 
-#### SeL4_Only CAmkES HAMR Arch
-![SeL4_Only CAmkES HAMR Arch](aadl/diagrams/CAmkES-HAMR-arch-SeL4_Only.svg)
+### JVM Metrics
+
+Language|files|blank|comment|code
+:-------|-------:|-------:|-------:|-------:
+Scala|53|788|277|2408
+--------|--------|--------|--------|--------
+SUM:|53|788|277|2408
+
+### Linux Metrics
+
+Language|files|blank|comment|code
+:-------|-------:|-------:|-------:|-------:
+C|155|1924|206|11022
+C/C++ Header|290|2579|239|6955
+C++|2|102|53|852
+--------|--------|--------|--------|--------
+SUM:|447|4605|498|18829
+
+### SeL4 Metrics
+Not sure what to measure here -- Camkes ADL cloc, glue-code cloc, generated seL4 code?
 
 ## Example Output
 *NOTE:* actual output may differ due to issues related to thread interleaving
-### SeL4_TB Expected Output: Timeout = 15 seconds
+### JVM Expected Output: Timeout = 0 seconds
 
   |HAMR Codegen Configuration| |
   |--|--|
   | package-name | b |
-  | exclude-component-impl | false |
+  | exclude-component-impl | true |
   | bit-width | 32 |
   | max-string-size | 256 |
   | max-array-size | 1 |
@@ -46,20 +70,19 @@
 
   **How To Run**
   ```
-  temperature-control/camkes/CAkES_seL4_tb/bin/run-camkes.sh -s
+  sbt run
   ```
 
   ```
-  Booting all finished, dropped to user space
-
+  Didn't find 'Booting all finished'!
   ```
 
-### SeL4_Only Expected Output: Timeout = 15 seconds
+### SeL4 Expected Output: Timeout = 0 seconds
 
   |HAMR Codegen Configuration| |
   |--|--|
   | package-name | b |
-  | exclude-component-impl | false |
+  | exclude-component-impl | true |
   | bit-width | 32 |
   | max-string-size | 256 |
   | max-array-size | 1 |
@@ -67,10 +90,10 @@
 
   **How To Run**
   ```
-  temperature-control/camkes/CAmkES_seL4_only/bin/run-camkes.sh -s
+  temperature-control/hamr/bin/transpile-sel4.sh
+  temperature-control/hamr/src/c/CAmkES_seL4/bin/run-camkes.sh -s
   ```
 
   ```
-  Booting all finished, dropped to user space
-
+  Didn't find 'Booting all finished'!
   ```

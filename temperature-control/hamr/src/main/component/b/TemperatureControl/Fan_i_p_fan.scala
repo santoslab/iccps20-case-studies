@@ -9,18 +9,17 @@ import b._
 object Fan_i_p_fan {
 
   def initialise(api: Fan_i_Initialization_Api): Unit = {
-    // example api usage
-
-    api.logInfo("Example info logging")
-    api.logDebug("Example debug logging")
-    api.logError("Example error logging")
-
-    api.sendfanAck(TemperatureControl.FanAck.byOrdinal(0).get)
+    // outgoing ports are all 'event data' so do nothing
   }
 
   def handlefanCmd(api: Fan_i_Operational_Api, value : TemperatureControl.FanCmd.Type): Unit = {
-    api.logInfo("example handlefanCmd implementation")
-    api.logInfo(s"received ${value}")
+        api.logInfo(s"received fanCmd $value")
+
+    val ack = FanNative.fanCmdActuate(value)
+
+    api.sendfanAck(ack)
+
+    api.logInfo(s"Actuation result: ${ack}")
   }
 
   def activate(api: Fan_i_Operational_Api): Unit = { }
@@ -30,4 +29,8 @@ object Fan_i_p_fan {
   def finalise(api: Fan_i_Operational_Api): Unit = { }
 
   def recover(api: Fan_i_Operational_Api): Unit = { }
+}
+
+@ext object FanNative {
+  def fanCmdActuate(cmd: FanCmd.Type): FanAck.Type = $
 }

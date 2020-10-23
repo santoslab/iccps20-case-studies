@@ -12,10 +12,10 @@ import scalalib._
 // mill build when asked.
 //
 // To run the demo from the command line:
-//   mill temperature_control.run
+//   mill b.run
 //
 // To run the example unit tests:
-//   mill temperature_control.test
+//   mill b.test
 
 trait SlangEmbeddedModule extends ScalaModule {
   val scalaVer = "2.13.3"
@@ -77,6 +77,6 @@ trait AadlTestModule extends AadlModule {
   }
 }
 
-object `temperature_control` extends AadlTestModule {
-  override def mainClass = T { Some("temperature_control.Demo") }
+object `b` extends AadlTestModule {
+  override def mainClass = T { Some("b.Demo") }
 }

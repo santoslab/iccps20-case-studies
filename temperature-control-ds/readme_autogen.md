@@ -6,8 +6,14 @@
     * [SeL4](#sel4)
       * [SeL4 CAmkES Arch](#sel4-camkes-arch)
       * [SeL4 CAmkES HAMR Arch](#sel4-camkes-hamr-arch)
+  * [Metrics](#metrics)
+    * [AADL Metrics](#aadl-metrics)
+    * [JVM Metrics](#jvm-metrics)
+    * [Linux Metrics](#linux-metrics)
+    * [SeL4 Metrics](#sel4-metrics)
   * [Example Output](#example-output)
-    * [SeL4 Expected Output: Timeout = 15 seconds](#sel4-expected-output-timeout--15-seconds)
+    * [JVM Expected Output: Timeout = 0 seconds](#jvm-expected-output-timeout--0-seconds)
+    * [SeL4 Expected Output: Timeout = 0 seconds](#sel4-expected-output-timeout--0-seconds)
 
 ## Diagrams
 ### AADL Arch
@@ -20,9 +26,58 @@
 #### SeL4 CAmkES HAMR Arch
 ![SeL4 CAmkES HAMR Arch](aadl/diagrams/CAmkES-HAMR-arch-SeL4.svg)
 
+## Metrics
+### AADL Metrics
+| | |
+|--|--|
+|Threads|3|
+|Ports|9|
+|Connections|4|
+
+### JVM Metrics
+
+Language|files|blank|comment|code
+:-------|-------:|-------:|-------:|-------:
+Scala|53|788|277|2409
+--------|--------|--------|--------|--------
+SUM:|53|788|277|2409
+
+### Linux Metrics
+
+Language|files|blank|comment|code
+:-------|-------:|-------:|-------:|-------:
+C|148|1790|165|10566
+C/C++ Header|284|2531|236|6857
+C++|2|102|53|852
+--------|--------|--------|--------|--------
+SUM:|434|4423|454|18275
+
+### SeL4 Metrics
+Not sure what to measure here -- Camkes ADL cloc, glue-code cloc, generated seL4 code?
+
 ## Example Output
 *NOTE:* actual output may differ due to issues related to thread interleaving
-### SeL4 Expected Output: Timeout = 15 seconds
+### JVM Expected Output: Timeout = 0 seconds
+
+  |HAMR Codegen Configuration| |
+  |--|--|
+  | package-name | b |
+  | exclude-component-impl | false |
+  | bit-width | 32 |
+  | max-string-size | 256 |
+  | max-array-size | 1 |
+
+
+  **How To Run**
+  ```
+  sbt run
+  ```
+
+  ```
+  Didn't find 'Booting all finished'!
+  ```
+
+### SeL4 Expected Output: Timeout = 0 seconds
 
   |HAMR Codegen Configuration| |
   |--|--|
@@ -40,35 +95,5 @@
   ```
 
   ```
-  Booting all finished, dropped to user space
-  Entering pre-init of TempSensor_i_tsp_tempSensor
-  Entering pre-init of TempControl_i_tcp_tempControl
-  AEntering pre-init of Fan_i_fp_fan
-  Art: Registered component:Art: Registered component: TempControlSystem_i_Instance_tsp_tempSensor (periodic: 1000)
-  Art: - Registered port: TempControlSystem_i_Instance_tsp_tempSensor_currentTemp (data out)
-  Art: - Registered port: TempControlSystem_i_Instance_tsp_tempSensor_tempChanged (evenrt: Registered component: TempControlSystem_i_Instance_tcp_tempControl (sporadic: 1)
-  Art: - Registered port: TempControlSystem_i_Instance_tcp_tempControl_currentTemp (data in)
-  Art: - Registered port: TempControlSystem_i_Instance_tcp_tempControl_fanAck (event in)
-  Art: - Registered port: TempControlSystem_i_Instance_tcp_tempControl_setPoin TempControlSystem_i_Instance_fp_fan (sporadic: 1)
-  Art: - Registered port: TempControlSystem_i_Instance_fp_fan_fanCmd (event in)
-  Art: - Registered port: TempControlSystem_i_Instance_fp_fan_fanAck (event out)
-  Leaving pre-init of Fan_i_fp_fan
-  t out)
-  Leaving pre-init of TempSensor_i_tsp_tempSensor
-  t (event in)
-  Art: - Registered port: TempControlSystem_i_Instance_tcp_tempControl_fanCmd (event out)
-  Art: - Registered port: TempControlSystem_i_Instance_tcp_tempControl_tempChanged (event in)
-  Leaving pre-init of TempControl_i_tcp_tempControl
-  TempControlSystem_i_Instance_tsp_tempSensor: Sensed temperature: 63.000000 F
-  TempControlSystem_i_Instance_tsp_tempSensor: Sensed temperature: 67.000000 F
-  TempControlSystem_i_Instance_tcp_tempControl: Temperature ok: 67.000000 F
-  TempControlSystem_i_Instance_tsp_tempSensor: Sensed temperature: 71.000000 F
-  TempControlSystem_i_Instance_tcp_tempControl: Temperature ok: 71.000000 F
-  TempControlSystem_i_Instance_tsp_tempSensor: Sensed temperature: 75.000000 F
-  TempControlSystem_i_Instance_tcp_tempControl: Temperature ok: 75.000000 F
-  TempControlSystem_i_Instance_tsp_tempSensor: Sensed temperature: 79.000000 F
-  TempControlSystem_i_Instance_tcp_tempControl: Temperature ok: 79.000000 F
-  TempControlSystem_i_Instance_tsp_tempSensor: Sensed temperature: 83.000000 F
-  TempControlSystem_i_Instance_tcp_tempControl: Temperature ok: 83.000000 F
-
+  Didn't find 'Booting all finished'!
   ```
