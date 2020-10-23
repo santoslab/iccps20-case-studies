@@ -1,0 +1,6 @@
+procedure sb_Monitor_TemperatureControl__FanCmd_1 {
+  include <sb_types.h>;
+  bool is_empty();
+  bool enqueue(refin TemperatureControl__FanCmd m);
+  bool dequeue(out TemperatureControl__FanCmd m);
+};

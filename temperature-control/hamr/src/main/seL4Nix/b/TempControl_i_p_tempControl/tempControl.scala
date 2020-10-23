@@ -21,7 +21,7 @@ object tempControl extends App {
     b.TemperatureControl.TempControl_i_p_tempControl_Bridge(
       id = 0,
       name = "TempControlSystem_i_Instance_p_tempControl",
-      dispatchProtocol = Sporadic(min = 1000),
+      dispatchProtocol = Sporadic(min = 1),
       dispatchTriggers = None(),
 
       currentTemp = currentTemp,

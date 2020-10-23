@@ -1,0 +1,6 @@
+procedure sb_Monitor_TemperatureControl__FanAck_1 {
+  include <sb_types.h>;
+  bool is_empty();
+  bool enqueue(refin TemperatureControl__FanAck m);
+  bool dequeue(out TemperatureControl__FanAck m);
+};

@@ -40,7 +40,7 @@ object Fan_i_p_fan_App extends App {
     }
     if (dispatch) {
       entryPoints.compute()
-      Process.sleep(1000)
+      Process.sleep(1)
     } else {
       Process.sleep(10)
     }

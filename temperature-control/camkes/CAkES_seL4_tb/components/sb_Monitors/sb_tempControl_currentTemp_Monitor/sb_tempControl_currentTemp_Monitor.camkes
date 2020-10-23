@@ -1,0 +1,6 @@
+import "../../../interfaces/sb_Monitor_TemperatureControl__Temperature_i.idl4";
+component sb_tempControl_currentTemp_Monitor {
+
+  provides sb_Monitor_TemperatureControl__Temperature_i mon;
+  emits DataportWrite monsig;
+}

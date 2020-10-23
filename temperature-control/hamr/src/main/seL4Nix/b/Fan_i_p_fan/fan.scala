@@ -18,7 +18,7 @@ object fan extends App {
     b.TemperatureControl.Fan_i_p_fan_Bridge(
       id = 0,
       name = "TempControlSystem_i_Instance_p_fan",
-      dispatchProtocol = Sporadic(min = 1000),
+      dispatchProtocol = Sporadic(min = 1),
       dispatchTriggers = None(),
 
       fanCmd = fanCmd,

@@ -1,0 +1,11 @@
+import "../../interfaces/sb_Monitor_TemperatureControl__Temperature_i.idl4";
+import "../../interfaces/AADLEvent_Sender.idl4";
+import <std_connector.camkes>;
+component TempSensor_i_p_tempSensor {
+  include <sb_types.h>;
+  control;
+  uses sb_Monitor_TemperatureControl__Temperature_i sb_currentTemp0;
+  uses AADLEvent_Sender sb_tempChanged0;
+  consumes Notification sb_periodic_dispatch_notification;
+  has semaphore sb_dispatch_sem;
+}

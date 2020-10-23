@@ -1,0 +1,6 @@
+import "../../../interfaces/sb_Monitor_TemperatureControl__FanAck_1.idl4";
+component sb_tempControl_fanAck_Monitor {
+
+  provides sb_Monitor_TemperatureControl__FanAck_1 mon;
+  emits QueuedData monsig;
+}

@@ -1,133 +1,133 @@
 package TemperatureControl
 public
-	with Base_Types, Data_Model, HAMR;
+  with Base_Types, Data_Model, HAMR;
 
-  abstract BasicThread
-  	properties
-      Compute_Execution_Time => 10ms .. 10ms;
-      Stack_Size => TemperatureControl_Properties::StackSize;
-  end BasicThread;
-  
-	system TempControlSystem
-		features
-			setPoint: in event data port SetPoint.i;
-	end TempControlSystem;
+  system TempControlSystem
+    features
+      setPoint: in event data port SetPoint.i;
+  end TempControlSystem;
 
-	system implementation TempControlSystem.i
-		subcomponents
-			t_processor: processor TempControlProcessor.i;
-			p: process TempControlProcess.i;
-		connections
-			sp: port setPoint -> p.setPoint;
-		properties
-			Actual_Processor_Binding => (reference (t_processor)) applies to p;
+  system implementation TempControlSystem.i
+    subcomponents
+      t_processor: processor TempControlProcessor.i;
+      p: process TempControlProcess.i;
+    connections
+      sp: port setPoint -> p.setPoint;
+    properties
+      Actual_Processor_Binding => (reference (t_processor)) applies to p;
 
-			HAMR::Platform => (JVM, Linux, macOS, Cygwin, seL4);
-		annex resolute {**
+      HAMR::Platform => (JVM, Linux, macOS, Cygwin, seL4);
+    annex resolute {**
 			check CASE_Tools
 		**};
 
-	end TempControlSystem.i;
+  end TempControlSystem.i;
 
-	processor TempControlProcessor
-	end TempControlProcessor;
+  processor TempControlProcessor
+  end TempControlProcessor;
 
-	processor implementation TempControlProcessor.i
-	end TempControlProcessor.i;
+  processor implementation TempControlProcessor.i
+  end TempControlProcessor.i;
 
-	process TempControlProcess
-		features
-			setPoint: in event data port SetPoint.i;
-	end TempControlProcess;
+  process TempControlProcess
+    features
+      setPoint: in event data port SetPoint.i;
+  end TempControlProcess;
 
-	process implementation TempControlProcess.i
-		subcomponents
-			tempSensor: thread TempSensor.i;
-			tempControl: thread TempControl.i;
-			fan: thread Fan.i;
-		connections
-			sp: port setPoint -> tempControl.setPoint;
-			ct: port tempSensor.currentTemp -> tempControl.currentTemp;
-			tc: port tempSensor.tempChanged -> tempControl.tempChanged;
-			fc: port tempControl.fanCmd -> fan.fanCmd;
-			fa: port fan.fanAck -> tempControl.fanAck;
-	end TempControlProcess.i;
+  process implementation TempControlProcess.i
+    subcomponents
+      tempSensor: thread TempSensor.i;
+      tempControl: thread TempControl.i;
+      fan: thread Fan.i;
+    connections
+      sp: port setPoint -> tempControl.setPoint;
+      ct: port tempSensor.currentTemp -> tempControl.currentTemp;
+      tc: port tempSensor.tempChanged -> tempControl.tempChanged;
+      fc: port tempControl.fanCmd -> fan.fanCmd;
+      fa: port fan.fanAck -> tempControl.fanAck;
+  end TempControlProcess.i;
 
-	thread TempSensor extends BasicThread
-		features
-			currentTemp: out data port Temperature.i;
-			tempChanged: out event port;
-		properties
-			Dispatch_Protocol => Periodic;
+  thread TempSensor
+    features
+      currentTemp: out data port Temperature.i;
+      tempChanged: out event port;
+    properties
+      Dispatch_Protocol => Periodic;
       Period => 1000ms;
-	end TempSensor;
+      Compute_Execution_Time => 10ms .. 10ms;
+      Stack_Size => TemperatureControl_Properties::StackSize;
+  end TempSensor;
 
-	thread implementation TempSensor.i
-	end TempSensor.i;
+  thread implementation TempSensor.i
+  end TempSensor.i;
 
-	thread Fan extends BasicThread
-		features
-			fanCmd: in event data port FanCmd;
-			fanAck: out event data port FanAck;
-		properties
-			Dispatch_Protocol => Sporadic;
-	end Fan;
+  thread Fan
+    features
+      fanCmd: in event data port FanCmd;
+      fanAck: out event data port FanAck;
+    properties
+      Dispatch_Protocol => Sporadic;
+      Compute_Execution_Time => 10ms .. 10ms;
+      Stack_Size => TemperatureControl_Properties::StackSize;
+  end Fan;
 
-	thread implementation Fan.i
-	end Fan.i;
+  thread implementation Fan.i
+  end Fan.i;
 
-	thread TempControl extends BasicThread
-		features
-			currentTemp: in data port Temperature.i;
-			tempChanged: in event port;
-			fanAck: in event data port FanAck;
-			setPoint: in event data port SetPoint.i;
-			fanCmd: out event data port FanCmd;
-		properties
-			Dispatch_Protocol => Sporadic;
-	end TempControl;
+  thread TempControl
+    features
+      currentTemp: in data port Temperature.i;
+      tempChanged: in event port;
+      fanAck: in event data port FanAck;
+      setPoint: in event data port SetPoint.i;
+      fanCmd: out event data port FanCmd;
+    properties
+      Dispatch_Protocol => Sporadic;
+      Compute_Execution_Time => 10ms .. 10ms;
+      Stack_Size => TemperatureControl_Properties::StackSize;
+  end TempControl;
 
-	thread implementation TempControl.i
-	end TempControl.i;
+  thread implementation TempControl.i
+  end TempControl.i;
 
-	data Temperature
-		properties
-			Data_Model::Data_Representation => Struct;
-	end Temperature;
+  data Temperature
+    properties
+      Data_Model::Data_Representation => Struct;
+  end Temperature;
 
-	data implementation Temperature.i
-		subcomponents
-			degrees: data Base_Types::Float_32;
-			unit: data TempUnit;
-	end Temperature.i;
+  data implementation Temperature.i
+    subcomponents
+      degrees: data Base_Types::Float_32;
+      unit: data TempUnit;
+  end Temperature.i;
 
-	data SetPoint
-		properties
-			Data_Model::Data_Representation => Struct;
-	end SetPoint;
+  data SetPoint
+    properties
+      Data_Model::Data_Representation => Struct;
+  end SetPoint;
 
-	data implementation SetPoint.i
-		subcomponents
-			low: data Temperature.i;
-			high: data Temperature.i;
-	end SetPoint.i;
+  data implementation SetPoint.i
+    subcomponents
+      low: data Temperature.i;
+      high: data Temperature.i;
+  end SetPoint.i;
 
-	data TempUnit
-		properties
-			Data_Model::Data_Representation => Enum;
-			Data_Model::Enumerators => ("Fahrenheit", "Celsius", "Kelvin");
-	end TempUnit;
+  data TempUnit
+    properties
+      Data_Model::Data_Representation => Enum;
+      Data_Model::Enumerators => ("Fahrenheit", "Celsius", "Kelvin");
+  end TempUnit;
 
-	data FanAck
-		properties
-			Data_Model::Data_Representation => Enum;
-			Data_Model::Enumerators => ("Ok", "Error");
-	end FanAck;
+  data FanAck
+    properties
+      Data_Model::Data_Representation => Enum;
+      Data_Model::Enumerators => ("Ok", "Error");
+  end FanAck;
 
-	data FanCmd
-		properties
-			Data_Model::Data_Representation => Enum;
-			Data_Model::Enumerators => ("On", "Off");
-	end FanCmd;
+  data FanCmd
+    properties
+      Data_Model::Data_Representation => Enum;
+      Data_Model::Enumerators => ("On", "Off");
+  end FanCmd;
 
 end TemperatureControl;

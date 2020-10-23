@@ -2,12 +2,6 @@ package TemperatureControl
 public
   with Base_Types, Data_Model, HAMR, CASE_Scheduling;
 
-  abstract BasicThread
-    properties
-      Compute_Execution_Time => 10ms .. 10ms;
-      Stack_Size => TemperatureControl_Properties::StackSize;
-  end BasicThread;
-
   system TempControlSystem
     features
       setPoint: in event data port SetPoint.i;
@@ -60,13 +54,16 @@ public
       tc: port tempSensor.tempChanged -> tempChanged;
   end TempSensorProcess.i;
 
-  thread TempSensor extends BasicThread
+  thread TempSensor
     features
       currentTemp: out data port Temperature.i;
       tempChanged: out event port;
     properties
       Dispatch_Protocol => Periodic;
       Period => 1000ms;
+      CASE_Scheduling::Domain => 2;
+      Compute_Execution_Time => 10ms .. 10ms;
+      Stack_Size => TemperatureControl_Properties::StackSize;
   end TempSensor;
 
   thread implementation TempSensor.i
@@ -87,12 +84,14 @@ public
       fa: port fan.fanAck -> fanAck;
   end FanProcess.i;
 
-  thread Fan extends BasicThread
+  thread Fan
     features
       fanCmd: in event data port FanCmd;
       fanAck: out event data port FanAck;
     properties
       Dispatch_Protocol => Sporadic;
+      Compute_Execution_Time => 10ms .. 10ms;
+      Stack_Size => TemperatureControl_Properties::StackSize;      
   end Fan;
 
   thread implementation Fan.i
@@ -119,7 +118,7 @@ public
       fc: port tempControl.fanCmd -> fanCmd;
   end TempControlProcess.i;
 
-  thread TempControl extends BasicThread
+  thread TempControl
     features
       currentTemp: in data port Temperature.i;
       tempChanged: in event port;
@@ -128,6 +127,8 @@ public
       fanCmd: out event data port FanCmd;
     properties
       Dispatch_Protocol => Sporadic;
+      Compute_Execution_Time => 10ms .. 10ms;
+      Stack_Size => TemperatureControl_Properties::StackSize;
   end TempControl;
 
   thread implementation TempControl.i

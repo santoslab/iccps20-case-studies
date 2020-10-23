@@ -1,0 +1,6 @@
+procedure sb_Monitor_TemperatureControl__Temperature_i {
+  include <sb_types.h>;
+  bool is_empty();
+  bool read(out TemperatureControl__Temperature_i m);
+  bool write(refin TemperatureControl__Temperature_i m);
+};

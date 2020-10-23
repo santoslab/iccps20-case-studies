@@ -1,0 +1,167 @@
+digraph g {
+graph [
+  overlap = false,
+  rankdir = "LR"
+];
+node [
+  fontsize = "16",
+  shape = "ellipse"
+];
+edge [
+];
+
+p_tempSensor [
+  label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+      <TR><TD><B>p_tempSensor</B></TD></TR>
+      <TR><TD PORT="sb_currentTemp"><FONT COLOR="red">dataport sp_TemperatureControl__Temperature_i_t <B>sb_currentTemp</B></FONT></TD></TR>
+      <TR><TD PORT="sb_tempChanged_counter"><FONT COLOR="red">dataport sb_event_counter_t <B>sb_tempChanged_counter</B></FONT></TD></TR>
+      <TR><TD PORT="sb_tempChanged"><FONT COLOR="blue">emits ReceiveEvent <B>sb_tempChanged</B></FONT></TD></TR>
+      <TR><TD PORT="sb_periodic_dispatch_notification"><FONT COLOR="blue">consumes Notification <B>sb_periodic_dispatch_notification</B></FONT></TD></TR>"
+    </TABLE>
+  >
+  shape=plaintext
+];
+
+p_tempControl [
+  label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+      <TR><TD><B>p_tempControl</B></TD></TR>
+      <TR><TD PORT="sb_currentTemp"><FONT COLOR="red">dataport sp_TemperatureControl__Temperature_i_t <B>sb_currentTemp</B></FONT></TD></TR>
+      <TR><TD PORT="sb_fanAck_queue"><FONT COLOR="red">dataport sb_queue_TemperatureControl__FanAck_1_t <B>sb_fanAck_queue</B></FONT></TD></TR>
+      <TR><TD PORT="sb_fanCmd_queue_1"><FONT COLOR="red">dataport sb_queue_TemperatureControl__FanCmd_1_t <B>sb_fanCmd_queue_1</B></FONT></TD></TR>
+      <TR><TD PORT="sb_tempChanged_counter"><FONT COLOR="red">dataport sb_event_counter_t <B>sb_tempChanged_counter</B></FONT></TD></TR>
+      <TR><TD PORT="sb_fanCmd_1_notification"><FONT COLOR="blue">emits ReceiveEvent <B>sb_fanCmd_1_notification</B></FONT></TD></TR>
+      <TR><TD PORT="sb_fanAck_notification"><FONT COLOR="blue">consumes ReceiveEvent <B>sb_fanAck_notification</B></FONT></TD></TR>
+      <TR><TD PORT="sb_tempChanged"><FONT COLOR="blue">consumes ReceiveEvent <B>sb_tempChanged</B></FONT></TD></TR>"
+    </TABLE>
+  >
+  shape=plaintext
+];
+
+p_fan [
+  label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+      <TR><TD><B>p_fan</B></TD></TR>
+      <TR><TD PORT="sb_fanCmd_queue"><FONT COLOR="red">dataport sb_queue_TemperatureControl__FanCmd_1_t <B>sb_fanCmd_queue</B></FONT></TD></TR>
+      <TR><TD PORT="sb_fanAck_queue_1"><FONT COLOR="red">dataport sb_queue_TemperatureControl__FanAck_1_t <B>sb_fanAck_queue_1</B></FONT></TD></TR>
+      <TR><TD PORT="sb_fanAck_1_notification"><FONT COLOR="blue">emits ReceiveEvent <B>sb_fanAck_1_notification</B></FONT></TD></TR>
+      <TR><TD PORT="sb_fanCmd_notification"><FONT COLOR="blue">consumes ReceiveEvent <B>sb_fanCmd_notification</B></FONT></TD></TR>"
+    </TABLE>
+  >
+  shape=plaintext
+];
+
+dispatch_periodic_inst [
+  label=<
+    <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+      <TR><TD><B>dispatch_periodic_inst</B></TD></TR>
+      <TR><TD PORT="sb_p_tempSensor_periodic_dispatch_notification"><FONT COLOR="blue">emits Notification <B>sb_p_tempSensor_periodic_dispatch_notification</B></FONT></TD></TR>
+      <TR><TD PORT="timer"><FONT COLOR="orange">uses Timer <B>timer</B></FONT></TD></TR>
+      <TR><TD PORT="timer_complete"><FONT COLOR="blue">consumes Notification <B>timer_complete</B></FONT></TD></TR>"
+    </TABLE>
+  >
+  shape=plaintext
+];
+
+connectiontypekey [
+  label=<
+   <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+     <TR><TD COLSPAN="2"><B>Key: Connection Types</B></TD></TR>
+     <TR><TD><FONT COLOR="red">seL4SharedData</FONT></TD><TD BGCOLOR="red">red</TD></TR>
+     <TR><TD><FONT COLOR="blue">seL4Notification</FONT></TD><TD BGCOLOR="blue">blue</TD></TR>
+     <TR><TD><FONT COLOR="orange">seL4RPCCall</FONT></TD><TD BGCOLOR="orange">orange</TD></TR>
+     <TR><TD><FONT COLOR="green">seL4TimeServer</FONT></TD><TD BGCOLOR="green">green</TD></TR>
+     <TR><TD><FONT COLOR="brown">seL4GlobalAsynchCallback</FONT></TD><TD BGCOLOR="brown">brown</TD></TR>
+     <TR><TD><FONT COLOR="yellow">seL4VMDTBPassthrough</FONT></TD><TD BGCOLOR="yellow">yellow</TD></TR>
+     <TR><TD><FONT COLOR="pink">seL4SharedDataWithCaps</FONT></TD><TD BGCOLOR="pink">pink</TD></TR>
+   </TABLE>
+  >
+  shape=plaintext
+];
+
+interfacetypekey [
+  label=<
+   <TABLE BORDER="0" CELLBORDER="1" CELLSPACING="0">
+     <TR><TD COLSPAN="2"><B>Key: Interface Types</B></TD></TR>
+     <TR><TD><FONT COLOR="red">dataport</FONT></TD><TD BGCOLOR="red">red</TD></TR>
+     <TR><TD><FONT COLOR="blue">emits</FONT></TD><TD BGCOLOR="blue">blue</TD></TR>
+     <TR><TD><FONT COLOR="blue">consumes</FONT></TD><TD BGCOLOR="blue">blue</TD></TR>
+     <TR><TD><FONT COLOR="orange">provides</FONT></TD><TD BGCOLOR="orange">orange</TD></TR>
+     <TR><TD><FONT COLOR="orange">uses</FONT></TD><TD BGCOLOR="orange">orange</TD></TR>
+   </TABLE>
+  >
+  shape=plaintext
+];
+
+"p_tempSensor":sb_currentTemp -> "p_tempControl":sb_currentTemp [
+  color="red"
+  //label = "seL4SharedData"
+  id = conn1
+
+];
+
+"p_tempSensor":sb_tempChanged -> "p_tempControl":sb_tempChanged [
+  color="blue"
+  //label = "seL4Notification"
+  id = conn2
+
+];
+
+"p_tempSensor":sb_tempChanged_counter -> "p_tempControl":sb_tempChanged_counter [
+  color="red"
+  //label = "seL4SharedData"
+  id = conn3
+
+];
+
+"p_tempControl":sb_fanCmd_1_notification -> "p_fan":sb_fanCmd_notification [
+  color="blue"
+  //label = "seL4Notification"
+  id = conn4
+
+];
+
+"p_tempControl":sb_fanCmd_queue_1 -> "p_fan":sb_fanCmd_queue [
+  color="red"
+  //label = "seL4SharedData"
+  id = conn5
+
+];
+
+"p_fan":sb_fanAck_1_notification -> "p_tempControl":sb_fanAck_notification [
+  color="blue"
+  //label = "seL4Notification"
+  id = conn6
+
+];
+
+"p_fan":sb_fanAck_queue_1 -> "p_tempControl":sb_fanAck_queue [
+  color="red"
+  //label = "seL4SharedData"
+  id = conn7
+
+];
+
+"dispatch_periodic_inst":sb_p_tempSensor_periodic_dispatch_notification -> "p_tempSensor":sb_periodic_dispatch_notification [
+  color="blue"
+  //label = "seL4Notification"
+  id = conn8
+
+];
+
+"dispatch_periodic_inst":timer -> "time_server":the_timer [
+  color="green"
+  //label = "seL4TimeServer"
+  id = conn9
+
+];
+
+"time_server":timer_notification -> "dispatch_periodic_inst":timer_complete [
+  color="brown"
+  //label = "seL4GlobalAsynchCallback"
+  id = conn10
+
+];
+
+}

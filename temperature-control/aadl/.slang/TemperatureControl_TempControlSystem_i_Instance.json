@@ -14,12 +14,12 @@
               "type" : "Some",
               "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
             },
-            "beginLine" : 17,
-            "beginColumn" : 2,
-            "endLine" : 31,
-            "endColumn" : 26,
-            "offset" : 369,
-            "length" : 409
+            "beginLine" : 10,
+            "beginColumn" : 3,
+            "endLine" : 24,
+            "endColumn" : 27,
+            "offset" : 187,
+            "length" : 433
           }
         }
       },
@@ -44,11 +44,11 @@
                   "type" : "Some",
                   "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                 },
-                "beginLine" : 14,
-                "beginColumn" : 4,
-                "endLine" : 14,
-                "endColumn" : 44,
-                "offset" : 302,
+                "beginLine" : 7,
+                "beginColumn" : 7,
+                "endLine" : 7,
+                "endColumn" : 47,
+                "offset" : 118,
                 "length" : 40
               }
             }
@@ -118,11 +118,11 @@
                   "type" : "Some",
                   "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                 },
-                "beginLine" : 20,
-                "beginColumn" : 4,
-                "endLine" : 20,
-                "endColumn" : 36,
-                "offset" : 480,
+                "beginLine" : 13,
+                "beginColumn" : 7,
+                "endLine" : 13,
+                "endColumn" : 39,
+                "offset" : 306,
                 "length" : 32
               }
             }
@@ -152,11 +152,11 @@
                       "type" : "Some",
                       "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                     },
-                    "beginLine" : 41,
-                    "beginColumn" : 4,
-                    "endLine" : 41,
-                    "endColumn" : 44,
-                    "offset" : 961,
+                    "beginLine" : 34,
+                    "beginColumn" : 7,
+                    "endLine" : 34,
+                    "endColumn" : 47,
+                    "offset" : 813,
                     "length" : 40
                   }
                 }
@@ -226,11 +226,11 @@
                       "type" : "Some",
                       "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                     },
-                    "beginLine" : 46,
-                    "beginColumn" : 4,
-                    "endLine" : 46,
-                    "endColumn" : 36,
-                    "offset" : 1092,
+                    "beginLine" : 39,
+                    "beginColumn" : 7,
+                    "endLine" : 39,
+                    "endColumn" : 39,
+                    "offset" : 951,
                     "length" : 32
                   }
                 }
@@ -260,11 +260,11 @@
                           "type" : "Some",
                           "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                         },
-                        "beginLine" : 59,
-                        "beginColumn" : 4,
-                        "endLine" : 59,
-                        "endColumn" : 45,
-                        "offset" : 1544,
+                        "beginLine" : 52,
+                        "beginColumn" : 7,
+                        "endLine" : 52,
+                        "endColumn" : 48,
+                        "offset" : 1413,
                         "length" : 41
                       }
                     }
@@ -332,11 +332,11 @@
                           "type" : "Some",
                           "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                         },
-                        "beginLine" : 60,
-                        "beginColumn" : 4,
-                        "endLine" : 60,
-                        "endColumn" : 32,
-                        "offset" : 1589,
+                        "beginLine" : 53,
+                        "beginColumn" : 7,
+                        "endLine" : 53,
+                        "endColumn" : 35,
+                        "offset" : 1461,
                         "length" : 28
                       }
                     }
@@ -436,6 +436,41 @@
                   "type" : "Property",
                   "name" : {
                     "type" : "Name",
+                    "name" : ["TempControlSystem_i_Instance", "p", "tempSensor", "Timing_Properties::Period"],
+                    "pos" : {
+                      "type" : "Some",
+                      "value" : {
+                        "type" : "Position",
+                        "uriOpt" : {
+                          "type" : "Some",
+                          "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Timing_Properties.aadl"
+                        },
+                        "beginLine" : 192,
+                        "beginColumn" : 2,
+                        "endLine" : 193,
+                        "endColumn" : 99,
+                        "offset" : 11626,
+                        "length" : 119
+                      }
+                    }
+                  },
+                  "propertyValues" : [
+                    {
+                      "type" : "UnitProp",
+                      "value" : "1.0E12",
+                      "unit" : {
+                        "type" : "Some",
+                        "value" : "ps"
+                      }
+                    }
+                  ],
+                  "appliesTo" : [
+                  ]
+                },
+                {
+                  "type" : "Property",
+                  "name" : {
+                    "type" : "Name",
                     "name" : ["TempControlSystem_i_Instance", "p", "tempSensor", "Timing_Properties::Compute_Execution_Time"],
                     "pos" : {
                       "type" : "Some",
@@ -472,41 +507,6 @@
                           "type" : "Some",
                           "value" : "ps"
                         }
-                      }
-                    }
-                  ],
-                  "appliesTo" : [
-                  ]
-                },
-                {
-                  "type" : "Property",
-                  "name" : {
-                    "type" : "Name",
-                    "name" : ["TempControlSystem_i_Instance", "p", "tempSensor", "Timing_Properties::Period"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Timing_Properties.aadl"
-                        },
-                        "beginLine" : 192,
-                        "beginColumn" : 2,
-                        "endLine" : 193,
-                        "endColumn" : 99,
-                        "offset" : 11626,
-                        "length" : 119
-                      }
-                    }
-                  },
-                  "propertyValues" : [
-                    {
-                      "type" : "UnitProp",
-                      "value" : "1.0E12",
-                      "unit" : {
-                        "type" : "Some",
-                        "value" : "ps"
                       }
                     }
                   ],
@@ -608,11 +608,11 @@
                       "type" : "Some",
                       "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                     },
-                    "beginLine" : 47,
-                    "beginColumn" : 4,
-                    "endLine" : 47,
-                    "endColumn" : 38,
-                    "offset" : 1128,
+                    "beginLine" : 40,
+                    "beginColumn" : 7,
+                    "endLine" : 40,
+                    "endColumn" : 41,
+                    "offset" : 990,
                     "length" : 34
                   }
                 }
@@ -642,11 +642,11 @@
                           "type" : "Some",
                           "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                         },
-                        "beginLine" : 84,
-                        "beginColumn" : 4,
-                        "endLine" : 84,
-                        "endColumn" : 44,
-                        "offset" : 2145,
+                        "beginLine" : 79,
+                        "beginColumn" : 7,
+                        "endLine" : 79,
+                        "endColumn" : 47,
+                        "offset" : 2116,
                         "length" : 40
                       }
                     }
@@ -714,11 +714,11 @@
                           "type" : "Some",
                           "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                         },
-                        "beginLine" : 86,
-                        "beginColumn" : 4,
-                        "endLine" : 86,
-                        "endColumn" : 38,
-                        "offset" : 2220,
+                        "beginLine" : 81,
+                        "beginColumn" : 7,
+                        "endLine" : 81,
+                        "endColumn" : 41,
+                        "offset" : 2197,
                         "length" : 34
                       }
                     }
@@ -821,11 +821,11 @@
                           "type" : "Some",
                           "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                         },
-                        "beginLine" : 87,
-                        "beginColumn" : 4,
-                        "endLine" : 87,
-                        "endColumn" : 44,
-                        "offset" : 2258,
+                        "beginLine" : 82,
+                        "beginColumn" : 7,
+                        "endLine" : 82,
+                        "endColumn" : 47,
+                        "offset" : 2238,
                         "length" : 40
                       }
                     }
@@ -893,11 +893,11 @@
                           "type" : "Some",
                           "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                         },
-                        "beginLine" : 88,
-                        "beginColumn" : 4,
-                        "endLine" : 88,
-                        "endColumn" : 39,
-                        "offset" : 2302,
+                        "beginLine" : 83,
+                        "beginColumn" : 7,
+                        "endLine" : 83,
+                        "endColumn" : 42,
+                        "offset" : 2285,
                         "length" : 35
                       }
                     }
@@ -1000,11 +1000,11 @@
                           "type" : "Some",
                           "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                         },
-                        "beginLine" : 85,
-                        "beginColumn" : 4,
-                        "endLine" : 85,
-                        "endColumn" : 31,
-                        "offset" : 2189,
+                        "beginLine" : 80,
+                        "beginColumn" : 7,
+                        "endLine" : 80,
+                        "endColumn" : 34,
+                        "offset" : 2163,
                         "length" : 27
                       }
                     }
@@ -1150,41 +1150,6 @@
                   "type" : "Property",
                   "name" : {
                     "type" : "Name",
-                    "name" : ["TempControlSystem_i_Instance", "p", "tempControl", "Timing_Properties::Period"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Timing_Properties.aadl"
-                        },
-                        "beginLine" : 192,
-                        "beginColumn" : 2,
-                        "endLine" : 193,
-                        "endColumn" : 99,
-                        "offset" : 11626,
-                        "length" : 119
-                      }
-                    }
-                  },
-                  "propertyValues" : [
-                    {
-                      "type" : "UnitProp",
-                      "value" : "1.0E12",
-                      "unit" : {
-                        "type" : "Some",
-                        "value" : "ps"
-                      }
-                    }
-                  ],
-                  "appliesTo" : [
-                  ]
-                },
-                {
-                  "type" : "Property",
-                  "name" : {
-                    "type" : "Name",
                     "name" : ["TempControlSystem_i_Instance", "p", "tempControl", "Memory_Properties::Stack_Size"],
                     "pos" : {
                       "type" : "Some",
@@ -1276,11 +1241,11 @@
                       "type" : "Some",
                       "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                     },
-                    "beginLine" : 48,
-                    "beginColumn" : 4,
-                    "endLine" : 48,
-                    "endColumn" : 22,
-                    "offset" : 1166,
+                    "beginLine" : 41,
+                    "beginColumn" : 7,
+                    "endLine" : 41,
+                    "endColumn" : 25,
+                    "offset" : 1031,
                     "length" : 18
                   }
                 }
@@ -1310,11 +1275,11 @@
                           "type" : "Some",
                           "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                         },
-                        "beginLine" : 70,
-                        "beginColumn" : 4,
-                        "endLine" : 70,
-                        "endColumn" : 38,
-                        "offset" : 1785,
+                        "beginLine" : 66,
+                        "beginColumn" : 7,
+                        "endLine" : 66,
+                        "endColumn" : 41,
+                        "offset" : 1783,
                         "length" : 34
                       }
                     }
@@ -1417,11 +1382,11 @@
                           "type" : "Some",
                           "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                         },
-                        "beginLine" : 71,
-                        "beginColumn" : 4,
-                        "endLine" : 71,
-                        "endColumn" : 39,
-                        "offset" : 1823,
+                        "beginLine" : 67,
+                        "beginColumn" : 7,
+                        "endLine" : 67,
+                        "endColumn" : 42,
+                        "offset" : 1824,
                         "length" : 35
                       }
                     }
@@ -1637,41 +1602,6 @@
                   "type" : "Property",
                   "name" : {
                     "type" : "Name",
-                    "name" : ["TempControlSystem_i_Instance", "p", "fan", "Timing_Properties::Period"],
-                    "pos" : {
-                      "type" : "Some",
-                      "value" : {
-                        "type" : "Position",
-                        "uriOpt" : {
-                          "type" : "Some",
-                          "value" : "\/org.osate.aadl2.contrib\/resources\/properties\/Predeclared_Property_Sets\/Timing_Properties.aadl"
-                        },
-                        "beginLine" : 192,
-                        "beginColumn" : 2,
-                        "endLine" : 193,
-                        "endColumn" : 99,
-                        "offset" : 11626,
-                        "length" : 119
-                      }
-                    }
-                  },
-                  "propertyValues" : [
-                    {
-                      "type" : "UnitProp",
-                      "value" : "1.0E12",
-                      "unit" : {
-                        "type" : "Some",
-                        "value" : "ps"
-                      }
-                    }
-                  ],
-                  "appliesTo" : [
-                  ]
-                },
-                {
-                  "type" : "Property",
-                  "name" : {
-                    "type" : "Name",
                     "name" : ["TempControlSystem_i_Instance", "p", "fan", "Memory_Properties::Stack_Size"],
                     "pos" : {
                       "type" : "Some",
@@ -1765,11 +1695,11 @@
                       "type" : "Some",
                       "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                     },
-                    "beginLine" : 50,
-                    "beginColumn" : 4,
-                    "endLine" : 50,
-                    "endColumn" : 46,
-                    "offset" : 1202,
+                    "beginLine" : 43,
+                    "beginColumn" : 7,
+                    "endLine" : 43,
+                    "endColumn" : 49,
+                    "offset" : 1072,
                     "length" : 42
                   }
                 }
@@ -1788,11 +1718,11 @@
                           "type" : "Some",
                           "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                         },
-                        "beginLine" : 20,
-                        "beginColumn" : 4,
-                        "endLine" : 20,
-                        "endColumn" : 36,
-                        "offset" : 480,
+                        "beginLine" : 13,
+                        "beginColumn" : 7,
+                        "endLine" : 13,
+                        "endColumn" : 39,
+                        "offset" : 306,
                         "length" : 32
                       }
                     }
@@ -1810,11 +1740,11 @@
                             "type" : "Some",
                             "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                           },
-                          "beginLine" : 41,
-                          "beginColumn" : 4,
-                          "endLine" : 41,
-                          "endColumn" : 44,
-                          "offset" : 961,
+                          "beginLine" : 34,
+                          "beginColumn" : 7,
+                          "endLine" : 34,
+                          "endColumn" : 47,
+                          "offset" : 813,
                           "length" : 40
                         }
                       }
@@ -1843,11 +1773,11 @@
                           "type" : "Some",
                           "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                         },
-                        "beginLine" : 47,
-                        "beginColumn" : 4,
-                        "endLine" : 47,
-                        "endColumn" : 38,
-                        "offset" : 1128,
+                        "beginLine" : 40,
+                        "beginColumn" : 7,
+                        "endLine" : 40,
+                        "endColumn" : 41,
+                        "offset" : 990,
                         "length" : 34
                       }
                     }
@@ -1865,11 +1795,11 @@
                             "type" : "Some",
                             "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                           },
-                          "beginLine" : 87,
-                          "beginColumn" : 4,
-                          "endLine" : 87,
-                          "endColumn" : 44,
-                          "offset" : 2258,
+                          "beginLine" : 82,
+                          "beginColumn" : 7,
+                          "endLine" : 82,
+                          "endColumn" : 47,
+                          "offset" : 2238,
                           "length" : 40
                         }
                       }
@@ -1915,11 +1845,11 @@
                       "type" : "Some",
                       "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                     },
-                    "beginLine" : 51,
-                    "beginColumn" : 4,
-                    "endLine" : 51,
-                    "endColumn" : 63,
-                    "offset" : 1248,
+                    "beginLine" : 44,
+                    "beginColumn" : 7,
+                    "endLine" : 44,
+                    "endColumn" : 66,
+                    "offset" : 1121,
                     "length" : 59
                   }
                 }
@@ -1938,11 +1868,11 @@
                           "type" : "Some",
                           "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                         },
-                        "beginLine" : 46,
-                        "beginColumn" : 4,
-                        "endLine" : 46,
-                        "endColumn" : 36,
-                        "offset" : 1092,
+                        "beginLine" : 39,
+                        "beginColumn" : 7,
+                        "endLine" : 39,
+                        "endColumn" : 39,
+                        "offset" : 951,
                         "length" : 32
                       }
                     }
@@ -1960,11 +1890,11 @@
                             "type" : "Some",
                             "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                           },
-                          "beginLine" : 59,
-                          "beginColumn" : 4,
-                          "endLine" : 59,
-                          "endColumn" : 45,
-                          "offset" : 1544,
+                          "beginLine" : 52,
+                          "beginColumn" : 7,
+                          "endLine" : 52,
+                          "endColumn" : 48,
+                          "offset" : 1413,
                           "length" : 41
                         }
                       }
@@ -1993,11 +1923,11 @@
                           "type" : "Some",
                           "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                         },
-                        "beginLine" : 47,
-                        "beginColumn" : 4,
-                        "endLine" : 47,
-                        "endColumn" : 38,
-                        "offset" : 1128,
+                        "beginLine" : 40,
+                        "beginColumn" : 7,
+                        "endLine" : 40,
+                        "endColumn" : 41,
+                        "offset" : 990,
                         "length" : 34
                       }
                     }
@@ -2015,11 +1945,11 @@
                             "type" : "Some",
                             "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                           },
-                          "beginLine" : 84,
-                          "beginColumn" : 4,
-                          "endLine" : 84,
-                          "endColumn" : 44,
-                          "offset" : 2145,
+                          "beginLine" : 79,
+                          "beginColumn" : 7,
+                          "endLine" : 79,
+                          "endColumn" : 47,
+                          "offset" : 2116,
                           "length" : 40
                         }
                       }
@@ -2065,11 +1995,11 @@
                       "type" : "Some",
                       "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                     },
-                    "beginLine" : 52,
-                    "beginColumn" : 4,
-                    "endLine" : 52,
-                    "endColumn" : 63,
-                    "offset" : 1311,
+                    "beginLine" : 45,
+                    "beginColumn" : 7,
+                    "endLine" : 45,
+                    "endColumn" : 66,
+                    "offset" : 1187,
                     "length" : 59
                   }
                 }
@@ -2088,11 +2018,11 @@
                           "type" : "Some",
                           "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                         },
-                        "beginLine" : 46,
-                        "beginColumn" : 4,
-                        "endLine" : 46,
-                        "endColumn" : 36,
-                        "offset" : 1092,
+                        "beginLine" : 39,
+                        "beginColumn" : 7,
+                        "endLine" : 39,
+                        "endColumn" : 39,
+                        "offset" : 951,
                         "length" : 32
                       }
                     }
@@ -2110,11 +2040,11 @@
                             "type" : "Some",
                             "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                           },
-                          "beginLine" : 60,
-                          "beginColumn" : 4,
-                          "endLine" : 60,
-                          "endColumn" : 32,
-                          "offset" : 1589,
+                          "beginLine" : 53,
+                          "beginColumn" : 7,
+                          "endLine" : 53,
+                          "endColumn" : 35,
+                          "offset" : 1461,
                           "length" : 28
                         }
                       }
@@ -2143,11 +2073,11 @@
                           "type" : "Some",
                           "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                         },
-                        "beginLine" : 47,
-                        "beginColumn" : 4,
-                        "endLine" : 47,
-                        "endColumn" : 38,
-                        "offset" : 1128,
+                        "beginLine" : 40,
+                        "beginColumn" : 7,
+                        "endLine" : 40,
+                        "endColumn" : 41,
+                        "offset" : 990,
                         "length" : 34
                       }
                     }
@@ -2165,11 +2095,11 @@
                             "type" : "Some",
                             "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                           },
-                          "beginLine" : 85,
-                          "beginColumn" : 4,
-                          "endLine" : 85,
-                          "endColumn" : 31,
-                          "offset" : 2189,
+                          "beginLine" : 80,
+                          "beginColumn" : 7,
+                          "endLine" : 80,
+                          "endColumn" : 34,
+                          "offset" : 2163,
                           "length" : 27
                         }
                       }
@@ -2215,11 +2145,11 @@
                       "type" : "Some",
                       "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                     },
-                    "beginLine" : 53,
-                    "beginColumn" : 4,
-                    "endLine" : 53,
-                    "endColumn" : 46,
-                    "offset" : 1374,
+                    "beginLine" : 46,
+                    "beginColumn" : 7,
+                    "endLine" : 46,
+                    "endColumn" : 49,
+                    "offset" : 1253,
                     "length" : 42
                   }
                 }
@@ -2238,11 +2168,11 @@
                           "type" : "Some",
                           "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                         },
-                        "beginLine" : 47,
-                        "beginColumn" : 4,
-                        "endLine" : 47,
-                        "endColumn" : 38,
-                        "offset" : 1128,
+                        "beginLine" : 40,
+                        "beginColumn" : 7,
+                        "endLine" : 40,
+                        "endColumn" : 41,
+                        "offset" : 990,
                         "length" : 34
                       }
                     }
@@ -2260,11 +2190,11 @@
                             "type" : "Some",
                             "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                           },
-                          "beginLine" : 88,
-                          "beginColumn" : 4,
-                          "endLine" : 88,
-                          "endColumn" : 39,
-                          "offset" : 2302,
+                          "beginLine" : 83,
+                          "beginColumn" : 7,
+                          "endLine" : 83,
+                          "endColumn" : 42,
+                          "offset" : 2285,
                           "length" : 35
                         }
                       }
@@ -2293,11 +2223,11 @@
                           "type" : "Some",
                           "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                         },
-                        "beginLine" : 48,
-                        "beginColumn" : 4,
-                        "endLine" : 48,
-                        "endColumn" : 22,
-                        "offset" : 1166,
+                        "beginLine" : 41,
+                        "beginColumn" : 7,
+                        "endLine" : 41,
+                        "endColumn" : 25,
+                        "offset" : 1031,
                         "length" : 18
                       }
                     }
@@ -2315,11 +2245,11 @@
                             "type" : "Some",
                             "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                           },
-                          "beginLine" : 70,
-                          "beginColumn" : 4,
-                          "endLine" : 70,
-                          "endColumn" : 38,
-                          "offset" : 1785,
+                          "beginLine" : 66,
+                          "beginColumn" : 7,
+                          "endLine" : 66,
+                          "endColumn" : 41,
+                          "offset" : 1783,
                           "length" : 34
                         }
                       }
@@ -2365,11 +2295,11 @@
                       "type" : "Some",
                       "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                     },
-                    "beginLine" : 54,
-                    "beginColumn" : 4,
-                    "endLine" : 54,
-                    "endColumn" : 46,
-                    "offset" : 1420,
+                    "beginLine" : 47,
+                    "beginColumn" : 7,
+                    "endLine" : 47,
+                    "endColumn" : 49,
+                    "offset" : 1302,
                     "length" : 42
                   }
                 }
@@ -2388,11 +2318,11 @@
                           "type" : "Some",
                           "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                         },
-                        "beginLine" : 48,
-                        "beginColumn" : 4,
-                        "endLine" : 48,
-                        "endColumn" : 22,
-                        "offset" : 1166,
+                        "beginLine" : 41,
+                        "beginColumn" : 7,
+                        "endLine" : 41,
+                        "endColumn" : 25,
+                        "offset" : 1031,
                         "length" : 18
                       }
                     }
@@ -2410,11 +2340,11 @@
                             "type" : "Some",
                             "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                           },
-                          "beginLine" : 71,
-                          "beginColumn" : 4,
-                          "endLine" : 71,
-                          "endColumn" : 39,
-                          "offset" : 1823,
+                          "beginLine" : 67,
+                          "beginColumn" : 7,
+                          "endLine" : 67,
+                          "endColumn" : 42,
+                          "offset" : 1824,
                           "length" : 35
                         }
                       }
@@ -2443,11 +2373,11 @@
                           "type" : "Some",
                           "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                         },
-                        "beginLine" : 47,
-                        "beginColumn" : 4,
-                        "endLine" : 47,
-                        "endColumn" : 38,
-                        "offset" : 1128,
+                        "beginLine" : 40,
+                        "beginColumn" : 7,
+                        "endLine" : 40,
+                        "endColumn" : 41,
+                        "offset" : 990,
                         "length" : 34
                       }
                     }
@@ -2465,11 +2395,11 @@
                             "type" : "Some",
                             "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                           },
-                          "beginLine" : 86,
-                          "beginColumn" : 4,
-                          "endLine" : 86,
-                          "endColumn" : 38,
-                          "offset" : 2220,
+                          "beginLine" : 81,
+                          "beginColumn" : 7,
+                          "endLine" : 81,
+                          "endColumn" : 41,
+                          "offset" : 2197,
                           "length" : 34
                         }
                       }
@@ -2517,11 +2447,11 @@
                       "type" : "Some",
                       "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                     },
-                    "beginLine" : 51,
-                    "beginColumn" : 4,
-                    "endLine" : 51,
-                    "endColumn" : 63,
-                    "offset" : 1248,
+                    "beginLine" : 44,
+                    "beginColumn" : 7,
+                    "endLine" : 44,
+                    "endColumn" : 66,
+                    "offset" : 1121,
                     "length" : 59
                   }
                 }
@@ -2539,11 +2469,11 @@
                         "type" : "Some",
                         "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                       },
-                      "beginLine" : 46,
-                      "beginColumn" : 4,
-                      "endLine" : 46,
-                      "endColumn" : 36,
-                      "offset" : 1092,
+                      "beginLine" : 39,
+                      "beginColumn" : 7,
+                      "endLine" : 39,
+                      "endColumn" : 39,
+                      "offset" : 951,
                       "length" : 32
                     }
                   }
@@ -2561,11 +2491,11 @@
                           "type" : "Some",
                           "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                         },
-                        "beginLine" : 59,
-                        "beginColumn" : 4,
-                        "endLine" : 59,
-                        "endColumn" : 45,
-                        "offset" : 1544,
+                        "beginLine" : 52,
+                        "beginColumn" : 7,
+                        "endLine" : 52,
+                        "endColumn" : 48,
+                        "offset" : 1413,
                         "length" : 41
                       }
                     }
@@ -2592,11 +2522,11 @@
                         "type" : "Some",
                         "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                       },
-                      "beginLine" : 47,
-                      "beginColumn" : 4,
-                      "endLine" : 47,
-                      "endColumn" : 38,
-                      "offset" : 1128,
+                      "beginLine" : 40,
+                      "beginColumn" : 7,
+                      "endLine" : 40,
+                      "endColumn" : 41,
+                      "offset" : 990,
                       "length" : 34
                     }
                   }
@@ -2614,11 +2544,11 @@
                           "type" : "Some",
                           "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                         },
-                        "beginLine" : 84,
-                        "beginColumn" : 4,
-                        "endLine" : 84,
-                        "endColumn" : 44,
-                        "offset" : 2145,
+                        "beginLine" : 79,
+                        "beginColumn" : 7,
+                        "endLine" : 79,
+                        "endColumn" : 47,
+                        "offset" : 2116,
                         "length" : 40
                       }
                     }
@@ -2650,11 +2580,11 @@
                           "type" : "Some",
                           "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                         },
-                        "beginLine" : 51,
-                        "beginColumn" : 4,
-                        "endLine" : 51,
-                        "endColumn" : 63,
-                        "offset" : 1248,
+                        "beginLine" : 44,
+                        "beginColumn" : 7,
+                        "endLine" : 44,
+                        "endColumn" : 66,
+                        "offset" : 1121,
                         "length" : 59
                       }
                     }
@@ -2670,11 +2600,11 @@
                           "type" : "Some",
                           "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                         },
-                        "beginLine" : 20,
-                        "beginColumn" : 4,
-                        "endLine" : 20,
-                        "endColumn" : 36,
-                        "offset" : 480,
+                        "beginLine" : 13,
+                        "beginColumn" : 7,
+                        "endLine" : 13,
+                        "endColumn" : 39,
+                        "offset" : 306,
                         "length" : 32
                       }
                     }
@@ -2698,11 +2628,11 @@
                       "type" : "Some",
                       "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                     },
-                    "beginLine" : 52,
-                    "beginColumn" : 4,
-                    "endLine" : 52,
-                    "endColumn" : 63,
-                    "offset" : 1311,
+                    "beginLine" : 45,
+                    "beginColumn" : 7,
+                    "endLine" : 45,
+                    "endColumn" : 66,
+                    "offset" : 1187,
                     "length" : 59
                   }
                 }
@@ -2720,11 +2650,11 @@
                         "type" : "Some",
                         "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                       },
-                      "beginLine" : 46,
-                      "beginColumn" : 4,
-                      "endLine" : 46,
-                      "endColumn" : 36,
-                      "offset" : 1092,
+                      "beginLine" : 39,
+                      "beginColumn" : 7,
+                      "endLine" : 39,
+                      "endColumn" : 39,
+                      "offset" : 951,
                       "length" : 32
                     }
                   }
@@ -2742,11 +2672,11 @@
                           "type" : "Some",
                           "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                         },
-                        "beginLine" : 60,
-                        "beginColumn" : 4,
-                        "endLine" : 60,
-                        "endColumn" : 32,
-                        "offset" : 1589,
+                        "beginLine" : 53,
+                        "beginColumn" : 7,
+                        "endLine" : 53,
+                        "endColumn" : 35,
+                        "offset" : 1461,
                         "length" : 28
                       }
                     }
@@ -2773,11 +2703,11 @@
                         "type" : "Some",
                         "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                       },
-                      "beginLine" : 47,
-                      "beginColumn" : 4,
-                      "endLine" : 47,
-                      "endColumn" : 38,
-                      "offset" : 1128,
+                      "beginLine" : 40,
+                      "beginColumn" : 7,
+                      "endLine" : 40,
+                      "endColumn" : 41,
+                      "offset" : 990,
                       "length" : 34
                     }
                   }
@@ -2795,11 +2725,11 @@
                           "type" : "Some",
                           "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                         },
-                        "beginLine" : 85,
-                        "beginColumn" : 4,
-                        "endLine" : 85,
-                        "endColumn" : 31,
-                        "offset" : 2189,
+                        "beginLine" : 80,
+                        "beginColumn" : 7,
+                        "endLine" : 80,
+                        "endColumn" : 34,
+                        "offset" : 2163,
                         "length" : 27
                       }
                     }
@@ -2831,11 +2761,11 @@
                           "type" : "Some",
                           "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                         },
-                        "beginLine" : 52,
-                        "beginColumn" : 4,
-                        "endLine" : 52,
-                        "endColumn" : 63,
-                        "offset" : 1311,
+                        "beginLine" : 45,
+                        "beginColumn" : 7,
+                        "endLine" : 45,
+                        "endColumn" : 66,
+                        "offset" : 1187,
                         "length" : 59
                       }
                     }
@@ -2851,11 +2781,11 @@
                           "type" : "Some",
                           "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                         },
-                        "beginLine" : 20,
-                        "beginColumn" : 4,
-                        "endLine" : 20,
-                        "endColumn" : 36,
-                        "offset" : 480,
+                        "beginLine" : 13,
+                        "beginColumn" : 7,
+                        "endLine" : 13,
+                        "endColumn" : 39,
+                        "offset" : 306,
                         "length" : 32
                       }
                     }
@@ -2879,11 +2809,11 @@
                       "type" : "Some",
                       "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                     },
-                    "beginLine" : 53,
-                    "beginColumn" : 4,
-                    "endLine" : 53,
-                    "endColumn" : 46,
-                    "offset" : 1374,
+                    "beginLine" : 46,
+                    "beginColumn" : 7,
+                    "endLine" : 46,
+                    "endColumn" : 49,
+                    "offset" : 1253,
                     "length" : 42
                   }
                 }
@@ -2901,11 +2831,11 @@
                         "type" : "Some",
                         "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                       },
-                      "beginLine" : 47,
-                      "beginColumn" : 4,
-                      "endLine" : 47,
-                      "endColumn" : 38,
-                      "offset" : 1128,
+                      "beginLine" : 40,
+                      "beginColumn" : 7,
+                      "endLine" : 40,
+                      "endColumn" : 41,
+                      "offset" : 990,
                       "length" : 34
                     }
                   }
@@ -2923,11 +2853,11 @@
                           "type" : "Some",
                           "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                         },
-                        "beginLine" : 88,
-                        "beginColumn" : 4,
-                        "endLine" : 88,
-                        "endColumn" : 39,
-                        "offset" : 2302,
+                        "beginLine" : 83,
+                        "beginColumn" : 7,
+                        "endLine" : 83,
+                        "endColumn" : 42,
+                        "offset" : 2285,
                         "length" : 35
                       }
                     }
@@ -2954,11 +2884,11 @@
                         "type" : "Some",
                         "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                       },
-                      "beginLine" : 48,
-                      "beginColumn" : 4,
-                      "endLine" : 48,
-                      "endColumn" : 22,
-                      "offset" : 1166,
+                      "beginLine" : 41,
+                      "beginColumn" : 7,
+                      "endLine" : 41,
+                      "endColumn" : 25,
+                      "offset" : 1031,
                       "length" : 18
                     }
                   }
@@ -2976,11 +2906,11 @@
                           "type" : "Some",
                           "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                         },
-                        "beginLine" : 70,
-                        "beginColumn" : 4,
-                        "endLine" : 70,
-                        "endColumn" : 38,
-                        "offset" : 1785,
+                        "beginLine" : 66,
+                        "beginColumn" : 7,
+                        "endLine" : 66,
+                        "endColumn" : 41,
+                        "offset" : 1783,
                         "length" : 34
                       }
                     }
@@ -3012,11 +2942,11 @@
                           "type" : "Some",
                           "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                         },
-                        "beginLine" : 53,
-                        "beginColumn" : 4,
-                        "endLine" : 53,
-                        "endColumn" : 46,
-                        "offset" : 1374,
+                        "beginLine" : 46,
+                        "beginColumn" : 7,
+                        "endLine" : 46,
+                        "endColumn" : 49,
+                        "offset" : 1253,
                         "length" : 42
                       }
                     }
@@ -3032,11 +2962,11 @@
                           "type" : "Some",
                           "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                         },
-                        "beginLine" : 20,
-                        "beginColumn" : 4,
-                        "endLine" : 20,
-                        "endColumn" : 36,
-                        "offset" : 480,
+                        "beginLine" : 13,
+                        "beginColumn" : 7,
+                        "endLine" : 13,
+                        "endColumn" : 39,
+                        "offset" : 306,
                         "length" : 32
                       }
                     }
@@ -3060,11 +2990,11 @@
                       "type" : "Some",
                       "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                     },
-                    "beginLine" : 54,
-                    "beginColumn" : 4,
-                    "endLine" : 54,
-                    "endColumn" : 46,
-                    "offset" : 1420,
+                    "beginLine" : 47,
+                    "beginColumn" : 7,
+                    "endLine" : 47,
+                    "endColumn" : 49,
+                    "offset" : 1302,
                     "length" : 42
                   }
                 }
@@ -3082,11 +3012,11 @@
                         "type" : "Some",
                         "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                       },
-                      "beginLine" : 48,
-                      "beginColumn" : 4,
-                      "endLine" : 48,
-                      "endColumn" : 22,
-                      "offset" : 1166,
+                      "beginLine" : 41,
+                      "beginColumn" : 7,
+                      "endLine" : 41,
+                      "endColumn" : 25,
+                      "offset" : 1031,
                       "length" : 18
                     }
                   }
@@ -3104,11 +3034,11 @@
                           "type" : "Some",
                           "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                         },
-                        "beginLine" : 71,
-                        "beginColumn" : 4,
-                        "endLine" : 71,
-                        "endColumn" : 39,
-                        "offset" : 1823,
+                        "beginLine" : 67,
+                        "beginColumn" : 7,
+                        "endLine" : 67,
+                        "endColumn" : 42,
+                        "offset" : 1824,
                         "length" : 35
                       }
                     }
@@ -3135,11 +3065,11 @@
                         "type" : "Some",
                         "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                       },
-                      "beginLine" : 47,
-                      "beginColumn" : 4,
-                      "endLine" : 47,
-                      "endColumn" : 38,
-                      "offset" : 1128,
+                      "beginLine" : 40,
+                      "beginColumn" : 7,
+                      "endLine" : 40,
+                      "endColumn" : 41,
+                      "offset" : 990,
                       "length" : 34
                     }
                   }
@@ -3157,11 +3087,11 @@
                           "type" : "Some",
                           "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                         },
-                        "beginLine" : 86,
-                        "beginColumn" : 4,
-                        "endLine" : 86,
-                        "endColumn" : 38,
-                        "offset" : 2220,
+                        "beginLine" : 81,
+                        "beginColumn" : 7,
+                        "endLine" : 81,
+                        "endColumn" : 41,
+                        "offset" : 2197,
                         "length" : 34
                       }
                     }
@@ -3193,11 +3123,11 @@
                           "type" : "Some",
                           "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                         },
-                        "beginLine" : 54,
-                        "beginColumn" : 4,
-                        "endLine" : 54,
-                        "endColumn" : 46,
-                        "offset" : 1420,
+                        "beginLine" : 47,
+                        "beginColumn" : 7,
+                        "endLine" : 47,
+                        "endColumn" : 49,
+                        "offset" : 1302,
                         "length" : 42
                       }
                     }
@@ -3213,11 +3143,11 @@
                           "type" : "Some",
                           "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                         },
-                        "beginLine" : 20,
-                        "beginColumn" : 4,
-                        "endLine" : 20,
-                        "endColumn" : 36,
-                        "offset" : 480,
+                        "beginLine" : 13,
+                        "beginColumn" : 7,
+                        "endLine" : 13,
+                        "endColumn" : 39,
+                        "offset" : 306,
                         "length" : 32
                       }
                     }
@@ -3327,11 +3257,11 @@
                   "type" : "Some",
                   "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                 },
-                "beginLine" : 19,
-                "beginColumn" : 4,
-                "endLine" : 19,
-                "endColumn" : 50,
-                "offset" : 430,
+                "beginLine" : 12,
+                "beginColumn" : 7,
+                "endLine" : 12,
+                "endColumn" : 53,
+                "offset" : 253,
                 "length" : 46
               }
             }
@@ -3418,11 +3348,11 @@
                   "type" : "Some",
                   "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                 },
-                "beginLine" : 22,
-                "beginColumn" : 4,
-                "endLine" : 22,
-                "endColumn" : 36,
-                "offset" : 530,
+                "beginLine" : 15,
+                "beginColumn" : 7,
+                "endLine" : 15,
+                "endColumn" : 39,
+                "offset" : 361,
                 "length" : 32
               }
             }
@@ -3441,12 +3371,12 @@
                       "type" : "Some",
                       "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                     },
-                    "beginLine" : 17,
-                    "beginColumn" : 2,
-                    "endLine" : 31,
-                    "endColumn" : 26,
-                    "offset" : 369,
-                    "length" : 409
+                    "beginLine" : 10,
+                    "beginColumn" : 3,
+                    "endLine" : 24,
+                    "endColumn" : 27,
+                    "offset" : 187,
+                    "length" : 433
                   }
                 }
               },
@@ -3463,11 +3393,11 @@
                         "type" : "Some",
                         "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                       },
-                      "beginLine" : 14,
-                      "beginColumn" : 4,
-                      "endLine" : 14,
-                      "endColumn" : 44,
-                      "offset" : 302,
+                      "beginLine" : 7,
+                      "beginColumn" : 7,
+                      "endLine" : 7,
+                      "endColumn" : 47,
+                      "offset" : 118,
                       "length" : 40
                     }
                   }
@@ -3496,11 +3426,11 @@
                       "type" : "Some",
                       "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                     },
-                    "beginLine" : 20,
-                    "beginColumn" : 4,
-                    "endLine" : 20,
-                    "endColumn" : 36,
-                    "offset" : 480,
+                    "beginLine" : 13,
+                    "beginColumn" : 7,
+                    "endLine" : 13,
+                    "endColumn" : 39,
+                    "offset" : 306,
                     "length" : 32
                   }
                 }
@@ -3518,11 +3448,11 @@
                         "type" : "Some",
                         "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                       },
-                      "beginLine" : 41,
-                      "beginColumn" : 4,
-                      "endLine" : 41,
-                      "endColumn" : 44,
-                      "offset" : 961,
+                      "beginLine" : 34,
+                      "beginColumn" : 7,
+                      "endLine" : 34,
+                      "endColumn" : 47,
+                      "offset" : 813,
                       "length" : 40
                     }
                   }
@@ -3570,11 +3500,11 @@
                   "type" : "Some",
                   "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                 },
-                "beginLine" : 22,
-                "beginColumn" : 4,
-                "endLine" : 22,
-                "endColumn" : 36,
-                "offset" : 530,
+                "beginLine" : 15,
+                "beginColumn" : 7,
+                "endLine" : 15,
+                "endColumn" : 39,
+                "offset" : 361,
                 "length" : 32
               }
             }
@@ -3592,12 +3522,12 @@
                     "type" : "Some",
                     "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                   },
-                  "beginLine" : 17,
-                  "beginColumn" : 2,
-                  "endLine" : 31,
-                  "endColumn" : 26,
-                  "offset" : 369,
-                  "length" : 409
+                  "beginLine" : 10,
+                  "beginColumn" : 3,
+                  "endLine" : 24,
+                  "endColumn" : 27,
+                  "offset" : 187,
+                  "length" : 433
                 }
               }
             },
@@ -3614,11 +3544,11 @@
                       "type" : "Some",
                       "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                     },
-                    "beginLine" : 14,
-                    "beginColumn" : 4,
-                    "endLine" : 14,
-                    "endColumn" : 44,
-                    "offset" : 302,
+                    "beginLine" : 7,
+                    "beginColumn" : 7,
+                    "endLine" : 7,
+                    "endColumn" : 47,
+                    "offset" : 118,
                     "length" : 40
                   }
                 }
@@ -3645,11 +3575,11 @@
                     "type" : "Some",
                     "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                   },
-                  "beginLine" : 47,
-                  "beginColumn" : 4,
-                  "endLine" : 47,
-                  "endColumn" : 38,
-                  "offset" : 1128,
+                  "beginLine" : 40,
+                  "beginColumn" : 7,
+                  "endLine" : 40,
+                  "endColumn" : 41,
+                  "offset" : 990,
                   "length" : 34
                 }
               }
@@ -3667,11 +3597,11 @@
                       "type" : "Some",
                       "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                     },
-                    "beginLine" : 87,
-                    "beginColumn" : 4,
-                    "endLine" : 87,
-                    "endColumn" : 44,
-                    "offset" : 2258,
+                    "beginLine" : 82,
+                    "beginColumn" : 7,
+                    "endLine" : 82,
+                    "endColumn" : 47,
+                    "offset" : 2238,
                     "length" : 40
                   }
                 }
@@ -3703,11 +3633,11 @@
                       "type" : "Some",
                       "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                     },
-                    "beginLine" : 22,
-                    "beginColumn" : 4,
-                    "endLine" : 22,
-                    "endColumn" : 36,
-                    "offset" : 530,
+                    "beginLine" : 15,
+                    "beginColumn" : 7,
+                    "endLine" : 15,
+                    "endColumn" : 39,
+                    "offset" : 361,
                     "length" : 32
                   }
                 }
@@ -3723,12 +3653,12 @@
                       "type" : "Some",
                       "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                     },
-                    "beginLine" : 17,
-                    "beginColumn" : 2,
-                    "endLine" : 31,
-                    "endColumn" : 26,
-                    "offset" : 369,
-                    "length" : 409
+                    "beginLine" : 10,
+                    "beginColumn" : 3,
+                    "endLine" : 24,
+                    "endColumn" : 27,
+                    "offset" : 187,
+                    "length" : 433
                   }
                 }
               },
@@ -3747,11 +3677,11 @@
                       "type" : "Some",
                       "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                     },
-                    "beginLine" : 50,
-                    "beginColumn" : 4,
-                    "endLine" : 50,
-                    "endColumn" : 46,
-                    "offset" : 1202,
+                    "beginLine" : 43,
+                    "beginColumn" : 7,
+                    "endLine" : 43,
+                    "endColumn" : 49,
+                    "offset" : 1072,
                     "length" : 42
                   }
                 }
@@ -3767,11 +3697,11 @@
                       "type" : "Some",
                       "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                     },
-                    "beginLine" : 20,
-                    "beginColumn" : 4,
-                    "endLine" : 20,
-                    "endColumn" : 36,
-                    "offset" : 480,
+                    "beginLine" : 13,
+                    "beginColumn" : 7,
+                    "endLine" : 13,
+                    "endColumn" : 39,
+                    "offset" : 306,
                     "length" : 32
                   }
                 }
@@ -4130,11 +4060,11 @@
                   "type" : "Some",
                   "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                 },
-                "beginLine" : 103,
-                "beginColumn" : 4,
-                "endLine" : 103,
-                "endColumn" : 39,
-                "offset" : 2612,
+                "beginLine" : 100,
+                "beginColumn" : 7,
+                "endLine" : 100,
+                "endColumn" : 42,
+                "offset" : 2724,
                 "length" : 35
               }
             }
@@ -4247,11 +4177,11 @@
                   "type" : "Some",
                   "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                 },
-                "beginLine" : 104,
-                "beginColumn" : 4,
-                "endLine" : 104,
-                "endColumn" : 24,
-                "offset" : 2651,
+                "beginLine" : 101,
+                "beginColumn" : 7,
+                "endLine" : 101,
+                "endColumn" : 27,
+                "offset" : 2766,
                 "length" : 20
               }
             }
@@ -4437,11 +4367,11 @@
                   "type" : "Some",
                   "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                 },
-                "beginLine" : 114,
-                "beginColumn" : 4,
-                "endLine" : 114,
-                "endColumn" : 28,
-                "offset" : 2834,
+                "beginLine" : 111,
+                "beginColumn" : 7,
+                "endLine" : 111,
+                "endColumn" : 31,
+                "offset" : 2963,
                 "length" : 24
               }
             }
@@ -4473,11 +4403,11 @@
                       "type" : "Some",
                       "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                     },
-                    "beginLine" : 103,
-                    "beginColumn" : 4,
-                    "endLine" : 103,
-                    "endColumn" : 39,
-                    "offset" : 2612,
+                    "beginLine" : 100,
+                    "beginColumn" : 7,
+                    "endLine" : 100,
+                    "endColumn" : 42,
+                    "offset" : 2724,
                     "length" : 35
                   }
                 }
@@ -4590,11 +4520,11 @@
                       "type" : "Some",
                       "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                     },
-                    "beginLine" : 104,
-                    "beginColumn" : 4,
-                    "endLine" : 104,
-                    "endColumn" : 24,
-                    "offset" : 2651,
+                    "beginLine" : 101,
+                    "beginColumn" : 7,
+                    "endLine" : 101,
+                    "endColumn" : 27,
+                    "offset" : 2766,
                     "length" : 20
                   }
                 }
@@ -4757,11 +4687,11 @@
                   "type" : "Some",
                   "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                 },
-                "beginLine" : 115,
-                "beginColumn" : 4,
-                "endLine" : 115,
-                "endColumn" : 29,
-                "offset" : 2862,
+                "beginLine" : 112,
+                "beginColumn" : 7,
+                "endLine" : 112,
+                "endColumn" : 32,
+                "offset" : 2994,
                 "length" : 25
               }
             }
@@ -4793,11 +4723,11 @@
                       "type" : "Some",
                       "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                     },
-                    "beginLine" : 103,
-                    "beginColumn" : 4,
-                    "endLine" : 103,
-                    "endColumn" : 39,
-                    "offset" : 2612,
+                    "beginLine" : 100,
+                    "beginColumn" : 7,
+                    "endLine" : 100,
+                    "endColumn" : 42,
+                    "offset" : 2724,
                     "length" : 35
                   }
                 }
@@ -4910,11 +4840,11 @@
                       "type" : "Some",
                       "value" : "\/temperature-control\/packages\/TemperatureControl.aadl"
                     },
-                    "beginLine" : 104,
-                    "beginColumn" : 4,
-                    "endLine" : 104,
-                    "endColumn" : 24,
-                    "offset" : 2651,
+                    "beginLine" : 101,
+                    "beginColumn" : 7,
+                    "endLine" : 101,
+                    "endColumn" : 27,
+                    "offset" : 2766,
                     "length" : 20
                   }
                 }

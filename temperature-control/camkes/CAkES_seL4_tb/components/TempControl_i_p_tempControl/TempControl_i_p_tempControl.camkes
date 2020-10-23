@@ -1,0 +1,16 @@
+import "../../interfaces/sb_Monitor_TemperatureControl__Temperature_i.idl4";
+import "../../interfaces/sb_Monitor_TemperatureControl__FanAck_1.idl4";
+import "../../interfaces/sb_Monitor_TemperatureControl__FanCmd_1.idl4";
+import "../../interfaces/AADLEvent_Receiver.idl4";
+component TempControl_i_p_tempControl {
+  include <sb_types.h>;
+  control;
+  uses sb_Monitor_TemperatureControl__Temperature_i sb_currentTemp;
+  uses sb_Monitor_TemperatureControl__FanAck_1 sb_fanAck;
+  uses sb_Monitor_TemperatureControl__FanCmd_1 sb_fanCmd0;
+  uses AADLEvent_Receiver sb_tempChanged;
+  consumes DataportWrite sb_currentTemp_notification;
+  consumes QueuedData sb_fanAck_notification;
+  consumes ReceiveEvent sb_tempChanged_notification;
+  has semaphore sb_dispatch_sem;
+}

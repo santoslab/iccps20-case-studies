@@ -3,31 +3,42 @@
  Table of Contents
   * [Diagrams](#diagrams)
     * [AADL Arch](#aadl-arch)
-    * [SeL4](#sel4)
-      * [SeL4 CAmkES Arch](#sel4-camkes-arch)
-      * [SeL4 CAmkES HAMR Arch](#sel4-camkes-hamr-arch)
+    * [SeL4_TB](#sel4_tb)
+      * [SeL4_TB CAmkES Arch](#sel4_tb-camkes-arch)
+      * [SeL4_TB CAmkES HAMR Arch](#sel4_tb-camkes-hamr-arch)
+    * [SeL4_Only](#sel4_only)
+      * [SeL4_Only CAmkES Arch](#sel4_only-camkes-arch)
+      * [SeL4_Only CAmkES HAMR Arch](#sel4_only-camkes-hamr-arch)
   * [Example Output](#example-output)
-    * [SeL4 Expected Output: Timeout = 15 seconds](#sel4-expected-output-timeout--15-seconds)
+    * [SeL4_TB Expected Output: Timeout = 15 seconds](#sel4_tb-expected-output-timeout--15-seconds)
+    * [SeL4_Only Expected Output: Timeout = 15 seconds](#sel4_only-expected-output-timeout--15-seconds)
 
 ## Diagrams
 ### AADL Arch
 ![AADL Arch](aadl/diagrams/aadl-arch.png)
 
-### SeL4
-#### SeL4 CAmkES Arch
-![SeL4 CAmkES Arch](aadl/diagrams/CAmkES-arch-SeL4.svg)
+### SeL4_TB
+#### SeL4_TB CAmkES Arch
+![SeL4_TB CAmkES Arch](aadl/diagrams/CAmkES-arch-SeL4_TB.svg)
 
-#### SeL4 CAmkES HAMR Arch
-![SeL4 CAmkES HAMR Arch](aadl/diagrams/CAmkES-HAMR-arch-SeL4.svg)
+#### SeL4_TB CAmkES HAMR Arch
+![SeL4_TB CAmkES HAMR Arch](aadl/diagrams/CAmkES-HAMR-arch-SeL4_TB.svg)
+
+### SeL4_Only
+#### SeL4_Only CAmkES Arch
+![SeL4_Only CAmkES Arch](aadl/diagrams/CAmkES-arch-SeL4_Only.svg)
+
+#### SeL4_Only CAmkES HAMR Arch
+![SeL4_Only CAmkES HAMR Arch](aadl/diagrams/CAmkES-HAMR-arch-SeL4_Only.svg)
 
 ## Example Output
 *NOTE:* actual output may differ due to issues related to thread interleaving
-### SeL4 Expected Output: Timeout = 15 seconds
+### SeL4_TB Expected Output: Timeout = 15 seconds
 
   |HAMR Codegen Configuration| |
   |--|--|
   | package-name | b |
-  | exclude-component-impl | true |
+  | exclude-component-impl | false |
   | bit-width | 32 |
   | max-string-size | 256 |
   | max-array-size | 1 |
@@ -35,63 +46,31 @@
 
   **How To Run**
   ```
-  temperature-control/hamr/bin/transpile-sel4.sh
-  temperature-control/hamr/src/c/CAmkES_seL4/bin/run-camkes.sh -s
+  temperature-control/camkes/CAkES_seL4_tb/bin/run-camkes.sh -s
   ```
 
   ```
   Booting all finished, dropped to user space
-  Entering pre-init of TempSensor_i_p_tempSensor
-  Art: Registered component: TempControlSystem_i_Instance_p_tempSensor (perioEntering pre-init of TempControl_i_p_tempControl
-  Art: Registered componentEntering pre-init of Fan_i_p_fan
-  Art: Registered component: TempControlSystem_i_Instance_p_fan (sporadic: dic: 1000)
-  Art: - Registered port: TempControlSystem_i_Instance_p_tempSensor_currentTemp (data out)
-  Art: - Registered port: TempControlSystem_i_Instance_p_tempSensor_tempChanged (event out)
-  Leaving pre-init of TempSensor_i_p_tempSensor
-  : TempControlSystem_i_Instance_p_tempControl (sporadic: 1000)
-  Art: - Registered port: TempControlSystem_i_Instance_p_tempControl_currentTemp (data in)
-  Art: - Registered port: TempControlSystem_i_Instance_p_tempControl_fanAck (event in)
-  Art: - Registered port: TempControlSystem_i_In1000)
-  Art: - Registered port: TempControlSystem_i_Instance_p_fan_fanCmd (event in)
-  Art: - Registered port: TempControlSystem_i_Instance_p_fan_fanAck (event out)
-  Leaving pre-init of Fan_i_p_fan
-  stance_p_tempControl_setPoint (event in)
-  Art: - Registered port: TempControlSystem_i_Instance_p_tempControl_fanCmd (event out)
-  Art: - Registered port: TempControlSystem_i_Instance_p_tempControl_tempChanged (event in)
-  Leaving pre-init of TempControl_i_p_tempControl
-  TempControlSystem_i_Instance_p_tempSensor: Sensed: Temperature_i(84.000000, Fahrenheit)
-  TempControlSystem_i_Instance_p_tempControl: Received: Temperature_i(84.000000, Fahrenheit)
-  TempControlSystem_i_Instance_p_tempControl: Temperature ok:
-  TempControlSystem_i_Instance_p_tempSensor: Sensed: Temperature_i(88.000000, Fahrenheit)
-  TempControlSystem_i_Instance_p_tempControl: Received: Temperature_i(88.000000, Fahrenheit)
-  TempControlSystem_i_Instance_p_tempControl: Temperature ok:
-  TempControlSystem_i_Instance_p_tempSensor: Sensed: Temperature_i(92.000000, Fahrenheit)
-  TempControlSystem_i_Instance_p_tempControl: Received: Temperature_i(92.000000, Fahrenheit)
-  TempControlSystem_i_Instance_p_tempControl: Temperature ok:
-  TempControlSystem_i_Instance_p_tempSensor: Sensed: Temperature_i(96.000000, Fahrenheit)
-  TempControlSystem_i_Instance_p_tempControl: Received: Temperature_i(96.000000, Fahrenheit)
-  TempControlSystem_i_Instance_p_tempControl: Temperature ok:
-  TempControlSystem_i_Instance_p_tempSensor: Sensed: Temperature_i(100.000000, Fahrenheit)
-  TempControlSystem_i_Instance_p_tempControl: Received: Temperature_i(100.000000, Fahrenheit)
-  TempControlSystem_i_Instance_p_tempControl: Temperature ok:
-  TempControlSystem_i_Instance_p_tempSensor: Sensed: Temperature_i(104.000000, Fahrenheit)
-  TempControlSystem_i_Instance_p_tempControl: Received: Temperature_i(104.000000, Fahrenheit)
-  TempControlSystem_i_Instance_p_tempControl: Sent fan command: On
-  TempControlSystem_i_Instance_p_fan: received fanCmd On
-  TempControlSystem_i_Instance_p_fan: Actuation result: Ok
-  TempControlSystem_i_Instance_p_tempControl: received fanAck Ok
-  TempControlSystem_i_Instance_p_tempControl: Actuation worked!
-  TempControlSystem_i_Instance_p_tempSensor: Sensed: Temperature_i(100.000000, Fahrenheit)
-  TempControlSystem_i_Instance_p_tempControl: Received: Temperature_i(100.000000, Fahrenheit)
-  TempControlSystem_i_Instance_p_tempControl: Temperature ok:
-  TempControlSystem_i_Instance_p_tempSensor: Sensed: Temperature_i(96.000000, Fahrenheit)
-  TempControlSystem_i_Instance_p_tempControl: Received: Temperature_i(96.000000, Fahrenheit)
-  TempControlSystem_i_Instance_p_tempControl: Temperature ok:
-  TempControlSystem_i_Instance_p_tempSensor: Sensed: Temperature_i(92.000000, Fahrenheit)
-  TempControlSystem_i_Instance_p_tempControl: Received: Temperature_i(92.000000, Fahrenheit)
-  TempControlSystem_i_Instance_p_tempControl: Temperature ok:
-  TempControlSystem_i_Instance_p_tempSensor: Sensed: Temperature_i(88.000000, Fahrenheit)
-  TempControlSystem_i_Instance_p_tempControl: Received: Temperature_i(88.000000, Fahrenheit)
-  TempControlSystem_i_Instance_p_tempControl: Temperature ok:
+
+  ```
+
+### SeL4_Only Expected Output: Timeout = 15 seconds
+
+  |HAMR Codegen Configuration| |
+  |--|--|
+  | package-name | b |
+  | exclude-component-impl | false |
+  | bit-width | 32 |
+  | max-string-size | 256 |
+  | max-array-size | 1 |
+
+
+  **How To Run**
+  ```
+  temperature-control/camkes/CAmkES_seL4_only/bin/run-camkes.sh -s
+  ```
+
+  ```
+  Booting all finished, dropped to user space
 
   ```

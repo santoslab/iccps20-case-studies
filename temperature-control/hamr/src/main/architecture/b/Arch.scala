@@ -34,7 +34,7 @@ object Arch {
     b.TemperatureControl.TempControl_i_p_tempControl_Bridge(
       id = 1,
       name = "TempControlSystem_i_Instance_p_tempControl",
-      dispatchProtocol = Sporadic(min = 1000),
+      dispatchProtocol = Sporadic(min = 1),
       dispatchTriggers = None(),
 
       currentTemp = currentTemp,
@@ -51,7 +51,7 @@ object Arch {
     b.TemperatureControl.Fan_i_p_fan_Bridge(
       id = 2,
       name = "TempControlSystem_i_Instance_p_fan",
-      dispatchProtocol = Sporadic(min = 1000),
+      dispatchProtocol = Sporadic(min = 1),
       dispatchTriggers = None(),
 
       fanCmd = fanCmd,

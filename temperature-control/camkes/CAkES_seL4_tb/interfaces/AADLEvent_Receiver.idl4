@@ -1,0 +1,5 @@
+procedure AADLEvent_Receiver {
+  include <sb_types.h>;
+  bool is_empty();
+  bool dequeue();
+};
