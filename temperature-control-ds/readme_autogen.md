@@ -35,6 +35,8 @@
 |Connections|4|
 
 ### JVM Metrics
+Total CLOC
+-----------
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
@@ -42,7 +44,16 @@ Scala|53|788|277|2409
 --------|--------|--------|--------|--------
 SUM:|53|788|277|2409
 
+User CLOC
+---------
+ | | |
+ |--|--:|
+ |Code|84|
+ |Log Code|8|
+
 ### Linux Metrics
+Total CLOC
+-----------
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
@@ -51,6 +62,13 @@ C/C++ Header|284|2531|236|6857
 C++|2|102|53|852
 --------|--------|--------|--------|--------
 SUM:|434|4423|454|18275
+
+User CLOC
+---------
+| | |
+|--|--:|
+|Code|17|
+|Log Code|0|
 
 ### SeL4 Metrics
 Not sure what to measure here -- Camkes ADL cloc, glue-code cloc, generated seL4 code?

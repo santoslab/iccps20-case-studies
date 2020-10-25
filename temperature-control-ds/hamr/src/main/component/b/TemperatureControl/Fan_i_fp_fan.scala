@@ -12,8 +12,7 @@ object Fan_i_fp_fan {
     // outgoing ports are all 'event data' so do nothing
   }
 
-  def handlefanCmd(api: Fan_i_Operational_Api,
-                   value : FanCmd.Type): Unit = {
+  def handlefanCmd(api: Fan_i_Operational_Api, value : FanCmd.Type): Unit = {
     api.logInfo(s"received fanCmd $value")
 
     val ack = FanNative.fanCmdActuate(value)

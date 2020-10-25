@@ -22,6 +22,8 @@
 |Connections|101|
 
 ### JVM Metrics
+Total CLOC
+-----------
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
@@ -30,6 +32,13 @@ JSON|4|0|0|179
 Bourne Shell|1|11|0|40
 --------|--------|--------|--------|--------
 SUM:|145|3250|850|14442
+
+User CLOC
+---------
+ | | |
+ |--|--:|
+ |Code|1366|
+ |Log Code|146|
 
 ## Example Output
 *NOTE:* actual output may differ due to issues related to thread interleaving
