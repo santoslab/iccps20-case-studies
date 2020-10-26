@@ -1,4 +1,4 @@
-# isolette
+# temperature-control-ds
 
  Table of Contents
   * [Diagrams](#diagrams)
@@ -31,9 +31,9 @@
 ### AADL Metrics
 | | |
 |--|--|
-|Threads|9|
-|Ports|47|
-|Connections|25|
+|Threads|3|
+|Ports|9|
+|Connections|4|
 
 ### JVM Metrics
 Directories Scanned Using [https://github.com/AlDanial/cloc](https://github.com/AlDanial/cloc) v1.88:
@@ -45,9 +45,9 @@ Total number of HAMR-generated and developer-written lines of code
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
-Scala|104|1945|1050|6349
+Scala|53|788|277|2408
 --------|--------|--------|--------|--------
-SUM:|104|1945|1050|6349
+SUM:|53|788|277|2408
 
 User LOC
 ---------
@@ -56,10 +56,10 @@ The number of lines of code written by the developer.
 likely would be excluded in a release build
  |Type|code |
  |--|--:|
- |Behavior|507|
- |Log|2|
+ |Behavior|76|
+ |Log|8|
  |--------|--------|
- |SUM:|509|
+ |SUM:|84|
 
 ### Linux Metrics
 Directories Scanned Using [https://github.com/AlDanial/cloc](https://github.com/AlDanial/cloc) v1.88:
@@ -72,24 +72,24 @@ Total number of HAMR-generated (transpiled) and developer-written lines of code
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
-C|264|4008|266|24797
-C/C++ Header|500|4526|410|12289
+C|155|1925|206|11022
+C/C++ Header|290|2579|239|6955
 C++|2|102|53|852
 --------|--------|--------|--------|--------
-SUM:|766|8636|729|37938
+SUM:|447|4606|498|18829
 
 User LOC
 ---------
 The number of lines of code written by the developer.
-The Slang-based component implementations were included by the transpiler so this represents the number of lines of C that implement Slang extensions.
+The Slang-based component implementations were excluded by the transpiler so this represents the number of lines of C code needed to realize the component behaviors.
 "Log" are lines of code used for logging that
 likely would be excluded in a release build
 |Type|code |
 |--|--:|
-|Behavior|90|
-|Log|0|
+|Behavior|77|
+|Log|46|
 |--------|--------|
-|SUM:|90|
+|SUM:|123|
 
 ### SeL4 Metrics
 Not sure what to measure here -- Camkes ADL cloc, glue-code cloc, generated seL4 code?.  Notable is that developer had to write 0 additional LOC for the CAmkES/seL4 profile.
@@ -100,8 +100,8 @@ Not sure what to measure here -- Camkes ADL cloc, glue-code cloc, generated seL4
 
   |HAMR Codegen Configuration| |
   |--|--|
-  | package-name | isolette |
-  | exclude-component-impl | false |
+  | package-name | b |
+  | exclude-component-impl | true |
   | bit-width | 32 |
   | max-string-size | 256 |
   | max-array-size | 1 |
@@ -109,7 +109,7 @@ Not sure what to measure here -- Camkes ADL cloc, glue-code cloc, generated seL4
 
   **How To Run**
   ```
-  cd isolette/hamr
+  cd temperature-control-ds/hamr
   sbt run
   ```
   **Expected Output: Timeout = 0 seconds**
@@ -121,8 +121,8 @@ Not sure what to measure here -- Camkes ADL cloc, glue-code cloc, generated seL4
 
   |HAMR Codegen Configuration| |
   |--|--|
-  | package-name | isolette |
-  | exclude-component-impl | false |
+  | package-name | b |
+  | exclude-component-impl | true |
   | bit-width | 32 |
   | max-string-size | 256 |
   | max-array-size | 1 |
@@ -130,10 +130,10 @@ Not sure what to measure here -- Camkes ADL cloc, glue-code cloc, generated seL4
 
   **How To Run**
   ```
-  isolette/hamr/bin/transpile.sh
-  isolette/hamr/bin/compile-linux.sh
-  isolette/hamr/bin/run-linux.sh
-  isolette/hamr/bin/stop.sh
+  temperature-control-ds/hamr/bin/transpile.sh
+  temperature-control-ds/hamr/bin/compile-linux.sh
+  temperature-control-ds/hamr/bin/run-linux.sh
+  temperature-control-ds/hamr/bin/stop.sh
   ```
 
 
@@ -141,8 +141,8 @@ Not sure what to measure here -- Camkes ADL cloc, glue-code cloc, generated seL4
 
   |HAMR Codegen Configuration| |
   |--|--|
-  | package-name | isolette |
-  | exclude-component-impl | false |
+  | package-name | b |
+  | exclude-component-impl | true |
   | bit-width | 32 |
   | max-string-size | 256 |
   | max-array-size | 1 |
@@ -150,8 +150,8 @@ Not sure what to measure here -- Camkes ADL cloc, glue-code cloc, generated seL4
 
   **How To Run**
   ```
-  isolette/hamr/bin/transpile-sel4.sh
-  isolette/hamr/src/c/CAmkES_seL4/bin/run-camkes.sh -s
+  temperature-control-ds/hamr/bin/transpile-sel4.sh
+  temperature-control-ds/hamr/src/c/CAmkES_seL4/bin/run-camkes.sh -s
   ```
   **Expected Output: Timeout = 0 seconds**
   ```
