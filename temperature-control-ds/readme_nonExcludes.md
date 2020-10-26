@@ -39,8 +39,8 @@
 Directories Scanned Using [https://github.com/AlDanial/cloc](https://github.com/AlDanial/cloc) v1.88:
 - [hamr-nonExcludes/src/main](hamr-nonExcludes/src/main)
 
-Total LOC
------------
+<u><b>Total LOC</b></u>
+
 Total number of HAMR-generated and developer-written lines of code
 
 Language|files|blank|comment|code
@@ -49,8 +49,8 @@ Scala|53|788|277|2409
 --------|--------|--------|--------|--------
 SUM:|53|788|277|2409
 
-User LOC
----------
+<u><b>User LOC</b></u>
+
 The number of lines of code written by the developer.
 "Log" are lines of code used for logging that
 likely would be excluded in a release build
@@ -66,8 +66,8 @@ Directories Scanned Using [https://github.com/AlDanial/cloc](https://github.com/
 - [hamr-nonExcludes/src/c/ext-c](hamr-nonExcludes/src/c/ext-c)
 - [hamr-nonExcludes/src/c/nix](hamr-nonExcludes/src/c/nix)
 
-Total LOC
------------
+<u><b>Total LOC</b></u>
+
 Total number of HAMR-generated (transpiled) and developer-written lines of code
 
 Language|files|blank|comment|code
@@ -78,8 +78,8 @@ C++|2|102|53|852
 --------|--------|--------|--------|--------
 SUM:|434|4423|454|18275
 
-User LOC
----------
+<u><b>User LOC</b></u>
+
 The number of lines of code written by the developer.
 The Slang-based component implementations were included by the transpiler so this represents the number of lines of C that implement Slang extensions.
 "Log" are lines of code used for logging that

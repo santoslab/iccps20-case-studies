@@ -25,8 +25,8 @@
 Directories Scanned Using [https://github.com/AlDanial/cloc](https://github.com/AlDanial/cloc) v1.88:
 - [hamr/src/main](hamr/src/main)
 
-Total LOC
------------
+<u><b>Total LOC</b></u>
+
 Total number of HAMR-generated and developer-written lines of code
 
 Language|files|blank|comment|code
@@ -37,8 +37,8 @@ Bourne Shell|1|11|0|40
 --------|--------|--------|--------|--------
 SUM:|145|3250|850|14442
 
-User LOC
----------
+<u><b>User LOC</b></u>
+
 The number of lines of code written by the developer.
 "Log" are lines of code used for logging that
 likely would be excluded in a release build
