@@ -6,8 +6,8 @@
   * [Metrics](#metrics)
     * [AADL Metrics](#aadl-metrics)
     * [JVM Metrics](#jvm-metrics)
-  * [Example Output](#example-output)
-    * [JVM Expected Output: Timeout = 0 seconds](#jvm-expected-output-timeout--0-seconds)
+  * [Run Instructions](#run-instructions)
+    * [JVM](#jvm)
 
 ## Diagrams
 ### AADL Arch
@@ -22,8 +22,12 @@
 |Connections|101|
 
 ### JVM Metrics
-Total CLOC
+Directories Scanned Using [https://github.com/AlDanial/cloc](https://github.com/AlDanial/cloc) v1.88:
+- [hamr/src/main](hamr/src/main)
+
+Total LOC
 -----------
+Total number of HAMR-generated and developer-written lines of code
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
@@ -33,16 +37,21 @@ Bourne Shell|1|11|0|40
 --------|--------|--------|--------|--------
 SUM:|145|3250|850|14442
 
-User CLOC
+User LOC
 ---------
- | | |
+The number of lines of code written by the developer.
+"Log" are lines of code used for logging that
+likely would be excluded in a release build
+ |Type|code |
  |--|--:|
- |Code|1366|
- |Log Code|146|
+ |Behavior|1220|
+ |Log|146|
+ |--------|--------|
+ |SUM:|1366|
 
-## Example Output
+## Run Instructions
 *NOTE:* actual output may differ due to issues related to thread interleaving
-### JVM Expected Output: Timeout = 0 seconds
+### JVM
 
   |HAMR Codegen Configuration| |
   |--|--|
@@ -55,9 +64,10 @@ User CLOC
 
   **How To Run**
   ```
+  cd pca-pump/hamr
   sbt run
   ```
-
+  **Expected Output: Timeout = 0 seconds**
   ```
-  Didn't find 'Booting all finished'!
+    Didn't find 'Booting all finished'!
   ```

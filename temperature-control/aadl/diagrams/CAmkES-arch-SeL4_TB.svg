@@ -70,7 +70,7 @@
 <text text-anchor="middle" x="307.4971" y="-578.1835" font-family="Times,serif" font-size="14.00" fill="#000000">conn7.conn8</text>
 </g>
 <!-- p_tempControl&#45;&gt;conn7.conn8 -->
-<g id="edge28" class="edge">
+<g id="edge29" class="edge">
 <title>p_tempControl&#45;&gt;conn7.conn8</title>
 <path fill="none" stroke="#000000" d="M324.1945,-673.6316C322.8132,-666.0417 321.1164,-656.718 319.3391,-646.9525"/>
 <polygon fill="#000000" stroke="#000000" points="322.7778,-646.2993 317.5438,-637.0876 315.891,-647.5527 322.7778,-646.2993"/>
@@ -94,7 +94,7 @@
 <text text-anchor="middle" x="202.4971" y="-324.2885" font-family="Times,serif" font-size="14.00" fill="#000000">p_fan::Fan_i_p_fan</text>
 </g>
 <!-- p_fan&#45;&gt;conn7.conn8 -->
-<g id="edge29" class="edge">
+<g id="edge28" class="edge">
 <title>p_fan&#45;&gt;conn7.conn8</title>
 <path fill="none" stroke="#000000" d="M187.3936,-345.9992C163.3438,-377.0019 121.7577,-441.7647 149.4971,-489.9885 169.8173,-525.3141 209.5129,-548.3234 244.0302,-562.4835"/>
 <polygon fill="#000000" stroke="#000000" points="243.0208,-565.8473 253.6081,-566.2456 245.58,-559.3318 243.0208,-565.8473"/>

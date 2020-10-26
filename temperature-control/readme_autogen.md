@@ -11,9 +11,10 @@
     * [JVM Metrics](#jvm-metrics)
     * [Linux Metrics](#linux-metrics)
     * [SeL4 Metrics](#sel4-metrics)
-  * [Example Output](#example-output)
-    * [JVM Expected Output: Timeout = 0 seconds](#jvm-expected-output-timeout--0-seconds)
-    * [SeL4 Expected Output: Timeout = 0 seconds](#sel4-expected-output-timeout--0-seconds)
+  * [Run Instructions](#run-instructions)
+    * [JVM](#jvm)
+    * [Linux](#linux)
+    * [SeL4](#sel4)
 
 ## Diagrams
 ### AADL Arch
@@ -35,8 +36,12 @@
 |Connections|4|
 
 ### JVM Metrics
-Total CLOC
+Directories Scanned Using [https://github.com/AlDanial/cloc](https://github.com/AlDanial/cloc) v1.88:
+- [hamr/src/main](hamr/src/main)
+
+Total LOC
 -----------
+Total number of HAMR-generated and developer-written lines of code
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
@@ -44,16 +49,26 @@ Scala|53|788|277|2408
 --------|--------|--------|--------|--------
 SUM:|53|788|277|2408
 
-User CLOC
+User LOC
 ---------
- | | |
+The number of lines of code written by the developer.
+"Log" are lines of code used for logging that
+likely would be excluded in a release build
+ |Type|code |
  |--|--:|
- |Code|84|
- |Log Code|8|
+ |Behavior|76|
+ |Log|8|
+ |--------|--------|
+ |SUM:|84|
 
 ### Linux Metrics
-Total CLOC
+Directories Scanned Using [https://github.com/AlDanial/cloc](https://github.com/AlDanial/cloc) v1.88:
+- [hamr/src/c/ext-c](hamr/src/c/ext-c)
+- [hamr/src/c/nix](hamr/src/c/nix)
+
+Total LOC
 -----------
+Total number of HAMR-generated (transpiled) and developer-written lines of code
 
 Language|files|blank|comment|code
 :-------|-------:|-------:|-------:|-------:
@@ -63,19 +78,25 @@ C++|2|102|53|852
 --------|--------|--------|--------|--------
 SUM:|447|4605|498|18829
 
-User CLOC
+User LOC
 ---------
-| | |
+The number of lines of code written by the developer.
+The Slang-based component implementations were excluded by the transpiler so this represents the number of lines of C code needed to realize the component behaviors.
+"Log" are lines of code used for logging that
+likely would be excluded in a release build
+|Type|code |
 |--|--:|
-|Code|122|
-|Log Code|46|
+|Behavior|76|
+|Log|46|
+|--------|--------|
+|SUM:|122|
 
 ### SeL4 Metrics
-Not sure what to measure here -- Camkes ADL cloc, glue-code cloc, generated seL4 code?
+Not sure what to measure here -- Camkes ADL cloc, glue-code cloc, generated seL4 code?.  Notable is that developer had to write 0 additional LOC for the CAmkES/seL4 profile.
 
-## Example Output
+## Run Instructions
 *NOTE:* actual output may differ due to issues related to thread interleaving
-### JVM Expected Output: Timeout = 0 seconds
+### JVM
 
   |HAMR Codegen Configuration| |
   |--|--|
@@ -88,14 +109,35 @@ Not sure what to measure here -- Camkes ADL cloc, glue-code cloc, generated seL4
 
   **How To Run**
   ```
+  cd temperature-control/hamr
   sbt run
   ```
-
+  **Expected Output: Timeout = 0 seconds**
   ```
-  Didn't find 'Booting all finished'!
+    Didn't find 'Booting all finished'!
   ```
 
-### SeL4 Expected Output: Timeout = 0 seconds
+### Linux
+
+  |HAMR Codegen Configuration| |
+  |--|--|
+  | package-name | b |
+  | exclude-component-impl | true |
+  | bit-width | 32 |
+  | max-string-size | 256 |
+  | max-array-size | 1 |
+
+
+  **How To Run**
+  ```
+  temperature-control/hamr/bin/transpile.sh
+  temperature-control/hamr/bin/compile-linux.sh
+  temperature-control/hamr/bin/run-linux.sh
+  temperature-control/hamr/bin/stop.sh
+  ```
+
+
+### SeL4
 
   |HAMR Codegen Configuration| |
   |--|--|
@@ -111,7 +153,7 @@ Not sure what to measure here -- Camkes ADL cloc, glue-code cloc, generated seL4
   temperature-control/hamr/bin/transpile-sel4.sh
   temperature-control/hamr/src/c/CAmkES_seL4/bin/run-camkes.sh -s
   ```
-
+  **Expected Output: Timeout = 0 seconds**
   ```
-  Didn't find 'Booting all finished'!
+    Didn't find 'Booting all finished'!
   ```

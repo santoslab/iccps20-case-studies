@@ -13,9 +13,9 @@
     * [AADL Metrics](#aadl-metrics)
     * [SeL4_TB Metrics](#sel4_tb-metrics)
     * [SeL4_Only Metrics](#sel4_only-metrics)
-  * [Example Output](#example-output)
-    * [SeL4_TB Expected Output: Timeout = 0 seconds](#sel4_tb-expected-output-timeout--0-seconds)
-    * [SeL4_Only Expected Output: Timeout = 0 seconds](#sel4_only-expected-output-timeout--0-seconds)
+  * [Run Instructions](#run-instructions)
+    * [SeL4_TB](#sel4_tb)
+    * [SeL4_Only](#sel4_only)
 
 ## Diagrams
 ### AADL Arch
@@ -44,14 +44,14 @@
 |Connections|4|
 
 ### SeL4_TB Metrics
-Not sure what to measure here -- Camkes ADL cloc, glue-code cloc, generated seL4 code?
+Not sure what to measure here -- Camkes ADL cloc, glue-code cloc, generated seL4 code?.  Notable is that developer had to write 0 additional LOC for the CAmkES/seL4 profile.
 
 ### SeL4_Only Metrics
-Not sure what to measure here -- Camkes ADL cloc, glue-code cloc, generated seL4 code?
+Not sure what to measure here -- Camkes ADL cloc, glue-code cloc, generated seL4 code?.  Notable is that developer had to write 0 additional LOC for the CAmkES/seL4 profile.
 
-## Example Output
+## Run Instructions
 *NOTE:* actual output may differ due to issues related to thread interleaving
-### SeL4_TB Expected Output: Timeout = 0 seconds
+### SeL4_TB
 
   |HAMR Codegen Configuration| |
   |--|--|
@@ -66,12 +66,12 @@ Not sure what to measure here -- Camkes ADL cloc, glue-code cloc, generated seL4
   ```
   temperature-control/camkes/CAkES_seL4_tb/bin/run-camkes.sh -s
   ```
-
+  **Expected Output: Timeout = 0 seconds**
   ```
-  Didn't find 'Booting all finished'!
+    Didn't find 'Booting all finished'!
   ```
 
-### SeL4_Only Expected Output: Timeout = 0 seconds
+### SeL4_Only
 
   |HAMR Codegen Configuration| |
   |--|--|
@@ -86,7 +86,7 @@ Not sure what to measure here -- Camkes ADL cloc, glue-code cloc, generated seL4
   ```
   temperature-control/camkes/CAmkES_seL4_only/bin/run-camkes.sh -s
   ```
-
+  **Expected Output: Timeout = 0 seconds**
   ```
-  Didn't find 'Booting all finished'!
+    Didn't find 'Booting all finished'!
   ```
